@@ -1,0 +1,11 @@
+@mixin fontSetup(
+  $weight: normal,
+  $size: 1rem,
+  $color: $font-black,
+  $height: 1.2
+) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
