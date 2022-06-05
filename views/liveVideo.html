@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>라이브 시청</title>
+</head>
+<body>
+  <div class="live__video__wrapper">
+    <header class="live__video__header">
+      <h1 class="live__video__logo">
+        <a href="./liveShopping.html">
+          <i class="sr-only">쇼핑 라이브</i>
+        </a>
+      </h1>
+    </header>
+    <section class="live__video__container">
+      <div class="live__video__title__group">
+        <h2>미스터피자X쥬라기월드 8천원이상 할인혜택</h2>
+        <span class="live__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
+        <span>프랜차이즈 상품권 특가 판매</span>
+      </div>
+      <ul class="live__video__top--btn--group">
+        <li><button class="live__video__muted--btn" aria-label="음소거" aria-pressed="false"></button></li>
+        <li>
+          <button class="live__video__alarm--btn" aria-label="알림받기" aria-pressed="false"></button>
+        </li>
+        <li>
+          <button class="live__video__close--btn" aira-label="닫기"></button>
+        </li>
+      </ul>
+      <video controlslist="nodownload">
+        <source src="../images/components/liveShoppingCard/ex01.mp4" type="video/mp4">
+      </video>
+      <div class="live__video__bottom">
+        <div class="live__video__chatting">
+          <div class="chat">
+            <b>닉네임</b>
+            <span>댓글댓글</span>
+          </div>
+        </div>
+        <ul class="live__video__bottom--btn--group">
+          <li><button type="button" aria-label="다운받을 수 있는 쿠폰 보기"></button></li>
+          <li><button type="button" aria-label="좋아요(ㅋ)"></button></li>
+          <li><button type="button" aria-label="라이브 공유하기"></button></li>
+        </ul>
+        <div class="live__vidieo__sales">
+          <a href="/" role="button">
+            <div class="live__video__sales__product">
+              <p>
+                <img src="../images/components/liveShoppingCard/play240.png" alt="">
+                <span>미스터 피자 20,000원 상품권</span>
+                <span><span>15%</span>15,000원</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="live__video__controller--group">
+        <div class="live__video__progress--bar" role="progressbar" tabindex="0" aria-label="탐색 슬라이더" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="4분 30초 중 0분 0초"></div>
+        <ul class="live__video__controller--btn--group">
+          <li><button type="button" aria-label="10초 전으로 이동"></button></li>
+          <li><button type="button" aria-label="재생" aria-pressed="false"></button></li>
+          <li><button type="button" aria-label="10초 후로 이동"></button></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
