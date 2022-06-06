@@ -61,6 +61,37 @@
   transform: translateY(-50%);
 }
 
+
+@mixin boxSize($max-width: 1024px, $w: 100%, $h: 220px) {
+  width: $w;
+  max-width: $max-width;
+  height: $h;
+}
+
+// carousel wrapper 설정
+@mixin carouselWrapper {
+  @include autoMargin;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+
+// carouselList width 설정
+@mixin carouselListWidth($numOfItem: 10) {
+  width: calc(100% * ($numOfItem + 2));
+  transform: translate3D(
+    calc(var(--currentItem) * (1 / ($numOfItem + 2) * -100%)),
+    0,
+    0
+  );
+}
+
+// 슬라이딩 비율 설정
+@mixin carouselSlideItem($duration: 0s, $currentSlide: 0) {
+  // transition: transform $duration ease-out;
+  // transform: translate3d(calc($currentSlide * -100%), 0, 0);
+}
+
 // text-overflow 
 @mixin textOverflow {
   text-overflow: ellipsis;

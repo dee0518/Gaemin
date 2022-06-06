@@ -1,0 +1,55 @@
+// 배달 포장 카드
+.main__card {
+  @include flexbox;
+  @include boxSize($h: 17rem);
+
+  &__item {
+    @include boxSize($max-width: 512px);
+    border-radius: 1rem;
+    margin: 0.25rem;
+    padding: 2rem;
+
+    background: $grayscaleSnow;
+
+    &__title {
+      font-family: "BMHANNAPro";
+      font-style: italic;
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    &__desc {
+      font-family: "BMHANNA_11yrs_ttf";
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+.main__today__discount,
+.main__recent__order,
+.main__shopping__live {
+  position: relative;
+}
+
+.main__section__heading {
+  font-size: 1.5rem;
+}
+
+.main__sction__link {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background: $white url("/images/components/banner/black-arrow60.png")
+      no-repeat 0 0;
+    background-size: cover;
+    // background-position: ;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
