@@ -20,10 +20,11 @@ $images: (
 );
 
 .dm {
-  &__container {
+  &__wrapper {
     @include paddingY(20px);
   }
 
+  // category list
   &__category {
     width: 100%;
 
@@ -56,11 +57,20 @@ $images: (
           position: absolute;
           top: 0;
           left: 0;
-          background: url("../images/dilivery-main/#{$glyph}") no-repeat;
+          background: url("../images/delivery-main/#{$glyph}") no-repeat;
           background-size: 75%;
           background-position: 50%;
         }
       }
     }
+  }
+
+  // food list
+  &__food {
+    height: 100px;
+    background: red;
+
+
+    
   }
 }
