@@ -1,0 +1,351 @@
+// 라이브 비디오
+.live__video {
+  &__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: $black;
+  }
+
+  &__inner {
+    position: relative;
+    display: inline-block;
+    width: calc(100vh * 0.528);
+    min-width: 360px;
+    height: 100%;
+    min-height: 640px;
+    text-align: left;
+  }
+
+  // 라이브 비디오 헤더
+  &__header {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  &__logo {
+    a {
+      display: block;
+      width: 108px;
+      height: 30px;
+      background: url(../../images/components/liveShoppingCard/logo-live.png) no-repeat;
+      background-size: contain;
+      background-position: right center;
+      @include fontSetup(bold, 14px, $white, 30px);
+    }
+  }
+
+  // 비디오 컨테이너
+  &__container {
+    height: 100%;
+    background: $white;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // 라이브 비디오 탑 그룹
+  &__top {
+    @include paddingX(10px);
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    padding-left: 50px;
+    background: url(../../images/components/liveShoppingCard/icon-badge.png) no-repeat;
+    background-position: left 10px center;
+    background-size: contain;
+  }
+
+  &__title__group {
+    h2 {
+      @include fontSetup(bold, 14px, $white, 1.2);
+      @include textOverflow;
+    }
+
+    span:last-child {
+      @include fontSetup(normal, 12px, $white, 1.2);
+    }
+  }
+
+  &__viewer {
+    @include fontSetup(normal, 12px, $white, 1.2);
+    position: relative;
+    display: inline-block;
+    padding-left: 18px;
+    margin-right: 8px;
+    background: url(../../images/components/liveShoppingCard/icon-person.png) no-repeat;
+    background-size: contain;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -7px;
+      top: 50%;
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: $white;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__top--btn--group {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    @include flexbox;
+    gap: 5px;
+
+    button {
+      @include buttonNone;
+      width: 30px;
+      height: 30px;
+      background: url(../../images/components/liveShoppingCard/icon-muted.png) no-repeat;
+      background-position: center;
+      background-size: 70%;
+    }
+    
+    & li:nth-child(1) button {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 140px;
+      height: 140px;
+      transform: translate(-50%,-50%);
+      background-image: url(../../images/components/liveShoppingCard/play240.png);
+      background-size: contain;
+    }
+
+    & li:nth-child(3) button {
+      background-image: url(../../images/components/liveShoppingCard/icon-sound.png);
+    }
+
+    & li:last-child button {
+      background-image: url(../../images/components/liveShoppingCard/icon-close.png);
+    }
+  }
+
+  // play시 첫번쨰 버튼 사라짐
+  &__container.play {
+    .live__video__play--btn {
+      display: none;
+    }
+  }
+
+  // 라이브 비디오 바텀 그룹
+  &__bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &__chatting {
+    float: left;
+    width: calc(100% - 70px);
+    height: 150px;
+    overflow-y: scroll;
+    padding-left: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chat {
+      margin-bottom: 3px;
+      
+      b {
+        @include fontSetup(bold, 12px, $white, 1.2);
+        opacity: 0.8;
+      }
+      
+      span {
+        @include fontSetup(normal, 12px, $white, 1.2);
+      }
+    }
+  }
+
+  &__bottom--btn--group {
+    @include paddingX(10px);
+    margin-bottom: 10px;
+    float: right;
+    
+    li {
+      margin-bottom: 5px;
+      text-align: center;
+
+      &:first-child {
+        margin-bottom: 1px;
+      }
+
+      &:nth-child(2) span {
+        margin-top: -5px;
+      }
+
+      button {
+        position: relative;
+        @include buttonNone;
+        width: 50px;
+        height: 40px;
+        background: url(../../images/components/liveShoppingCard/icon-coupon.png) no-repeat;
+        background-position: center;
+      }
+
+      &:nth-child(1) button {
+        &::after {
+          @include fontSetup(normal, 10px, $white, 16px);
+          content: attr(data-num);
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: $font-pink;
+        }
+      }
+
+      &:nth-child(2) button {
+        background-image: url(../../images/components/liveShoppingCard/icon-like.png);
+      }
+
+      &:nth-child(3) button {
+        padding-top: 40px;
+        background-image: url(../../images/components/liveShoppingCard/icon-share.png);
+
+        span {
+          font-size: 10px;
+        }
+      }
+  
+      span {
+        display: block;
+        @include fontSetup(normal, 12px, $white, 1.2);
+      }
+    }   
+  }
+
+  &__sales {
+    clear: both;
+    margin-bottom: 20px;
+
+    a {
+      position: relative;
+      display: block;
+      padding-right: 80px;
+      padding-left: 10px;
+      background: url(../../images/components/liveShoppingCard/icon-pack.png) no-repeat;
+      background-position: right 10px center;
+
+      &::before {
+        @include fontSetup(bold, 12px, $white, 1.2);
+        content: attr(data-product-num);
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-30%);
+      }
+    }
+
+    &__product {
+      position: relative;
+      background: $white;
+      border-radius: 5px;
+      padding-left: 60px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -4px;
+        bottom: 50%;
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: $white;
+        transform:translateY(50%)  rotate(45deg);
+      }
+
+      p {
+        padding: 10px 0;
+        @include fontSetup(normal, 14px, $black, 1.2);
+        vertical-align: middle;
+
+        & > span {
+          display: block;
+
+          &:last-child {
+            margin-top: 5px;
+            @include fontSetup(bold, 14px, $black, 1.2);
+
+            span {
+              display: inline-block;
+              margin-right: 5px;
+              color: $font-orange;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 라이브 비디오 바텀 컨트롤 영역
+  &__controller {
+    &--group {
+      @include paddingX(10px);
+    }
+
+    &__progress--bar {
+      position: relative;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: $font-gray;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 2px;
+        background: $white;
+      }
+    }
+
+    &__time {
+      @include flexbox($justify: space-between);
+      @include fontSetup(normal, 14px, $white, 1.2);
+    }
+
+    &--btn--group {
+      text-align: center;
+      margin-bottom: 20px;
+
+      li {
+        display: inline-block;
+        @include marginX(5px);
+
+        button {
+          @include buttonNone;
+          width: 30px;
+          height: 30px;
+          background: url(../../images/components/liveShoppingCard/icon-play.png) no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
