@@ -1,0 +1,278 @@
+.pickUp-tab {
+	// tabUI
+	&__list:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	&__list li {
+		float: left;
+		list-style: none;
+		display: block;
+		background: #fff;
+		color: $font-gray;
+		padding: 10px;
+		margin-right: 5px;
+		text-decoration: none;
+		position: relative;
+		top: 2px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	#tab3 {
+		background-image: url(./../../images/map/star.png);
+		background-repeat: no-repeat;
+		background-size: 30%;
+		background-position: 5% 50%;
+		padding-left: 20px;
+	}
+	#tab4 {
+		position: relative;
+		padding-left: 20px;
+	}
+	#tab4::before {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-45%);
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		opacity: 60%;
+
+		content: " ";
+		display: inline-block;
+		height: 20px;
+		width: 30px;
+		background-image: url(./../../images/map/EAL.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&__list-before {
+		padding-left: 0;
+		margin: 0;
+	}
+	&__list-before:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	&__list-before li {
+		float: left;
+		list-style: none;
+	}
+	&__list-before li {
+		display: block;
+		background: #999;
+		color: gray;
+		padding: 10px;
+		margin-right: 5px;
+		text-decoration: none;
+		position: relative;
+		top: 2px;
+	}
+}
+
+[aria-selected="true"] {
+	color: #aaa !important;
+	font-weight: bold;
+}
+.pickUp-tab__contents {
+	display: flex;
+	margin-top: 0;
+	width: fit-content;
+	margin-top: 2px;
+	section {
+		z-index: 9;
+		background-color: $bg-gray;
+		border-radius: 0 0 10px 10px;
+		width: fit-content;
+		height: fit-content;
+		&:nth-of-type(2) {
+			transform: translateX(rem(-40px));
+		}
+		&:nth-of-type(3) {
+			transform: translateX(rem(-430px));
+			p {
+				margin: 12px 24px;
+				background-image: url(./../../images/map/kRf.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				color: $map-font;
+				padding-left: rem(17px);
+			}
+		}
+		&:nth-of-type(4) {
+			transform: translateX(rem(-500px));
+		}
+		button {
+			height: fit-content;
+			width: fit-content;
+			display: block;
+			@include buttonNone;
+			margin: 12px 24px;
+			white-space: nowrap;
+		}
+	}
+	.selectedItem {
+		background: #fff !important;
+		color: #aaa !important;
+		font-weight: bold;
+	}
+	.unvisual {
+		visibility: hidden;
+	}
+}
+// map
+.pickup-mapinfo {
+	display: flex;
+	position: relative;
+	height: 90vh;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	max-width: 1024px;
+	#map {
+		width: 100%;
+		height: 100%;
+	}
+	&__search {
+		box-sizing: border-box;
+		padding-top: rem(61px);
+		height: 100%;
+		padding: 24px;
+		width: rem(320px);
+		border: 1px solid transparent;
+		border-image: linear-gradient(to left, $box-shadow-color 99%, transparent 100%);
+		border-image-slice: 1;
+		&__container {
+			position: relative;
+			margin-bottom: rem(38px);
+			#search {
+				text-indent: 3rem;
+				height: rem(45px);
+				border-radius: 20px;
+				width: 100%;
+				padding: 0;
+				border: 1px solid $pickup-border-color;
+				outline: none;
+
+				&:focus {
+					border-width: 3px;
+				}
+			}
+			button {
+				display: none;
+			}
+			label {
+				position: absolute;
+				top: 50%;
+				left: rem(14px);
+				transform: translateY(-50%);
+				width: rem(30px);
+				height: rem(30px);
+				display: block;
+				background-image: url(./../../images/map/AsG.png);
+				background-size: contain;
+			}
+		}
+	}
+}
+.pickuppage-layout {
+	position: relative;
+}
+
+[class^="column-"] {
+	-webkit-flex: 1;
+	flex: 1;
+	padding: 0 2em 0 2em;
+}
+[class^="column-"]:first-child {
+	border-right: 2px solid #ccc;
+}
+
+.pickup-container {
+	margin: 0 auto;
+	max-width: 1024px;
+	height: 100vh;
+}
+.pickup-menulist {
+	$images: (
+		"sushi": "sushi200.png",
+		"chinese": "jajangmyeon200.png",
+		"chicken": "chicken200.png",
+		"rice": "rice168.png",
+		"cafe": "cafe150.png",
+		"bunsik": "bunsik200.png",
+		"jjigae": "jjigae150.png",
+		"pizza": "pizza150.png",
+		"spagetti": "spagetti126.png",
+		"sam": "sam168.png",
+		"jok": "jok150.png",
+		"asian": "asian168.png",
+		"burger": "burger200.png",
+		"yasik": "yasik150.png",
+		"lunchbox": "lunchbox200.png",
+		"salad": "salad200.png",
+		"soup": "soup200.png",
+		"dairy": "dairy200.png",
+	);
+
+	.dm {
+		&__container {
+			box-sizing: border-box;
+			@include paddingY(10px);
+			@include paddingX(24px);
+		}
+
+		&__category {
+			width: 100%;
+
+			&__list {
+				white-space: wrap;
+				@include autoMargin;
+				min-width: 0;
+				width: rem(420px);
+				max-width: 100%;
+				overflow: hidden;
+				border-radius: rem(10px);
+				height: fit-content;
+				padding-top: rem(10px);
+			}
+
+			&__item {
+				white-space: wrap;
+				padding-top: 0px;
+				float: left;
+				position: relative;
+				text-align: center;
+				font-size: rem(10px);
+				text-align: center;
+				font-weight: 700;
+				width: rem(60px);
+				height: rem(60px);
+				&:nth-of-type(1) {
+					white-space: nowrap;
+				}
+				button {
+					margin: 0px;
+				}
+			}
+
+			&__link {
+				@each $name, $glyph in $images {
+					&__#{$name}::before {
+						content: "";
+						width: rem(60px);
+						height: rem(40px);
+						display: block;
+						background: url("../images/dilivery-main/#{$glyph}") no-repeat;
+						background-size: contain;
+						position: relative;
+						transform: translateX(15%);
+					}
+				}
+			}
+		}
+	}
+}
