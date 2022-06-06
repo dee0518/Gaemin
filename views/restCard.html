@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Restaurant Card Component</title>
+  </head>
+  <body>
+    <ul class="restaurantCard__container">
+      <!-- Restaurant Card -->
+      <li class="restCard">
+        <div class="imgContainer">
+          <img
+            src="../images/components/restaurantCard/gukbab2.jpg"
+            alt="설렁탕"
+          />
+        </div>
+        <div class="descContainer">
+          <h3 class="restName">
+            <!-- 주문 상세 페이지로 넘어갈 것 -->
+            <a href="/" class="restLink">백년설렁탕</a>
+          </h3>
+          <p class="sr-only">
+            고기가 많은 설렁탕으로 유명한 백년설렁탕의 메뉴를 눌러 확인해보세요.
+          </p>
+          <dl>
+            <div class="descWrapper__rating">
+              <dt class="sr-only">별점</dt>
+              <dd class="rating">4.8</dd>
+            </div>
+            <div class="descWrapper">
+              <dt class="minPrice">최소주문</dt>
+              <dd>9,000원</dd>
+            </div>
+            <div class="descWrapper">
+              <dt class="dilvTip">배달팁</dt>
+              <dd>
+                900원~1,900원<span class="sr-only">거리</span
+                ><span class="middot">&middot;</span>1.1km
+              </dd>
+            </div>
+            <br />
+            <div class="bmNo1wrapper">
+              <dt>배민<span class="sr-only">넘버원</span></dt>
+              <dd>10~20분</dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

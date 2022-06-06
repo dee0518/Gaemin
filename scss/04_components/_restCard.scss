@@ -1,0 +1,111 @@
+.restaurantCard__container {
+  width: 500px;
+}
+
+.restCard {
+  width: 100%;
+  position: relative;
+  background: $white;
+  border-radius: rem(28px);
+  box-shadow: rem(8px) rem(8px) rem(8px) $bg-gray;
+
+  .imgContainer {
+    width: 100%;
+    border-radius: rem(28px);
+
+    img {
+      border-radius: rem(28px);
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .descContainer {
+    width: 100%;
+    @include paddingX(12px);
+    @include paddingY(14px);
+    font-size: rem(20px);
+
+    .restName {
+      float: left;
+      padding-right: rem(4px);
+      font-size: rem(24px);
+      font-weight: 700;
+
+      .restLink::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    .descWrapper {
+      display: inline-block;
+      line-height: 2;
+      margin-right: 1rem;
+
+      &__rating {
+        line-height: 1.4;
+      }
+    }
+
+    dt {
+      color: $font-gray;
+    }
+
+    dt,
+    dd {
+      display: inline-block;
+    }
+
+    .rating {
+      font-weight: 700;
+    }
+
+    .rating::before {
+      content: "";
+      display: inline-block;
+      width: rem(18px);
+      height: rem(18px);
+      background: url("../../images/components/restaurantCard/star42.png");
+      background-size: 100%;
+      transform: translateY(10%);
+    }
+
+    .middot {
+      color: $font-gray;
+    }
+
+    .bmNo1wrapper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      border: 1px solid $banner-blue;
+      border-radius: rem(24px);
+      background: $bg-blue;
+      @include paddingY(6px);
+      @include paddingX(10px);
+
+      dt {
+        padding-right: 0.8rem;
+        font-weight: 700;
+        color: $font-blue;
+      }
+
+      dt:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: rem(46px);
+        width: rem(22px);
+        height: rem(22px);
+        background: url("../../images/components/restaurantCard/no1-24.png");
+        background-size: 100%;
+        transform: translateX(-15%);
+      }
+    }
+  }
+}
