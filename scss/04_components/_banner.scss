@@ -1,12 +1,13 @@
 .banner__event {
   @include boxSize;
+  margin-top: 1rem;
+  border-radius: 1rem;
 
   // 배너 item 공통 디자인
   &__tabpanel {
     @include boxSize;
     position: relative;
     background: skyblue;
-    border-radius: 1rem;
     padding: 2rem 4rem;
 
     img {

@@ -1,7 +1,9 @@
 // 배달 포장 카드
 .main__card {
   @include flexbox;
+  @include autoMargin;
   @include boxSize($h: 17rem);
+  margin-top: 1rem;
 
   &__item {
     @include boxSize($max-width: 512px);
@@ -52,4 +54,14 @@
     width: 1.5rem;
     height: 1.5rem;
   }
+}
+
+.main__banner__event,
+.main__card,
+.main__today__discount,
+.main__recent__order,
+.main__shopping__live {
+  @include autoMargin;
+  @include boxSize($h: auto);
+  margin-top: 2rem;
 }
