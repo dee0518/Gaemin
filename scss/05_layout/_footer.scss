@@ -28,7 +28,7 @@
 .footer__sub {
   padding-left: rem(20px);
   background-color: $bg-gray;
-  max-width: rem(1455px);
+  width: 100%;
   padding: rem(22px) 0 rem(60px) rem(184px);
   @include autoMargin;
 }
@@ -59,10 +59,26 @@
   height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
+  @include flexbox(row, flex-start, flex-start, wrap);
+  margin: rem(5px) 0;
+}
+
+.company__detail__sub {
+  margin-right: rem(10px);
 }
 
 .is--active {
-  height: rem(260px);
+  @include desktop {
+    height: rem(110px);
+  }
+
+  @include tablet {
+    height: rem(260px);
+  }
+}
+
+.footer__footer {
+  @include flexbox(row, flex-start, stretch, wrap);
 }
 
 

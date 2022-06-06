@@ -17,11 +17,12 @@ const modalHandler = () => {
   body.style.overflow = 'hidden';
 };
 
-const modalOff = () => {
+const modalOff = (e) => {
   modal.style.display = 'none';
   body.style.overflow = 'auto';
+  e.target.tagName === 'LI' && e.target.textContent !== '주소 추가' ? header_location.textContent = e.target.textContent : null;
 };
 
 company_toggle.addEventListener('click', companyToggleHandler);
 header_location.addEventListener('click', modalHandler);
-modal.addEventListener('click', modalOff);
+modal.addEventListener('click', (e) => modalOff(e));
