@@ -1,4 +1,4 @@
-const carousel = ($container, items) => {
+const bannerCarousel = ($bannerCarousel, items) => {
   let currentItem = 0;
   let isMoving = false;
   const DURATION = 500;
@@ -14,18 +14,26 @@ const carousel = ($container, items) => {
     $carouselList.style.setProperty("--duration", duration);
     $carouselList.style.setProperty("--currentItem", currentItem);
 
-    let itemCount = currentItem > items.length ? items.length : currentItem;
+    let itemCount =
+      currentItem <= 0
+        ? 1
+        : currentItem > items.length
+        ? items.length
+        : currentItem;
 
     $bannerCurrentItem.innerHTML = `${itemCount} / ${items.length} `;
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    $container.innerHTML = `
-<div class="banner__event__list carousel__list">
-  ${[items[items.length - 1], ...items, items[0]]
+    $bannerCarousel.innerHTML = `
+    <h2 class="main__heading banner__event__title sr-only">
+          지금 진행 중인 이벤트
+        </h2>
+<div class="banner__event__list banner__carousel__list">
+  ${[items[items.length - 1], ...items, items[0], items[1]]
     .map(
       (item) => `
-      <article class="banner__event__tabpanel carousel__item" role="tabpanel" aria-label="${item.index}번째 배너">
+      <article class="banner__event__tabpanel banner__carousel__item" role="tabpanel" aria-label="${item.index}번째 배너">
         <a href="#" class="banner__event__link">
         <img src="${item.img}" alt="" />
         <p class="banner__event__text">${item.text}</p>
@@ -37,35 +45,36 @@ const carousel = ($container, items) => {
     )
     .join("")}
 </div>
-<button class="banner__event__button carousel__list-button prev ">
-  <img class="carousel__list-button" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
+<button class="banner__event__button carousel__list__button prev ">
+  <img class="banner__carousel__list-button" src="/images/components/banner/gray-arrow60.png" alt="이전 배너 보기 버튼" />
 </button>
-<button class="banner__event__button carousel__list-button next">
-  <img class="carousel__list-button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />
+<button class="banner__event__button carousel__list__button next">
+  <img class="banner__carousel__list-button" src="/images/components/banner/gray-arrow60.png" alt="다음 배너 보기 버튼" />
 </button>
-<a href="#" type="button" class="banner__event__link__button"
-  ><span class="banner__event__link__button__current"> </span
+<a href="#" type="button" class="banner__event__link__button carousel__currnet__badge"
+  ><span class="banner__event__link__button__current carousel__currnet__badge__text"> </span
   >모두보기</a> 
 `;
 
-    $carouselList = document.querySelector(".carousel__list");
+    $carouselList = document.querySelector(".banner__carousel__list");
     $bannerCurrentItem = document.querySelector(
       ".banner__event__link__button__current"
     );
-  });
 
-  window.onload = () => {
-    $container.style.opacity = 1;
-
+    $bannerCarousel.style.opacity = 1;
     move(++currentItem);
 
     // Autoplay
     timerId = setInterval(() => move(++currentItem, DURATION), 5000);
-  };
+  });
 
-  $container.onclick = ({ target }) => {
+  // window.onload = () => {
+  // };
+
+  $bannerCarousel.onclick = ({ target }) => {
     console.log(target);
-    if (!target.classList.contains("carousel__list-button") || isMoving) return;
+    if (!target.classList.contains("carousel__list__button") || isMoving)
+      return;
 
     // Autoplay reset
     clearInterval(timerId);
@@ -80,7 +89,7 @@ const carousel = ($container, items) => {
     timerId = setInterval(() => move(++currentItem, DURATION), 5000);
   };
 
-  $container.ontransitionend = () => {
+  $bannerCarousel.ontransitionend = () => {
     isMoving = false;
 
     const point =
@@ -93,20 +102,24 @@ const carousel = ($container, items) => {
   };
 };
 
-carousel(document.querySelector(".carousel"), [
+/**
+ * DATA SET
+ * */
+
+bannerCarousel(document.querySelector(".banner__carousel"), [
   {
     index: 1,
     text: "당신의 먹스타일을 알려드릴게요",
     textBold1: "textBold1",
     textBold2: "textBold2",
-    img: "/images/components/banner/banner4.png",
+    img: "/images/components/banner/eventChicken.png",
   },
   {
     index: 2,
     text: "당신의 먹스타일을 알려드릴게요",
     textBold1: "textBold3",
     textBold2: "textBold4",
-    img: "/images/components/banner/banner4.png",
+    img: "/images/components/banner/eventChicken.png",
   },
   {
     index: 3,

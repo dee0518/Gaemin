@@ -1,5 +1,6 @@
-.today__discount {
+.main__today__discount {
   @include boxSize($h: 12rem);
+
   &__title {
     &::after {
       content: "";
@@ -23,6 +24,15 @@
     margin: 0.5rem;
   }
 
+  &__link {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+  }
+
   &__logo {
     height: 2rem;
     margin-bottom: 0.25rem;
@@ -43,15 +53,26 @@
   }
 }
 
-// // carousel
-// .carousel {
-//   @include carouselWrapper;
-//   &__list {
-//     display: flex;
-//     // @include carouselListWidth($numOfItem: 3);
-//     transition: transform calc(var(--duration) * 1ms) ease-out;
-//   }
-//   &__item {
-//     @include carouselSlideItem;
-//   }
-// }
+.today_discount__button {
+  height: 12rem;
+  // background: rgba($grayscaleGray1, 0.1);
+}
+
+// carousel
+.today__discount__carousel {
+  @include carouselWrapper;
+  &__list {
+    display: flex;
+    @include carouselListWidth(
+      $numOfItem: 6,
+      // before, contents, after1,2,3
+      $percent: -100%,
+      $eachItemPercent: 40%
+    );
+    transition: transform calc(var(--duration) * 1ms) ease-out;
+  }
+
+  &__item {
+    // @include carouselSlideItem($slidePercent: -40%);
+  }
+}

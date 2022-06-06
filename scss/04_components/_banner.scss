@@ -12,7 +12,7 @@
 
     img {
       position: absolute;
-      right: 0;
+      right: 5rem;
     }
   }
 
@@ -35,25 +35,29 @@
     letter-spacing: 0.2rem;
     margin-top: 0.75rem;
   }
+}
 
-  &__button {
-    @include buttonNone;
-    position: absolute;
-    width: 3rem;
-    height: 220px;
+.banner__event__button {
+  height: 220px;
+}
+.carousel__list__button {
+  @include buttonNone;
 
-    img {
-      width: 60%;
-    }
+  position: absolute;
+  width: 3rem;
 
-    // background: #000;
+  img {
+    width: 60%;
   }
+
+  // background: #000;
 }
 
 // 배너 이동 버튼
 .prev {
-  top: 0;
   left: 0;
+  bottom: 0;
+  // background-image: linear-gradient(to right, $white, transparent);
 
   img {
     transform: rotate(180deg);
@@ -61,11 +65,12 @@
 }
 
 .next {
-  top: 0;
+  bottom: 0;
   right: 0;
+  background-image: linear-gradient(to left, $white, transparent);
 }
 
-.banner__event__link__button {
+.carousel__currnet__badge {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -76,19 +81,20 @@
   font-size: 0.75rem;
   color: $grayscaleGray1;
 
-  &__current {
+  &__text {
     color: $white;
   }
 }
 
 // carousel
-.carousel {
+.banner__carousel {
   @include carouselWrapper;
   &__list {
     display: flex;
-    @include carouselListWidth($numOfItem: 4);
+    @include carouselListWidth($numOfItem: 4+1);
     transition: transform calc(var(--duration) * 1ms) ease-out;
   }
+
   &__item {
     @include carouselSlideItem;
   }
