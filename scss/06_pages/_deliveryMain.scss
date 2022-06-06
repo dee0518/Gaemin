@@ -24,7 +24,7 @@ $images: (
     @include paddingY(20px);
   }
 
-  // category list
+  // category section
   &__category {
     width: 100%;
 
@@ -34,7 +34,7 @@ $images: (
       max-width: rem(1140px);
       height: 100%;
       overflow: hidden;
-      border-radius: rem(10px);
+      border-radius: rem(28px);
     }
 
     &__item {
@@ -65,12 +65,28 @@ $images: (
     }
   }
 
-  // food list
+  // food section
   &__food {
-    height: 100px;
+    width: 100%;
+    padding: rem(60px);
     background: red;
 
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      min-width: rem(570px);
+      max-width: rem(1140px);
+      justify-content: space-between;
+      @include autoMargin;
+      overflow: hidden;
+      border-radius: rem(28px);
+      background: lime;
+    }
 
-    
+    .item__wrapper {
+      padding: rem(20px);
+      display: block;
+      width: 50%;
+    }
   }
 }
