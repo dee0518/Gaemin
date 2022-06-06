@@ -1,5 +1,9 @@
+.restaurantCard__container {
+  width: 500px;
+}
+
 .restCard {
-  width: 400px;
+  width: 100%;
   position: relative;
   min-width: rem(360px);
   background: $white;
