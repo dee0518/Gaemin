@@ -1,5 +1,5 @@
 // 공통 스타일
-.banner {
+.live__banner {
   background: $font-pink;
 }
 
@@ -8,7 +8,7 @@
   padding-bottom: 70px;
 }
 
-.banner__inner, .live__inner {
+.live__banner__inner, .live__inner {
   max-width: 1024px;
   @include autoMargin;
 }
