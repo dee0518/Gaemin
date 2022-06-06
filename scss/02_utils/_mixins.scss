@@ -61,18 +61,6 @@
   transform: translateY(-50%);
 }
 
-// flex 박스 믹스인
-@mixin flexbox(
-  $direction: row,
-  $justify: flex-start,
-  $items: stretch,
-  $wrap: nowrap
-) {
-  display: flex;
-  flex-flow: $direction $wrap;
-  justify-content: $justify;
-  align-items: $items;
-}
 
 @mixin boxSize($max-width: 1024px, $w: 100%, $h: 220px) {
   width: $w;
@@ -102,4 +90,11 @@
 @mixin carouselSlideItem($duration: 0s, $currentSlide: 0) {
   // transition: transform $duration ease-out;
   // transform: translate3d(calc($currentSlide * -100%), 0, 0);
+}
+
+// text-overflow 
+@mixin textOverflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

@@ -1,3 +1,123 @@
 // 헤더 시작 ------------------------------------------------------------------------ /
+.header {
+  width: 100%;
+  height: rem(161px);
+  background-color: $banner-blue;
+  border-radius: 0 0 15px 15px;
+  @include autoMargin;
+}
 
+.header__container {
+  padding-top: rem(30px);
+  max-width: rem(1024px);
+  @include autoMargin;
+}
+
+.header__login {
+  @include fontSetup(400, 20px, $font-white, 25px);
+  vertical-align: middle;
+  margin-right: rem(5px);
+}
+
+.header__sub1 {
+  @include flexbox(row, space-between, center);
+}
+
+.header__sub2 {
+  @include flexbox(row, center, center);
+  margin-top: rem(15px);
+}
+
+#search {
+  width: rem(500px);
+  height: rem(50px);
+  border: transparent;
+  border-radius: 3px;
+  text-indent: rem(50px);
+  @include fontSetup(400, 18px, $font-gray, 22px);
+}
+
+.search__fieldset{
+  position: relative;
+  &::before {
+    content: '';
+    width: rem(30px);
+    height: rem(30px);
+    display: inline-block;
+    background-image: url(../../images/components/header/serach-green48.png);
+    background-position: 0 0;
+    background-size: contain;
+    position: absolute;
+    top: rem(10px);
+    left: rem(10px);
+  }
+}
+
+
+.header__location {
+  @include fontSetup(400, 24px, $font-white, 30px);
+  cursor: pointer;
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    background-image: url(../../images/components/header/dropdown37.png);
+    background-position: 0 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+}
+
+.logo {
+  height: rem(30px);
+}
+
+.logo img {
+  display: inline-block;
+  &:first-child {
+    width: rem(30px);
+    height: rem(30px);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  position: absolute;
+  width: rem(400px);
+  height: 500px;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  border-radius: 0 0 15px 15px;
+  top: 0;
+  left: calc(50% - rem(200px));
+  height: 50%;
+  @include flexbox(row, center, center);
+  z-index: 1;
+}
+
+.modal_body h2 {
+  font-weight: bold;
+}
+
+.my__place__ul {
+  width: 100%;
+}
+
+.my__place__ul li{
+  border-bottom: 1px solid $black;
+  margin: 20px 0;
+  cursor: pointer;
+}
 // 헤더 종료 --------------------------------------------------------------------- /

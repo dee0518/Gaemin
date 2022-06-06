@@ -5,17 +5,16 @@
 $rootUnit: 16px !default;
 
 // 단위 제거 함수 ------------------------------------------------------------------ /
-@function removeUnit($value){
+@function removeUnit($value) {
   @return math.div($value, $value * 0 + 1);
 }
 
-
 // px을 rem 단위로 변경하는 함수 ------------------------------------------------------- /
-@function rem($value, $base: $rootUnit){
+@function rem($value, $base: $rootUnit) {
   @return math.div($value, $base) * 1rem;
 }
 
 // px을 em 단위로 변경하는 함수 ------------------------------------------------------- /
-@function em($value, $base: $rootUnit){
+@function em($value, $base: $rootUnit) {
   @return math.div($value, $base) * 1em;
 }
