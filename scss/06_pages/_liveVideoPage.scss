@@ -13,7 +13,7 @@
   &__inner {
     position: relative;
     display: inline-block;
-    width: calc(100vh * 0.5625);
+    width: calc(100vh * 0.528);
     min-width: 360px;
     height: 100%;
     min-height: 640px;
@@ -30,7 +30,7 @@
   &__logo {
     a {
       display: block;
-      width: 105px;
+      width: 108px;
       height: 30px;
       background: url(../../images/components/liveShoppingCard/logo-live.png) no-repeat;
       background-size: contain;
@@ -194,11 +194,26 @@
       }
 
       button {
+        position: relative;
         @include buttonNone;
         width: 50px;
         height: 40px;
         background: url(../../images/components/liveShoppingCard/icon-coupon.png) no-repeat;
         background-position: center;
+      }
+
+      &:nth-child(1) button {
+        &::after {
+          @include fontSetup(normal, 10px, $white, 16px);
+          content: attr(data-num);
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: $font-pink;
+        }
       }
 
       &:nth-child(2) button {
