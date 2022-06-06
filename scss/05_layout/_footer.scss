@@ -1,3 +1,85 @@
 // 푸터 시작 --------------------------------------------------------------------- /
+.customer__service__container {
+  display: flex;
+  border: 1px solid #E8E8E8;
+  margin: rem(15px) 0;
+  width: rem(500px);
+}
+
+.customer__service__container__sub1 {
+  border-right: 1px solid #E8E8E8;
+  padding: rem(10px);
+  flex-grow: 1;
+}
+
+.customer__service__container__sub2 {
+  padding: rem(10px);
+  flex-grow: 1;
+}
+
+.footer {
+  @include fontSetup(normal, 1rem, $font-gray, 1.3);
+}
+
+.footer__bold {
+  @include fontSetup(bold, 1rem, $font-black);
+}
+
+.footer__sub {
+  padding-left: rem(20px);
+  background-color: $bg-gray;
+  width: 100%;
+  padding: rem(22px) 0 rem(60px) rem(184px);
+  @include autoMargin;
+}
+
+.company__detail__toggle {
+  margin: 20px 0 10px 0;
+  width: rem(130px);
+  cursor: pointer;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-position: 0 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../images/components/footer/down42.png);
+  }
+}
+
+.company__toggle__up {
+  &::after {
+    background-image: url(../../images/components/footer/up42.png);
+  }
+}
+
+.company__detail {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  @include flexbox(row, flex-start, flex-start, wrap);
+  margin: rem(5px) 0;
+}
+
+.company__detail__sub {
+  margin-right: rem(10px);
+}
+
+.is--active {
+  @include desktop {
+    height: rem(110px);
+  }
+
+  @include tablet {
+    height: rem(260px);
+  }
+}
+
+.footer__footer {
+  @include flexbox(row, flex-start, stretch, wrap);
+}
+
 
 // 푸터 종료 --------------------------------------------------------------------- /
