@@ -1,0 +1,94 @@
+.banner__event {
+  @include boxSize;
+
+  // 배너 item 공통 디자인
+  &__tabpanel {
+    @include boxSize;
+    position: relative;
+    background: skyblue;
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+
+    img {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__item {
+    @include boxSize;
+  }
+
+  &__link {
+    @include boxSize;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+  }
+
+  &__text-bold {
+    font-weight: 700;
+    font-size: 2.25rem;
+    font-family: "BMHANNAPro";
+    letter-spacing: 0.2rem;
+    margin-top: 0.75rem;
+  }
+
+  &__button {
+    @include buttonNone;
+    position: absolute;
+    width: 3rem;
+    height: 220px;
+
+    img {
+      width: 60%;
+    }
+
+    // background: #000;
+  }
+}
+
+// 배너 이동 버튼
+.prev {
+  top: 0;
+  left: 0;
+
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.next {
+  top: 0;
+  right: 0;
+}
+
+.banner__event__link__button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 2px;
+  background: rgba($grayscaleGray1, 50%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3rem;
+  font-size: 0.75rem;
+  color: $grayscaleGray1;
+
+  &__current {
+    color: $white;
+  }
+}
+
+// carousel
+.carousel {
+  @include carouselWrapper;
+  &__list {
+    display: flex;
+    @include carouselListWidth($numOfItem: 4);
+    transition: transform calc(var(--duration) * 1ms) ease-out;
+  }
+  &__item {
+    @include carouselSlideItem;
+  }
+}

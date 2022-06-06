@@ -1,0 +1,57 @@
+.today__discount {
+  @include boxSize($h: 12rem);
+  &__title {
+    &::after {
+      content: "";
+      display: inline-block;
+      background: $white url("/images/main/icon_discout.png") no-repeat 0 0;
+      background-size: cover;
+      // background-position: ;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    @include boxSize($w: 40%, $h: 12rem, $max-width: calc(40 / 100 * 1024px));
+    border-radius: 1rem;
+    background: $grayscaleSnow;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  &__logo {
+    height: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__desc-top {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__desc-discount {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  &__desc-bottom {
+    font-size: 0.75rem;
+  }
+}
+
+// // carousel
+// .carousel {
+//   @include carouselWrapper;
+//   &__list {
+//     display: flex;
+//     // @include carouselListWidth($numOfItem: 3);
+//     transition: transform calc(var(--duration) * 1ms) ease-out;
+//   }
+//   &__item {
+//     @include carouselSlideItem;
+//   }
+// }
