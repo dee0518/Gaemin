@@ -1,0 +1,67 @@
+$images: (
+  "sushi": "sushi200.png",
+  "chinese": "jajangmyeon200.png",
+  "chicken": "chicken200.png",
+  "rice": "rice168.png",
+  "cafe": "cafe150.png",
+  "bunsik": "bunsik200.png",
+  "jjigae": "jjigae150.png",
+  "pizza": "pizza150.png",
+  "spagetti": "spagetti126.png",
+  "sam": "sam168.png",
+  "jok": "jok150.png",
+  "asian": "asian168.png",
+  "burger": "burger200.png",
+  "yasik": "yasik150.png",
+  "lunchbox": "lunchbox200.png",
+  "salad": "salad200.png",
+  "soup": "soup200.png",
+  "dairy": "dairy200.png",
+);
+
+.dm {
+  &__container {
+    @include paddingY(20px);
+  }
+
+  &__category {
+    width: 100%;
+
+    &__list {
+      @include autoMargin;
+      min-width: rem(570px);
+      max-width: rem(1140px);
+      // width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: rem(10px);
+    }
+
+    &__item {
+      float: left;
+      position: relative;
+      padding-top: rem(180px);
+      text-align: center;
+      font-size: rem(18px);
+      font-weight: 700;
+      width: rem(190px);
+      height: rem(210px);
+    }
+
+    &__link {
+      @each $name, $glyph in $images {
+        &__#{$name}::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: url("../images/dilivery-main/#{$glyph}") no-repeat;
+          background-size: 75%;
+          background-position: 50%;
+        }
+      }
+    }
+  }
+}
