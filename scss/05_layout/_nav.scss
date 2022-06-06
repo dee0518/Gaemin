@@ -1,0 +1,35 @@
+.nav {
+  height: rem(100px);
+  width: 100%;
+}
+
+.nav__sec {
+  text-align: center;
+}
+
+.nav__heading {
+  margin-top: rem(30px);
+  @include fontSetup(400, 24px, $font-black, 30px);
+}
+
+.nav__ul {
+  @include flexbox(row, center);
+  margin-top: rem(35px);
+  overflow-x: scroll;
+}
+
+.nav__li {
+  margin-right: rem(20px);
+  a {
+    @include fontSetup(400, 18px $font-black, 22px);
+    color: #858585;
+    white-space: nowrap;
+  }
+}
+
+.nav__li .selected {
+  border-bottom: 3px solid $black;
+  height: rem(35px);
+  color: $font-black;
+  display: inline-block;
+}
