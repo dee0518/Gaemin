@@ -1,0 +1,127 @@
+// 공통 스타일
+.banner {
+  background: $font-pink;
+}
+
+.live {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.banner__inner, .live__inner {
+  max-width: 1024px;
+  @include autoMargin;
+}
+
+.live__title {
+  margin-bottom: 20px;
+  @include fontSetup(700, 24px, $font-black, 1.2);
+}
+
+// 배너
+.banner__inner {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background: url(../../images/components/liveShoppingCard/shoppinglive486.png) no-repeat;
+  background-position: right -100px bottom;
+
+  .banner__text {
+    span {
+      display: block
+    }
+
+    &--bold {
+      margin-bottom: 25px;
+      @include fontSetup(bold, 48px, $white, 60px);
+    }
+    
+    &--normal {
+      @include fontSetup(normal, 20px, $white, 27px);
+    }
+  }
+}
+
+
+// 다가오는 라이브
+.live__schedule {
+  &__container {
+    @include flexbox($wrap: wrap);
+    gap: 22px;
+  }
+
+  &__item {
+    width: calc(50% - 22px);
+    
+    a {
+      position: relative;
+      display: block;
+      padding-left: 184px;
+    }
+
+    figure {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 160px;
+      height: 240px;
+      border-radius: 10px;
+      background: rgba(0,0,0,.5);
+    }
+
+    figcaption {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include fontSetup(400, 18px, $white, 1.2);
+      @include flexbox(column, center, center, nowrap);
+
+      span {
+        display: block;
+        text-align: center;
+
+        &:last-child {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  &__product__info {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      @include fontSetup(700,18px, $font-black, 25px);
+    }
+
+    & > span:first-child {
+      color: $font-pink;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    & > span:last-child {
+      margin-top: 3px;
+      color: $font-gray;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 32px;
+    @include fontSetup(400, 16px, $font-gray, 19px);
+  }
+
+  button {
+    @include buttonNone; 
+    @include fontSetup(400, 16px, $banner-blue, 1.2);
+    @include paddingY(6px);
+    padding-left: 40px;
+    padding-right: 15px;
+    border: 1px solid $banner-blue;
+    border-radius: 20px;
+  }
+}
