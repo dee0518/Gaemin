@@ -30,15 +30,14 @@ $images: (
 
     &__list {
       @include autoMargin;
-      min-width: rem(570px);
       max-width: rem(1140px);
       height: 100%;
       overflow: hidden;
       border-radius: rem(28px);
+      @include flexbox($wrap: wrap);
     }
 
     &__item {
-      float: left;
       position: relative;
       padding-top: rem(180px);
       text-align: center;
@@ -69,24 +68,38 @@ $images: (
   &__food {
     width: 100%;
     padding: rem(60px);
-    background: red;
 
     &__list {
       display: flex;
       flex-flow: row wrap;
-      min-width: rem(570px);
+      justify-content: space-between;
       max-width: rem(1140px);
       justify-content: space-between;
       @include autoMargin;
       overflow: hidden;
       border-radius: rem(28px);
-      background: lime;
+      // background: lime;
     }
 
-    .item__wrapper {
+    &__item {
       padding: rem(20px);
+      margin-bottom: rem(30px);
       display: block;
-      width: 50%;
+      width: 48%;
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .couponWrapper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      border-radius: rem(24px);
+      background: $bg-orange;
+      color: $font-orange;
+      @include paddingY(6px);
+      @include paddingX(10px);
     }
   }
 }
