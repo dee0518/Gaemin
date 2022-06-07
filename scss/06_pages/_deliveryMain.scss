@@ -78,7 +78,6 @@ $images: (
       @include autoMargin;
       overflow: hidden;
       border-radius: rem(28px);
-      // background: lime;
     }
 
     &__item {
@@ -86,9 +85,6 @@ $images: (
       margin-bottom: rem(30px);
       display: block;
       width: 48%;
-      @include tablet {
-        width: 100%;
-      }
     }
 
     .couponWrapper {
