@@ -1,0 +1,79 @@
+.cart__heading {
+  @include fontSetup(700, rem(30px), $font-black, rem(80px));
+  @include cartContainer(rem(80px), center, rem(10px));
+}
+
+.cart__order__detail {
+  @include cartContainer(rem(500px), left, rem(15px));
+}
+
+.cart__order__detail h2 {
+  height: rem(80px);
+  @include fontSetup(400, rem(20px), $font-black, rem(80px));
+  &::before {
+    content: '';
+    display: inline-block;
+    width: rem(30px);
+    height: rem(30px);
+    border-radius: rem(10px);
+    background-image: url(../../images/cart/jimdark.png);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(30%);
+    margin: 0 rem(20px);
+  }
+  box-shadow: 0 0.1px;
+}
+
+.cart__main {
+  max-width: rem(1024px);
+  @include autoMargin;
+}
+
+.left__70 {
+  width: 70%;
+}
+
+.cart__order__detail__top {
+  margin: rem(20px);
+  @include flexbox(row, space-between, center);
+}
+
+.cart__btn__x {
+  width: rem(20px);
+  height: rem(20px);
+  background-color: $white;
+}
+
+.cart__order__detail__main{
+  @include flexbox(row, flex-start, flex-start);
+  margin: rem(20px);
+  ul {
+    list-style: disc;
+    @include fontSetup(300, 16px, $font-gray, 2);
+  }
+  img {
+    border-radius: rem(10px);
+    margin-right: rem(40px);
+  }
+  li:last-child {
+    list-style: none;
+    text-indent: rem(-15px);
+    color: $font-black;
+  }
+}
+
+.cart__detail__btn {
+  box-shadow: 0 0 1px;
+  border-radius: 5px;
+  width: rem(150px);
+  height: rem(50px);
+  &::before {
+    content: '';
+    display: inline-block;
+    width: rem(50px);
+    height: rem(50px);
+    background-image: url();
+  }
+}

@@ -1,0 +1,40 @@
+.nav__main {
+  height: rem(60px);
+  width: 100%;
+  background-color: $white; 
+  padding-top: rem(15px);
+  position: fixed;
+  top: 150px;
+  left: 0;
+  box-shadow: 0 0.1px;
+}
+
+.nav__sec__main {
+  text-align: center; 
+  max-width: rem(1024px);
+  @include autoMargin;
+}
+
+.nav__heading {
+  @include fontSetup(400, 24px, $font-black, 30px);
+  padding: 5px 0;
+}
+
+.nav__ul__main {
+  @include flexbox(row, flex-start); 
+  margin-top: rem(10px);
+  overflow-x: scroll;
+}
+
+.nav__li__main {
+  margin-right: rem(20px);
+  a {
+    @include fontSetup(400, 18px $font-black, 22px);
+    color: #858585;
+    white-space: nowrap;
+  }
+}
+
+.nav__li__main .selected {
+  color: $font-blue;
+}

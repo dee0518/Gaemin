@@ -1,4 +1,10 @@
 // 공통 스타일
+.live__banner, .live {
+  @include tablet {
+    min-width: 700px;
+  }
+}
+
 .live__banner {
   background: $font-pink;
 }
@@ -9,8 +15,12 @@
 }
 
 .live__banner__inner, .live__inner {
-  max-width: 1024px;
-  @include autoMargin;
+  @include paddingX(25px);
+  
+  @include desktop {
+    max-width: 1024px;
+    @include autoMargin;
+  }
 }
 
 .live__title {
@@ -19,11 +29,20 @@
 }
 
 // 배너
-.banner__inner {
-  padding-top: 80px;
-  padding-bottom: 100px;
+.live__banner__inner {
   background: url(../../images/components/liveShoppingCard/shoppinglive486.png) no-repeat;
-  background-position: right -100px bottom;
+  
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 300px;
+    background-position: right -70px bottom;
+  }
+  
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-position: right -100px bottom;
+  }
 
   .banner__text {
     span {
@@ -50,12 +69,20 @@
   }
 
   &__item {
-    width: calc(50% - 22px);
+    
+    @include tablet {
+      width: 100%;
+    }
+
+    @include desktop {
+      width: calc(50% - 22px);
+    }
     
     a {
       position: relative;
       display: block;
       padding-left: 184px;
+      height: 240px;
     }
 
     figure {
@@ -63,7 +90,7 @@
       left: 0;
       top: 0;
       width: 160px;
-      height: 240px;
+      height: 100%;
       border-radius: 10px;
       background: rgba(0,0,0,.5);
     }

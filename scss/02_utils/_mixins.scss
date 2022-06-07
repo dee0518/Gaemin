@@ -61,7 +61,6 @@
   transform: translateY(-50%);
 }
 
-
 @mixin boxSize($max-width: 1024px, $w: 100%, $h: 220px) {
   width: $w;
   max-width: $max-width;
@@ -77,24 +76,37 @@
 }
 
 // carouselList width 설정
-@mixin carouselListWidth($numOfItem: 10) {
-  width: calc(100% * ($numOfItem + 2));
+@mixin carouselListWidth(
+  $numOfItem: 10,
+  $percent: -100%,
+  $eachItemPercent: 100%
+) {
+  width: calc($eachItemPercent * ($numOfItem + 2));
   transform: translate3D(
-    calc(var(--currentItem) * (1 / ($numOfItem + 2) * -100%)),
+    calc(var(--currentItem) * (1 / ($numOfItem + 2) * $percent)),
     0,
     0
   );
 }
 
 // 슬라이딩 비율 설정
-@mixin carouselSlideItem($duration: 0s, $currentSlide: 0) {
+@mixin carouselSlideItem($slidePercent: -100%) {
   // transition: transform $duration ease-out;
-  // transform: translate3d(calc($currentSlide * -100%), 0, 0);
+  transform: translate3d($slidePercent, 0, 0);
 }
 
-// text-overflow 
+// text-overflow
 @mixin textOverflow {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@mixin cartContainer($height, $align, $mg-top) {
+  @include autoMargin;
+  height: $height;
+  text-align: $align;
+  margin-top: $mg-top;
+  background-color: $white;
+  border-radius: 5px;
 }

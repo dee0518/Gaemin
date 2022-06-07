@@ -1,5 +1,16 @@
 // 라이브 비디오
 .live__video {
+  // play시 첫번쨰 버튼 사라짐
+  &__container.play {
+    .live__video__play--btn {
+      display: none;
+    }
+
+    .live__video__controller--btn--group .live__play__btn {
+      background-image: url(../../images/components/liveShoppingCard/icon-pause.png);
+    }
+  }
+
   &__wrapper {
     position: fixed;
     left: 0;
@@ -13,10 +24,10 @@
   &__inner {
     position: relative;
     display: inline-block;
-    width: calc(100vh * 0.528);
-    min-width: 360px;
+    width: calc(100vh * 0.5268);
+    min-width: 355px;
     height: 100%;
-    min-height: 640px;
+    min-height: 680px;
     text-align: left;
   }
 
@@ -25,6 +36,7 @@
     position: absolute;
     left: 10px;
     top: 10px;
+    z-index: 1;
   }
 
   &__logo {
@@ -102,6 +114,7 @@
     position: absolute;
     right: 10px;
     top: -30px;
+    z-index: 1;
     @include flexbox;
     gap: 5px;
 
@@ -125,19 +138,16 @@
       background-size: contain;
     }
 
+    & li.muted button {
+      background-image: url(../../images/components/liveShoppingCard/icon-sound.png);
+    }
+
     & li:nth-child(3) button {
       background-image: url(../../images/components/liveShoppingCard/icon-sound.png);
     }
 
     & li:last-child button {
       background-image: url(../../images/components/liveShoppingCard/icon-close.png);
-    }
-  }
-
-  // play시 첫번쨰 버튼 사라짐
-  &__container.play {
-    .live__video__play--btn {
-      display: none;
     }
   }
 
@@ -313,12 +323,10 @@
       border-radius: 2px;
       background: $font-gray;
 
-      &::after {
-        content: "";
+      .progress__bar {
         position: absolute;
         left: 0;
         top: 0;
-        width: 50%;
         height: 100%;
         border-radius: 2px;
         background: $white;
@@ -344,6 +352,15 @@
           height: 30px;
           background: url(../../images/components/liveShoppingCard/icon-play.png) no-repeat;
           background-position: center;
+        }
+
+        &:first-child button{
+          background-image: url(../../images/components/liveShoppingCard/icon-arrow.png);
+          transform: rotate(180deg);
+        }
+
+        &:last-child button{
+          background-image: url(../../images/components/liveShoppingCard/icon-arrow.png);
         }
       }
     }
