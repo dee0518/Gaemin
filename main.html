@@ -30,7 +30,7 @@
         <div class="header__container">
           <div class="header__sub1">
             <h1 class="logo">
-              <a href="/">
+              <a href="./main.html">
                 <img
                   src="./images/components/header/logo72.png"
                   alt="배달의 민족 로고"
@@ -43,13 +43,13 @@
             </h1>
             <p class="header__location">주소를 알려주세요!</p>
             <div class="login__container">
-              <a href="/" class="header__login">로그인</a>
-              <a href=""
+              <a href="#" class="header__login">로그인</a>
+              <a href="#"
                 ><img
                   src="./images/components/header/person32.png"
                   alt="마이배민"
               /></a>
-              <a href=""
+              <a href="#"
                 ><img
                   src="./images/components/header/cart46.png"
                   alt="장바구니"
@@ -64,24 +64,14 @@
                 <input
                   type="search"
                   id="search"
+                  name="qqq"
                   placeholder="닭발?   순대?   곱창?"
                 />
               </fieldset>
             </form>
           </div>
         </div>
-        <div class="modal">
-          <div class="modal__body">
-            <section class="my__place">
-              <h2>주소 설정</h2>
-              <ul class="my__place__ul">
-                <li>우리 집</li>
-                <li>우리 회사</li>
-                <li><a href="/">주소 추가</a></li>
-              </ul>
-            </section>
-          </div>
-        </div>
+        
       </header>
 
       <!-- nav -->
@@ -121,7 +111,7 @@
 
         <!-- 탭 영역 -->
         <a
-          href=""
+          href="./views/deliveryMain.html"
           class="main__card__item delivery"
           role="tab"
           aria-label="배달 페이지 이동 버튼"
@@ -131,7 +121,7 @@
           <p class="main__card__item__desc">맞집은 많다</p>
         </a>
         <a
-          href=""
+          href="./index.html"
           class="main__card__item package"
           role="tab"
           aria-label="포장 페이지 이동 버튼"
@@ -282,7 +272,7 @@
         <ul class="live__special__container">
           <li class="live__special__items">
             <a
-              href="./liveVideo.html"
+              href="./views/liveVideo.html"
               target="_self"
               rel="opener"
               class="live__special__link"
@@ -679,6 +669,18 @@
           ></button>
         </div>
       </footer>
+      <div class="modal">
+        <div class="modal__body">
+          <section class="my__place">
+            <h2>주소 설정</h2>
+            <ul class="my__place__ul">
+              <li>우리 집</li>
+              <li>우리 회사</li>
+              <li><a href="/">주소 추가</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
   <script type="module" src="/js/index.js" defer></script>
