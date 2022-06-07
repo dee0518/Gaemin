@@ -6,14 +6,20 @@ $shadow: #d5d5d5;
 // Main Color
 $bg-gray: #f6f6f6;
 $bg-blue: #f0faf9;
-$bg-orange: #F2E4D6;
+$bg-orange: #f2e4d6;
 $font-white: #fffffd;
 $font-gray: #858585;
 $font-dark-gray: #858585;
 $font-black: #222222;
 $font-blue: #2ac1bc;
 $font-orange: #dc8a32;
-$banner-blue: #2ac1bc;
+$banner-blue: rgb(42, 193, 188);
+
+$carousel-darkgreen: rgb(9, 85, 54);
+$carousel-orange: rgb(255, 143, 43);
+$carousel-pink: rgb(251, 115, 151);
+$carousel-green: rgb(128, 216, 107);
+$carousel-olive: rgb(155, 171, 98);
 
 // grayscale 흑백
 $grayscaleWhite: #fefefe;
@@ -30,4 +36,4 @@ $grayscaleGray6: #eee;
 $pickup-border-color: #149793;
 $box-shadow-color: rgba($shadow, 0.5);
 $map-font: #c2a681;
-$font-pink: #FF4A4A;
+$font-pink: #ff4a4a;
