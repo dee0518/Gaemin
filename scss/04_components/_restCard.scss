@@ -12,11 +12,11 @@
   .imgContainer {
     width: 100%;
     border-radius: rem(28px);
-
+    overflow: hidden;
+    
     img {
       border-radius: rem(28px);
       width: 100%;
-      height: auto;
     }
   }
 
@@ -64,15 +64,13 @@
     .rating {
       font-weight: 700;
     }
-
-    .rating::before {
-      content: "";
-      display: inline-block;
-      width: rem(18px);
-      height: rem(18px);
-      background: url("../../images/components/restaurantCard/star42.png");
-      background-size: 100%;
-      transform: translateY(10%);
+    .rating-dt {
+      img {
+        display: inline-block;
+        width: rem(25px);
+        padding-bottom: rem(5px);
+        background-size: contain;
+      }
     }
 
     .middot {
@@ -90,21 +88,21 @@
       @include paddingX(10px);
 
       dt {
-        padding-right: 0.8rem;
         font-weight: 700;
         color: $font-blue;
       }
 
-      dt:after {
-        content: "";
+      .no1 {
         display: inline-block;
-        position: absolute;
-        left: rem(46px);
-        width: rem(22px);
+        width: rem(20px);
         height: rem(22px);
         background: url("../../images/components/restaurantCard/no1-24.png");
-        background-size: 100%;
-        transform: translateX(-15%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-indent: 99rem;
+        white-space: nowrap;
+        transform: translateY(10%);
+        overflow: hidden;
       }
     }
   }
