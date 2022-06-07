@@ -19,6 +19,7 @@
 
 .footer {
   @include fontSetup(normal, 1rem, $font-gray, 1.3);
+  background-color: $bg-gray;
 }
 
 .footer__bold {
@@ -27,9 +28,9 @@
 
 .footer__sub {
   padding-left: rem(20px);
-  background-color: $bg-gray;
-  width: 100%;
-  padding: rem(22px) 0 rem(60px) rem(184px);
+  max-width: rem(1024px);
+  padding: rem(22px) 0 rem(60px) 0;
+  position: relative;
   @include autoMargin;
 }
 
