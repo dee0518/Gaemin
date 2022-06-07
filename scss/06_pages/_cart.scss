@@ -29,10 +29,22 @@
 .cart__main {
   max-width: rem(1024px);
   @include autoMargin;
+
+  @include desktop {
+    @include flexbox;
+    gap: 10px;
+  }
+
+  @include tablet {
+    padding-bottom: rem(150px);
+  }
 }
 
 .left__70 {
-  width: 70%;
+  @include desktop {
+    flex-shrink: 0;
+    width: 70%;
+  }
 }
 
 .cart__order__detail__top {
@@ -69,11 +81,46 @@
   border-radius: 5px;
   width: rem(150px);
   height: rem(50px);
+  margin-left: auto;
+  margin-right: rem(20px);
+  margin: rem(20px) rem(20px) rem(20px) auto;
+  @include fontSetup(700, 20px, $font-black);
+  @include flexbox(row, space-between, center);
   &::before {
     content: '';
     display: inline-block;
-    width: rem(50px);
-    height: rem(50px);
-    background-image: url();
+    width: rem(20px);
+    height: rem(20px);
+    background-image: url(../../images/cart/minus-512.webp);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    width: rem(20px);
+    height: rem(20px);
+    background-image: url(../../images/cart/plus-black72.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+}
+
+.want__more__food {
+  @include fontSetup(400, 18px, $font-black);
+  display: inline-block;
+  transform: translateY(50px);
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 -0.1px;
+  padding-top: rem(20px);
+  & img {
+    width: rem(20px);
+    height: rem(20px);
+    margin-right: rem(20px);
   }
 }
