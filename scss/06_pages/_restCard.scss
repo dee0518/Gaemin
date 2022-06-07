@@ -31,15 +31,6 @@
         padding-right: rem(4px);
         font-size: rem(20px);
         font-weight: 700;
-
-        .restLink::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          right: 0;
-          bottom: 0;
-        }
       }
 
       .descWrapper {
@@ -65,16 +56,6 @@
         font-weight: 700;
       }
 
-      .rating::before {
-        content: "";
-        display: inline-block;
-        width: rem(18px);
-        height: rem(18px);
-        background: url("../../images/components/restaurantCard/star42.png");
-        background-size: 100%;
-        transform: translateY(25%);
-      }
-
       .middot {
         color: $font-gray;
       }
@@ -94,20 +75,86 @@
           font-weight: 700;
           color: $font-blue;
         }
-
-        dt:after {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          left: rem(46px);
-          width: rem(22px);
-          height: rem(15px);
-          background: url("../../images/components/restaurantCard/no1-24.png");
-          background-size: contain;
-          background-repeat: no-repeat;
-          transform: translateX(-15%);
-        }
       }
     }
   }
+}
+// skeleton test code
+body {
+  margin: 0px;
+}
+.d-flex {
+  display: flex;
+}
+@media (max-width: 767.98px) {
+  .d-flex {
+    display: block;
+  }
+}
+.item {
+  padding: 2rem;
+}
+.item-img {
+  position: relative;
+  width: 320px;
+  height: 180px;
+}
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+/* 이미지의 스켈레톤(뼈대) */
+.loading-img {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+/**
+ * 깜박이는 블링크 애니메이션
+ */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+  z-index: 99;
+  float: inherit;
+}
+/* 실제 이미지 */
+
+.item-text {
+  position: relative;
+  width: 320px;
+}
+/* 텍스트의 스켈레톤 */
+.loading-text {
+  margin-bottom: 0.7rem;
+  height: 20px;
+  background-color: #e0e0e0;
+  z-index: 999;
+}
+/**
+       * 실제 텍스트
+       */
+h3 {
+  margin-bottom: 0.5rem;
+}
+.create-date {
+  font-size: smaller;
+  margin-bottom: 0.5rem;
+}
+.intro {
+  font-style: italic;
+  word-break: break-all;
+}
+/* 스켈레톤 스크린 숨기기 */
+.loading-hidden {
+  display: none;
+}
+.bmNo1wrapper {
+  z-index: 0;
 }

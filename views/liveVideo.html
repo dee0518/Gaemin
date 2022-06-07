@@ -25,9 +25,9 @@
             <span>프랜차이즈 상품권 특가 판매</span>
           </div>
           <ul class="live__video__top--btn--group">
-            <li class="live__video__play--btn"><button aria-label="재생"></button></li>
-            <li class="live__video__muted--btn"><button aria-label="음소거" aria-pressed="false"></button></li>
-            <li class="live__video__alarm--btn">
+            <li class="live__video__play--btn live__play__btn"><button aria-label="재생"></button></li>
+            <li class="live__video__muted--btn live__muted__btn"><button aria-label="음소거" aria-pressed="false"></button></li>
+            <li class="live__video__alarm--btn live__alarm__btn">
               <button aria-label="알림받기" aria-pressed="false"></button>
             </li>
             <li class="live__video__close--btn">
@@ -98,20 +98,24 @@
             </a>
           </div>
           <div class="live__video__controller--group">
-            <div class="live__video__controller__progress--bar" role="progressbar" tabindex="0" aria-label="탐색 슬라이더" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="4분 30초 중 0분 0초"></div>
-            <div class="live__video__controller__time" aria-hidden="true">
-              <span>0:00</span>
-              <span>04:30</span>
+            <div class="live__video__controller__progress--bar" role="progressbar" aria-label="영상 프로그래스 바" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="4분 30초 중 0분 0초">
+              <span class="progress__bar"></span>
             </div>
-            <ul class="live__video__controller--btn--group">
-              <li><button type="button" aria-label="10초 전으로 이동"></button></li>
-              <li><button type="button" aria-label="재생" aria-pressed="false"></button></li>
-              <li><button type="button" aria-label="10초 후로 이동"></button></li>
+            <div class="live__video__controller__time" aria-hidden="true">
+              <span class="timer">00:00</span>
+              <span class="all__timer">00:00</span>
+            </div>
+            <ul class="live__video__controller--btn--group" role="tablist">
+              <li><button type="button" class="rewind__forward" aria-label="영상 앞으로 되감기" tabindex="0"></button></li>
+              <li><button type="button" class="live__play__btn" aria-label="재생" aria-pressed="false" tabindex="-1"></button></li>
+              <li><button type="button" class="rewind__backward" aria-label="영상 뒤로 감기" tabindex="-1"></button></li>
             </ul>
           </div>
         </div>
       </section>
     </div>
   </div>
+  <script src="../js/liveVideo.js"></script>
+
 </body>
 </html>
