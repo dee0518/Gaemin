@@ -1,0 +1,20 @@
+.dc {
+  &__wrapper {
+    max-width: rem(1024px);
+    padding-top: 100px;
+    @include autoMargin;
+  }
+
+  &__list {
+    @include flexbox($justify: space-between, $wrap: wrap);
+  }
+  
+  &__food {
+    
+    &__item {
+      width: 31%;
+      @include marginY(20px);
+      box-shadow: none;
+    }
+  }
+}
