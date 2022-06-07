@@ -34,7 +34,7 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
   ${[items[items.length - 1], ...items, items[0], items[1], items[2]]
     .map(
       (item) => `
-      <article class="main__today__discount__item today__discount__carousel__item" role="tabpanel" aria-label="${item.index}번째 배너">
+      <article class="main__today__discount__item today__discount__carousel__item ${item.styleClass}" role="tabpanel" aria-label="${item.index}번째 배너">
         <a href="#" class="main__today__discount__link">
         <img
               src="${item.logo}"
@@ -122,6 +122,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descBottem1: "홈파티의 정석!",
     descBottom2: "집에서 즐기는 빕스 다이닝",
     background: "/images/components/banner/vips-bg.png",
+    styleClass: "card__orange",
   },
   {
     index: 2,
@@ -131,6 +132,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descBottem1: "홈파티의 정석!",
     descBottom2: "집에서 즐기는 빕스 다이닝",
     background: "/images/components/banner/vips-bg.png",
+    styleClass: "card__darkgreen",
   },
   {
     index: 3,
@@ -140,6 +142,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descBottem1: "홈파티의 정석!",
     descBottom2: "집에서 즐기는 빕스 다이닝",
     background: "/images/components/banner/vips-bg.png",
+    styleClass: "card__pink",
   },
   {
     index: 4,
@@ -149,5 +152,6 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descBottem1: "홈파티의 정석!",
     descBottom2: "집에서 즐기는 빕스 다이닝",
     background: "/images/components/banner/vips-bg.png",
+    styleClass: "card__olive",
   },
 ]);

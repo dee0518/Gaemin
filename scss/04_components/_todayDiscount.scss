@@ -30,6 +30,7 @@
 
   &__bg {
     position: absolute;
+    margin-left: -1rem;
     right: 0;
   }
 
@@ -55,7 +56,11 @@
 
 .today_discount__button {
   height: 12rem;
+  bottom: 0.5rem;
   // background: rgba($grayscaleGray1, 0.1);
+  &.next {
+    background-image: linear-gradient(to left, $white, transparent);
+  }
 }
 
 // carousel

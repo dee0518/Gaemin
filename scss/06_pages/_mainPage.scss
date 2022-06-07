@@ -8,6 +8,7 @@
   &__item {
     @include boxSize($max-width: 512px);
     border-radius: 1rem;
+    border: 1px solid $grayscaleGray5;
     margin: 0.25rem;
     padding: 2rem;
 
@@ -85,7 +86,6 @@
       width: 1.8rem;
       height: 1.8rem;
     }
-
   }
 
   &::after {
@@ -115,6 +115,26 @@
       flex-shrink: 0;
       width: 280px;
     }
+  }
+}
 
+.card {
+  &__darkgreen {
+    background: $carousel-darkgreen;
+  }
+
+  &__orange {
+    background: $carousel-orange;
+  }
+
+  &__pink {
+    background: $carousel-pink;
+  }
+
+  &__green {
+    background: $carousel-green;
+  }
+  &__olive {
+    background: $carousel-olive;
   }
 }

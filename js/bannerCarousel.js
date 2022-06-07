@@ -33,7 +33,7 @@ const bannerCarousel = ($bannerCarousel, items) => {
   ${[items[items.length - 1], ...items, items[0], items[1]]
     .map(
       (item) => `
-      <article class="banner__event__tabpanel banner__carousel__item" role="tabpanel" aria-label="${item.index}번째 배너">
+      <article class="banner__event__tabpanel banner__carousel__item ${item.styleClass}" role="tabpanel" aria-label="${item.index}번째 배너">
         <a href="#" class="banner__event__link">
         <img src="${item.img}" alt="" />
         <p class="banner__event__text">${item.text}</p>
@@ -46,10 +46,10 @@ const bannerCarousel = ($bannerCarousel, items) => {
     .join("")}
 </div>
 <button class="banner__event__button carousel__list__button prev ">
-  <img class="banner__carousel__list-button" src="/images/components/banner/gray-arrow60.png" alt="이전 배너 보기 버튼" />
+  <img class="banner__carousel__list-button" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
 </button>
 <button class="banner__event__button carousel__list__button next">
-  <img class="banner__carousel__list-button" src="/images/components/banner/gray-arrow60.png" alt="다음 배너 보기 버튼" />
+  <img class="banner__carousel__list-button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />
 </button>
 <a href="#" type="button" class="banner__event__link__button carousel__currnet__badge"
   ><span class="banner__event__link__button__current carousel__currnet__badge__text"> </span
@@ -113,6 +113,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     textBold1: "textBold1",
     textBold2: "textBold2",
     img: "/images/components/banner/eventChicken.png",
+    styleClass: "card__green",
   },
   {
     index: 2,
@@ -120,6 +121,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     textBold1: "textBold3",
     textBold2: "textBold4",
     img: "/images/components/banner/eventChicken.png",
+    styleClass: "card__pink",
   },
   {
     index: 3,
@@ -127,6 +129,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     textBold1: "textBold5",
     textBold2: "textBold6",
     img: "/images/components/banner/banner4.png",
+    styleClass: "card__darkgreen",
   },
   {
     index: 4,
@@ -134,5 +137,6 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     textBold1: "textBold7",
     textBold2: "textBold8",
     img: "/images/components/banner/banner4.png",
+    styleClass: "card__orange",
   },
 ]);
