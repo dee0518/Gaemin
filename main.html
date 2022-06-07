@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>홈</title>
+    <title>배달의 민족 for Web</title>
     <meta
       name="description"
       content="배달의 민족 웹-태블릿 전용 페이지입니다."
@@ -20,7 +20,9 @@
       href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/style.css" />
+
   </head>
   <body>
     <div class="tablet__container">
@@ -31,11 +33,13 @@
             <h1 class="logo">
               <a href="/">
                 <img
+
                   src="./images/components/header/logo72.png"
                   alt="배달의 민족 로고"
                 />
                 <img
                   src="./images/components/header/logo.svg"
+
                   alt="배달의 민족"
                 />
               </a>
@@ -45,12 +49,16 @@
               <a href="/" class="header__login">로그인</a>
               <a href=""
                 ><img
+
                   src="./images/components/header/person32.png"
+
                   alt="마이배민"
               /></a>
               <a href=""
                 ><img
+
                   src="./images/components/header/cart46.png"
+
                   alt="장바구니"
               /></a>
             </div>
@@ -110,20 +118,19 @@
 
       <!-- 배너 -->
       <section
-        class="banner__event slide carousel"
+        class="banner__event banner__carousel"
         role="region"
         aria-labelledby="carouselheading"
-      >
-        <h2 class="main__heading banner__event__title sr-only">
-          지금 진행 중인 이벤트
-        </h2>
-      </section>
+      ></section>
       <!-- 배달 / 포장 -->
       <section class="main__card">
+
+        <h2 class="sr-only">배달, 포장 카드 링크</h2>
+
         <!-- 탭 영역 -->
         <a
           href=""
-          class="main__card__item"
+          class="main__card__item delivery"
           role="tab"
           aria-label="배달 페이지 이동 버튼"
         >
@@ -133,7 +140,7 @@
         </a>
         <a
           href=""
-          class="main__card__item"
+          class="main__card__item package"
           role="tab"
           aria-label="포장 페이지 이동 버튼"
         >
@@ -144,28 +151,504 @@
       </section>
 
       <!-- 오늘의 할인 -->
-      <section class="main__today__discount">
-        <h2 class="main__section__heading main__today__discount__title">
-          오늘의 할인
-        </h2>
-        <a href="" class="main__sction__link">전체보기</a>
-        <div class="carousel"></div>
-      </section>
+      <section
+        class="main__today__discount today__discount__carousel"
+      ></section>
 
       <!-- 최근에 주문했어요 -->
       <section class="main__recent__order">
         <h2 class="main__section__heading main__recent__order__title">
           최근에 주문했어요
         </h2>
-        <a href="" class="main__sction__link">전체보기</a>
-        <div class="carousel"></div>
+        <a href="" class="main__section__link">전체보기</a>
+
+        <ul class="main__restCards">
+
+          <!-- Restaurant Card -->
+          <li class="restCard">
+            <div class="imgContainer">
+              <img
+
+                src="../images/delivery-main/jok.jpg"
+                alt="족발"
+
+              />
+            </div>
+            <div class="descContainer">
+              <h3 class="restName">
+
+                <a href="/" class="restLink">마약족발</a>
+              </h3>
+              <p class="sr-only">
+                마약같은 맛의 마약족발
+
+              </p>
+              <dl>
+                <div class="descWrapper__rating">
+                  <dt class="sr-only">별점</dt>
+                  <dd class="rating">4.5</dd>
+                </div>
+                <div class="descWrapper">
+                  <dt class="dilvTip">배달팁</dt>
+                  <dd>
+                    1,500원~2,500원<span class="sr-only">거리</span
+                    ><span class="middot">&middot;</span>0.8km
+                  </dd>
+                </div>
+                <br />
+                <div class="bmNo1wrapper">
+                  <dt>배민<span class="sr-only">원</span></dt>
+                  <dd></dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+          <li class="restCard">
+            <div class="imgContainer">
+              <img
+                src="../images/delivery-main/jok.jpg"
+                alt="족발"
+              />
+            </div>
+            <div class="descContainer">
+              <h3 class="restName">
+                <a href="/" class="restLink">마약족발</a>
+              </h3>
+              <p class="sr-only">
+                마약같은 맛의 마약족발
+              </p>
+              <dl>
+                <div class="descWrapper__rating">
+                  <dt class="sr-only">별점</dt>
+                  <dd class="rating">4.5</dd>
+                </div>
+                <div class="descWrapper">
+                  <dt class="dilvTip">배달팁</dt>
+                  <dd>
+                    1,500원~2,500원<span class="sr-only">거리</span
+                    ><span class="middot">&middot;</span>0.8km
+                  </dd>
+                </div>
+                <br />
+                <div class="bmNo1wrapper">
+                  <dt>배민<span class="sr-only">원</span></dt>
+                  <dd></dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+          <li class="restCard">
+            <div class="imgContainer">
+              <img
+                src="../images/delivery-main/jok.jpg"
+                alt="족발"
+              />
+            </div>
+            <div class="descContainer">
+              <h3 class="restName">
+                <a href="/" class="restLink">마약족발</a>
+              </h3>
+              <p class="sr-only">
+                마약같은 맛의 마약족발
+              </p>
+              <dl>
+                <div class="descWrapper__rating">
+                  <dt class="sr-only">별점</dt>
+                  <dd class="rating">4.5</dd>
+                </div>
+                <div class="descWrapper">
+                  <dt class="dilvTip">배달팁</dt>
+                  <dd>
+                    1,500원~2,500원<span class="sr-only">거리</span
+                    ><span class="middot">&middot;</span>0.8km
+                  </dd>
+                </div>
+                <br />
+                <div class="bmNo1wrapper">
+                  <dt>배민<span class="sr-only">원</span></dt>
+                  <dd></dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+          <li class="restCard">
+            <div class="imgContainer">
+              <img
+                src="../images/delivery-main/jok.jpg"
+                alt="족발"
+              />
+            </div>
+            <div class="descContainer">
+              <h3 class="restName">
+                <a href="/" class="restLink">마약족발</a>
+              </h3>
+              <p class="sr-only">
+                마약같은 맛의 마약족발
+              </p>
+              <dl>
+                <div class="descWrapper__rating">
+                  <dt class="sr-only">별점</dt>
+                  <dd class="rating">4.5</dd>
+
+                </div>
+                <div class="descWrapper">
+                  <dt class="dilvTip">배달팁</dt>
+                  <dd>
+
+                    1,500원~2,500원<span class="sr-only">거리</span
+                    ><span class="middot">&middot;</span>0.8km
+
+                  </dd>
+                </div>
+                <br />
+                <div class="bmNo1wrapper">
+
+                  <dt>배민<span class="sr-only">원</span></dt>
+                  <dd></dd>
+
+                </div>
+              </dl>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <!-- 배민 쇼핑라이브  -->
-      <section class="main__shopping__live">
+      <section class="live__special main__shopping__live">
         <h2 class="main__section__heading shopping__live">배민 쇼핑 라이브</h2>
-        <a href="" class="main__sction__link">전체보기</a>
-        <div class="carousel"></div>
+        <a href="" class="main__section__link">전체보기</a>
+        <ul class="live__special__container">
+          <li class="live__special__items">
+            <a
+              href="./liveVideo.html"
+              target="_self"
+              rel="opener"
+              class="live__special__link"
+            >
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source
+                      src="../images/components/liveShoppingCard/ex01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap"
+                        >미스터 피자 상품권 특가 판매</span
+                      >
+                      <span aria-labelledby="live__special__video__figcap"
+                        >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
+                      >
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span
+                          >1,000원 쿠폰<span class="sr-only">제공</span></span
+                        >
+                      </span>
+                      <span class="live__special__video__viewer"
+                        >63,185<span class="sr-only">명 시청 중</span></span
+                      >
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span
+                      >미스터 피자
+                      <span class="live__special__coupon--bottom">20,000원</span
+                      >상품권<span aria-hidden="true">/</span></span
+                    >
+                  </dt>
+                  <dd>
+                    <span>25%<span class="sr-only">할인</span></span>
+                    <span
+                      >15,000원<span class="sr-only">으로 판매중</span></span
+                    >
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a
+              href="./liveVideo.html"
+              target="_self"
+              rel="opener"
+              class="live__special__link"
+            >
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source
+                      src="../images/components/liveShoppingCard/ex01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap"
+                        >미스터 피자 상품권 특가 판매</span
+                      >
+                      <span aria-labelledby="live__special__video__figcap"
+                        >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
+                      >
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span
+                          >1,000원 쿠폰<span class="sr-only">제공</span></span
+                        >
+                      </span>
+                      <span class="live__special__video__viewer"
+                        >63,185<span class="sr-only">명 시청 중</span></span
+                      >
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span
+                      >미스터 피자
+                      <span class="live__special__coupon--bottom">20,000원</span
+                      >상품권<span aria-hidden="true">/</span></span
+                    >
+                  </dt>
+                  <dd>
+                    <span>25%<span class="sr-only">할인</span></span>
+                    <span
+                      >15,000원<span class="sr-only">으로 판매중</span></span
+                    >
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a
+              href="./liveVideo.html"
+              target="_self"
+              rel="opener"
+              class="live__special__link"
+            >
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source
+                      src="../images/components/liveShoppingCard/ex01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap"
+                        >미스터 피자 상품권 특가 판매</span
+                      >
+                      <span aria-labelledby="live__special__video__figcap"
+                        >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
+                      >
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span
+                          >1,000원 쿠폰<span class="sr-only">제공</span></span
+                        >
+                      </span>
+                      <span class="live__special__video__viewer"
+                        >63,185<span class="sr-only">명 시청 중</span></span
+                      >
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span
+                      >미스터 피자
+                      <span class="live__special__coupon--bottom">20,000원</span
+                      >상품권<span aria-hidden="true">/</span></span
+                    >
+                  </dt>
+                  <dd>
+                    <span>25%<span class="sr-only">할인</span></span>
+                    <span
+                      >15,000원<span class="sr-only">으로 판매중</span></span
+                    >
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a
+              href="./liveVideo.html"
+              target="_self"
+              rel="opener"
+              class="live__special__link"
+            >
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source
+                      src="../images/components/liveShoppingCard/ex01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap"
+                        >미스터 피자 상품권 특가 판매</span
+                      >
+                      <span aria-labelledby="live__special__video__figcap"
+                        >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
+                      >
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span
+                          >1,000원 쿠폰<span class="sr-only">제공</span></span
+                        >
+                      </span>
+                      <span class="live__special__video__viewer"
+                        >63,185<span class="sr-only">명 시청 중</span></span
+                      >
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span
+                      >미스터 피자
+                      <span class="live__special__coupon--bottom">20,000원</span
+                      >상품권<span aria-hidden="true">/</span></span
+                    >
+                  </dt>
+                  <dd>
+                    <span>25%<span class="sr-only">할인</span></span>
+                    <span
+                      >15,000원<span class="sr-only">으로 판매중</span></span
+                    >
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a
+              href="./liveVideo.html"
+              target="_self"
+              rel="opener"
+              class="live__special__link"
+            >
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source
+                      src="../images/components/liveShoppingCard/ex01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap"
+                        >미스터 피자 상품권 특가 판매</span
+                      >
+                      <span aria-labelledby="live__special__video__figcap"
+                        >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
+                      >
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span
+                          >1,000원 쿠폰<span class="sr-only">제공</span></span
+                        >
+                      </span>
+                      <span class="live__special__video__viewer"
+                        >63,185<span class="sr-only">명 시청 중</span></span
+                      >
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span
+                      >미스터 피자
+                      <span class="live__special__coupon--bottom">20,000원</span
+                      >상품권<span aria-hidden="true">/</span></span
+                    >
+                  </dt>
+                  <dd>
+                    <span>25%<span class="sr-only">할인</span></span>
+                    <span
+                      >15,000원<span class="sr-only">으로 판매중</span></span
+                    >
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a
+              href="./liveVideo.html"
+              target="_self"
+              rel="opener"
+              class="live__special__link"
+            >
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source
+                      src="../images/components/liveShoppingCard/ex01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap"
+                        >미스터 피자 상품권 특가 판매</span
+                      >
+                      <span aria-labelledby="live__special__video__figcap"
+                        >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
+                      >
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span
+                          >1,000원 쿠폰<span class="sr-only">제공</span></span
+                        >
+                      </span>
+                      <span class="live__special__video__viewer"
+                        >63,185<span class="sr-only">명 시청 중</span></span
+                      >
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span
+                      >미스터 피자
+                      <span class="live__special__coupon--bottom">20,000원</span
+                      >상품권<span aria-hidden="true">/</span></span
+                    >
+                  </dt>
+                  <dd>
+                    <span>25%<span class="sr-only">할인</span></span>
+                    <span
+                      >15,000원<span class="sr-only">으로 판매중</span></span
+                    >
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <!-- footer -->
@@ -227,5 +710,6 @@
     </div>
   </body>
   <script type="module" src="/js/index.js" defer></script>
-  <script type="module" src="/js/carousel.js"></script>
+  <script type="module" src="/js/bannerCarousel.js"></script>
+  <script type="module" src="/js/todayDiscountCarousel.js"></script>
 </html>
