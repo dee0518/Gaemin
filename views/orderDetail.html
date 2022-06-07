@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>주문 상세 페이지</title>
+</head>
+<body class="order__detail">
+  <!-- 해더 -->
+  <header class="order__detail__header">
+    <div class="order__detail__inner">
+      <div class="order__detail__header__btn--group">
+        <button type="button" aria-label="뒤로 가기"></button>
+        <p aria-hidden="true">유명 찜닭</p>
+        <button type="button" aria-label="음식 공유하기"></button>
+      </div>
+      <div class="order__detail__header__desc">
+        <h1>유명찜닭</h1>
+        <p>찜닭에 우삼겹, 분모자떡, 감자만두를 곁들인 특이하고 색다른 맛</p>
+      </div>
+    </div>
+  </header>
+  <main class="order__detail__main">
+    <section class="order__detail__menu">
+      <h2>가격</h2>
+      <ul class="order__detail__radio--group">
+        <li>
+          <label for="s">
+            <span>소반마리+우삼겹130g+만두3+떡4</span>
+            <span>25,000원</span>
+          </label>
+          <input id="s" type="radio" name="price">
+        </li>
+        <li>
+          <label for="m">
+            <span>소반마리+우삼겹130g+만두3+떡4</span>
+            <span>25,000원</span>
+          </label>
+          <input id="m" type="radio" name="price">
+        </li>
+        <li>
+          <label for="l">
+            <span>소반마리+우삼겹130g+만두3+떡4</span>
+            <span>25,000원</span>
+          </label>
+          <input id="l" type="radio" name="price">
+        </li>
+      </ul>
+    </section>
+    <section class="order__detail__menu">
+      <h2>메뉴선택</h2>
+      <ul class="order__detail__radio--group">
+        <li>
+          <label for="bone">
+            <span>뼈</span>
+            <span><span aria-hidden="true">+</span>0원</span>
+          </label>
+          <input id="bone" type="radio" name="type">
+        </li>
+        <li>
+          <label for="boneless">
+            <span>순살</span>
+            <span><span aria-hidden="true">+</span>0원</span>
+          </label>
+          <input id="boneless" type="radio" name="type">
+        </li>
+        <li>
+          <label for="rice">
+            <span>공기밥</span>
+            <span><span aria-hidden="true">+</span>0원</span>
+          </label>
+          <input id="rice" type="radio" name="type">
+        </li>
+      </ul>
+    </section>
+    <section class="order__detail__menu">
+      <h2>추가선택 <span aria-hidden="true">(</span>최대 11개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
+      <ul class="order__detail__chk--group">
+        <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" id="ex1"></li>
+        <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" id="ex1"></li>
+        <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" id="ex1"></li>
+        <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" id="ex1"></li>
+        <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" id="ex1"></li>
+      </ul>
+    </section>
+    <section class="order__detail__total">
+      <h2>수량</h2>
+      <div class="order__detail__total__btn--group">
+        <button type="button" aria-hidden="수량 하나 줄이기"></button>
+        <span><span class="order__detail__total__num">1</span>개</span>
+        <button type="button" aria-hidden="수량 하나 더하기"></button>
+      </div>
+    </section>
+    <section class="order__detail__warning">
+      <h2 class="sr-only">경고문</h2>
+      <p class="order__detail__warning__desc">메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.</p>
+    </section>
+    <section class="order__detail__total__price">
+      <h2 class="sr-only">최종 선택 수량과 금액</h2>
+      <p>배달최소주문금액 12,000원</p>
+      <button type="button">
+        <span><span class="total__count">1</span>개 담기</span>
+        <span><span class="total__price">25,000</span>원</span>
+      </button>
+    </section>
+  </main>
+</body>
+</html>

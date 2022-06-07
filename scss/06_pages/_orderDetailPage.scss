@@ -1,0 +1,172 @@
+.order__detail {
+  background-color: $grayscaleSnow;
+  padding-bottom: 150px;
+
+  &__inner {
+    @include tablet {
+      width: 100%;
+    }
+    
+    @include desktop {
+      max-width: 1024px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    height: 250px;
+    background-color: $font-gray;
+
+    &__btn--group {
+      @include flexbox($justify: space-between, $items: center);
+      position: fixed;
+      left: 50%;
+      top: 0;
+      width: 100%;
+      transform: translateX(-50%);
+
+      @include desktop {
+        max-width: 1024px;    
+      }
+      
+      button {
+        @include buttonNone;
+        width: 50px;
+        height: 50px;
+        background: url(../../images/order-detail/left-white36.png) no-repeat;
+        background-size: 24px;
+        background-position: center;
+
+        &:last-child {
+          background-image: url(../../images/order-detail/share-white96.png);
+        }
+      }
+      
+      p {
+        display: none;
+      }
+    }
+    
+    &.on {
+      .order__detail__header__btn--group {
+        background: $white;
+        box-shadow: 0 2px 10px 0 $box-shadow-color;
+        
+        button {
+          background-image: url(../../images/order-detail/left-black36.png);
+          
+          &:last-child {
+            background-image: url(../../images/order-detail/share-black96.png);
+          }
+        }
+  
+        p {
+          @include fontSetup(bold, 18px, $black, 1.2);
+          display: block;
+        }
+      }
+    }
+
+    &__desc {
+      @include paddingX(20px);
+      @include paddingY(20px);
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      width: calc(100% - 30px);
+      border-radius: 5px;
+      text-align: center;
+      background-color: $white;
+      box-shadow: 0px 2px 10px 0 $box-shadow-color;
+
+      @include desktop {
+        max-width: 994px;    
+      }
+      
+      h1 {
+        @include fontSetup(bold, 20px, $black, 1.2);
+        margin-bottom: 10px;
+      }
+
+      p {
+        @include fontSetup(normal, 16px, $black, 1.2);
+      }
+    }
+  }
+
+  
+  &__menu {
+    &:first-child {
+      padding-top: 100px;
+    }  
+
+    label {
+      @include flexbox($justify: space-between, $items: center);
+    }
+ }
+
+ &__total {
+  @include paddingX(20px);
+  @include paddingY(30px);
+  @include flexbox($justify:space-between, $items: center);
+  background: $white;
+  border-bottom: 1px solid $grayscaleGray6;
+
+  @include desktop {
+    @include autoMargin;
+    max-width: 1024px;    
+  }
+  
+  h2 {
+    @include fontSetup(bold, 20px, $black, 1.2);
+  }
+}
+
+&__warning {
+  @include paddingY(30px);
+  @include paddingX(20px);
+  @include fontSetup(normal, 12px, $font-gray, 1.2);
+  text-align: center;
+ }
+
+ &__total__price {
+  @include paddingY(30px);
+  @include paddingX(20px);
+   position: fixed;
+   left: 50%;
+   bottom: 0;
+   width: 100%;
+   transform: translateX(-50%);
+   background: $white;
+   text-align: center;
+
+   @include desktop {
+     border-radius: 10px 10px 0 0;
+    max-width: 1024px;    
+  }
+
+   p {
+     @include fontSetup(normal, 14px, $black, 1.2);
+     margin-bottom: 10px;
+   }
+
+   button {
+     @include buttonNone;
+     @include paddingY(15px);
+     @include fontSetup(bold, 18px, $white, 1.2);
+     position: relative;
+     width: 100%;
+     border-radius: 5px;
+     background: $font-blue;
+
+    & > span:last-child {
+      @include fontSetup(bold, 14px, $white, 1.2);
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+   }
+ }
+}
