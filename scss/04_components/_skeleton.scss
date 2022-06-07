@@ -4,19 +4,24 @@
   height: 100%;
   background: #ffffff;
 }
-/* 이미지의 스켈레톤(뼈대) */
-.loading-img {
+.loadingImg {
   width: 100%;
-  height: inherit;
-  background-color: #e0e0e0;
-  border-radius: rem(24px);
+  background: #e0e0e0;
+  border-radius: rem(28px);
+  position: absolute;
+  height: 125px;
+  @include tablet {
+    height: 240px;
+  }
 }
+/* 이미지의 스켈레톤(뼈대) */
+
 /**
  * 깜박이는 블링크 애니메이션
  */
 @keyframes blinker {
   50% {
-    background-color: rgb(155, 154, 154);
+    background-color: rgb(209, 209, 209);
   }
 }
 .blink_me {
@@ -28,6 +33,7 @@
 
 /* 텍스트의 스켈레톤 */
 .loading-text {
+  position: absolute;
   margin: 10px 10px 0px 7px;
   height: 60px;
   background-color: #e0e0e0;
@@ -41,5 +47,5 @@
 
 /* 스켈레톤 스크린 숨기기 */
 .loading-hidden {
-  display: none;
+  z-index: -999;
 }
