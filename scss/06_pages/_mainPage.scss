@@ -85,5 +85,36 @@
       width: 1.8rem;
       height: 1.8rem;
     }
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 340px;
+    background-image: linear-gradient(to left, #fff, transparent);
+  }
+
+  // 카드리스트
+  .main__restCards {
+    @include flexbox;
+    overflow-x: scroll;
+    gap: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .restCard {
+      flex-shrink: 0;
+      width: 280px;
+    }
+
   }
 }

@@ -20,24 +20,24 @@ $images: (
 );
 
 .dm {
-  &__container {
+  &__wrapper {
     @include paddingY(20px);
   }
 
+  // category section
   &__category {
     width: 100%;
 
     &__list {
       @include autoMargin;
-      min-width: rem(570px);
       max-width: rem(1140px);
       height: 100%;
       overflow: hidden;
-      border-radius: rem(10px);
+      border-radius: rem(28px);
+      @include flexbox($wrap: wrap);
     }
 
     &__item {
-      float: left;
       position: relative;
       padding-top: rem(180px);
       text-align: center;
@@ -56,11 +56,46 @@ $images: (
           position: absolute;
           top: 0;
           left: 0;
-          background: url("../images/dilivery-main/#{$glyph}") no-repeat;
+          background: url("../images/delivery-main/#{$glyph}") no-repeat;
           background-size: 75%;
           background-position: 50%;
         }
       }
+    }
+  }
+
+  // food section
+  &__food {
+    width: 100%;
+    padding: rem(60px);
+
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      max-width: rem(1140px);
+      justify-content: space-between;
+      @include autoMargin;
+      overflow: hidden;
+      border-radius: rem(28px);
+    }
+
+    &__item {
+      padding: rem(20px);
+      margin-bottom: rem(30px);
+      display: block;
+      width: 48%;
+    }
+
+    .couponWrapper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      border-radius: rem(24px);
+      background: $bg-orange;
+      color: $font-orange;
+      @include paddingY(6px);
+      @include paddingX(10px);
     }
   }
 }
