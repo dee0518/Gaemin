@@ -16,6 +16,7 @@
 		text-decoration: none;
 		position: relative;
 		top: 2px;
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -24,7 +25,7 @@
 		background-image: url(./../../images/map/star.png);
 		background-repeat: no-repeat;
 		background-size: 30%;
-		background-position: 5% 50%;
+		background-position: 5% 37%;
 		padding-left: 20px;
 	}
 	#tab4 {
@@ -34,7 +35,7 @@
 	#tab4::before {
 		position: absolute;
 		top: 50%;
-		transform: translateY(-45%);
+		transform: translateY(-60%);
 		left: 0px;
 		right: 0px;
 		bottom: 0px;
@@ -82,6 +83,8 @@
 	margin-top: 0;
 	width: fit-content;
 	margin-top: 2px;
+	position: absolute;
+
 	section {
 		z-index: 9;
 		background-color: $bg-gray;
@@ -126,15 +129,26 @@
 // map
 .pickup-mapinfo {
 	display: flex;
-	position: relative;
 	height: 90vh;
-	position: absolute;
+	float: left;
 	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	width: 100%;
 	max-width: 1024px;
 	#map {
 		width: 100%;
 		height: 100%;
+
+		.loading-map {
+			background-color: #e0e0e0;
+			width: 100%;
+			height: 100%;
+			animation: blinker 1s linear infinite;
+			z-index: 99;
+			float: inherit;
+		}
 	}
 	&__search {
 		box-sizing: border-box;
@@ -145,9 +159,65 @@
 		border: 1px solid transparent;
 		border-image: linear-gradient(to left, $box-shadow-color 99%, transparent 100%);
 		border-image-slice: 1;
+		overflow: auto;
+		.pickup-cardlist {
+			.imgContainer {
+				height: 120px;
+			}
+			li {
+				margin-top: rem(24px);
+				&:nth-of-type(1) {
+					margin-top: 1px;
+				}
+			}
+			.descWrapper__rating {
+				display: flex;
+				align-items: center;
+			}
+			.rating-dt {
+				img {
+					margin-right: rem(6px);
+					margin-left: rem(-2px);
+					width: 20px;
+					margin-top: rem(-5px);
+				}
+			}
+			.rating {
+				height: 2rem;
+				margin-left: rem(-5px);
+				margin-top: rem(-4px);
+			}
+			.loading-text {
+				position: absolute;
+				padding: rem(10px);
+				margin-left: 0;
+				height: rem(110px);
+				margin-top: 0px;
+				width: 80%;
+				border-radius: 5%;
+				&:nth-of-type(2) {
+					height: rem(80px);
+					margin-right: rem(35px);
+				}
+			}
+			.loading-button {
+				margin-left: rem(9px);
+				margin-top: -27px;
+				height: rem(40px);
+				width: 90%;
+				@include tablet {
+					width: 50%;
+				}
+			}
+			.descWrapper {
+				line-height: 1.4rem;
+			}
+		}
 		&__container {
 			position: relative;
 			margin-bottom: rem(38px);
+			overflow: hidden;
+
 			#search {
 				text-indent: 3rem;
 				height: rem(45px);
@@ -194,8 +264,9 @@
 .pickup-container {
 	margin: 0 auto;
 	max-width: 1024px;
-	height: 100vh;
+	// height: 100%;
 }
+
 .pickup-menulist {
 	$images: (
 		"sushi": "sushi200.png",
@@ -271,6 +342,65 @@
 						position: relative;
 						transform: translateX(15%);
 					}
+				}
+			}
+		}
+	}
+}
+.tablet__container {
+	&.pickup {
+		footer {
+			float: left;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}
+@include tablet {
+	.pickup-mapinfo {
+		display: flex;
+		flex-flow: column nowrap;
+		#map {
+			height: 600px;
+			order: 1;
+		}
+		&__search {
+			order: 2;
+			width: 100%;
+			.pickup-cardlist {
+				text-align: center;
+			}
+			.restCard {
+				display: inline-block;
+				width: 40%;
+				&:nth-of-type(odd) {
+					margin-right: rem(40px);
+				}
+				text-align: start;
+			}
+		}
+	}
+	.pickUp-tab__contents {
+		width: 100%;
+	}
+	.pickup-cardlist {
+		.restCard,
+		.loading-img {
+			.imgContainer {
+				height: 240px;
+			}
+		}
+		.loading {
+			.loading-text {
+				&:nth-child(1) {
+					display: none;
+				}
+				&:nth-of-type(2) {
+					height: 70px;
+					width: 220px;
 				}
 			}
 		}

@@ -6,4 +6,4 @@ const hideLoading = () => {
   });
 }
 // 테스트 코드
-window.onload = setTimeout(hideLoading, 2000);
+window.onload = hideLoading;
