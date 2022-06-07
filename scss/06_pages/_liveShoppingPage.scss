@@ -97,16 +97,32 @@
     }
 
     figure {
+      position: relative;
       width: 160px;
       height: 100%;
       border-radius: 10px;
-      background: rgba(0,0,0,.5);
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.1);
+      }
+
+      img {
+        height: 100%;
+      }
     }
 
     figcaption {
       position: absolute;
       left: 0;
       top: 0;
+      z-index: 1;
       width: 100%;
       height: 100%;
       @include fontSetup(400, 18px, $white, 1.2);
