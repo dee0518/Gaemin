@@ -1,12 +1,13 @@
 // 라이브 특가
 .live__special {
+  position: relative;
   margin-bottom: 75px;
   
   &::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 0;
+    top: 49px;
     width: 60px;
     height: 340px;
     background-image: linear-gradient(to left, #fff, transparent);
@@ -113,7 +114,10 @@
       top: 0;
       width: 70px;
       height: 70px;
-      background: lavender;
+      border-radius: 5px;
+      background: url(../../images/components/liveShoppingCard/pizza-logo.png) no-repeat;
+      background-position: center;
+      background-size: cover;
     }
 
     dl {

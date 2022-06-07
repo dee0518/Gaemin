@@ -6,6 +6,7 @@
 }
 
 .live__banner {
+  margin-top: 60px;
   background: $font-pink;
 }
 
@@ -69,7 +70,8 @@
   }
 
   &__item {
-    
+    position: relative;
+
     @include tablet {
       width: 100%;
     }
@@ -79,16 +81,22 @@
     }
     
     a {
-      position: relative;
       display: block;
-      padding-left: 184px;
-      height: 240px;
+
+      &:first-child {
+        height: 210px;
+        padding-left: 184px;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 240px;
+      }
     }
 
     figure {
-      position: absolute;
-      left: 0;
-      top: 0;
       width: 160px;
       height: 100%;
       border-radius: 10px;
@@ -146,9 +154,9 @@
     @include buttonNone; 
     @include fontSetup(400, 16px, $banner-blue, 1.2);
     @include paddingY(6px);
-    padding-left: 40px;
-    padding-right: 15px;
+    @include paddingX(20px);
     border: 1px solid $banner-blue;
     border-radius: 20px;
+    margin-left: 184px;
   }
 }
