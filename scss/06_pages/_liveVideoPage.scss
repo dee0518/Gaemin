@@ -167,6 +167,7 @@
     padding-left: 10px;
     -ms-overflow-style: none;
     scrollbar-width: none; 
+    @include flexbox($direction: column, $justify: flex-end);
 
     &::-webkit-scrollbar {
       display: none;

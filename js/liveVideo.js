@@ -9,8 +9,21 @@
   const timer = document.querySelector('.timer');
   const allTimer = document.querySelector('.all__timer');
   const rewindBtns = document.querySelectorAll('[class*=rewind__]');
+  const chatContainer = document.querySelector('.live__video__chatting');
+  const chatObject = {
+    '배민123': '맛있겠다',
+    'pizzang': '피자피자 먹고 싶다.',
+    'ajdi': '사죠',
+    '닉네임이뭘까': '댓글댓글댓글',
+    '어령ㄴ123': '길게 길게 써보기이이이이이이',
+    '배민123': '맛있겠다',
+    'pizzang': '피자피자 먹고 싶다.',
+    'ajdi': '사죠',
+    '닉네임이뭘까': '댓글댓글댓글',
+    '어령123': '길게 길게 써보기이이이이이이'
+  }
   let setTimer;
-
+  
   // 비디오 초기화
   const initVideo = () => {
     const video_du = Math.round(video.duration);
@@ -87,6 +100,8 @@
       progressBar.style.width = Math.round((video_cur / video_du) * 100) + '%';
       timer.innerHTML = '00:' + (video_cur < 10? ('0' + video_cur) : video_cur)
     });
+
+    addChat()
   }
 
   // 되감기
@@ -106,6 +121,23 @@
     progress.setAttribute('aria-valuetext', `${video_du}초 중 ${video.currentTime}초 재생 중`);
     progressBar.style.width = Math.round((video.currentTime / video_du) * 100) + '%';
     timer.innerHTML = '00:' + (Math.round(video.currentTime) < 10? ('0' + Math.round(video.currentTime)) : Math.round(video.currentTime))
+  }
+
+  // 댓글 추가하기
+  let index = 0
+
+  const addChat = () => {
+    for (let pro in chatObject) {
+      setTimeout(function(){
+        const pTag = document.createElement('p');
+        pTag.classList.add('chat');
+        pTag.innerHTML = `<b>${pro}</b><span>${chatObject[pro]}</span>`;
+        
+        chatContainer.append(pTag)
+      }, 1000*index++);  
+    }
+
+    index = 0
   }
 
   document.addEventListener("DOMContentLoaded", () => {
