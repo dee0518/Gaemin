@@ -24,9 +24,9 @@ const nav = () => {
   };
 
   const render = () => {
-    nav_li[0].classList.add("selected");
-    nav_li[0].setAttribute("aria-selected", "true");
-    const firstTabtoShow = nav_li[0].getAttribute("aria-controls");
+    nav_li[4].classList.add("selected");
+    nav_li[4].setAttribute("aria-selected", "true");
+    const firstTabtoShow = nav_li[4].getAttribute("aria-controls");
     const firstSelectedPannel = document.getElementById(firstTabtoShow);
     firstSelectedPannel.style.display = "block";
     firstSelectedPannel.style.paddingTop = "100px";

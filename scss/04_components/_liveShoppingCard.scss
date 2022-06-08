@@ -35,6 +35,30 @@
     a {
       display: block;
     }
+
+    &:nth-child(2) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/burgerking-logo.png);
+      } 
+    }
+
+    &:nth-child(3) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
+      } 
+    }
+
+    &:nth-child(4) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/paris-logo.png);
+      } 
+    }
+
+    &:nth-child(5) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
+      } 
+    }
   }
   
   &__video {
@@ -145,4 +169,5 @@
       }
     }
   }
+
 }
