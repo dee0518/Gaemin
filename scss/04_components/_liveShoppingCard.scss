@@ -2,7 +2,7 @@
 .live__special {
   position: relative;
   margin-bottom: 75px;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -20,18 +20,17 @@
     @include flexbox;
     gap: 15px;
     -ms-overflow-style: none;
-    scrollbar-width: none; 
+    scrollbar-width: none;
 
     &::-webkit-scrollbar {
       display: none;
     }
-
   }
 
   &__items {
     flex-shrink: 0;
     width: 225px;
-    
+
     a {
       display: block;
     }
@@ -39,28 +38,28 @@
     &:nth-child(2), &:nth-child(7) {
       .live__special__coupon::before {
         background-image: url(../../images/components/liveShoppingCard/burgerking-logo.png);
-      } 
+      }
     }
 
     &:nth-child(3), &:nth-child(8) {
       .live__special__coupon::before {
-        background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
-      } 
+        background-image: url(../../images/main/meat.jpg);
+      }
     }
 
     &:nth-child(4), &:nth-child(9) {
       .live__special__coupon::before {
         background-image: url(../../images/components/liveShoppingCard/paris-logo.png);
-      } 
+      }
     }
 
     &:nth-child(5), &:nth-child(10) {
       .live__special__coupon::before {
         background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
-      } 
+      }
     }
   }
-  
+
   &__video {
     position: relative;
     height: 340px;
@@ -71,7 +70,7 @@
     & video {
       width: 100%;
     }
-    
+
     & figcaption {
       box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5) inset;
       position: absolute;
@@ -91,7 +90,7 @@
         @include fontSetup(700, 18px, $white, 1.2);
       }
     }
-    
+
     &__type {
       position: absolute;
       left: 10px;
@@ -119,7 +118,7 @@
       position: absolute;
       left: 10px;
       top: 10px;
-      background: rgba(0,0,0,.3) url(../../images/components/liveShoppingCard/icon-person.png) no-repeat;
+      background: rgba(0, 0, 0, 0.3) url(../../images/components/liveShoppingCard/icon-person.png) no-repeat;
       background-size: 14px;
       background-position: 6px center;
       border-radius: 6px;
@@ -152,22 +151,21 @@
       @include fontSetup(700, 14px, $font-gray, 1.2);
       margin-bottom: 36px;
     }
-    
+
     &--bottom {
       position: absolute;
       top: 22px;
       left: 0;
     }
-    
+
     dd {
       & > span:first-child {
         @include fontSetup(700, 16px, $font-orange, 1.2);
       }
-      
+
       & > span:last-child {
         @include fontSetup(700, 16px, $font-black, 1.2);
       }
     }
   }
-
 }

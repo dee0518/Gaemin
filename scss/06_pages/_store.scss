@@ -20,10 +20,17 @@ body {
   // box-shadow: 0 10px 10px 0 $box-shadow-color;
 
   &__header {
-    width: calc(100% - 2rem);
-    margin: 1rem;
+    // width: calc(100% - 2rem);
+    // margin: 1rem;
+    padding-top: 300px;
+    background: url(../../images/order-detail/dunkin.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top 40%;
 
     &__title-card {
+      @include autoMargin;
+      width: calc(100% - 2rem);
+      transform: translateY(8rem);
       padding-top: 1.25rem;
       padding-left: 1.25rem;
       padding-right: 1.25rem;
@@ -31,7 +38,7 @@ body {
       border-radius: 5px;
       text-align: center;
       background-color: #fff;
-      box-shadow: 0px 2px 10px 0 rgb(213 213 213 / 50%);
+      box-shadow: 0px 5px 10px 0 rgb(213 213 213 / 50%);
 
       &__name {
         font-weight: bold;
@@ -41,20 +48,32 @@ body {
         margin-bottom: 1rem;
       }
     }
-
-    &__review {
-      margin-top: 0.75rem;
-      color: $grayscaleGray1;
-    }
   }
 }
 
-.star-point {
-  display: inline-block;
-  background: url(/images/map/star.png) no-repeat 0 0;
-  background-size: contain;
-  width: 1.5rem;
-  height: 1.5rem;
+.badge-cesco {
+  color: #fff;
+  background-color: #038ad1;
+  border-radius: 5px 0 5px 0;
+  font-size: 0.75rem;
+  padding: 00.25rem;
+}
+
+.star {
+  &-point {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(/images/reataurant-detail/starfull84.png) no-repeat 0 0;
+    background-size: contain;
+  }
+  &-point-half {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(/images/reataurant-detail/starhalf84.png) no-repeat 0 0;
+    background-size: contain;
+  }
 }
 
 .store__header__title-card {
@@ -66,7 +85,7 @@ body {
   }
 
   &__review {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-family: "BMDOHYUN";
     color: $grayscaleGray1;
     font-size: 0.75rem;
@@ -132,6 +151,13 @@ body {
 }
 
 .store__order-info {
+  @include flexbox;
+  position: relative;
+  background-color: $white;
+  box-shadow: 0px 2px 2px 0 rgb(213 213 213 / 50%);
+  padding-top: 8rem;
+  z-index: -1;
+
   &:last-child::before {
     content: "";
     width: 1px;
@@ -139,12 +165,6 @@ body {
     background-color: $grayscaleGray6;
     transform: translateY(55%);
   }
-
-  @include flexbox;
-  position: relative;
-  background-color: $white;
-  box-shadow: 0px 2px 2px 0 rgb(213 213 213 / 50%);
-
   &__list {
     // position: absolute;
     width: 50%;
@@ -200,7 +220,7 @@ body {
 
   dd {
     @include tablet {
-      width: 50%;
+      width: 60%;
     }
     @include desktop {
       width: 50%;
@@ -210,6 +230,16 @@ body {
     }
     font-weight: 400;
   }
+}
+
+.badge-signature {
+  content: "";
+  display: inline-block;
+  background: $grayscaleGray6 url(/images/reataurant-detail/icon-popular.jpg);
+  background-size: cover;
+  margin-right: 0.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 // 메인
@@ -288,10 +318,19 @@ body {
       }
 
       &__desc {
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        // font-weight: 100;
+        color: $grayscaleGray5;
+        font-family: sans-serif;
       }
 
       &__list {
+      }
+
+      &__link {
+        position: relative;
+        display: flow-root;
       }
 
       &__item {
@@ -302,16 +341,18 @@ body {
         display: flow-root;
 
         &__heading {
+          display: flex;
           font-weight: 500;
           font-size: 1.5rem;
           margin-left: 1.5rem;
           margin-top: 2rem;
           margin-bottom: 1rem;
-          display: inline-block;
+          align-items: center;
         }
 
         &__detail {
-          color: $grayscaleGray6;
+          color: $grayscaleGray5;
+          font-family: sans-serif;
           margin-left: 1.5rem;
           margin-bottom: 0.5rem;
         }
@@ -385,4 +426,10 @@ body {
 
 .store__main__review {
   display: none;
+}
+
+.footer__store {
+  @include tablet {
+    display: none;
+  }
 }

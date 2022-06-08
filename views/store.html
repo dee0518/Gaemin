@@ -16,11 +16,12 @@
     <meta name="author" content="개발의민족" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- 해더 -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container">
         <div class="header__sub1">
           <h1 class="logo">
@@ -76,21 +77,21 @@
           </section>
         </div>
       </div>
-    </header> -->
+    </header>
     <main class="store order__detail__main">
       <div class="order__detail__box__shadow__wrapper">
       <h1 class="store__main__title sr-only">음식점 메인 페이지 입니다.</h1>
       <div class="store__header">
         <div class="store__header__title-card">
-          <h2 class="store__header__title-card__name">잭슨피자 공덕점</h2>
+          <h2 class="store__header__title-card__name">던킨 강남역사 2호점</h2>
           <div class="store__header__title-card__star-point">
-          <span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span class="star-point"></span>
-          <span class="store__header__title-card__star-point"
-              > 4.9</span>
-            </div>
+            <span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span class="star-point-half"></span>
+            <span class="store__header__title-card__star-point"
+              > 4.5</span>
+          </div>
           <div class="store__header__title-card__review">
             <span class="store__header__title-card__review__recent-review"
-                  >최근리뷰 84</span
+                  >최근리뷰 84 |</span
                 >
             <span class="store__header__title-card__review__recent-manager-reply"
                   >최근사장님댓글 84</span
@@ -175,29 +176,54 @@
             </nav>
 
             <p class="store__main__menu__desc">
-              <a class="badge-place-of-origin">원산지 표기</a>
-              러시아 전쟁으로 인하여 언어 수급이 어렵습니다.
+              <!-- <a class="badge-place-of-origin">원산지 표기</a> -->
+              <span class="badge-cesco">세스코 멤버스</span>
+              강남역 신분당선 6번출구 지하 1층 출입구에서 운영중입니다.
             </p>
 
             
             <div class="signature store__main__menu__category" role="tabpanel">
               <h5 class="signature store__main__menu__category__title">
-                대표메뉴
+                인기 메뉴
               </h5>
               <ul class="signature store__main__menu__category__list">
                 <li class="signature store__main__menu__category__item">
+                  <a class="store__main__menu__categoty__link">
+                    <div class="store__main__menu__category__item__img">
+                      <img class="store__main__menu__category__item__img__content" aria src="/images/reataurant-detail/donut1.png" alt="">
+                    </div>
                     <h6 class="signature store__main__menu__category__item__heading">
                       <span class="badge-signature" aria-label="인기 상품"></span>
-                      슈퍼잭슨
+                      연유 보스톤 크림
                     </h6>
-                    <p class="store__main__menu__category__desc"></p>
+                    <p class="store__main__menu__category__desc">담콤 고소한 연유필링을 채우고 진한 초콜릿을 토핑한 도넛</p>
                 
-                    <p class="signature store__main__menu__category__item__detail">
-                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
+                    <p class="signature store__main__menu__category__item__price">
+                      1,900원
                     </p>
+                    <p class="signature store__main__menu__category__item__detail">
+                      품절 임박 3개 남음
+                    </p>
+                  </a>
+                </li>
+                <li class="signature store__main__menu__category__item">
+                  <a class="store__main__menu__categoty__link">
+                    <div class="store__main__menu__category__item__img">
+                      <img class="store__main__menu__category__item__img__content" src="/images/reataurant-detail/donut1.png" alt="">
+                    </div>
+                    <h6 class="signature store__main__menu__category__item__heading">
+                      <span class="badge-signature" aria-label="인기 상품"></span>
+                      스트로베리필드
+                    </h6>
+                    <p class="store__main__menu__category__desc">담콤 고소한 연유필링을 채우고 진한 초콜릿을 토핑한 도넛</p>
+                
                     <p class="signature store__main__menu__category__item__price">
                       14,900원
                     </p>
+                    <p class="signature store__main__menu__category__item__detail">
+                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
+                    </p>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -379,7 +405,7 @@
         </div>
     </main>
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer__store footer">
       <div class="footer__sub">
         <p class="">
           <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
