@@ -1,16 +1,17 @@
 .nav__main {
   height: rem(60px);
   width: 100%;
-  background-color: $white; 
+  background-color: $white;
   padding-top: rem(15px);
   position: fixed;
   top: 150px;
   left: 0;
   box-shadow: 0 0.1px;
+  z-index: 3;
 }
 
 .nav__sec__main {
-  text-align: center; 
+  text-align: center;
   max-width: rem(1024px);
   @include autoMargin;
 }
@@ -21,7 +22,7 @@
 }
 
 .nav__ul__main {
-  @include flexbox(row, flex-start); 
+  @include flexbox(row, flex-start);
   margin-top: rem(10px);
   overflow-x: scroll;
 }

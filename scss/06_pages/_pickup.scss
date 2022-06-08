@@ -1,5 +1,8 @@
 .pickUp-tab {
 	// tabUI
+	&__list {
+		background: #fff;
+	}
 	&__list:after {
 		display: block;
 		clear: both;
@@ -137,10 +140,24 @@
 	bottom: 0;
 	width: 100%;
 	max-width: 1024px;
+	.rating-dt {
+		img {
+			margin-right: rem(6px);
+			margin-left: rem(-2px);
+			display: inline-block;
+			max-width: 18px;
+			margin-bottom: -10px;
+		}
+	}
+	.rating {
+		height: 2rem;
+		margin-bottom: -15px;
+		margin-left: rem(-5px);
+	}
 	#map {
 		width: 100%;
 		height: 100%;
-
+		z-index: -2;
 		.loading-map {
 			background-color: #e0e0e0;
 			width: 100%;
@@ -148,6 +165,19 @@
 			animation: blinker 1s linear infinite;
 			z-index: 99;
 			float: inherit;
+		}
+	}
+	.bmNo1wrapper {
+		height: 30px;
+		display: none;
+		dt {
+			padding-right: 2px;
+			img {
+				max-width: 15px;
+			}
+		}
+		dd {
+			margin-left: -8px;
 		}
 	}
 	&__search {
@@ -174,38 +204,22 @@
 				display: flex;
 				align-items: center;
 			}
-			.rating-dt {
-				img {
-					margin-right: rem(6px);
-					margin-left: rem(-2px);
-					width: 20px;
-					margin-top: rem(-5px);
-				}
-			}
-			.rating {
-				height: 2rem;
-				margin-left: rem(-5px);
-				margin-top: rem(-4px);
-			}
 			.loading-text {
 				position: absolute;
 				padding: rem(10px);
 				margin-left: 0;
-				height: rem(110px);
-				margin-top: 0px;
+				height: rem(90px);
+				margin-top: -5px;
 				width: 80%;
 				border-radius: 5%;
-				&:nth-of-type(2) {
-					height: rem(80px);
-					margin-right: rem(35px);
-				}
 			}
 			.loading-button {
-				margin-left: rem(9px);
-				margin-top: -27px;
-				height: rem(40px);
-				width: 90%;
+				margin-left: 7px;
+				margin-top: -18px;
+				height: rem(42px);
+				width: 80%;
 				@include tablet {
+					height: rem(40px);
 					width: 50%;
 				}
 			}
@@ -337,7 +351,7 @@
 						width: rem(60px);
 						height: rem(40px);
 						display: block;
-						background: url("../images/dilivery-main/#{$glyph}") no-repeat;
+						background: url("../images/delivery-main/#{$glyph}") no-repeat;
 						background-size: contain;
 						position: relative;
 						transform: translateX(15%);
@@ -349,6 +363,8 @@
 }
 .tablet__container {
 	&.pickup {
+		background-color: #fff;
+
 		footer {
 			float: left;
 			top: 0;
@@ -395,13 +411,11 @@
 		}
 		.loading {
 			.loading-text {
-				&:nth-child(1) {
-					display: none;
-				}
-				&:nth-of-type(2) {
-					height: 70px;
-					width: 220px;
-				}
+				height: 50px;
+				width: rem(290px);
+			}
+			.loading-button {
+				width: rem(140px);
 			}
 		}
 	}
