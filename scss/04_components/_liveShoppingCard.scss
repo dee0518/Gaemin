@@ -35,25 +35,25 @@
       display: block;
     }
 
-    &:nth-child(2) {
+    &:nth-child(2), &:nth-child(7) {
       .live__special__coupon::before {
         background-image: url(../../images/components/liveShoppingCard/burgerking-logo.png);
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(3), &:nth-child(8) {
       .live__special__coupon::before {
         background-image: url(../../images/main/meat.jpg);
       }
     }
 
-    &:nth-child(4) {
+    &:nth-child(4), &:nth-child(9) {
       .live__special__coupon::before {
         background-image: url(../../images/components/liveShoppingCard/paris-logo.png);
       }
     }
 
-    &:nth-child(5) {
+    &:nth-child(5), &:nth-child(10) {
       .live__special__coupon::before {
         background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
       }
