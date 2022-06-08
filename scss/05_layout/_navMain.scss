@@ -7,15 +7,11 @@
   top: 150px;
   left: 0;
   box-shadow: 0 0.1px;
-  z-index: 1;
-}
-
-.map__nav {
-  position: static;
+  z-index: 3;
 }
 
 .nav__sec__main {
-  text-align: center; 
+  text-align: center;
   max-width: rem(1024px);
   @include autoMargin;
 }
@@ -26,7 +22,7 @@
 }
 
 .nav__ul__main {
-  @include flexbox(row, flex-start); 
+  @include flexbox(row, flex-start);
   margin-top: rem(10px);
 }
 

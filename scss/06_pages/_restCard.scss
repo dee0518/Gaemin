@@ -102,37 +102,37 @@ body {
   background: #ffffff;
 }
 /* 이미지의 스켈레톤(뼈대) */
-.loading-img {
-  width: 100%;
-  height: 100%;
-  background-color: #e0e0e0;
-}
+// .loading-img {
+//   width: 100%;
+//   height: 100%;
+//   background-color: #e0e0e0;
+// }
 /**
  * 깜박이는 블링크 애니메이션
  */
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-.blink_me {
-  animation: blinker 1s linear infinite;
-  z-index: 99;
-  float: inherit;
-}
-/* 실제 이미지 */
+// @keyframes blinker {
+//   50% {
+//     opacity: 0;
+//   }
+// }
+// .blink_me {
+//   animation: blinker 1s linear infinite;
+//   z-index: 99;
+//   float: inherit;
+// }
+// /* 실제 이미지 */
 
-.item-text {
-  position: relative;
-  width: 320px;
-}
-/* 텍스트의 스켈레톤 */
-.loading-text {
-  margin-bottom: 0.7rem;
-  height: 20px;
-  background-color: #e0e0e0;
-  z-index: 999;
-}
+// .item-text {
+//   position: relative;
+//   width: 320px;
+// }
+// /* 텍스트의 스켈레톤 */
+// .loading-text {
+//   margin-bottom: 0.7rem;
+//   height: 20px;
+//   background-color: #e0e0e0;
+//   z-index: 999;
+// }
 /**
        * 실제 텍스트
        */
@@ -148,9 +148,9 @@ h3 {
   word-break: break-all;
 }
 /* 스켈레톤 스크린 숨기기 */
-.loading-hidden {
-  display: none;
-}
+// .loading-hidden {
+//   display: none;
+// }
 .bmNo1wrapper {
   z-index: 0;
 }

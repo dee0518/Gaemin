@@ -10,7 +10,7 @@
       @include flexbox;
       gap: 10px;
       @include autoMargin;
-      max-width: 1024px;    
+      max-width: 1024px;
     }
   }
 
@@ -43,7 +43,7 @@
       background-color: $white;
       box-shadow: 0px 2px 10px 0 $box-shadow-color;
     }
-    
+
     h2 {
       @include fontSetup(bold, 20px, $black, 1.2);
       margin-bottom: 10px;
@@ -54,24 +54,23 @@
     }
   }
 
-  
   &__menu {
     &:nth-child(2) {
       padding-top: 100px;
-    }  
+    }
 
     label {
       @include flexbox($justify: space-between, $items: center);
     }
- }
+  }
 
   &__total {
     @include paddingX(20px);
     @include paddingY(30px);
-    @include flexbox($justify:space-between, $items: center);
+    @include flexbox($justify: space-between, $items: center);
     background: $white;
     border-bottom: 1px solid $grayscaleGray6;
-    
+
     h2 {
       @include fontSetup(bold, 20px, $black, 1.2);
     }
@@ -80,6 +79,6 @@
   @include tablet {
     .footer {
       display: none;
-    } 
+    }
   }
 }
