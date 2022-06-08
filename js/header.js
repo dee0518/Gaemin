@@ -4,6 +4,8 @@ const header = () => {
   let modal_body = document.querySelector('.modal__body');
   let body = document.querySelector('body');
   let my_place_li = document.querySelectorAll('.my__place__ul li');
+  let local_count_group = document.querySelector('.local__count__group');
+  let local_count = document.querySelector('.local__count');
   
   const modalHandler = () => {
     modal.style.display = 'block';
@@ -30,6 +32,13 @@ const header = () => {
   modal.addEventListener('click', (e) => modalOff(e));
   header_location.addEventListener('keyup', (e) => a11yModalHandler(e))
   my_place_li.forEach(x => x.addEventListener('keyup', (e) => a11yListHandler(e)));
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('hi');
+    if (localStorage.getItem('cart') !== null) {
+      local_count.innerHTML = localStorage.getItem('cart');
+      local_count_group.style.display = 'inline-block';
+    }      
+  });
 };
 
 export default header;

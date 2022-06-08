@@ -19,7 +19,7 @@
       <div class="header__container">
         <div class="header__sub1">
           <h1 class="logo">
-            <a href="/">
+            <a href="../main.html">
               <img
                 src="../images/components/header/logo72.png"
                 alt="배달의 민족 로고"
@@ -38,9 +38,15 @@
                 src="../images/components/header/person32.png"
                 alt="마이배민"
             /></a>
-            <a href=""
+            <a href="./cart.html" class="cart__img"
               ><img src="../images/components/header/cart46.png" alt="장바구니"
-            /></a>
+            />
+            <span class="total__count--group local__count__group">
+              <span class="sr-only">총</span>
+              <span class="local__count">1</span>
+              <span class="sr-only">개</span>
+            </span>
+          </a>
           </div>
         </div>
         <div class="modal">
@@ -60,7 +66,9 @@
       
     </header>
     <main>
+
       <form action="./cart.html">
+
         <fieldset class="order__detail__main">
           <legend class="sr-onlly">상세 주문 내역 폼</legend>
           <div class="order__detail__box__shadow__wrapper">
@@ -175,7 +183,11 @@
                   <span class="total__count">1</span>
                   <span class="sr-only">개</span>
                 </span>
+
+                <span><span class="display__off"><span class="total__price">25,000</span>원</span> 장바구니 담기</span>
+
                 <span><span class="display__off"><span class="total__price">16,000</span>원</span> 담기</span>
+
               </button>
             </section>
           </div>

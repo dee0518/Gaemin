@@ -5,6 +5,9 @@
   const billContainer = document.querySelector(".bill");
   const submitBtn = document.querySelector("button[type=submit]");
   let totalCount = document.querySelector(".order__detail__total__num");
+  let totalCount2 = document.querySelector(".total__count");
+
+  let num = 0;
 
   // radion, checkbox on & off
   const changeInput = (e) => {
@@ -42,7 +45,7 @@
   const calTotalNum = (e) => {
     console.log(e.target.className)
     let className = e.target.className
-    let num = Number(totalCount.innerText)
+    num = Number(totalCount.innerText)
 
     if(className === 'mius__btn'){
       if(num > 1) {
@@ -52,10 +55,18 @@
       num += 1  
     }
 
-    totalCount.innerHTML = num
+    totalCount.innerHTML = num;
+    totalCount2.innerHTML = num;
+    
+  }
+
+  const setCart = () => {
+    console.log('hi');
+    localStorage.setItem('cart', num);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    totalCount.innerHTML = 1;
     ulGroup.forEach(ul => {
       ul.addEventListener("click", changeInput)
     })
@@ -63,4 +74,7 @@
     miusBtn.addEventListener("click",calTotalNum)
     plusBtn.addEventListener("click",calTotalNum)
   });
+
+  
+  submitBtn.addEventListener('click', setCart);
 })();

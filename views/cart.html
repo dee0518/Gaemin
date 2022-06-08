@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/cart.js" type="module" defer></script>
 </head>
 <body>
   <div class="tablet__container">
@@ -16,7 +17,7 @@
       <div class="header__container">
         <div class="header__sub1">
           <h1 class="logo">
-            <a href="/">
+            <a href="../main.html">
               <img src="../images/components/header/logo72.png" alt="배달의 민족 로고" />
               <img src="../images/components/header/logo.svg" alt="배달의 민족" />
             </a>
@@ -25,7 +26,13 @@
           <div class="login__container">
             <a href="/" class="header__login">로그인</a>
             <a href=""><img src="../images/components/header/person32.png" alt="마이배민" /></a>
-            <a href=""><img src="../images/components/header/cart46.png" alt="장바구니" /></a>
+            <a href="./cart.html" class="cart__img"><img src="../images/components/header/cart46.png" alt="장바구니" />
+              <span class="total__count--group local__count__group">
+                <span class="sr-only">총</span>
+                <span class="local__count">1</span>
+                <span class="sr-only">개</span>
+              </span>
+            </a>
           </div>
         </div>
         <div class="header__sub2">
@@ -50,12 +57,12 @@
               <img class="cart__btn__x" src="../images/cart/x96.png" alt="장바구니에서 제거" />
             </div>
             <div class="cart__order__detail__main">
-              <img src="../images/cart/jimdark.png" alt="닭도리탕" />
+              <img src="../images/cart/iOS.jpg" alt="닭도리탕" />
               <ul>
-                <li>가격 : 少반마리+우삼겹130g+만두3+떡4 (25,000원)</li>
-                <li>메뉴선택 : 뼈</li>
-                <li>맛 선택 : 순한맛</li>
-                <li>서비스 선택 : 음료 (쿨피스)</li>
+                <li>가격 : 올스타 도넛 세트 (25,000원)</li>
+                <li>메뉴선택 : 아메리카노</li>
+                <li>맛 선택 : 단맛</li>
+                <li>서비스 선택 : 음료 (자몽에이드)</li>
                 <li>25,000원</li>
               </ul>
             </div>
@@ -102,13 +109,27 @@
               <span class="total__count">1</span>
               <span class="sr-only">개</span>
             </span>
-            <span><span class="display__off"><span class="total__price">50,000</span>원</span> 주문하기</span>
+            <span><span class="display__off"><span class="total__price">50,000</span>원</span> 결제하기</span>
           </button>
         </section>
+        <button type="button" class="cart__delete">장바구니 모두 제거</button>
       </div>
-      </section>
     </main>
   </div>
+
+  <div class="modal">
+    <div class="modal__body">
+      <section class="my__place">
+        <h2>주소 설정</h2>
+        <ul class="my__place__ul">
+          <li>우리 집</li>
+          <li>우리 회사</li>
+          <li><a href="/">주소 추가</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
 
   <!-- modal -->
   <div class="receit__modal">
@@ -157,7 +178,7 @@
       <button></button>
     </div>
   </div>
-  
+
 </body>
 <script type="module" src="../js/index.js"></script>
 </html>
