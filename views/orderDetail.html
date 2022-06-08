@@ -19,7 +19,7 @@
       <div class="header__container">
         <div class="header__sub1">
           <h1 class="logo">
-            <a href="/">
+            <a href="../main.html">
               <img
                 src="../images/components/header/logo72.png"
                 alt="배달의 민족 로고"
@@ -38,9 +38,15 @@
                 src="../images/components/header/person32.png"
                 alt="마이배민"
             /></a>
-            <a href=""
+            <a href="./cart.html" class="cart__img"
               ><img src="../images/components/header/cart46.png" alt="장바구니"
-            /></a>
+            />
+            <span class="total__count--group local__count__group">
+              <span class="sr-only">총</span>
+              <span class="local__count">1</span>
+              <span class="sr-only">개</span>
+            </span>
+          </a>
           </div>
         </div>
         <div class="modal">
@@ -60,7 +66,9 @@
       
     </header>
     <main>
-      <form action="/">
+
+      <form action="./cart.html">
+
         <fieldset class="order__detail__main">
           <legend class="sr-onlly">상세 주문 내역 폼</legend>
           <div class="order__detail__box__shadow__wrapper">
@@ -75,22 +83,22 @@
               <ul class="order__detail__radio--group">
                 <li>
                   <label for="s">
-                    <span>페이머스 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 스트로베리필드, 바바리안필드</span>
-                    <span>15,000원</span>
+                    <span class="order__detail__name">페이머스 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 스트로베리필드, 바바리안필드</span>
+                    <span class="order__detail__menu__price">15,000원</span>
                   </label>
                   <input id="s" type="radio" name="price">
                 </li>
                 <li>
                   <label for="m">
-                    <span>초코 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 허니필드, 바바리안필드</span>
-                    <span>15,000원</span>
+                    <span class="order__detail__name">초코 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 허니필드, 바바리안필드</span>
+                    <span class="order__detail__menu__price">15,000원</span>
                   </label>
                   <input id="m" type="radio" name="price">
                 </li>
                 <li>
                   <label for="l">
-                    <span>허니 글레이즈드, 올리브 츄이스티, 허니후리터, 카페모카츄이스티, 스트로베리필드, 바바리안필드</span>
-                    <span>15,000원</span>
+                    <span class="order__detail__name">허니 글레이즈드, 올리브 츄이스티, 허니후리터, 카페모카츄이스티, 스트로베리필드, 바바리안필드</span>
+                    <span class="order__detail__menu__price">15,000원</span>
                   </label>
                   <input id="l" type="radio" name="price">
                 </li>
@@ -101,34 +109,34 @@
               <ul class="order__detail__radio--group">
                 <li>
                   <label for="bone">
-                    <span>아메리카노</span>
-                    <span><span aria-hidden="true">+</span>0원</span>
+                    <span class="order__detail__name">아메리카노</span>
+                    <span class="order__detail__menu__price"><span aria-hidden="true">+</span>0원</span>
                   </label>
                   <input id="bone" type="radio" name="type">
                 </li>
                 <li>
                   <label for="boneless">
-                    <span>카페라떼</span>
-                    <span><span aria-hidden="true">+</span>0원</span>
+                    <span class="order__detail__name">카페라떼</span>
+                    <span class="order__detail__menu__price"><span aria-hidden="true">+</span>0원</span>
                   </label>
                   <input id="boneless" type="radio" name="type">
                 </li>
                 <li>
                   <label for="rice">
-                    <span>카페모카</span>
-                    <span><span aria-hidden="true">+</span>0원</span>
+                    <span class="order__detail__name">카페모카</span>
+                    <span class="order__detail__menu__price"><span aria-hidden="true">+</span>0원</span>
                   </label>
                   <input id="rice" type="radio" name="type">
                 </li>
               </ul>
             </section>
             <section class="order__detail__menu">
-              <h2>추가선택 <span aria-hidden="true">(</span>최대 11개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
+              <h2>추가선택 <span aria-hidden="true">(</span>최대 2개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
               <ul class="order__detail__chk--group">
-                <li><label for="ex1">자몽에이드 <span><span class="sr-only">+</span>1,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
-                <li><label for="ex2">복숭아 아이스티 <span><span class="sr-only">+</span>500원</span></label><input type="checkbox" name="extra" id="ex2"></li>
-                <li><label for="ex3">요거트스무디 <span><span class="sr-only">+</span>2,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
-                <li><label for="ex4">딸기쿠키프라페 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
+                <li><label for="ex1"><span class="order__detail__name">자몽에이드</span><span class="order__detail__menu__price"><span class="sr-only">+</span>1,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
+                <li><label for="ex2"><span class="order__detail__name">복숭아 아이스티</span> <span class="order__detail__menu__price"><span class="sr-only">+</span>500원</span></label><input type="checkbox" name="extra" id="ex2"></li>
+                <li><label for="ex3"><span class="order__detail__name">요거트스무디</span> <span class="order__detail__menu__price"><span class="sr-only">+</span>2,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
+                <li><label for="ex4"><span class="order__detail__name">딸기쿠키프라페</span> <span class="order__detail__menu__price"><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
               </ul>
             </section>
             <section class="order__detail__total">
@@ -142,7 +150,7 @@
           </div>
           <!-- 주문 내역서 컴포넌트 -->
           <!-- .bill에 .off추가시 텅 이미지 추가되도록 스타일 설정 -->
-          <div class="bill off">
+          <div class="bill">
             <section class="bill__warning">
               <h2 class="sr-only">경고문</h2>
               <p class="bill__warning__desc">메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.</p>
@@ -155,34 +163,31 @@
                 <div class="empty"></div>
     
                 <!-- 주문 내역서 리스트 -->
-                <!-- <ul class="bill__total__list desktop">
+                <ul class="bill__total__list desktop">
                   <li class="bill__total__item">
-                    <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+                    <span class="bill__total__item__product">페이머스 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 스트로베리필드, 바바리안필드<span>15,000원</span></span>
                     <ul class="bill__total__detail__list">
-                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                      <li class="bill__total__item"><span class="bill__total__item__product">아메리카노<span>0원</span></span></li>
+                      <li class="bill__total__item"><span class="bill__total__item__product">자몽에이드<span>1,000원</span></span></li>
                     </ul>
                   </li>
-                  <li class="bill__total__item">
-                    <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
-                    <ul class="bill__total__detail__list">
-                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                    </ul>
-                  </li>
-                </ul> -->
-                <!-- <p class="bill__total__price">
-                  <span>총결제금액</span><span class="total__price">25,000원</span>
-                </p> -->
+                </ul>
+                <p class="bill__total__price">
+                  <span>총결제금액</span><span class="total__price">16,000원</span>
+                </p>
               </div>
               <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
-              <button type="submit" disabled>
+              <button type="submit">
                 <span class="total__count--group">
                   <span class="sr-only">총</span>
                   <span class="total__count">1</span>
                   <span class="sr-only">개</span>
                 </span>
-                <span><span class="display__off"><span class="total__price">25,000</span>원</span> 주문하기</span>
+
+                <span><span class="display__off"><span class="total__price">25,000</span>원</span> 장바구니 담기</span>
+
+                <span><span class="display__off"><span class="total__price">16,000</span>원</span> 담기</span>
+
               </button>
             </section>
           </div>

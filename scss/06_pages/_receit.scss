@@ -1,5 +1,68 @@
-.receit__modal {
-  width: rem(500px);
-  @include autoMargin;
-//
+.receit {
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: rem(80px);
+    padding-bottom: rem(80px);
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.4);
+    &__body {
+      padding: rem(32px);
+
+      h2 {
+        font-size: rem(40px);
+        text-align: center;
+      }
+      .receit__detail {
+        padding-top: rem(40px);
+
+        h3 {
+          font-size: rem(24px);
+        }
+        
+        .receit__menu__list{
+          @include flexbox($direction: column);
+          padding-top: rem(20px);
+          margin-bottom: rem(40px);
+
+          .receit__menu__item {
+            h4 {
+              font-size: rem(20px);
+            }
+            ul {
+              padding-top: rem(10px);
+              li {
+                line-height: 1.4;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 33.3%;
+    @include autoMargin;
+    background: url("../../images/delivery-main/background_receipt.jpeg");
+    overflow: hidden;
+
+    .payed {
+      display: block;
+      font-size: rem(30px);
+      text-align: center;
+    }
+
+    .bill__warning__desc {
+      display: block;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+  }
 }

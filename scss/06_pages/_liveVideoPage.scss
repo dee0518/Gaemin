@@ -1,5 +1,23 @@
 // 라이브 비디오
-.live__video {
+.live__video {  
+  &__wrapper {
+    background: $black;
+    
+    &.loading {
+      .live__video__inner {
+        background: $font-gray;
+
+        header, .live__video__container {
+          opacity: 0;
+        }
+      }
+    }
+
+    header, .live__video__container {
+      opacity: 1;
+      transition: opacity ease 0.3s;
+    }
+  }
   // play시 첫번쨰 버튼 사라짐
   &__container.play {
     .live__video__play--btn {
@@ -174,7 +192,7 @@
     }
 
     .chat {
-      @include flexbox($wrap: wrap);
+      @include flexbox;
       gap: 10px;
       margin-bottom: 3px;
       

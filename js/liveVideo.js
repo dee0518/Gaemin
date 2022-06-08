@@ -1,4 +1,5 @@
 (function () {
+  const wrapper = document.querySelector(".live__video__wrapper");
   const liveVideoContainer = document.querySelector(".live__video__container");
   const playBtns = document.querySelectorAll(".live__play__btn");
   const mutedBtn = document.querySelector(".live__muted__btn");
@@ -22,7 +23,6 @@
     "ajdi",
     "frontend-d",
     "zerobase",
-    "배민123",
     "pizzang",
     "ajdi"
   ];
@@ -38,10 +38,11 @@
     "댓글댓글댓글",
     "야식으로 먹어야지",
     "맛있겠다",
-    "피자 먹고 싶다.",
     "피자 상품권 구매해서 하나 사먹고 싶다 나도 먹고 싶다 언제 먹을 수 있나"
   ];
 
+  const likeBtn = document.querySelector(".like__btn");
+  let likeNum = document.querySelector(".like__num");
   let setTimer;
 
   // 비디오 초기화
@@ -50,6 +51,7 @@
     progress.setAttribute("aria-valuemax", video_du);
     progress.setAttribute("aria-valuetext", `${video_du}초 중 0초`);
     allTimer.innerHTML = "00:" + (video_du > 10 ? video_du : "0" + video_du);
+    wrapper.classList.remove("loading")
   };
 
   // 비디오 음소거
@@ -154,6 +156,13 @@
         : Math.round(video.currentTime));
   };
 
+  // 좋아요 수 높이기
+  const addLikeNum = () => {
+    let num = Number(likeNum.innerText) + 1
+
+    likeNum.innerText = num
+  }
+
   // 댓글 추가하기
   // ---------------------------------------------------------------------------
   // const addChat = () => {
@@ -197,7 +206,6 @@
 
   // tabIndex 이동
   const setTabindex = (e) => {
-    console.log(e.keyCode)
     if(e.keyCode === 39){
       if(e.target.parentNode.nextElementSibling !== null){
         e.target.setAttribute('tabindex', -1);
@@ -235,5 +243,7 @@
     controllerContainer.querySelectorAll("button").forEach(btn => {
       btn.addEventListener("keydown", setTabindex);
     })
+
+    likeBtn.addEventListener("click",addLikeNum)
   });
 })();
