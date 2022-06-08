@@ -26,7 +26,27 @@ body {
     background: url(../../images/order-detail/dunkin.jpg) no-repeat;
     background-size: cover;
     background-position: center top 40%;
-
+    &__coupon {
+      background-image: url(/images/dunkin/kVc.png);
+      background-position: 34%;
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-color: $bg-gray;
+      height: rem(50px);
+      line-height: rem(50px);
+      color: $font-orangelight;
+      font-weight: 600;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 40px;
+        position: absolute;
+        background-image: url(/images/dunkin/MYt.png);
+        background-position: center top 80%;
+        background-repeat: no-repeat;
+      }
+    }
     &__title-card {
       @include autoMargin;
       width: calc(100% - 2rem);
@@ -146,6 +166,14 @@ body {
   }
 }
 
+.store__header__coupon {
+  margin: 0 auto;
+  margin-top: 9rem;
+  border-radius: 10px;
+  border: 1px solid $grayscaleGray6;
+  width: calc(100% - 2rem);
+  text-align: center;
+}
 .store__order__info__wrapper {
   @include flexbox;
 }
@@ -432,4 +460,8 @@ body {
   @include tablet {
     display: none;
   }
+}
+.order__detail__box__shadow__wrapper {
+  background-color: $white;
+  z-index: -1;
 }
