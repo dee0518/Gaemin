@@ -99,3 +99,17 @@
     @include carouselSlideItem;
   }
 }
+.banner__event__list {
+  [aria-label="1번째 배너"] {
+    img {
+      width: 250px;
+      margin-top: -20px;
+    }
+  }
+  [aria-label="3번째 배너"] {
+    img {
+      width: 350px;
+      margin-top: -20px;
+    }
+  }
+}
