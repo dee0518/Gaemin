@@ -1,6 +1,8 @@
 .pickUp-tab {
 	// tabUI
 	&__list {
+		@include paddingX(15px);
+
 		background: #fff;
 		padding-top: 50px;
 		margin-left: -15px;
@@ -142,6 +144,7 @@
 	bottom: 0;
 	width: 100%;
 	max-width: 1024px;
+
 	.rating-dt {
 		img {
 			margin-right: rem(6px);
@@ -196,6 +199,7 @@
 			overflow-x: hidden;
 			.imgContainer {
 				height: 120px;
+				object-fit: contain;
 			}
 			li {
 				margin-top: rem(24px);
