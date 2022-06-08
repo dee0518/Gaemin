@@ -50,20 +50,19 @@
       <div class="left__70">
         <h2 class="cart__heading">장바구니</h1> 
         <section class="cart__order__detail">
-          <h2>안동찜닭 닭도리탕</h2>
+          <h2>던킨 강남역사 2호점</h2>
           <article>
             <div class="cart__order__detail__top">
-              <span>유명찜닭</span>
+              <span>올스타 도넛세트</span>
               <img class="cart__btn__x" src="../images/cart/x96.png" alt="장바구니에서 제거" />
             </div>
             <div class="cart__order__detail__main">
               <img src="../images/cart/iOS.jpg" alt="닭도리탕" />
               <ul>
-                <li>가격 : 올스타 도넛 세트 (25,000원)</li>
+                <li>가격 : 올스타 도넛 세트 (15,000원)</li>
                 <li>메뉴선택 : 아메리카노</li>
-                <li>맛 선택 : 단맛</li>
-                <li>서비스 선택 : 음료 (자몽에이드)</li>
-                <li>25,000원</li>
+                <li>서비스 선택 : 자몽에이드 (1,000원)</li>
+                <li></li>
               </ul>
             </div>
             <div class="cart__detail__btn">
@@ -92,24 +91,24 @@
             <!-- 주문 내역서 리스트 -->
             <ul class="bill__total__list desktop">
               <li class="bill__total__item">
-                <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+                <span class="bill__total__item__product">올스타 도넛세트<span>16,000원</span></span>
                 <ul class="bill__total__detail__list">
                   <li class="bill__total__item"><span class="bill__total__item__product">배달 팁<span>0원</span></span></li>
                 </ul>
               </li>
             </ul>
             <p class="bill__total__price">
-              <span>총결제금액</span><span class="total__price">50,000원</span>
+              <span>총결제금액</span><span class="total__price">16,000원</span>
             </p>
           </div>
           <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
-          <button type="button">
+          <button type="button" class="cart__payment__btn">
             <span class="total__count--group">
               <span class="sr-only">총</span>
               <span class="total__count">1</span>
               <span class="sr-only">개</span>
             </span>
-            <span><span class="display__off"><span class="total__price">50,000</span>원</span> 결제하기</span>
+            <span><span class="display__off"><span class="total__price">16,000</span>원</span> 결제하기</span>
           </button>
         </section>
         <button type="button" class="cart__delete">장바구니 모두 제거</button>
@@ -130,7 +129,6 @@
     </div>
   </div>
 
-
   <!-- modal -->
   <div class="receit__modal">
     <div class="receit__wrapper">
@@ -138,17 +136,15 @@
         <section class="receit">
           <h2>주문 내역서</h2>
           <section class="receit__detail">
-            <h3>안동찜닭 닭도리탕</h3>
+            <h3>던킨 강남역사 2호점</h3>
             <article>
                 <ul class="receit__menu__list">
                   <li class="receit__menu__item">
-                    <h4 class="receit__menu__item__name">유명찜닭</h4>
+                    <h4 class="receit__menu__item__name">올스타 도넛세트</h4>
                     <ul>
-                      <li>가격 : 少반마리+우삼겹130g+만두3+떡4 (25,000원)</li>
-                      <li>메뉴선택 : 뼈</li>
-                      <li>맛 선택 : 순한맛</li>
-                      <li>서비스 선택 : 음료 (쿨피스)</li>
-                      <li>25,000원</li>
+                      <li>페이머스 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 스트로베리필드, 바바리안필드</li>
+                      <li>메뉴선택 : 아메리카노</li>
+                      <li>추가선택 : 자몽에이드</li>
                     </ul>
                   </li>
                 </ul>
@@ -157,14 +153,15 @@
         </section>
         <ul class="bill__total__list desktop">
           <li class="bill__total__item">
-            <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+            <span class="bill__total__item__product">올스타 도넛세트<span>15,000원</span></span>
             <ul class="bill__total__detail__list">
+              <li class="bill__total__item"><span class="bill__total__item__product">추가선택 : 자몽에이드<span>1,000원</span></li>
               <li class="bill__total__item"><span class="bill__total__item__product">배달 팁<span>0원</span></span></li>
             </ul>
           </li>
         </ul>
         <p class="bill__total__price">
-          <span>총결제금액</span><span class="total__price">50,000원</span>
+          <span>총결제금액</span><span class="total__price">16,000원</span>
         </p>
       </div>
       <span class="payed">
@@ -175,10 +172,12 @@
         <p class="bill__warning__desc">(주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
           않습니다.</p>
       </section>
-      <button></button>
+      <button class="receit__exit" role="button" aria-label="영수증 나가기">
+      </button>
+      <a class="exit__home" href="../main.html" aria-label="홈 화면으로 돌아가기"></a>
     </div>
   </div>
-
 </body>
 <script type="module" src="../js/index.js"></script>
+<script src="../js/receit.js"></script>
 </html>

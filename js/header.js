@@ -33,7 +33,6 @@ const header = () => {
   header_location.addEventListener('keyup', (e) => a11yModalHandler(e))
   my_place_li.forEach(x => x.addEventListener('keyup', (e) => a11yListHandler(e)));
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('hi');
     if (localStorage.getItem('cart') !== null) {
       local_count.innerHTML = localStorage.getItem('cart');
       local_count_group.style.display = 'inline-block';
