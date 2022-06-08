@@ -16,7 +16,8 @@
     width: rem(30px);
     height: rem(30px);
     border-radius: rem(10px);
-    background-image: url(../../images/cart/jimdark.png);
+    background-image: url(../../images/cart/image.png);
+    border: 1px solid $font-gray;
     background-position: 0 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -28,6 +29,7 @@
 
 .cart__main {
   max-width: rem(1024px);
+  position: relative;
   @include autoMargin;
 
   @include desktop {
@@ -123,4 +125,32 @@
     height: rem(20px);
     margin-right: rem(20px);
   }
+}
+
+.cart__delete {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  border-radius: 5px;
+  background: #2ac1bc;
+  position: absolute;
+  bottom: -70px;
+  left: 20px;
+  width: rem(260px);
+}
+
+.bill__total {
+  position: relative;
+}
+
+.cart__order__detail__main img{
+  width: 150px;
+  height: 150px;
 }
