@@ -10,6 +10,7 @@
   const allTimer = document.querySelector(".all__timer");
   const rewindBtns = document.querySelectorAll("[class*=rewind__]");
   const chatContainer = document.querySelector(".live__video__chatting");
+  const controllerContainer = document.querySelector(".live__video__controller--btn--group");
   const chatIDs = [
     "배민123",
     "pizzang",
@@ -19,33 +20,28 @@
     "배민123",
     "pizzang",
     "ajdi",
-    "닉네임이뭘까",
-    "어령123",
+    "frontend-d",
+    "zerobase",
+    "배민123",
+    "pizzang",
+    "ajdi"
   ];
   const chatConts = [
     "맛있겠다",
-    "피자피자 먹고 싶다.",
+    "피자 먹고 싶다.",
     "사죠",
-    "댓글댓글댓글",
-    "길게 길게 써보기이이이이이이",
+    "댓글을 열심히 써본다",
+    "길게 써보기이이이이이이",
     "맛있겠다",
-    "피자피자 먹고 싶다.",
+    "피자 먹고 싶다.",
     "사죠",
     "댓글댓글댓글",
-    "길게 길게 써보기이이이이이이",
+    "야식으로 먹어야지",
+    "맛있겠다",
+    "피자 먹고 싶다.",
+    "피자 상품권 구매해서 하나 사먹고 싶다 나도 먹고 싶다 언제 먹을 수 있나"
   ];
-  // const chatObject = {
-  //   배민123: "맛있겠다",
-  //   pizzang: "피자피자 먹고 싶다.",
-  //   ajdi: "사죠",
-  //   닉네임이뭘까: "댓글댓글댓글",
-  //   어령ㄴ123: "길게 길게 써보기이이이이이이",
-  //   배민123: "맛있겠다",
-  //   pizzang: "피자피자 먹고 싶다.",
-  //   ajdi: "사죠",
-  //   닉네임이뭘까: "댓글댓글댓글",
-  //   어령123: "길게 길게 써보기이이이이이이",
-  // };
+
   let setTimer;
 
   // 비디오 초기화
@@ -199,6 +195,27 @@
     }
   };
 
+  // tabIndex 이동
+  const setTabindex = (e) => {
+    console.log(e.keyCode)
+    if(e.keyCode === 39){
+      if(e.target.parentNode.nextElementSibling !== null){
+        e.target.setAttribute('tabindex', -1);
+        e.target.parentNode.nextElementSibling.querySelector("button").focus()
+        e.target.parentNode.nextElementSibling.querySelector("button").setAttribute('tabindex', 0);
+      }
+    }
+    
+    if(e.keyCode === 37){
+      if(e.target.parentNode.previousElementSibling !== null){
+        e.target.setAttribute('tabindex', -1);
+        e.target.parentNode.previousElementSibling.querySelector("button").focus()
+        e.target.parentNode.previousElementSibling.querySelector("button").setAttribute('tabindex', 0);
+      }
+    }
+  }
+
+
   document.addEventListener("DOMContentLoaded", () => {
     playBtns.forEach((playBtn, i) => {
       playBtn.addEventListener("click", (e) => funcVideo(e, i));
@@ -214,5 +231,9 @@
     rewindBtns.forEach((rewindBtn) => {
       rewindBtn.addEventListener("click", rewind);
     });
+
+    controllerContainer.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("keydown", setTabindex);
+    })
   });
 })();
