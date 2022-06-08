@@ -144,11 +144,37 @@
     transform: translate(-10px, -12px);
   }
 }
+.today__discount__carousel {
+  &__list {
+    .main__today__discount__link {
+      img {
+        &:nth-of-type(2) {
+          max-width: 130px;
+          max-height: 158px;
+        }
+      }
+      .main__today__discount__desc-top {
+        margin-top: 20px;
+      }
+    }
+    [aria-label="1번째 배너"] {
+      .main__today__discount__desc-top {
+        margin-top: 0;
+      }
+    }
+    [aria-label="3번째 배너"] {
+      img {
+        &:nth-of-type(2) {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
 .mainpage-container {
   .imgContainer {
     height: 350px;
     img {
-      // object-fit: fill;
       height: 100%;
       width: auto;
     }
