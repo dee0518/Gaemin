@@ -4,7 +4,6 @@
   const plusBtn = document.querySelector(".plus__btn");
   const billContainer = document.querySelector(".bill");
   const submitBtn = document.querySelector("button[type=submit]");
-
   let totalCount = document.querySelector(".order__detail__total__num");
   let totalCount2 = document.querySelector(".total__count");
 
