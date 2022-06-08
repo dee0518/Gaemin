@@ -167,6 +167,7 @@
     padding-left: 10px;
     -ms-overflow-style: none;
     scrollbar-width: none; 
+    @include flexbox($direction: column, $justify: flex-end);
 
     &::-webkit-scrollbar {
       display: none;
@@ -176,12 +177,12 @@
       margin-bottom: 3px;
       
       b {
-        @include fontSetup(bold, 12px, $white, 1.2);
+        @include fontSetup(bold, 20px, $white, 1.2);
         opacity: 0.8;
       }
       
       span {
-        @include fontSetup(normal, 12px, $white, 1.2);
+        @include fontSetup(normal, 20px, $white, 1.2);
       }
     }
   }

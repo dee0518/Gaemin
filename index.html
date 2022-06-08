@@ -30,16 +30,16 @@
       <div class="header__container">
         <div class="header__sub1">
           <h1 class="logo">
-            <a href="/">
+            <a href="./main.html">
               <img src="./images/components/header/logo72.png" alt="배달의 민족 로고" />
               <img src="./images/components/header/logo.svg" alt="배달의 민족" />
             </a>
           </h1>
           <p class="header__location">주소를 알려주세요!</p>
           <div class="login__container">
-            <a href="/" class="header__login">로그인</a>
-            <a href=""><img src="./images/components/header/person32.png" alt="마이배민" /></a>
-            <a href=""><img src="./images/components/header/cart46.png" alt="장바구니" /></a>
+            <a href="#" class="header__login">로그인</a>
+            <a href="#"><img src="./images/components/header/person32.png" alt="마이배민" /></a>
+            <a href="#"><img src="./images/components/header/cart46.png" alt="장바구니" /></a>
           </div>
         </div>
         <div class="header__sub2">
@@ -47,24 +47,23 @@
             <fieldset class="search__fieldset">
               <legend>음식 검색창</legend>
               <label for="search"></label>
-              <input type="search" id="search" placeholder="닭발?   순대?   곱창?" />
+              <input type="search" id="search" name="qqq" placeholder="닭발?   순대?   곱창?" />
             </fieldset>
           </form>
         </div>
       </div>
-      <div class="modal">
-        <div class="modal__body">
-          <section class="my__place">
-            <h2>주소 설정</h2>
-            <ul class="my__place__ul">
-              <li>우리 집</li>
-              <li>우리 회사</li>
-              <li><a href="/">주소 추가</a></li>
-            </ul>
-          </section>
-        </div>
-      </div>
+
     </header>
+    <nav class="nav__main map__nav">
+      <section class="nav__sec__main">
+        <h2 class="nav__heading__main sr-only">네비게이션 바</h2>
+        <ul class="nav__ul__main">
+          <li class="nav__li__main"><a href="./views/deliveryMain.html" aria-selected="true">배달</a></li>
+          <li class="nav__li__main"><a href="#" class="selected">포장</a></li>
+          <li class="nav__li__main"><a href="./views/liveShopping.html">쇼핑라이브</a></li>
+        </ul>
+      </section>
+    </nav>
 
     <div class="pickup-container ">
       <div class="pickUp-tab">
@@ -143,8 +142,91 @@
                       <button href="/" class="dm__category__link__dairy">유제품</button>
                     </li>
                   </ul>
-                </div>
-              </div>
+
+                  <div class="pickup-container">
+                    <div class="pickUp-tab">
+                      <!-- 탭 인덱스 -->
+                      <ul class="pickUp-tab__list" role="tablist">
+                        <li id="tab1" role="tab" aria-controls="section1" aria-selected="true" tabindex="0">가까운 순</li>
+                        <li id="tab2" role="tab" aria-controls="section2" aria-selected="false" tabindex="0">메뉴 전체</li>
+                        <li id="tab3" role="tab" aria-controls="section3" aria-selected="false" tabindex="0">별점</li>
+                        <li id="tab4" role="tab" aria-controls="section4" aria-selected="false" tabindex="0">기타</li>
+                      </ul>
+                      <!-- 탭 콘텐츠 -->
+                      <div class="pickuppage-layout">
+                        <div class="pickUp-tab__contents">
+                          <section id="section1" role="tabpanel" class="unvisual hello" aria-labelledby="tab1">
+                            <button>가까운 순</button>
+                            <button>주문 많은 순</button>
+                            <button>별점 높은 순</button>
+                            <button>찜많은 순</button>
+                          </section>
+                          <section id="section2" class="unvisual" role="tabpanel" aria-labelledby="tab2">
+                            <div class="pickup-menulist">
+                              <div class="dm__container">
+                                <ul class="dm__category__list">
+                                  <li class="dm__category__item">
+                                    <button href="/"
+                                      class="dm__category__link__sushi">돈까스&centerdot;회&centerdot;일식</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__chinese">중식</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__chicken">치킨</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/"
+                                      class="dm__category__link__rice">백반&centerdot;죽&centerdot;국수</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__cafe">카페&centerdot;디저트</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__bunsik">분식</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/"
+                                      class="dm__category__link__jjigae">찜&centerdot;탕&centerdot;찌개</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__pizza">피자</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__spagetti">양식</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__sam">고기&centerdot;구이</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__jok">족발&centerdot;보쌈</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__asian">아시안</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__burger">패스트푸드</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__yasik">야식</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__lunchbox">도시락</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__salad">채식</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__soup">국</button>
+                                  </li>
+                                  <li class="dm__category__item">
+                                    <button href="/" class="dm__category__link__dairy">유제품</button>
+                                  </li>
+                                </ul>
+                              </div>
+
+                            </div>
+                        </div>
             </section>
             <section id="section3" class="unvisual" role="tabpanel" aria-labelledby="tab3">
               <p>전체</p>
@@ -165,7 +247,7 @@
                 <fieldset>
                   <legend>검색 폼</legend>
                   <div class="pickup-mapinfo__search__container">
-                    <input type="search" id="search" name="search" required />
+                    <input type="search" id="search" name="qqq" required />
                     <button type="submit" id="submit" class="pickup-mapinfo__search-button"></button>
                     <label for="submit" class="pickup-mapinfo__search__icon-search"></label>
                   </div>
@@ -568,65 +650,88 @@
       </div>
     </footer>
   </div>
-  <div id="map"></div>
-  </section>
-  </div>
-  <script>
-    var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+  <<<<<<< HEAD <div id="map">
+    </div>
+    </section>
+    </div>
+    =======
+    <div id="map"></div>
+    </section>
+    </div>
 
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-      mapOption = {
-        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-      };
+    >>>>>>> refs/remotes/origin/main
+    <script>
+      var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
 
-    // 지도를 생성합니다
-    var map = new kakao.maps.Map(mapContainer, mapOption);
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+          center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+        };
 
-    // 장소 검색 객체를 생성합니다
-    var ps = new kakao.maps.services.Places();
+      // 지도를 생성합니다
+      var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    // 키워드로 장소를 검색합니다
-    ps.keywordSearch('이태원 맛집', placesSearchCB);
+      // 장소 검색 객체를 생성합니다
+      var ps = new kakao.maps.services.Places();
 
-    // 키워드 검색 완료 시 호출되는 콜백함수 입니다
-    function placesSearchCB(data, status, pagination) {
-      if (status === kakao.maps.services.Status.OK) {
+      // 키워드로 장소를 검색합니다
+      ps.keywordSearch('이태원 맛집', placesSearchCB);
 
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-        // LatLngBounds 객체에 좌표를 추가합니다
-        var bounds = new kakao.maps.LatLngBounds();
+      // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+      function placesSearchCB(data, status, pagination) {
+        if (status === kakao.maps.services.Status.OK) {
 
-        for (var i = 0; i < data.length; i++) {
-          displayMarker(data[i]);
-          bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+          // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+          // LatLngBounds 객체에 좌표를 추가합니다
+          var bounds = new kakao.maps.LatLngBounds();
+
+          for (var i = 0; i < data.length; i++) {
+            displayMarker(data[i]);
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+          }
+
+          // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+          map.setBounds(bounds);
         }
-
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-        map.setBounds(bounds);
       }
-    }
 
-    // 지도에 마커를 표시하는 함수입니다
-    function displayMarker(place) {
+      // 지도에 마커를 표시하는 함수입니다
+      function displayMarker(place) {
 
-      // 마커를 생성하고 지도에 표시합니다
-      var marker = new kakao.maps.Marker({
-        map: map,
-        position: new kakao.maps.LatLng(place.y, place.x)
-      });
+        // 마커를 생성하고 지도에 표시합니다
+        var marker = new kakao.maps.Marker({
+          map: map,
+          position: new kakao.maps.LatLng(place.y, place.x)
+        });
 
-      // 마커에 클릭이벤트를 등록합니다
-      kakao.maps.event.addListener(marker, 'click', function () {
-        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
-        infowindow.open(map, marker);
-      });
-    }
-  </script>
-  </div>
+        // 마커에 클릭이벤트를 등록합니다
+        kakao.maps.event.addListener(marker, 'click', function () {
+          // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+          infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <<<<<<< HEAD </div>
 
 
+      =======
+      </div>
+
+      <div class="modal">
+        <div class="modal__body">
+          <section class="my__place">
+            <h2>주소 설정</h2>
+            <ul class="my__place__ul">
+              <li>우리 집</li>
+              <li>우리 회사</li>
+              <li><a href="/">주소 추가</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      >>>>>>> refs/remotes/origin/main
 
 </body>
 
