@@ -18,8 +18,8 @@ const bannerCarousel = ($bannerCarousel, items) => {
       currentItem <= 0
         ? 1
         : currentItem > items.length
-        ? items.length
-        : currentItem;
+          ? items.length
+          : currentItem;
 
     $bannerCurrentItem.innerHTML = `${itemCount} / ${items.length} `;
   };
@@ -31,8 +31,8 @@ const bannerCarousel = ($bannerCarousel, items) => {
         </h2>
 <div class="banner__event__list banner__carousel__list">
   ${[items[items.length - 1], ...items, items[0], items[1]]
-    .map(
-      (item) => `
+        .map(
+          (item) => `
       <article class="banner__event__tabpanel banner__carousel__item ${item.styleClass}" role="tabpanel" aria-label="${item.index}번째 배너">
         <a href="#" class="banner__event__link">
         <img src="${item.img}" alt="" />
@@ -42,14 +42,14 @@ const bannerCarousel = ($bannerCarousel, items) => {
         </a>
         </article>
         `
-    )
-    .join("")}
+        )
+        .join("")}
 </div>
 <button class="banner__event__button carousel__list__button prev ">
-  <img class="banner__carousel__list-button" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
+  <img class="banner__carousel__list-button carousel__list__button prev" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
 </button>
 <button class="banner__event__button carousel__list__button next">
-  <img class="banner__carousel__list-button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />
+<img class="banner__carousel__list-button carousel__list__button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />  
 </button>
 <a href="#" type="button" class="banner__event__link__button carousel__currnet__badge"
   ><span class="banner__event__link__button__current carousel__currnet__badge__text"> </span
