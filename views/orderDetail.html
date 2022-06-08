@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <title>주문 상세 페이지</title>
-</head>
-<body class="order__detail">
-  <div class="tablet__container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>주문 상세 페이지</title>
+  </head>
+  <body class="order__detail">
     <!-- 해더 -->
     <header class="header">
       <div class="header__container">
@@ -34,9 +33,7 @@
                 alt="마이배민"
             /></a>
             <a href=""
-              ><img
-                src="../images/components/header/cart46.png"
-                alt="장바구니"
+              ><img src="../images/components/header/cart46.png" alt="장바구니"
             /></a>
           </div>
         </div>
@@ -83,21 +80,21 @@
                 <span>소반마리+우삼겹130g+만두3+떡4</span>
                 <span>25,000원</span>
               </label>
-              <input id="s" type="radio" name="price">
+              <input id="s" type="radio" name="price" />
             </li>
             <li>
               <label for="m">
                 <span>소반마리+우삼겹130g+만두3+떡4</span>
                 <span>25,000원</span>
               </label>
-              <input id="m" type="radio" name="price">
+              <input id="m" type="radio" name="price" />
             </li>
             <li>
               <label for="l">
                 <span>소반마리+우삼겹130g+만두3+떡4</span>
                 <span>25,000원</span>
               </label>
-              <input id="l" type="radio" name="price">
+              <input id="l" type="radio" name="price" />
             </li>
           </ul>
         </section>
@@ -109,31 +106,56 @@
                 <span>뼈</span>
                 <span><span aria-hidden="true">+</span>0원</span>
               </label>
-              <input id="bone" type="radio" name="type">
+              <input id="bone" type="radio" name="type" />
             </li>
             <li>
               <label for="boneless">
                 <span>순살</span>
                 <span><span aria-hidden="true">+</span>0원</span>
               </label>
-              <input id="boneless" type="radio" name="type">
+              <input id="boneless" type="radio" name="type" />
             </li>
             <li>
               <label for="rice">
                 <span>공기밥</span>
                 <span><span aria-hidden="true">+</span>0원</span>
               </label>
-              <input id="rice" type="radio" name="type">
+              <input id="rice" type="radio" name="type" />
             </li>
           </ul>
         </section>
         <section class="order__detail__menu">
-          <h2>추가선택 <span aria-hidden="true">(</span>최대 11개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
+          <h2>
+            추가선택 <span aria-hidden="true">(</span>최대 11개<span
+              class="sr-only"
+              >선택 가능</span
+            ><span aria-hidden="true">)</span>
+          </h2>
           <ul class="order__detail__chk--group">
-            <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
-            <li><label for="ex2">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex2"></li>
-            <li><label for="ex3">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
-            <li><label for="ex4">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
+            <li>
+              <label for="ex1"
+                >분모자떡4개
+                <span><span class="sr-onlu">+</span>3,000원</span></label
+              ><input type="checkbox" name="extra" id="ex1" />
+            </li>
+            <li>
+              <label for="ex2"
+                >분모자떡4개
+                <span><span class="sr-onlu">+</span>3,000원</span></label
+              ><input type="checkbox" name="extra" id="ex2" />
+            </li>
+            <li>
+              <label for="ex3"
+                >분모자떡4개
+                <span><span class="sr-onlu">+</span>3,000원</span></label
+              ><input type="checkbox" name="extra" id="ex3" />
+            </li>
+            <li>
+              <label for="ex4"
+                >분모자떡4개
+                <span><span class="sr-onlu">+</span>3,000원</span></label
+              ><input type="checkbox" name="extra" id="ex4" />
+            </li>
           </ul>
         </section>
         <section class="order__detail__total">
@@ -150,7 +172,9 @@
       <div class="bill off">
         <section class="bill__warning">
           <h2 class="sr-only">경고문</h2>
-          <p class="bill__warning__desc">메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.</p>
+          <p class="bill__warning__desc">
+            메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.
+          </p>
         </section>
         <section class="bill__total">
           <h2 class="desktop">주문 내역서</h2>
@@ -162,17 +186,37 @@
             <!-- 주문 내역서 리스트 -->
             <ul class="bill__total__list desktop">
               <li class="bill__total__item">
-                <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+                <span class="bill__total__item__product"
+                  >유명 찜닭<span>25,000원</span></span
+                >
                 <ul class="bill__total__detail__list">
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                  <li class="bill__total__item">
+                    <span class="bill__total__item__product"
+                      >추가 목록들<span>1,000원</span></span
+                    >
+                  </li>
+                  <li class="bill__total__item">
+                    <span class="bill__total__item__product"
+                      >추가 목록들<span>1,000원</span></span
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="bill__total__item">
-                <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+                <span class="bill__total__item__product"
+                  >유명 찜닭<span>25,000원</span></span
+                >
                 <ul class="bill__total__detail__list">
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                  <li class="bill__total__item">
+                    <span class="bill__total__item__product"
+                      >추가 목록들<span>1,000원</span></span
+                    >
+                  </li>
+                  <li class="bill__total__item">
+                    <span class="bill__total__item__product"
+                      >추가 목록들<span>1,000원</span></span
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -187,7 +231,12 @@
               <span class="total__count">1</span>
               <span class="sr-only">개</span>
             </span>
-            <span><span class="display__off"><span class="total__price">25,000</span>원</span> 주문하기</span>
+            <span
+              ><span class="display__off"
+                ><span class="total__price">25,000</span>원</span
+              >
+              주문하기</span
+            >
           </button>
         </section>
       </div>
@@ -238,8 +287,8 @@
         </section>
         <div class="footer__footer">
           <p>
-            (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
-            아닙니다. 따라서&nbsp;
+            (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다.
+            따라서&nbsp;
           </p>
           <p>
             (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
@@ -248,6 +297,5 @@
         </div>
       </div>
     </footer>
-  </div>
-</body>
+  </body>
 </html>
