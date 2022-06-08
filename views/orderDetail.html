@@ -67,130 +67,135 @@
         </div>
       </div>
     </header>
-    <main class="order__detail__main">
-      <div class="order__detail__box__shadow__wrapper">
-        <section class="order__detail__desc">
-          <div class="order__detail__desc__content">
-            <h2>유명찜닭</h2>
-            <p>찜닭에 우삼겹, 분모자떡, 감자만두를 곁들인 특이하고 색다른 맛</p>
+    <main>
+      <form action="/">
+        <fieldset class="order__detail__main">
+          <legend class="sr-onlly">상세 주문 내역 폼</legend>
+          <div class="order__detail__box__shadow__wrapper">
+            <section class="order__detail__desc">
+              <div class="order__detail__desc__content">
+                <h2>유명찜닭</h2>
+                <p>찜닭에 우삼겹, 분모자떡, 감자만두를 곁들인 특이하고 색다른 맛</p>
+              </div>
+            </section>
+            <section class="order__detail__menu">
+              <h2>가격</h2>
+              <ul class="order__detail__radio--group">
+                <li>
+                  <label for="s">
+                    <span>소반마리+우삼겹130g+만두3+떡4</span>
+                    <span>25,000원</span>
+                  </label>
+                  <input id="s" type="radio" name="price">
+                </li>
+                <li>
+                  <label for="m">
+                    <span>중반마리+우삼겹180g+만두3+떡4</span>
+                    <span>25,000원</span>
+                  </label>
+                  <input id="m" type="radio" name="price">
+                </li>
+                <li>
+                  <label for="l">
+                    <span>대반마리+우삼겹210g+만두3+떡4</span>
+                    <span>25,000원</span>
+                  </label>
+                  <input id="l" type="radio" name="price">
+                </li>
+              </ul>
+            </section>
+            <section class="order__detail__menu">
+              <h2>메뉴선택</h2>
+              <ul class="order__detail__radio--group">
+                <li>
+                  <label for="bone">
+                    <span>뼈</span>
+                    <span><span aria-hidden="true">+</span>0원</span>
+                  </label>
+                  <input id="bone" type="radio" name="type">
+                </li>
+                <li>
+                  <label for="boneless">
+                    <span>순살</span>
+                    <span><span aria-hidden="true">+</span>0원</span>
+                  </label>
+                  <input id="boneless" type="radio" name="type">
+                </li>
+                <li>
+                  <label for="rice">
+                    <span>공기밥</span>
+                    <span><span aria-hidden="true">+</span>0원</span>
+                  </label>
+                  <input id="rice" type="radio" name="type">
+                </li>
+              </ul>
+            </section>
+            <section class="order__detail__menu">
+              <h2>추가선택 <span aria-hidden="true">(</span>최대 11개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
+              <ul class="order__detail__chk--group">
+                <li><label for="ex1">분모자떡4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
+                <li><label for="ex2">소시지4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex2"></li>
+                <li><label for="ex3">야채4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
+                <li><label for="ex4">넓적당면4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
+              </ul>
+            </section>
+            <section class="order__detail__total">
+              <h2>수량</h2>
+              <div class="order__detail__total__btn--group">
+                <button type="button" class="mius__btn" aria-label="수량 하나 줄이기"></button>
+                <span><span class="order__detail__total__num">1</span>개</span>
+                <button type="button" class="plus__btn" aria-label="수량 하나 더하기"></button>
+              </div>
+            </section>
           </div>
-        </section>
-        <section class="order__detail__menu">
-          <h2>가격</h2>
-          <ul class="order__detail__radio--group">
-            <li>
-              <label for="s">
-                <span>소반마리+우삼겹130g+만두3+떡4</span>
-                <span>25,000원</span>
-              </label>
-              <input id="s" type="radio" name="price">
-            </li>
-            <li>
-              <label for="m">
-                <span>소반마리+우삼겹130g+만두3+떡4</span>
-                <span>25,000원</span>
-              </label>
-              <input id="m" type="radio" name="price">
-            </li>
-            <li>
-              <label for="l">
-                <span>소반마리+우삼겹130g+만두3+떡4</span>
-                <span>25,000원</span>
-              </label>
-              <input id="l" type="radio" name="price">
-            </li>
-          </ul>
-        </section>
-        <section class="order__detail__menu">
-          <h2>메뉴선택</h2>
-          <ul class="order__detail__radio--group">
-            <li>
-              <label for="bone">
-                <span>뼈</span>
-                <span><span aria-hidden="true">+</span>0원</span>
-              </label>
-              <input id="bone" type="radio" name="type">
-            </li>
-            <li>
-              <label for="boneless">
-                <span>순살</span>
-                <span><span aria-hidden="true">+</span>0원</span>
-              </label>
-              <input id="boneless" type="radio" name="type">
-            </li>
-            <li>
-              <label for="rice">
-                <span>공기밥</span>
-                <span><span aria-hidden="true">+</span>0원</span>
-              </label>
-              <input id="rice" type="radio" name="type">
-            </li>
-          </ul>
-        </section>
-        <section class="order__detail__menu">
-          <h2>추가선택 <span aria-hidden="true">(</span>최대 11개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
-          <ul class="order__detail__chk--group">
-            <li><label for="ex1">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
-            <li><label for="ex2">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex2"></li>
-            <li><label for="ex3">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
-            <li><label for="ex4">분모자떡4개 <span><span class="sr-onlu">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
-          </ul>
-        </section>
-        <section class="order__detail__total">
-          <h2>수량</h2>
-          <div class="order__detail__total__btn--group">
-            <button type="button" aria-label="수량 하나 줄이기"></button>
-            <span><span class="order__detail__total__num">1</span>개</span>
-            <button type="button" aria-label="수량 하나 더하기"></button>
-          </div>
-        </section>
-      </div>
-      <!-- 주문 내역서 컴포넌트 -->
-      <!-- .bill에 .off추가시 텅 이미지 추가되도록 스타일 설정 -->
-      <div class="bill off">
-        <section class="bill__warning">
-          <h2 class="sr-only">경고문</h2>
-          <p class="bill__warning__desc">메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.</p>
-        </section>
-        <section class="bill__total">
-          <h2 class="desktop">주문 내역서</h2>
-          <p class="bill__total__limit">배달최소주문금액 12,000원</p>
-          <div class="desktop">
-            <!-- 텅 이미지 -->
-            <div class="empty"></div>
-
-            <!-- 주문 내역서 리스트 -->
-            <ul class="bill__total__list desktop">
-              <li class="bill__total__item">
-                <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
-                <ul class="bill__total__detail__list">
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+          <!-- 주문 내역서 컴포넌트 -->
+          <!-- .bill에 .off추가시 텅 이미지 추가되도록 스타일 설정 -->
+          <div class="bill off">
+            <section class="bill__warning">
+              <h2 class="sr-only">경고문</h2>
+              <p class="bill__warning__desc">메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.</p>
+            </section>
+            <section class="bill__total">
+              <h2 class="desktop">주문 내역서</h2>
+              <p class="bill__total__limit">배달최소주문금액 12,000원</p>
+              <div class="desktop">
+                <!-- 텅 이미지 -->
+                <div class="empty"></div>
+    
+                <!-- 주문 내역서 리스트 -->
+                <ul class="bill__total__list desktop">
+                  <li class="bill__total__item">
+                    <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+                    <ul class="bill__total__detail__list">
+                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                    </ul>
+                  </li>
+                  <li class="bill__total__item">
+                    <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
+                    <ul class="bill__total__detail__list">
+                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                      <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
+                    </ul>
+                  </li>
                 </ul>
-              </li>
-              <li class="bill__total__item">
-                <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
-                <ul class="bill__total__detail__list">
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                  <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
-                </ul>
-              </li>
-            </ul>
-            <p class="bill__total__price">
-              <span>총결제금액</span><span class="total__price">25,000원</span>
-            </p>
+                <p class="bill__total__price">
+                  <span>총결제금액</span><span class="total__price">25,000원</span>
+                </p>
+              </div>
+              <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
+              <button type="submit" disabled>
+                <span class="total__count--group">
+                  <span class="sr-only">총</span>
+                  <span class="total__count">1</span>
+                  <span class="sr-only">개</span>
+                </span>
+                <span><span class="display__off"><span class="total__price">25,000</span>원</span> 주문하기</span>
+              </button>
+            </section>
           </div>
-          <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
-          <button type="button">
-            <span class="total__count--group">
-              <span class="sr-only">총</span>
-              <span class="total__count">1</span>
-              <span class="sr-only">개</span>
-            </span>
-            <span><span class="display__off"><span class="total__price">25,000</span>원</span> 주문하기</span>
-          </button>
-        </section>
-      </div>
+        </fieldset>
+      </form>
     </main>
     <!-- footer -->
     <footer class="footer">
@@ -248,6 +253,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="../js/orderDetail.js"></script>
   </div>
 </body>
 </html>
