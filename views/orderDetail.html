@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <title>주문 상세 페이지</title>
 </head>
@@ -74,8 +77,8 @@
           <div class="order__detail__box__shadow__wrapper">
             <section class="order__detail__desc">
               <div class="order__detail__desc__content">
-                <h2>유명찜닭</h2>
-                <p>찜닭에 우삼겹, 분모자떡, 감자만두를 곁들인 특이하고 색다른 맛</p>
+                <h2>올스타 도넛세트</h2>
+                <p>던킨에서 가장 잘 나가는 도넛6개로 구성된 버라이어티 6EA와 맛있는 먼치킨 10EA가 더해진 올스타 도넛세트 버라이어티 6EA</p>
               </div>
             </section>
             <section class="order__detail__menu">
@@ -83,22 +86,22 @@
               <ul class="order__detail__radio--group">
                 <li>
                   <label for="s">
-                    <span>소반마리+우삼겹130g+만두3+떡4</span>
-                    <span>25,000원</span>
+                    <span>페이머스 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 스트로베리필드, 바바리안필드</span>
+                    <span>15,000원</span>
                   </label>
                   <input id="s" type="radio" name="price">
                 </li>
                 <li>
                   <label for="m">
-                    <span>중반마리+우삼겹180g+만두3+떡4</span>
-                    <span>25,000원</span>
+                    <span>초코 글레이즈드, 올리브 츄이스티, 허니후리터, 카푸치노츄이스티, 허니필드, 바바리안필드</span>
+                    <span>15,000원</span>
                   </label>
                   <input id="m" type="radio" name="price">
                 </li>
                 <li>
                   <label for="l">
-                    <span>대반마리+우삼겹210g+만두3+떡4</span>
-                    <span>25,000원</span>
+                    <span>허니 글레이즈드, 올리브 츄이스티, 허니후리터, 카페모카츄이스티, 스트로베리필드, 바바리안필드</span>
+                    <span>15,000원</span>
                   </label>
                   <input id="l" type="radio" name="price">
                 </li>
@@ -109,21 +112,21 @@
               <ul class="order__detail__radio--group">
                 <li>
                   <label for="bone">
-                    <span>뼈</span>
+                    <span>아메리카노</span>
                     <span><span aria-hidden="true">+</span>0원</span>
                   </label>
                   <input id="bone" type="radio" name="type">
                 </li>
                 <li>
                   <label for="boneless">
-                    <span>순살</span>
+                    <span>카페라떼</span>
                     <span><span aria-hidden="true">+</span>0원</span>
                   </label>
                   <input id="boneless" type="radio" name="type">
                 </li>
                 <li>
                   <label for="rice">
-                    <span>공기밥</span>
+                    <span>카페모카</span>
                     <span><span aria-hidden="true">+</span>0원</span>
                   </label>
                   <input id="rice" type="radio" name="type">
@@ -133,10 +136,10 @@
             <section class="order__detail__menu">
               <h2>추가선택 <span aria-hidden="true">(</span>최대 11개<span class="sr-only">선택 가능</span><span aria-hidden="true">)</span></h2>
               <ul class="order__detail__chk--group">
-                <li><label for="ex1">분모자떡4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
-                <li><label for="ex2">소시지4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex2"></li>
-                <li><label for="ex3">야채4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
-                <li><label for="ex4">넓적당면4개 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
+                <li><label for="ex1">자몽에이드 <span><span class="sr-only">+</span>1,000원</span></label><input type="checkbox" name="extra" id="ex1"></li>
+                <li><label for="ex2">복숭아 아이스티 <span><span class="sr-only">+</span>500원</span></label><input type="checkbox" name="extra" id="ex2"></li>
+                <li><label for="ex3">요거트스무디 <span><span class="sr-only">+</span>2,000원</span></label><input type="checkbox" name="extra" id="ex3"></li>
+                <li><label for="ex4">딸기쿠키프라페 <span><span class="sr-only">+</span>3,000원</span></label><input type="checkbox" name="extra" id="ex4"></li>
               </ul>
             </section>
             <section class="order__detail__total">
@@ -163,7 +166,7 @@
                 <div class="empty"></div>
     
                 <!-- 주문 내역서 리스트 -->
-                <ul class="bill__total__list desktop">
+                <!-- <ul class="bill__total__list desktop">
                   <li class="bill__total__item">
                     <span class="bill__total__item__product">유명 찜닭<span>25,000원</span></span>
                     <ul class="bill__total__detail__list">
@@ -178,10 +181,10 @@
                       <li class="bill__total__item"><span class="bill__total__item__product">추가 목록들<span>1,000원</span></span></li>
                     </ul>
                   </li>
-                </ul>
-                <p class="bill__total__price">
+                </ul> -->
+                <!-- <p class="bill__total__price">
                   <span>총결제금액</span><span class="total__price">25,000원</span>
-                </p>
+                </p> -->
               </div>
               <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
               <button type="submit" disabled>
