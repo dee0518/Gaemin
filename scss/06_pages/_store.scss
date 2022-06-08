@@ -465,3 +465,12 @@ body {
   background-color: $white;
   z-index: -1;
 }
+.order__detail__main {
+  &.store {
+    .bill {
+      &.off {
+        margin-top: 10rem;
+      }
+    }
+  }
+}
