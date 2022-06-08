@@ -2,6 +2,8 @@
 	// tabUI
 	&__list {
 		background: #fff;
+		padding-top: 50px;
+		margin-left: -15px;
 	}
 	&__list:after {
 		display: block;
@@ -189,8 +191,10 @@
 		border: 1px solid transparent;
 		border-image: linear-gradient(to left, $box-shadow-color 99%, transparent 100%);
 		border-image-slice: 1;
-		overflow: auto;
+		overflow-y: auto;
+
 		.pickup-cardlist {
+			overflow-x: hidden;
 			.imgContainer {
 				height: 120px;
 			}
