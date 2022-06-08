@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   @include autoMargin;
 }
 
@@ -44,10 +44,10 @@
   @include fontSetup(400, 18px, $font-gray, 22px);
 }
 
-.search__fieldset{
+.search__fieldset {
   position: relative;
   &::before {
-    content: '';
+    content: "";
     width: rem(30px);
     height: rem(30px);
     display: inline-block;
@@ -60,12 +60,11 @@
   }
 }
 
-
 .header__location {
   @include fontSetup(400, 24px, $font-white, 30px);
   cursor: pointer;
   &::after {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     margin-left: 15px;
@@ -95,6 +94,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1000;
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -120,7 +120,7 @@
   width: 100%;
 }
 
-.my__place__ul li{
+.my__place__ul li {
   border-bottom: 1px solid $black;
   margin: 20px 0;
   cursor: pointer;

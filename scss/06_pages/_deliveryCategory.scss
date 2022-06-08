@@ -1,0 +1,32 @@
+.dc {
+  &__wrapper {
+    display: none;
+    max-width: rem(1024px);
+    margin-bottom: rem(100px);
+    @include autoMargin;
+  }
+
+  &__list {
+
+    @include flexbox($justify: space-between, $wrap: wrap);
+  }
+
+  &__food {
+    &__item {
+      width: 31%;
+      @include marginY(20px);
+      box-shadow: none;
+
+      .couponWrapper {
+        display: inline-block;
+        position: relative;
+        margin-top: 0.5rem;
+        border-radius: rem(24px);
+        background: $bg-orange;
+        color: $font-orange;
+        @include paddingY(6px);
+        @include paddingX(10px);
+      }
+    }
+  }
+}

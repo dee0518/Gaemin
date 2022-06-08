@@ -1,5 +1,10 @@
 .pickUp-tab {
 	// tabUI
+	&__list {
+		background: #fff;
+		padding-top: 50px;
+		margin-left: -15px;
+	}
 	&__list:after {
 		display: block;
 		clear: both;
@@ -16,6 +21,7 @@
 		text-decoration: none;
 		position: relative;
 		top: 2px;
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -24,7 +30,7 @@
 		background-image: url(./../../images/map/star.png);
 		background-repeat: no-repeat;
 		background-size: 30%;
-		background-position: 5% 50%;
+		background-position: 5% 37%;
 		padding-left: 20px;
 	}
 	#tab4 {
@@ -34,7 +40,7 @@
 	#tab4::before {
 		position: absolute;
 		top: 50%;
-		transform: translateY(-45%);
+		transform: translateY(-60%);
 		left: 0px;
 		right: 0px;
 		bottom: 0px;
@@ -82,6 +88,8 @@
 	margin-top: 0;
 	width: fit-content;
 	margin-top: 2px;
+	position: absolute;
+
 	section {
 		z-index: 9;
 		background-color: $bg-gray;
@@ -126,15 +134,53 @@
 // map
 .pickup-mapinfo {
 	display: flex;
-	position: relative;
 	height: 90vh;
-	position: absolute;
+	float: left;
 	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	width: 100%;
 	max-width: 1024px;
+	.rating-dt {
+		img {
+			margin-right: rem(6px);
+			margin-left: rem(-2px);
+			display: inline-block;
+			max-width: 18px;
+			margin-bottom: -10px;
+		}
+	}
+	.rating {
+		height: 2rem;
+		margin-bottom: -15px;
+		margin-left: rem(-5px);
+	}
 	#map {
 		width: 100%;
 		height: 100%;
+		z-index: -2;
+		.loading-map {
+			background-color: #e0e0e0;
+			width: 100%;
+			height: 100%;
+			animation: blinker 1s linear infinite;
+			z-index: 99;
+			float: inherit;
+		}
+	}
+	.bmNo1wrapper {
+		height: 30px;
+		display: none;
+		dt {
+			padding-right: 2px;
+			img {
+				max-width: 15px;
+			}
+		}
+		dd {
+			margin-left: -8px;
+		}
 	}
 	&__search {
 		box-sizing: border-box;
@@ -145,9 +191,51 @@
 		border: 1px solid transparent;
 		border-image: linear-gradient(to left, $box-shadow-color 99%, transparent 100%);
 		border-image-slice: 1;
+		overflow-y: auto;
+
+		.pickup-cardlist {
+			overflow-x: hidden;
+			.imgContainer {
+				height: 120px;
+			}
+			li {
+				margin-top: rem(24px);
+				&:nth-of-type(1) {
+					margin-top: 1px;
+				}
+			}
+			.descWrapper__rating {
+				display: flex;
+				align-items: center;
+			}
+			.loading-text {
+				position: absolute;
+				padding: rem(10px);
+				margin-left: 0;
+				height: rem(90px);
+				margin-top: -5px;
+				width: 80%;
+				border-radius: 5%;
+			}
+			.loading-button {
+				margin-left: 7px;
+				margin-top: -18px;
+				height: rem(42px);
+				width: 80%;
+				@include tablet {
+					height: rem(40px);
+					width: 50%;
+				}
+			}
+			.descWrapper {
+				line-height: 1.4rem;
+			}
+		}
 		&__container {
 			position: relative;
 			margin-bottom: rem(38px);
+			overflow: hidden;
+
 			#search {
 				text-indent: 3rem;
 				height: rem(45px);
@@ -194,8 +282,9 @@
 .pickup-container {
 	margin: 0 auto;
 	max-width: 1024px;
-	height: 100vh;
+	// height: 100%;
 }
+
 .pickup-menulist {
 	$images: (
 		"sushi": "sushi200.png",
@@ -266,12 +355,71 @@
 						width: rem(60px);
 						height: rem(40px);
 						display: block;
-						background: url("../images/dilivery-main/#{$glyph}") no-repeat;
+						background: url("../images/delivery-main/#{$glyph}") no-repeat;
 						background-size: contain;
 						position: relative;
 						transform: translateX(15%);
 					}
 				}
+			}
+		}
+	}
+}
+.tablet__container {
+	&.pickup {
+		background-color: #fff;
+
+		footer {
+			float: left;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}
+@include tablet {
+	.pickup-mapinfo {
+		display: flex;
+		flex-flow: column nowrap;
+		#map {
+			height: 600px;
+			order: 1;
+		}
+		&__search {
+			order: 2;
+			width: 100%;
+			.pickup-cardlist {
+				text-align: center;
+			}
+			.restCard {
+				display: inline-block;
+				width: 40%;
+				&:nth-of-type(odd) {
+					margin-right: rem(40px);
+				}
+				text-align: start;
+			}
+		}
+	}
+	.pickUp-tab__contents {
+		width: 100%;
+	}
+	.pickup-cardlist {
+		.restCard,
+		.loading-img {
+			.imgContainer {
+				height: 240px;
+			}
+		}
+		.loading {
+			.loading-text {
+				height: 50px;
+				width: rem(290px);
+			}
+			.loading-button {
+				width: rem(140px);
 			}
 		}
 	}

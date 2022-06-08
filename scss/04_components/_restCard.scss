@@ -1,5 +1,5 @@
 .restaurantCard__container {
-  width: 500px;
+  width: 600px;
 }
 
 .restCard {
@@ -13,7 +13,7 @@
     width: 100%;
     border-radius: rem(28px);
     overflow: hidden;
-    
+
     img {
       border-radius: rem(28px);
       width: 100%;
@@ -49,6 +49,10 @@
 
       &__rating {
         line-height: 1.4;
+        img {
+          width: rem(24px);
+          padding-bottom: rem(4px);
+        }
       }
     }
 
@@ -64,6 +68,7 @@
     .rating {
       font-weight: 700;
     }
+
     .rating-dt {
       img {
         display: inline-block;

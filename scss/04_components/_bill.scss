@@ -113,6 +113,7 @@
     }
 
     button {
+      transition: background ease 0.3s;
       @include buttonNone;
       @include paddingY(15px);
       @include flexbox($justify: center, $items: center);

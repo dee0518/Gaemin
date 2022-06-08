@@ -42,12 +42,12 @@
   &__logo {
     a {
       display: block;
-      width: 108px;
+      width: 103px;
       height: 30px;
       background: url(../../images/components/liveShoppingCard/logo-live.png) no-repeat;
       background-size: contain;
-      background-position: right center;
-      @include fontSetup(bold, 14px, $white, 30px);
+      background-position: right top -2px;
+      @include fontSetup(bold, 16px, $white, 30px);
     }
   }
 
@@ -68,7 +68,7 @@
     @include paddingX(10px);
     position: absolute;
     left: 0;
-    top: 40px;
+    top: 50px;
     width: 100%;
     padding-left: 50px;
     background: url(../../images/components/liveShoppingCard/icon-badge.png) no-repeat;
@@ -78,12 +78,12 @@
 
   &__title__group {
     h2 {
-      @include fontSetup(bold, 14px, $white, 1.2);
+      @include fontSetup(normal, 16px, $white, 1.2);
       @include textOverflow;
     }
 
     span:last-child {
-      @include fontSetup(normal, 12px, $white, 1.2);
+      @include fontSetup(lighter, 14px, $white, 1.2);
     }
   }
 
@@ -167,21 +167,24 @@
     padding-left: 10px;
     -ms-overflow-style: none;
     scrollbar-width: none; 
+    @include flexbox($direction: column, $justify: flex-end);
 
     &::-webkit-scrollbar {
       display: none;
     }
 
     .chat {
+      @include flexbox($wrap: wrap);
+      gap: 10px;
       margin-bottom: 3px;
       
       b {
-        @include fontSetup(bold, 12px, $white, 1.2);
+        @include fontSetup(normal, 14px, $white, 1.2);
         opacity: 0.8;
       }
       
       span {
-        @include fontSetup(normal, 12px, $white, 1.2);
+        @include fontSetup(normal, 14px, $white, 1.2);
       }
     }
   }
@@ -214,7 +217,7 @@
 
       &:nth-child(1) button {
         &::after {
-          @include fontSetup(normal, 10px, $white, 16px);
+          @include fontSetup(normal, 12px, $white, 16px);
           content: attr(data-num);
           position: absolute;
           right: 0;
@@ -235,13 +238,13 @@
         background-image: url(../../images/components/liveShoppingCard/icon-share.png);
 
         span {
-          font-size: 10px;
+          font-size: 11px;
         }
       }
   
       span {
         display: block;
-        @include fontSetup(normal, 12px, $white, 1.2);
+        @include fontSetup(normal, 14px, $white, 1.2);
       }
     }   
   }
@@ -259,7 +262,7 @@
       background-position: right 10px center;
 
       &::before {
-        @include fontSetup(bold, 12px, $white, 1.2);
+        @include fontSetup(bold, 14px, $white, 1.2);
         content: attr(data-product-num);
         position: absolute;
         right: 24px;
@@ -272,7 +275,9 @@
       position: relative;
       background: $white;
       border-radius: 5px;
-      padding-left: 60px;
+      padding-left: 70px;
+      background: $white url(../../images/components/liveShoppingCard/pizza-logo.png) no-repeat;
+      background-size: contain;
 
       &::after {
         content: "";
@@ -288,7 +293,7 @@
 
       p {
         padding: 10px 0;
-        @include fontSetup(normal, 14px, $black, 1.2);
+        @include fontSetup(bold, 16px, $black, 1.2);
         vertical-align: middle;
 
         & > span {

@@ -1,12 +1,13 @@
 // 라이브 특가
 .live__special {
+  position: relative;
   margin-bottom: 75px;
   
   &::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 0;
+    top: 49px;
     width: 60px;
     height: 340px;
     background-image: linear-gradient(to left, #fff, transparent);
@@ -33,6 +34,30 @@
     
     a {
       display: block;
+    }
+
+    &:nth-child(2) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/burgerking-logo.png);
+      } 
+    }
+
+    &:nth-child(3) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
+      } 
+    }
+
+    &:nth-child(4) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/paris-logo.png);
+      } 
+    }
+
+    &:nth-child(5) {
+      .live__special__coupon::before {
+        background-image: url(../../images/components/liveShoppingCard/baskin-logo.jpg);
+      } 
     }
   }
   
@@ -113,7 +138,10 @@
       top: 0;
       width: 70px;
       height: 70px;
-      background: lavender;
+      border-radius: 5px;
+      background: url(../../images/components/liveShoppingCard/pizza-logo.png) no-repeat;
+      background-position: center;
+      background-size: cover;
     }
 
     dl {
@@ -141,4 +169,5 @@
       }
     }
   }
+
 }
