@@ -18,7 +18,33 @@ $images: (
   "soup": "soup200.png",
   "dairy": "dairy200.png",
 );
-
+.deliveryMain-container {
+  .nav__main {
+    border-bottom: 2px solid $bg-gray;
+  }
+  .dm {
+    &__category {
+      background: $white;
+      padding-bottom: 35px;
+      max-width: 1324px;
+      margin: 0 auto;
+    }
+    &__food {
+      background: $white;
+      padding-top: 0;
+      max-width: 1324px;
+      margin: 0 auto;
+      .dm__food__nav__section__item {
+        select {
+          background: $white;
+        }
+      }
+      &__nav__section__list {
+        @include paddingY(15px);
+      }
+    }
+  }
+}
 .dm {
   &__wrapper {
     @include paddingY(20px);
@@ -73,7 +99,6 @@ $images: (
       @include autoMargin;
       max-width: rem(1024px);
       &__section {
-        
         &__list {
           @include flexbox($justify: space-evenly);
           overflow-x: scroll;
@@ -83,8 +108,8 @@ $images: (
             display: none;
           }
 
-
-          a, select {
+          a,
+          select {
             @include paddingX(12px);
             @include paddingY(24px);
             display: block;
@@ -103,7 +128,6 @@ $images: (
           align-items: center;
         }
       }
-
     }
 
     &__list {
