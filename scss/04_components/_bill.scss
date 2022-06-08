@@ -89,7 +89,12 @@
 
       &__product {
         @include fontSetup(normal, 14px, $black, 1.2);
-        @include flexbox($justify: space-between, $items: center);
+        @include flexbox($justify: space-between);
+        gap: 5px;
+
+        span {
+          flex-shrink: 0;
+        }
       }
 
       &:last-child {
