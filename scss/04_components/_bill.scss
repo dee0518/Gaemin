@@ -27,7 +27,7 @@
     @include paddingY(25px);
     @include flexbox($direction: column-reverse, $justify: flex-end);
     position: sticky;
-    top: 10px;
+    top: 170px;
     align-self: flex-start;
     border-radius: 5px;
     background: $white;
