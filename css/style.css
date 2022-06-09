@@ -2509,7 +2509,7 @@ h3 {
   height: 5.625rem;
   margin-top: -5px;
   width: 80%;
-  border-radius: 5%;
+  border-radius: 10px;
 }
 .pickup-mapinfo__search .pickup-cardlist .loading-button {
   margin-left: 7px;
