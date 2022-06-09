@@ -55,8 +55,8 @@
 
 // 배너 이동 버튼
 .prev {
-  left: 0;
   bottom: 0;
+  left: 0;
   // background-image: linear-gradient(to right, $white, transparent);
 
   img {
@@ -93,6 +93,10 @@
     display: flex;
     @include carouselListWidth($numOfItem: 4+1);
     transition: transform calc(var(--duration) * 1ms) ease-out;
+    &:focus,
+    &:hover {
+      transition: none;
+    }
   }
 
   &__item {

@@ -5,6 +5,7 @@ const bannerCarousel = ($bannerCarousel, items) => {
 
   let timerId = null;
   let $carouselList = null;
+  let $carouselItem = null;
   let $bannerCurrentItem = null;
 
   // currentItem를 기준으로 carouselList를 이동시킨다.
@@ -13,6 +14,7 @@ const bannerCarousel = ($bannerCarousel, items) => {
 
     $carouselList.style.setProperty("--duration", duration);
     $carouselList.style.setProperty("--currentItem", currentItem);
+    $carouselList.setAttribute("aria-live", "off");
 
     let itemCount =
       currentItem <= 0
@@ -20,7 +22,7 @@ const bannerCarousel = ($bannerCarousel, items) => {
         : currentItem > items.length
         ? items.length
         : currentItem;
-
+    $carouselList.setAttribute("aria-live", "polite");
     $bannerCurrentItem.innerHTML = `${itemCount} / ${items.length} `;
   };
 
@@ -28,35 +30,39 @@ const bannerCarousel = ($bannerCarousel, items) => {
     $bannerCarousel.innerHTML = `
     <h2 class="main__heading banner__event__title sr-only">
           지금 진행 중인 이벤트
-        </h2>
-<div class="banner__event__list banner__carousel__list">
-  ${[items[items.length - 1], ...items, items[0], items[1]]
-    .map(
-      (item) => `
-      <article class="banner__event__tabpanel banner__carousel__item ${item.styleClass}" role="tabpanel" aria-label="${item.index}번째 배너">
-        <a href="#" class="banner__event__link">
-        <img src="${item.img}" alt="" />
-        <p class="banner__event__text">${item.text}</p>
-        <p class="banner__event__text-bold">${item.textBold1}</p>
-        <p class="banner__event__text-bold">${item.textBold2}</p>
-        </a>
-        </article>
-        `
-    )
-    .join("")}
-</div>
-<button class="banner__event__button carousel__list__button prev ">
-  <img class="banner__carousel__list-button carousel__list__button prev" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
-</button>
-<button class="banner__event__button carousel__list__button next">
-<img class="banner__carousel__list-button carousel__list__button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />  
-</button>
-<a href="#" type="button" class="banner__event__link__button carousel__currnet__badge"
-  ><span class="banner__event__link__button__current carousel__currnet__badge__text"> </span
-  >모두보기</a> 
+    </h2>
+        
+    <div class="carousel__button__controls">
+      <button type="button" class="banner__event__button carousel__list__button prev aria-controls="banner__carousel__list">
+        <img class="banner__carousel__list-button carousel__list__button prev" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기" />
+      </button>
+      <button type="button" class="banner__event__button carousel__list__button next aria-controls="banner__carousel__list">
+      <img class="banner__carousel__list-button carousel__list__button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기" />  
+      </button>
+    </div>
+    <div class="banner__event__list banner__carousel__list" id="banner__carousel__list">
+      ${[items[items.length - 1], ...items, items[0], items[1]]
+        .map(
+          (item) => `
+          <article class="banner__event__tabpanel banner__carousel__item ${item.styleClass}" aria-label="${item.index}번째 배너"  role="group" aria-roledescription="slide">
+            <a href="#" class="banner__event__link">
+            <img src="${item.img}" alt="" />
+            <p class="banner__event__text">${item.text}</p>
+            <p class="banner__event__text-bold">${item.textBold1}</p>
+            <p class="banner__event__text-bold">${item.textBold2}</p>
+            </a>
+            </article>
+            `
+        )
+        .join("")}
+    </div>
+    <a href="#" type="button" class="banner__event__link__button carousel__currnet__badge aria-hidden="true"
+    ><span class="banner__event__link__button__current carousel__currnet__badge__text"> </span
+    >모두보기</a> 
 `;
 
     $carouselList = document.querySelector(".banner__carousel__list");
+    $carouselItem = document.querySelectorAll(".banner__carousel__item");
     $bannerCurrentItem = document.querySelector(
       ".banner__event__link__button__current"
     );
@@ -88,6 +94,8 @@ const bannerCarousel = ($bannerCarousel, items) => {
     // Autoplay restart
     timerId = setInterval(() => move(++currentItem, DURATION), 5000);
   };
+
+  $bann;
 
   $bannerCarousel.ontransitionend = () => {
     isMoving = false;

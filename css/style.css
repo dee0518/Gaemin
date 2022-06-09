@@ -602,8 +602,8 @@ button {
 }
 
 .prev {
-  left: 0;
   bottom: 0;
+  left: 0;
 }
 .prev img {
   transform: rotate(180deg);
@@ -641,6 +641,9 @@ button {
   width: 700%;
   transform: translate3D(calc(var(--currentItem) * -14.2857142857%), 0, 0);
   transition: transform calc(var(--duration) * 1ms) ease-out;
+}
+.banner__carousel__list:focus, .banner__carousel__list:hover {
+  transition: none;
 }
 .banner__carousel__item {
   transform: translate3d(-100%, 0, 0);
