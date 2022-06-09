@@ -95,8 +95,6 @@ const bannerCarousel = ($bannerCarousel, items) => {
     timerId = setInterval(() => move(++currentItem, DURATION), 5000);
   };
 
-  $bann;
-
   $bannerCarousel.ontransitionend = () => {
     isMoving = false;
 
