@@ -19,7 +19,7 @@
 
 .footer {
   @include fontSetup(normal, 1rem, $font-gray, 1.3);
-  background-color: $bg-gray;
+  background-color: $grayscaleGray6;
 }
 
 .footer__bold {

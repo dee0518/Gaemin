@@ -27,11 +27,12 @@ body {
     background-size: cover;
     background-position: center top 40%;
     &__coupon {
+      background: $grayscaleGray7;
       background-image: url(/images/dunkin/kVc.png);
       background-position: 34%;
       background-repeat: no-repeat;
       background-size: 40px;
-      background-color: $bg-gray;
+      // background-color: $bg-gray;
       height: rem(50px);
       line-height: rem(50px);
       color: $font-orangelight;
@@ -166,14 +167,20 @@ body {
   }
 }
 
+.store__header__coupon__wrapper {
+  padding-top: 9rem;
+  background: #fff;
+}
+
 .store__header__coupon {
-  margin: 0 auto;
-  margin-top: 9rem;
+  @include autoMargin;
   border-radius: 10px;
   border: 1px solid $grayscaleGray6;
   width: calc(100% - 2rem);
   text-align: center;
+  // background: $grayscaleGray7;
 }
+
 .store__order__info__wrapper {
   @include flexbox;
 }
@@ -461,10 +468,7 @@ body {
     display: none;
   }
 }
-.order__detail__box__shadow__wrapper {
-  background-color: $white;
-  z-index: -1;
-}
+
 .order__detail__main {
   &.store {
     .bill {
