@@ -120,7 +120,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     text: "친구초대시 5천원 쿠폰",
     textBold1: "이제는",
     textBold2: "웹에서도 만나요!",
-    img: "/images/components/banner/EzU.png",
+    img: "./images/components/banner/EzU.png",
     styleClass: "card__green",
   },
   {
@@ -128,7 +128,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     text: "뭐 먹을지 고민될땐",
     textBold1: "인생은",
     textBold2: "치킨의 연속",
-    img: "/images/components/banner/eventChicken.png",
+    img: "./images/components/banner/eventChicken.png",
     styleClass: "card__pink",
   },
   {
@@ -136,7 +136,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     text: "무더운 여름철",
     textBold1: "든든한 보양식~",
     textBold2: "먹고싶을 때",
-    img: "/images/components/banner/eelbob.png",
+    img: "./images/components/banner/eelbob.png",
     styleClass: "card__orange",
   },
   {
@@ -144,7 +144,7 @@ bannerCarousel(document.querySelector(".banner__carousel"), [
     text: "쿠폰함을 확인해 보세요",
     textBold1: "할인과 결제사이",
     textBold2: "단 10초!",
-    img: "/images/components/banner/banner4.png",
+    img: "./images/components/banner/banner4.png",
     styleClass: "card__darkgreen",
   },
 ]);
