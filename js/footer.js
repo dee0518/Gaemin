@@ -1,3 +1,5 @@
+import top from "./topBtn.js";
+
 const footer = () => {
   let company_toggle = document.querySelector('.company__detail__toggle');
   let company_detail = document.querySelector('.company__detail');
@@ -14,6 +16,7 @@ const footer = () => {
   
   company_toggle.addEventListener('click', companyToggleHandler);
   company_toggle.addEventListener('keyup', (e) => a11yCompanyHandler(e));
+  top();
 };
 
 export default footer;

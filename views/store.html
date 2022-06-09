@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/headFoot.js" type="module" defer></script>
 </head>
 
 <body>
@@ -30,7 +31,13 @@
         <div class="login__container">
           <a href="/" class="header__login">로그인</a>
           <a href=""><img src="../images/components/header/person32.png" alt="마이배민" /></a>
-          <a href=""><img src="../images/components/header/cart46.png" alt="장바구니" /></a>
+          <a href="./cart.html" class="cart__img"><img src="../images/components/header/cart46.png" alt="장바구니" />
+            <span class="total__count--group local__count__group">
+              <span class="sr-only">총</span>
+              <span class="local__count">1</span>
+              <span class="sr-only">개</span>
+            </span>
+          </a>
         </div>
       </div>
       <div class="header__sub2">
@@ -43,17 +50,7 @@
         </form>
       </div>
     </div>
-    <div class="modal">
-      <div class="modal__body">
-        <section class="my__place">
-          <h2>주소 설정</h2>
-          <ul class="my__place__ul">
-            <li>우리 집</li>
-            <li>우리 회사</li>
-            <li><a href="/">주소 추가</a></li>
-          </ul>
-        </section>
-      </div>
+    
     </div>
   </header>
   <main class="store order__detail__main">
@@ -578,9 +575,20 @@
           않습니다.
         </p>
       </div>
+      <button type="button" class="top__btn" aria-label="맨 위로 이동"></button>
     </div>
   </footer>
-
+  <div class="modal">
+    <div class="modal__body">
+      <section class="my__place">
+        <h2>주소 설정</h2>
+        <ul class="my__place__ul">
+          <li>우리 집</li>
+          <li>우리 회사</li>
+          <li><a href="/">주소 추가</a></li>
+        </ul>
+      </section>
+    </div>
 </body>
 
 </html>
