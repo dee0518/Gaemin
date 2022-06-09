@@ -33,7 +33,13 @@
             <div class="login__container">
               <a href="#" class="header__login">로그인</a>
               <a href="#"><img src="./images/components/header/person32.png" alt="마이배민" /></a>
-              <a href="#"><img src="./images/components/header/cart46.png" alt="장바구니" /></a>
+              <a href="./views/cart.html" class="cart__img"><img src="./images/components/header/cart46.png"
+                  alt="장바구니" />
+                <span class="total__count--group local__count__group">
+                  <span class="sr-only">총</span>
+                  <span class="total__count local__count">1</span>
+                  <span class="sr-only">개</span>
+                </span></a>
             </div>
           </div>
           <div class="header__sub2">
@@ -234,17 +240,17 @@
               <div class="live__special__video">
                 <figure>
                   <video muted>
-                    <source src="../images/components/liveShoppingCard/ex01.mp4" type="video/mp4" />
+                    <source src="../images/components/liveShoppingCard/ex02.mp4" type="video/mp4" />
                   </video>
                   <figcaption>
                     <div class="live__special__video__caption">
-                      <span class="sr-only" id="live__special__figcap">미스터 피자 상품권 특가 판매</span>
-                      <span aria-labelledby="live__special__video__figcap">미스터 피자X쥬라기월드 8천원이상 할인 혜택</span>
+                      <span class="sr-only" id="live__special__figcap">버거킹 특가 판매</span>
+                      <span aria-labelledby="live__special__video__figcap">버거킹 와퍼주니어 1 + 1 특별 행사</span>
                       <span class="live__special__video__type">
                         <span>기간한정특가</span>
                         <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
                       </span>
-                      <span class="live__special__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
+                      <span class="live__special__video__viewer">5,185<span class="sr-only">명 시청 중</span></span>
                     </div>
                   </figcaption>
                 </figure>
@@ -252,13 +258,83 @@
               <div class="live__special__coupon">
                 <dl>
                   <dt>
-                    <span>미스터 피자
-                      <span class="live__special__coupon--bottom">20,000원</span>상품권<span
+                    <span>버거킹
+                      <span class="live__special__coupon--bottom">와퍼주니어 1 + 1</span>상품권<span
                         aria-hidden="true">/</span></span>
                   </dt>
                   <dd>
                     <span>25%<span class="sr-only">할인</span></span>
-                    <span>15,000원<span class="sr-only">으로 판매중</span></span>
+                    <span>8,000원<span class="sr-only">으로 판매중</span></span>
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source src="../images/components/liveShoppingCard/ex03.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap">스테이크 특가 판매</span>
+                      <span aria-labelledby="live__special__video__figcap">빕스 스테이크 2만원이상 할인 혜택</span>
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span>5,000원 쿠폰<span class="sr-only">제공</span></span>
+                      </span>
+                      <span class="live__special__video__viewer">70,185<span class="sr-only">명 시청 중</span></span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span>빕스 스테이크
+                      <span class="live__special__coupon--bottom">50,000원</span>상품권<span
+                        aria-hidden="true">/</span></span>
+                  </dt>
+                  <dd>
+                    <span>50%<span class="sr-only">할인</span></span>
+                    <span>25,000원<span class="sr-only">으로 판매중</span></span>
+                  </dd>
+                </dl>
+              </div>
+            </a>
+          </li>
+          <li class="live__special__items">
+            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+              <div class="live__special__video">
+                <figure>
+                  <video muted>
+                    <source src="../images/components/liveShoppingCard/ex04.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>
+                    <div class="live__special__video__caption">
+                      <span class="sr-only" id="live__special__figcap">파리바게트 상품권 특가 판매</span>
+                      <span aria-labelledby="live__special__video__figcap">파리바게트 신상 디저트 상품 할인 특가 판매</span>
+                      <span class="live__special__video__type">
+                        <span>기간한정특가</span>
+                        <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
+                      </span>
+                      <span class="live__special__video__viewer">83,205<span class="sr-only">명 시청 중</span></span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="live__special__coupon">
+                <dl>
+                  <dt>
+                    <span>파리바게트
+                      <span class="live__special__coupon--bottom">30,000원</span>상품권<span
+                        aria-hidden="true">/</span></span>
+                  </dt>
+                  <dd>
+                    <span>40%<span class="sr-only">할인</span></span>
+                    <span>12,000원<span class="sr-only">으로 판매중</span></span>
                   </dd>
                 </dl>
               </div>
@@ -304,77 +380,7 @@
               <div class="live__special__video">
                 <figure>
                   <video muted>
-                    <source src="../images/components/liveShoppingCard/ex01.mp4" type="video/mp4" />
-                  </video>
-                  <figcaption>
-                    <div class="live__special__video__caption">
-                      <span class="sr-only" id="live__special__figcap">미스터 피자 상품권 특가 판매</span>
-                      <span aria-labelledby="live__special__video__figcap">미스터 피자X쥬라기월드 8천원이상 할인 혜택</span>
-                      <span class="live__special__video__type">
-                        <span>기간한정특가</span>
-                        <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
-                      </span>
-                      <span class="live__special__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="live__special__coupon">
-                <dl>
-                  <dt>
-                    <span>미스터 피자
-                      <span class="live__special__coupon--bottom">20,000원</span>상품권<span
-                        aria-hidden="true">/</span></span>
-                  </dt>
-                  <dd>
-                    <span>25%<span class="sr-only">할인</span></span>
-                    <span>15,000원<span class="sr-only">으로 판매중</span></span>
-                  </dd>
-                </dl>
-              </div>
-            </a>
-          </li>
-          <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
-              <div class="live__special__video">
-                <figure>
-                  <video muted>
-                    <source src="../images/components/liveShoppingCard/ex01.mp4" type="video/mp4" />
-                  </video>
-                  <figcaption>
-                    <div class="live__special__video__caption">
-                      <span class="sr-only" id="live__special__figcap">미스터 피자 상품권 특가 판매</span>
-                      <span aria-labelledby="live__special__video__figcap">미스터 피자X쥬라기월드 8천원이상 할인 혜택</span>
-                      <span class="live__special__video__type">
-                        <span>기간한정특가</span>
-                        <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
-                      </span>
-                      <span class="live__special__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="live__special__coupon">
-                <dl>
-                  <dt>
-                    <span>미스터 피자
-                      <span class="live__special__coupon--bottom">20,000원</span>상품권<span
-                        aria-hidden="true">/</span></span>
-                  </dt>
-                  <dd>
-                    <span>25%<span class="sr-only">할인</span></span>
-                    <span>15,000원<span class="sr-only">으로 판매중</span></span>
-                  </dd>
-                </dl>
-              </div>
-            </a>
-          </li>
-          <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
-              <div class="live__special__video">
-                <figure>
-                  <video muted>
-                    <source src="../images/components/liveShoppingCard/ex01.mp4" type="video/mp4" />
+                    <source src="../images/components/liveShoppingCard/ex02.mp4" type="video/mp4" />
                   </video>
                   <figcaption>
                     <div class="live__special__video__caption">
@@ -479,7 +485,7 @@
     </div>
   </div>
 </body>
-<script type="module" src="/js/index.js" defer></script>
+<script type="module" src="/js/main.js" defer></script>
 <script type="module" src="/js/bannerCarousel.js"></script>
 <script type="module" src="/js/todayDiscountCarousel.js"></script>
 

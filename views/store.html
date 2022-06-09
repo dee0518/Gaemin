@@ -1,167 +1,154 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>배달의 민족 for Web</title>
-    <meta
-      name="description"
-      content="배달의 민족 웹-태블릿 전용 페이지입니다."
-    />
-    <meta
-      name="keywords"
-      content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민, 라이브, 배민쇼핑라이브"
-    />
-    <meta name="author" content="개발의민족" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <!-- 해더 -->
-    <header class="header">
-      <div class="header__container">
-        <div class="header__sub1">
-          <h1 class="logo">
-            <a href="/">
-              <img
-                src="../images/components/header/logo72.png"
-                alt="배달의 민족 로고"
-              />
-              <img
-                src="../images/components/header/logo.svg"
-                alt="배달의 민족"
-              />
-            </a>
-          </h1>
-          <p class="header__location">주소를 알려주세요!</p>
-          <div class="login__container">
-            <a href="/" class="header__login">로그인</a>
-            <a href=""
-              ><img
-                src="../images/components/header/person32.png"
-                alt="마이배민"
-            /></a>
-            <a href=""
-              ><img
-                src="../images/components/header/cart46.png"
-                alt="장바구니"
-            /></a>
-          </div>
-        </div>
-        <div class="header__sub2">
-          <form action="#">
-            <fieldset class="search__fieldset">
-              <legend>음식 검색창</legend>
-              <label for="search"></label>
-              <input
-                type="search"
-                id="search"
-                placeholder="닭발?   순대?   곱창?"
-              />
-            </fieldset>
-          </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>배달의 민족 for Web</title>
+  <meta name="description" content="배달의 민족 웹-태블릿 전용 페이지입니다." />
+  <meta name="keywords" content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민, 라이브, 배민쇼핑라이브" />
+  <meta name="author" content="개발의민족" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- 해더 -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__sub1">
+        <h1 class="logo">
+          <a href="/main.html">
+            <img src="../images/components/header/logo72.png" alt="배달의 민족 로고" />
+            <img src="../images/components/header/logo.svg" alt="배달의 민족" />
+          </a>
+        </h1>
+        <p class="header__location">주소를 알려주세요!</p>
+        <div class="login__container">
+          <a href="/" class="header__login">로그인</a>
+          <a href=""><img src="../images/components/header/person32.png" alt="마이배민" /></a>
+          <a href=""><img src="../images/components/header/cart46.png" alt="장바구니" /></a>
         </div>
       </div>
-      <div class="modal">
-        <div class="modal__body">
-          <section class="my__place">
-            <h2>주소 설정</h2>
-            <ul class="my__place__ul">
-              <li>우리 집</li>
-              <li>우리 회사</li>
-              <li><a href="/">주소 추가</a></li>
-            </ul>
-          </section>
-        </div>
+      <div class="header__sub2">
+        <form action="#">
+          <fieldset class="search__fieldset">
+            <legend>음식 검색창</legend>
+            <label for="search"></label>
+            <input type="search" id="search" placeholder="닭발?   순대?   곱창?" />
+          </fieldset>
+        </form>
       </div>
-    </header>
-    <main class="store order__detail__main">
-      <div class="order__detail__box__shadow__wrapper">
+    </div>
+    <div class="modal">
+      <div class="modal__body">
+        <section class="my__place">
+          <h2>주소 설정</h2>
+          <ul class="my__place__ul">
+            <li>우리 집</li>
+            <li>우리 회사</li>
+            <li><a href="/">주소 추가</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </header>
+  <main class="store order__detail__main">
+    <div class="order__detail__box__shadow__wrapper">
       <h1 class="store__main__title sr-only">음식점 메인 페이지 입니다.</h1>
       <div class="store__header">
         <div class="store__header__title-card">
           <h2 class="store__header__title-card__name">던킨 강남역사 2호점</h2>
           <div class="store__header__title-card__star-point">
-            <span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span class="star-point-half"></span>
-            <span class="store__header__title-card__star-point"
-              > 4.5</span>
+            <span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span
+              class="star-point"></span><span class="star-point-half"></span>
+            <span class="store__header__title-card__star-point"> 4.5</span>
           </div>
           <div class="store__header__title-card__review">
-            <span class="store__header__title-card__review__recent-review"
-                  >최근리뷰 84 |</span
-                >
-            <span class="store__header__title-card__review__recent-manager-reply"
-                  >최근사장님댓글 84</span
-                >
+            <span class="store__header__title-card__review__recent-review">최근리뷰 84 |</span>
+            <span class="store__header__title-card__review__recent-manager-reply">최근사장님댓글 84</span>
           </div>
-        <div class="store__header__title-card__contect">
-          <a href="tel:050881949965"
-                type="button"
-                class="store__header__title-card__contect__tel"
-                >
-                전화</a
-              >
-          <button class="store__header__title-card__contect__zzim buttonNone">찜 84</button>
-          <button class="store__header__title-card__contect__share buttonNone">공유</button>
+          <div class="store__header__title-card__contect">
+            <a href="tel:050881949965" type="button" class="store__header__title-card__contect__tel">
+              전화</a>
+            <button class="store__header__title-card__contect__zzim zzim buttonNone" onclick="handleTitleClick()">찜
+              84</button>
+            <button class="store__header__title-card__contect__share buttonNone">공유</button>
+          </div>
         </div>
       </div>
-    </div>
-          <div class="store__order-info">
-            <h3 class="store__order-info__header sr-only">배달, 포장 주문 정보 입니다.</h3>
+      <div class="store__header__coupon">
+        최대 4000원 쿠폰 받기
 
-            <div class="store__order__info__wrapper">
-              <h4 class="store__order-info__list__header" role="tab"><span class="border_bottom">배달주문</span></h4>
-              <dl class="store__order-info__list">
-                <dt class="store__order-info__list__min-order-price">
-                  최소주문금액
-                </dt>
-                <dd class="store__order-info__list__min-order-price__value">
-                  15,000원
-                </dd>
-                <dt class="store__order-info__list__pay-method">결제방법</dt>
-                <dd class="store__order-info__list__pay-method__value">
-                  바로결제, 만나서결제, 예약가능
-                </dd>
-                <dt class="sotre__order-info__list__delivery-tip">배달팁</dt>
-                <dd class="sotre__order-info__list__delivery-tip__value">
-                  3,000원
-                </dd>
-                <dt class="sotre__order-info__list__delivery-time">배달시간</dt>
-                <dd class="sotre__order-info__list__delivery-time__value">
-                  45~60분 소요예상
-                </dd>
-              </dl>
-              <h4 class="store__order-info__list__header header-package" role="tab"><span class="border_bottom">포장/방문주문</span></h4>
-              <dl class="store__order-info__list">
-                <dt class="store__order-info__list____discount">
-                  최소주문금액<span class="badge-question">
-                </dt>
-                <dd class="store__order-info__list____discount__value">4,000원 <span class="store__order-info__list____discount__value__detail">12,000원 이상 포장 시 알인됩니다.</span></dd>
-                <dt class="store__order-info__min-order-price">최소주문금액</dt>
-                <dd class="store__order-info__min-order-price__value">15,000</dd>
-                <dt class="store__order-info__use-method">이용방법</dt>
-                <dd class="store__order-info__use-method__value">포장</dd>
-                <dt class="store__order-info__pick-up-time">픽업시간</dt>
-                <dd class="store__order-info__pick-up-time__value">6~26분 소요 예상<span class="badge-question"></span></dd>
-                <dt class="store__order-info__pick-up-time">위치안내</dt>
-                <dd class="store__order-info__pick-up-time__value">서울특별시 마포구 백범로31길 7 1동 113호</dd>
-                <dt class="store__order-info__pay-method">결제방법</dt>
-                <dd class="store__order-info__pay0method__value">바로결제</dd>
-              </dl>
-            </div>
-          </div>
-        <!-- store main -->
-        <div class="store__main">
-          <h3 class="store__main__header sr-only">음식점 메뉴, 정보, 리뷰 정보 입니다.</h3>
-          <!-- store menu tab-->
-          <nav class="store__main__nav">
-            <ul class="store__main__nav__list" role="tablist">
-              <li class="store__main__nav__item is-active" role="tab">메뉴</li>
-              <li class="store__main__nav__item" role="tab">정보</li>
-              <li class="store__main__nav__item" role="tab">리뷰</li>
+      </div>
+      <div class="store__order-info">
+        <h3 class="store__order-info__header sr-only">배달, 포장 주문 정보 입니다.</h3>
+
+        <div class="store__order__info__wrapper">
+          <h4 class="store__order-info__list__header" role="tab"><span class="border_bottom">배달주문</span></h4>
+          <dl class="store__order-info__list">
+            <dt class="store__order-info__list__min-order-price">
+              최소주문금액
+            </dt>
+            <dd class="store__order-info__list__min-order-price__value">
+              15,000원
+            </dd>
+            <dt class="store__order-info__list__pay-method">결제방법</dt>
+            <dd class="store__order-info__list__pay-method__value">
+              바로결제, 만나서결제, 예약가능
+            </dd>
+            <dt class="sotre__order-info__list__delivery-tip">배달팁</dt>
+            <dd class="sotre__order-info__list__delivery-tip__value">
+              3,000원
+            </dd>
+            <dt class="sotre__order-info__list__delivery-time">배달시간</dt>
+            <dd class="sotre__order-info__list__delivery-time__value">
+              45~60분 소요예상
+            </dd>
+          </dl>
+          <h4 class="store__order-info__list__header header-package" role="tab"><span
+              class="border_bottom">포장/방문주문</span></h4>
+          <dl class="store__order-info__list">
+            <dt class="store__order-info__list____discount">
+              최소주문금액<span class="badge-question">
+            </dt>
+            <dd class="store__order-info__list____discount__value">4,000원 <span
+                class="store__order-info__list____discount__value__detail">12,000원 이상 포장 시 알인됩니다.</span></dd>
+            <dt class="store__order-info__min-order-price">최소주문금액</dt>
+            <dd class="store__order-info__min-order-price__value">15,000</dd>
+            <dt class="store__order-info__use-method">이용방법</dt>
+            <dd class="store__order-info__use-method__value">포장</dd>
+            <dt class="store__order-info__pick-up-time">픽업시간</dt>
+            <dd class="store__order-info__pick-up-time__value">6~26분 소요 예상<span class="badge-question"></span></dd>
+            <dt class="store__order-info__pick-up-time">위치안내</dt>
+            <dd class="store__order-info__pick-up-time__value">서울특별시 마포구 백범로31길 7 1동 113호</dd>
+            <dt class="store__order-info__pay-method">결제방법</dt>
+            <dd class="store__order-info__pay0method__value">바로결제</dd>
+          </dl>
+        </div>
+      </div>
+      <!-- store main -->
+      <div class="store__main">
+        <h3 class="store__main__header sr-only">음식점 메뉴, 정보, 리뷰 정보 입니다.</h3>
+        <!-- store menu tab-->
+        <nav class="store__main__nav">
+          <ul class="store__main__nav__list" role="tablist">
+            <li class="store__main__nav__item is-active" role="tab">메뉴</li>
+            <li class="store__main__nav__item" role="tab">정보</li>
+            <li class="store__main__nav__item" role="tab">리뷰</li>
+          </ul>
+        </nav>
+        <section class="store__main__menu" role="tabpanel">
+          <h4 class="store__main__menu__title sr-only" role="tab">메뉴</h4>
+          <!-- store menu nav -->
+          <nav class="store__main__menu__nav">
+            <ul class="store__main__menu__nav__list" role="tablist">
+              <li class="store__main__menu__nav__item is-active" role="tab">인기 메뉴</li>
+              <li class="store__main__menu__nav__item" role="tab">오리지날 크러스트 피자</li>
+              <li class="store__main__menu__nav__item" role="tab">음료</li>
             </ul>
           </nav>
           <section class="store__main__menu" role="tabpanel">
@@ -331,9 +318,66 @@
                 </li>
               </ul>
             </div>
+          <p class="store__main__menu__desc">
 
-            <!-- 인기메뉴 -->
-            <!-- <div class="store__main__menu__popular">
+            <!-- <a class="badge-place-of-origin">원산지 표기</a> -->
+            <span class="badge-cesco">세스코 멤버스</span>
+            강남역 신분당선 6번출구 지하 1층 출입구에서 운영중입니다.
+
+          </p>
+
+
+
+          <div class="signature store__main__menu__category" role="tabpanel">
+            <h5 class="signature store__main__menu__category__title">
+              인기 메뉴
+            </h5>
+            <ul class="signature store__main__menu__category__list">
+              <li class="signature store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
+                  <div class="store__main__menu__category__item__img">
+                    <img class="store__main__menu__category__item__img__content" aria
+                      src="/images/reataurant-detail/donut1.png" alt="">
+                  </div>
+                  <h6 class="signature store__main__menu__category__item__heading">
+                    <span class="badge-signature" aria-label="인기 상품"></span>
+                    연유 보스톤 크림
+                  </h6>
+                  <p class="store__main__menu__category__desc">담콤 고소한 연유필링을 채우고 진한 초콜릿을 토핑한 도넛</p>
+
+                  <p class="signature store__main__menu__category__item__price">
+                    1,900원
+                  </p>
+                  <p class="signature store__main__menu__category__item__detail">
+                    품절 임박 3개 남음
+                  </p>
+                </a>
+              </li>
+              <li class="signature store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
+                  <div class="store__main__menu__category__item__img">
+                    <img class="store__main__menu__category__item__img__content"
+                      src="/images/reataurant-detail/donut1.png" alt="">
+                  </div>
+                  <h6 class="signature store__main__menu__category__item__heading">
+                    <span class="badge-signature" aria-label="인기 상품"></span>
+                    스트로베리필드
+                  </h6>
+                  <p class="store__main__menu__category__desc">담콤 고소한 연유필링을 채우고 진한 초콜릿을 토핑한 도넛</p>
+
+                  <p class="signature store__main__menu__category__item__price">
+                    14,900원
+                  </p>
+                  <p class="signature store__main__menu__category__item__detail">
+                    페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 인기메뉴 -->
+          <!-- <div class="store__main__menu__popular">
               <h5 class="store__main__menu__popular__title">
                 대표메뉴
               </h5>
@@ -352,106 +396,181 @@
                   <span class="badge-manager-recommend">사장님 추천</span>
                 </li>
               </ul> -->
-            </div>
-            <!-- 메뉴 카테고리 -->
-            <div class="store__main__menu__category">
-              <h5 class="store__main__menu__category__title">
-                오리지날 크러스트 피자(P)
-              </h5>
-              <p class="store__main__menu__category__desc">퍼스널사이즈 1인분(8인치)피자 입니다. 피클은 기본 구성에 포함되지 않습니다.</p>
-              <ul class="store__main__menu__category__list">
-                <li class="store__main__menu__category__item">
-                  <a href="./orderDetail.html">
-                  <h6 class="store__main__menu__category__item__heading">
-                    <span class="badge-category" aria-label="오리지날 크러스트 피자(P)"></span>
-                    슈퍼잭슨(P)
-                  </h6>
-                  <div class="store__main__menu__category__item__img">
-
-                    <img class="store__main__menu__category__item__img__content" src="/images/reataurant-detail/logo-jackson.png" alt="">
-                  </div>
-                  <p class="store__main__menu__category__item__detail">
-                    토마토소스, 모짜렐라치즈, 페퍼로니, 소시지, 크러쉬드 소고기, 베이컨, 적양파, 구운파프리카 
-                  </p>
-                  <p class="store__main__menu__category__item__price">
-                    11,000원
-                  </p>
-                  <span class="badge-manager-recommend">사장님 추천</span>
-                </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="store__main__menu__category">
-              <h5 class="store__main__menu__category__title">
-                음료
-              </h5>
-              <p class="store__main__menu__category__desc"></p>
-              <ul class="store__main__menu__category__list">
-                <li class="store__main__menu__category__item">
-                  <h6 class="store__main__menu__category__item__heading">
-                    코카콜라
-                  </h6>
-                  <p class="store__main__menu__category__item__detail">
-                  </p>
-                  <ul class="store__main__menu__category__item__detail__list">
-                    <li class="store__main__menu__category__item__detail__item">500ml: 1,500원</li>
-                    <li class="store__main__menu__category__item__detail__item">1.25L : 2,000원</li>
-                  </ul>
-                </li>
-                <li class="store__main__menu__category__item">
-                  <h6 class="store__main__menu__category__item__heading">
-                    스프라이트
-                  </h6>
-                  <p class="store__main__menu__category__item__detail">
-                    <ul class="store__main__menu__category__item__detail__list">
-                      <li class="store__main__menu__category__item__detail__item">500ml: 1,500원</li>
-                      <li class="store__main__menu__category__item__detail__item">1.25L : 2,000원</li>
-                    </ul>
-                  </p>
-                </li>
-                <li class="store__main__menu__category__item">
-                  <h6 class="store__main__menu__category__item__heading">
-                    제로콜라 1.25L
-                  </h6>
-                  <p class="store__main__menu__category__item__price">
-                    2,000원
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <!-- 원산지 표기 -->
-            <div class="store__main__menu__place-of-origin">
-            </div>
-
-          </section>
-          <!-- store info tab -->
-          <section class="store__main__info">
-            <h4 class="store__main__menu__title" role="tab">정보</h4>
-          </section>
-          <!-- store review tab -->
-          <section class="store__main__review">
-            <h4 class="store__main__menu__title" role="tab">리뷰</h4>
-          </section>
-        </div>
       </div>
-        <div class="bill off">
-          <section class="bill__warning">
-            <h2 class="sr-only">경고문</h2>
-            <p class="bill__warning__desc">
-              메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.
-            </p>
-          </section>
-          <section class="bill__total">
-            <h2 class="desktop">주문 내역서</h2>
-            <p class="bill__total__limit">배달최소주문금액 12,000원</p>
-            <div class="desktop">
-              <!-- 텅 이미지 -->
-              <div class="empty"></div>
-  
-              <!-- 주문 내역서 리스트 -->
-              <!-- <ul class="bill__total__list desktop">
+      <!-- 메뉴 카테고리 -->
+      <div class="store__main__menu__category">
+        <h5 class="store__main__menu__category__title">
+          오리지날 크러스트 피자(P)
+        </h5>
+        <p class="store__main__menu__category__desc">퍼스널사이즈 1인분(8인치)피자 입니다. 피클은 기본 구성에 포함되지 않습니다.</p>
+        <ul class="store__main__menu__category__list">
+          <li class="store__main__menu__category__item">
+            <a href="./orderDetail.html">
+              <h6 class="store__main__menu__category__item__heading">
+                <span class="badge-category" aria-label="오리지날 크러스트 피자(P)"></span>
+                슈퍼잭슨(P)
+              </h6>
+              <div class="store__main__menu__category__item__img">
+
+                <img class="store__main__menu__category__item__img__content"
+                  src="/images/reataurant-detail/logo-jackson.png" alt="">
+              </div>
+              <p class="store__main__menu__category__item__detail">
+                토마토소스, 모짜렐라치즈, 페퍼로니, 소시지, 크러쉬드 소고기, 베이컨, 적양파, 구운파프리카
+              </p>
+              <p class="store__main__menu__category__item__price">
+                11,000원
+              </p>
+              <span class="badge-manager-recommend">사장님 추천</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="store__main__menu__category">
+        <h5 class="store__main__menu__category__title">
+          커피
+        </h5>
+        <p class="store__main__menu__category__desc"></p>
+        <ul class="store__main__menu__category__list">
+          <li class="store__main__menu__category__item">
+            <a class="store__main__menu__categoty__link">
+              <div class="store__main__menu__category__item__img">
+                <img class="store__main__menu__category__item__img__content" aria src="/images/dunkin/IMG_6226.PNG"
+                  alt="아메리카노">
+              </div>
+              <h6 class="signature store__main__menu__category__item__heading">
+                아메리카노
+              </h6>
+              <p class="store__main__menu__category__desc">풍부한 향이 있는 미디엄 로스팅의 아메리카노 <br />(카페인 함유제품)</p>
+
+              <p class="signature store__main__menu__category__item__price">
+                3,700원
+              </p>
+
+            </a>
+          </li>
+          <li class="store__main__menu__category__item">
+            <a class="store__main__menu__categoty__link">
+              <div class="store__main__menu__category__item__img">
+                <img class="store__main__menu__category__item__img__content" aria src="/images/dunkin/IMG_6227.PNG"
+                  alt="따뜻한 카페라떼">
+              </div>
+              <h6 class="signature store__main__menu__category__item__heading">
+                카페라떼
+              </h6>
+              <p class="store__main__menu__category__desc">우유의 고소함과 부드러움이 잘 어울리는 커피<br />(카페인 함유제품)</p>
+
+              <p class="signature store__main__menu__category__item__price">
+                4,000원
+              </p>
+
+            </a>
+          </li>
+          <li class="store__main__menu__category__item">
+            <a class="store__main__menu__categoty__link">
+              <div class="store__main__menu__category__item__img">
+                <img class="store__main__menu__category__item__img__content" aria src="/images/dunkin/IMG_6228.PNG"
+                  alt="따뜻한 카푸치노">
+              </div>
+              <h6 class="signature store__main__menu__category__item__heading">
+                카푸치노
+              </h6>
+              <p class="store__main__menu__category__desc">폭신한 우유거품과 진한 에스프레소가 조화로운 카푸치노<br />(카페인 함유제품)</p>
+
+              <p class="signature store__main__menu__category__item__price">
+                4,000원
+              </p>
+
+            </a>
+          </li>
+          <li class="store__main__menu__category__item">
+            <a class="store__main__menu__categoty__link">
+              <div class="store__main__menu__category__item__img">
+                <img class="store__main__menu__category__item__img__content" aria src="/images/dunkin/IMG_6229.PNG"
+                  alt="따뜻한 카페모카">
+              </div>
+              <h6 class="signature store__main__menu__category__item__heading">
+                카페모카
+              </h6>
+              <p class="store__main__menu__category__desc">달콤한 초코, 부드러운 휘핑크림이 조화로운 카페모카<br />(배달주문시 휘핑크림은 제공되지 않습니다, 카페인
+                함유제품)</p>
+
+              <p class="signature store__main__menu__category__item__price">
+                4,400원
+              </p>
+
+            </a>
+          </li>
+          <li class="store__main__menu__category__item">
+            <a class="store__main__menu__categoty__link">
+              <div class="store__main__menu__category__item__img">
+                <img class="store__main__menu__category__item__img__content" aria src="/images/dunkin/IMG_6230.PNG"
+                  alt="따뜻한 바닐라라떼">
+              </div>
+              <h6 class="signature store__main__menu__category__item__heading">
+                바닐라라떼
+              </h6>
+              <p class="store__main__menu__category__desc">향긋한 바닐라가 조화로운 달콤한 바닐라 라떼<br />(배달주문시 휘핑크림은 제공되지 않습니다, 카페인
+                함유제품)</p>
+
+              <p class="signature store__main__menu__category__item__price">
+                4,400원
+              </p>
+
+            </a>
+          </li>
+          <li class="store__main__menu__category__item">
+            <a class="store__main__menu__categoty__link">
+              <div class="store__main__menu__category__item__img">
+                <img class="store__main__menu__category__item__img__content" aria src="/images/dunkin/IMG_6231.PNG"
+                  alt="따뜻한 카라멜마끼아또">
+              </div>
+              <h6 class="signature store__main__menu__category__item__heading">
+                카라멜마끼아또
+              </h6>
+              <p class="store__main__menu__category__desc">따뜻한 우유, 달콤한 카라멜이 조화로운 카라멜마끼아또<br />(카페인 함유제품)</p>
+
+              <p class="signature store__main__menu__category__item__price">
+                4,400원
+              </p>
+
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 원산지 표기 -->
+      <div class="store__main__menu__place-of-origin">
+      </div>
+
+      </section>
+      <!-- store info tab -->
+      <section class="store__main__info">
+        <h4 class="store__main__menu__title" role="tab">정보</h4>
+      </section>
+      <!-- store review tab -->
+      <section class="store__main__review">
+        <h4 class="store__main__menu__title" role="tab">리뷰</h4>
+      </section>
+    </div>
+    </div>
+    <div class="bill off">
+      <section class="bill__warning">
+        <h2 class="sr-only">경고문</h2>
+        <p class="bill__warning__desc">
+          메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.
+        </p>
+      </section>
+      <section class="bill__total">
+        <h2 class="desktop">주문 내역서</h2>
+        <p class="bill__total__limit">배달최소주문금액 12,000원</p>
+        <div class="desktop">
+          <!-- 텅 이미지 -->
+          <div class="empty"></div>
+
+          <!-- 주문 내역서 리스트 -->
+          <!-- <ul class="bill__total__list desktop">
                 <li class="bill__total__item">
                   <span class="bill__total__item__product"
                     >유명 찜닭<span>25,000원</span></span
@@ -490,79 +609,73 @@
               <p class="bill__total__price">
                 <span>총결제금액</span><span class="total__price">25,000원</span>
               </p> -->
-            </div>
-            <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
-            <button type="button">
-              <span class="total__count--group">
-                <span class="sr-only">총</span>
-                <span class="total__count">1</span>
-                <span class="sr-only">개</span>
-              </span>
-              <span
-                ><span class="display__off"
-                  ><span class="total__price">25,000</span>원</span
-                >
-                주문하기</span
-              >
-            </button>
-          </section>
         </div>
-    </main>
-    <!-- footer -->
-    <footer class="footer__store footer">
-      <div class="footer__sub">
-        <p class="">
-          <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
-          <a href="#">이용약관 </a> <span aria-hidden="true">|</span>
-          <a href="#">전자금융거래이용약관 </a>
-          <span aria-hidden="true">|</span>
-          <a href="#" class="footer__bold">개인정보처리방침 </a>
-        </p>
-        <p
-          class="company__detail__toggle footer__bold"
-          role="button"
-          tabindex="0"
-        >
-          (주)우아한형제들
-        </p>
-        <section class="company__detail">
-          <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
-          <div class="company__detail__sub">
-            <p class="">
-              대표이사 김범준 <span aria-hidden="true">|</span> 사업자등록번호
-              120-87-65763
-            </p>
-            <p>
-              통신판매업 서울 송파-0515 | 호스팅서비스제공자 (주)우아한형제들
-            </p>
-            <p>CS@woowahan.com | 서울특별시 송파구 위례성대로 2 장은빌딩</p>
-            <p>전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)</p>
-            <p>Fax 050-6050-0400</p>
-          </div>
-          <div class="customer__service__container">
-            <div class="customer__service__container__sub1">
-              <p>고객센터(대표)</p>
-              <p>1600-0987</p>
-              <p>24시간 운영, 연중무휴</p>
-            </div>
-            <div class="customer__service__container__sub2">
-              <p>고객센터(B마트/배민스토어)</p>
-              <p>1600-0025</p>
-              <p>오전 09:00~익일 새벽 01:00</p>
-            </div>
-          </div>
-        </section>
-        <div class="footer__footer">
-          <p>
-            (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다.
-            따라서&nbsp;
+        <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
+        <button type="button">
+          <span class="total__count--group">
+            <span class="sr-only">총</span>
+            <span class="total__count">1</span>
+            <span class="sr-only">개</span>
+          </span>
+          <span><span class="display__off"><span class="total__price">25,000</span>원</span>
+            주문하기</span>
+        </button>
+      </section>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="footer__store footer">
+    <div class="footer__sub">
+      <p class="">
+        <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
+        <a href="#">이용약관 </a> <span aria-hidden="true">|</span>
+        <a href="#">전자금융거래이용약관 </a>
+        <span aria-hidden="true">|</span>
+        <a href="#" class="footer__bold">개인정보처리방침 </a>
+      </p>
+      <p class="company__detail__toggle footer__bold" role="button" tabindex="0">
+        (주)우아한형제들
+      </p>
+      <section class="company__detail">
+        <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
+        <div class="company__detail__sub">
+          <p class="">
+            대표이사 김범준 <span aria-hidden="true">|</span> 사업자등록번호
+            120-87-65763
           </p>
           <p>
-            (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
-            않습니다.
+            통신판매업 서울 송파-0515 | 호스팅서비스제공자 (주)우아한형제들
           </p>
+          <p>CS@woowahan.com | 서울특별시 송파구 위례성대로 2 장은빌딩</p>
+          <p>전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)</p>
+          <p>Fax 050-6050-0400</p>
         </div>
+        <div class="customer__service__container">
+          <div class="customer__service__container__sub1">
+            <p>고객센터(대표)</p>
+            <p>1600-0987</p>
+            <p>24시간 운영, 연중무휴</p>
+          </div>
+          <div class="customer__service__container__sub2">
+            <p>고객센터(B마트/배민스토어)</p>
+            <p>1600-0025</p>
+            <p>오전 09:00~익일 새벽 01:00</p>
+          </div>
+        </div>
+      </section>
+      <div class="footer__footer">
+        <p>
+          (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다.
+          따라서&nbsp;
+        </p>
+        <p>
+          (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
+          않습니다.
+        </p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+</body>
+
 </html>

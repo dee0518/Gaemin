@@ -142,16 +142,17 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descBottem1: "붐 치키 붐~ 든든하고 맛있게",
     descBottom2: "리얼 멕시코를 두배 사이즈로",
     background: "/images/main/mexican.png",
+
     styleClass: "card__pink",
   },
   {
     index: 4,
     logo: "/images/main/logo-vips.png",
-    descTop: "빕스 모든 메뉴",
-    descDiscount: "100만 2천원 할인",
-    descBottem1: "홈파티의 정석!",
-    descBottom2: "집에서 즐기는 빕스 다이닝",
-    background: "/images/components/banner/vips-bg.png",
-    styleClass: "card__darkgreen",
+    descTop: "둔내 막국수",
+    descDiscount: "2천원 할인",
+    descBottem1: "쫄깃한 면발",
+    descBottom2: "여름에 입맛돋구는 막국수",
+    background: "/images/main/bibimgucksu2.png",
+    styleClass: "card__olive",
   },
 ]);

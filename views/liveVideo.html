@@ -11,7 +11,7 @@
   <title>라이브 시청</title>
 </head>
 <body class="live__video">
-  <div class="live__video__wrapper">
+  <div class="live__video__wrapper loading">
     <div class="live__video__inner">
       <header class="live__video__header">
         <h1 class="live__video__logo">
@@ -43,7 +43,7 @@
           </div>
           <ul class="live__video__bottom--btn--group">
             <li><button type="button" aria-label="다운받을 수 있는 쿠폰 보기" data-num="1"></button></li>
-            <li><button type="button" aria-label="좋아요(ㅋ)"></button><span>9,281<span class="sr-only">명이 좋아합니다.</span></li>
+            <li><button type="button" aria-label="좋아요(ㅋ)" class="like__btn"></button><span><span class="like__num">0</span><span class="sr-only">명이 좋아합니다.</span></li>
             <li><button type="button"><span><span class="sr-only">라이브</span>공유하기</span></button></li>
           </ul>
           <div class="live__video__sales">
@@ -76,6 +76,5 @@
     </div>
   </div>
   <script src="../js/liveVideo.js"></script>
-
 </body>
 </html>

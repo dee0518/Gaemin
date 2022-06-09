@@ -14,6 +14,7 @@
 .header__container {
   padding-top: rem(30px);
   max-width: rem(1024px);
+  @include paddingX(15px);
   @include autoMargin;
 }
 
@@ -124,5 +125,23 @@
   border-bottom: 1px solid $black;
   margin: 20px 0;
   cursor: pointer;
+}
+
+.local__count__group {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: $white;
+  width: rem(20px);
+  height: rem(20px);
+  color: $banner-blue;
+  text-align: center;
+  line-height: rem(20px);
+  display: none;
+}
+
+.cart__img {
+  position: relative;
 }
 // 헤더 종료 --------------------------------------------------------------------- /

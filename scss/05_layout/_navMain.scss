@@ -24,6 +24,7 @@
 .nav__ul__main {
   @include flexbox(row, flex-start);
   margin-top: rem(10px);
+  @include paddingX(15px);
 }
 
 .nav__li__main {
