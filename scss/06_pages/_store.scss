@@ -28,7 +28,7 @@ body {
     background-position: center top 40%;
     &__coupon {
       background: $grayscaleGray7;
-      background-image: url(/images/dunkin/kVc.png);
+      background-image: url(./../images/dunkin/kVc.png);
       background-position: 34%;
       background-repeat: no-repeat;
       background-size: 40px;
@@ -43,7 +43,7 @@ body {
         width: 30px;
         height: 40px;
         position: absolute;
-        background-image: url(/images/dunkin/MYt.png);
+        background-image: url(./../images/dunkin/MYt.png);
         background-position: center top 80%;
         background-repeat: no-repeat;
       }
@@ -85,14 +85,14 @@ body {
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(/images/reataurant-detail/starfull84.png) no-repeat 0 0;
+    background: url(./../images/reataurant-detail/starfull84.png) no-repeat 0 0;
     background-size: contain;
   }
   &-point-half {
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(/images/reataurant-detail/starhalf84.png) no-repeat 0 0;
+    background: url(./../images/reataurant-detail/starhalf84.png) no-repeat 0 0;
     background-size: contain;
   }
 }
@@ -132,7 +132,7 @@ body {
       width: 1rem;
       height: 1rem;
       display: inline-block;
-      background: url(/images/reataurant-detail/phone72.png);
+      background: url(./../images/reataurant-detail/phone72.png);
       background-size: cover;
       margin-right: 0.25rem;
     }
@@ -144,7 +144,7 @@ body {
     &::before {
       content: "";
       display: inline-block;
-      background: url(/images/reataurant-detail/heart72.png);
+      background: url(./../images/reataurant-detail/heart72.png);
       background-size: cover;
       width: 1rem;
       height: 1rem;
@@ -158,7 +158,7 @@ body {
     &::before {
       content: "";
       display: inline-block;
-      background: url(/images/reataurant-detail/share72.png);
+      background: url(./../images/reataurant-detail/share72.png);
       background-size: cover;
       width: 1rem;
       height: 1rem;
@@ -270,7 +270,7 @@ body {
 .badge-signature {
   content: "";
   display: inline-block;
-  background: $grayscaleGray6 url(/images/reataurant-detail/icon-popular.jpg);
+  background: $grayscaleGray6 url(./../images/reataurant-detail/icon-popular.jpg);
   background-size: cover;
   margin-right: 0.5rem;
   width: 1.75rem;
