@@ -604,6 +604,7 @@ button {
 .prev {
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
 .prev img {
   transform: rotate(180deg);
@@ -612,6 +613,7 @@ button {
 .next {
   bottom: 0;
   right: 0;
+  z-index: 1;
 }
 
 .carousel__currnet__badge {
@@ -3507,7 +3509,7 @@ body {
 }
 .store__header__coupon {
   background: #eee;
-  background-image: url(/images/dunkin/kVc.png);
+  background-image: url(./../images/dunkin/kVc.png);
   background-position: 34%;
   background-repeat: no-repeat;
   background-size: 40px;
@@ -3522,7 +3524,7 @@ body {
   width: 30px;
   height: 40px;
   position: absolute;
-  background-image: url(/images/dunkin/MYt.png);
+  background-image: url(./../images/dunkin/MYt.png);
   background-position: center top 80%;
   background-repeat: no-repeat;
 }
@@ -3560,14 +3562,14 @@ body {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url(/images/reataurant-detail/starfull84.png) no-repeat 0 0;
+  background: url(./../images/reataurant-detail/starfull84.png) no-repeat 0 0;
   background-size: contain;
 }
 .star-point-half {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url(/images/reataurant-detail/starhalf84.png) no-repeat 0 0;
+  background: url(./../images/reataurant-detail/starhalf84.png) no-repeat 0 0;
   background-size: contain;
 }
 
@@ -3601,7 +3603,7 @@ body {
   width: 1rem;
   height: 1rem;
   display: inline-block;
-  background: url(/images/reataurant-detail/phone72.png);
+  background: url(./../images/reataurant-detail/phone72.png);
   background-size: cover;
   margin-right: 0.25rem;
 }
@@ -3614,7 +3616,7 @@ body {
 .store__header__title-card__contect__zzim::before {
   content: "";
   display: inline-block;
-  background: url(/images/reataurant-detail/heart72.png);
+  background: url(./../images/reataurant-detail/heart72.png);
   background-size: cover;
   width: 1rem;
   height: 1rem;
@@ -3629,7 +3631,7 @@ body {
 .store__header__title-card__contect__share::before {
   content: "";
   display: inline-block;
-  background: url(/images/reataurant-detail/share72.png);
+  background: url(./../images/reataurant-detail/share72.png);
   background-size: cover;
   width: 1rem;
   height: 1rem;
@@ -3743,7 +3745,7 @@ body {
 .badge-signature {
   content: "";
   display: inline-block;
-  background: #ccc url(/images/reataurant-detail/icon-popular.jpg);
+  background: #ccc url(./../images/reataurant-detail/icon-popular.jpg);
   background-size: cover;
   margin-right: 0.5rem;
   width: 1.75rem;
