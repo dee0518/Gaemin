@@ -32,6 +32,8 @@
     position: absolute;
     margin-left: -1rem;
     right: 0;
+    width: 11rem;
+    z-index: 0;
   }
 
   &__logo {
@@ -50,7 +52,8 @@
     margin-bottom: 0.25rem;
   }
   &__desc-bottom {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
+    z-index: 2;
   }
 }
 
