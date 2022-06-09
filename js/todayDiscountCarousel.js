@@ -116,7 +116,7 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
 todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
   {
     index: 1,
-    logo: "/images/main/logo-dunkin.webp",
+    logo: "./images/main/logo-dunkin.webp",
     descTop: "6월 생일 이벤트",
     descDiscount: "선착순 무료",
     descBottem1: "콩~그레이츄레이션",
@@ -126,7 +126,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
   },
   {
     index: 2,
-    logo: "/images/main/logo-udon.webp",
+    logo: "./images/main/logo-udon.webp",
     descTop: "마루가메 우동 전메뉴",
     descDiscount: "4천원 할인",
     descBottem1: "오키나와 스타일 우동 전문 브렌드!",
@@ -136,7 +136,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
   },
   {
     index: 3,
-    logo: "/images/main/carolinas-logo.png",
+    logo: "./images/main/carolinas-logo.png",
     descTop: "보울 메뉴",
     descDiscount: "1만원 할인",
     descBottem1: "붐 치키 붐~ 든든하고 맛있게",
@@ -147,7 +147,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
   },
   {
     index: 4,
-    logo: "/images/main/logo-vips.png",
+    logo: "./images/main/logo-vips.png",
     descTop: "둔내 막국수",
     descDiscount: "2천원 할인",
     descBottem1: "쫄깃한 면발",
