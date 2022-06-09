@@ -55,10 +55,10 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
     .join("")}
 </div>
 <button class="today_discount__button carousel__list__button prev ">
-  <img class="carousel__list-button carousel__list__button prev" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
+  <img class="carousel__list-button carousel__list__button prev" src="./images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
 </button>
 <button class="today_discount__button carousel__list__button next">
-  <img class="carousel__list-button carousel__list__button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />
+  <img class="carousel__list-button carousel__list__button" src="./images/components/banner/white-arrow56.png" alt="다음 배너 보기 버튼" />
 </button>
 <a href="#" type="button" class="today_discount__link__button carousel__currnet__badge"
   ><span class="today_discount__link__button__current carousel__currnet__badge__text"> </span
@@ -121,7 +121,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descDiscount: "선착순 무료",
     descBottem1: "콩~그레이츄레이션",
     descBottom2: "당신의 생일을 축하합니다",
-    background: "/images/main/birthday.png",
+    background: "./images/main/birthday.png",
     styleClass: "card__orange",
   },
   {
@@ -131,7 +131,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descDiscount: "4천원 할인",
     descBottem1: "오키나와 스타일 우동 전문 브렌드!",
     descBottom2: "올 여름 오키나와를 느껴보세요",
-    background: "/images/main/udon.png",
+    background: "./images/main/udon.png",
     styleClass: "card__green",
   },
   {
@@ -141,8 +141,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descDiscount: "1만원 할인",
     descBottem1: "붐 치키 붐~ 든든하고 맛있게",
     descBottom2: "리얼 멕시코를 두배 사이즈로",
-    background: "/images/main/mexican.png",
-
+    background: "./images/main/mexican.png",
     styleClass: "card__pink",
   },
   {
@@ -152,7 +151,7 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descDiscount: "2천원 할인",
     descBottem1: "쫄깃한 면발",
     descBottom2: "여름에 입맛돋구는 막국수",
-    background: "/images/main/bibimgucksu2.png",
+    background: "./images/main/bibimgucksu2.png",
     styleClass: "card__olive",
   },
 ]);

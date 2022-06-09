@@ -34,10 +34,10 @@ const bannerCarousel = ($bannerCarousel, items) => {
         
     <div class="carousel__button__controls">
       <button type="button" class="banner__event__button carousel__list__button prev aria-controls="banner__carousel__list">
-        <img class="banner__carousel__list-button carousel__list__button prev" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기" />
+        <img class="banner__carousel__list-button carousel__list__button prev" src="./images/components/banner/white-arrow56.png" alt="이전 배너 보기" />
       </button>
       <button type="button" class="banner__event__button carousel__list__button next aria-controls="banner__carousel__list">
-      <img class="banner__carousel__list-button carousel__list__button" src="/images/components/banner/white-arrow56.png" alt="다음 배너 보기" />  
+      <img class="banner__carousel__list-button carousel__list__button" src="./images/components/banner/white-arrow56.png" alt="다음 배너 보기" />  
       </button>
     </div>
     <div class="banner__event__list banner__carousel__list" id="banner__carousel__list">
