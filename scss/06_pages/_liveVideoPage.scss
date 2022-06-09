@@ -6,11 +6,72 @@
     &.loading {
       .live__video__inner {
         background: $font-gray;
-
+        
         header, .live__video__container {
           opacity: 0;
         }
+        
+        .loading__container {
+          display: block;
+        }
       }
+    }
+
+    .loading__container {
+        display: none;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .loading {
+          border-radius: 100%;
+          border: 2px solid $white;
+          border-top-color: transparent;
+          border-bottom-color: transparent;
+          background: transparent;
+          -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+          -moz-transform-origin: 50% 50%;
+          -o-animation: rotate-loading 1.5s linear 0s infinite normal;
+          -o-transform-origin: 50% 50%;
+          -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+          -webkit-transform-origin: 50% 50%;
+          animation: rotate-loading 1.5s linear 0s infinite normal;
+          transform-origin: 50% 50%;
+        }
+
+        &:hover .loading {
+            border-color: transparent #E45635 transparent #E45635;
+        }
+
+        &:hover .loading,
+        & .loading {
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #loading-text {
+            -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+            -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+            -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+            animation: loading-text-opacity 2s linear 0s infinite normal;
+            color: #ffffff;
+            font-family: "Helvetica Neue, "Helvetica", ""arial";
+            font-size: 10px;
+            font-weight: bold;
+            margin-top: 45px;
+            opacity: 0;
+            position: absolute;
+            text-align: center;
+            text-transform: uppercase;
+            top: 0;
+            width: 100px;
+        }
     }
 
     header, .live__video__container {
