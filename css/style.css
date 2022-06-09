@@ -4060,7 +4060,18 @@ body {
   position: absolute;
   bottom: -70px;
   left: 20px;
-  width: 16.25rem;
+}
+@media screen and (min-width: 1024px) {
+  .cart__delete {
+    width: 16.25rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .cart__delete {
+    bottom: 80px;
+    left: 70px;
+    width: 80%;
+  }
 }
 
 .bill__total {

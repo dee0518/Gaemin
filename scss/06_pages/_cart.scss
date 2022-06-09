@@ -143,7 +143,16 @@
   position: absolute;
   bottom: -70px;
   left: 20px;
-  width: rem(260px);
+  @include desktop {
+    width: rem(260px);
+  }
+
+  @include tablet {
+    bottom: 80px;
+    left: 70px;
+    width: 80%;
+    // height: rem(50px);
+  }
 }
 
 .bill__total {
