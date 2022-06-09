@@ -883,7 +883,7 @@ button {
   border-radius: 10px;
   overflow: hidden;
 }
-.live__special__video video {
+.live__special__video img {
   width: 100%;
 }
 .live__special__video figcaption {
