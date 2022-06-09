@@ -1376,6 +1376,10 @@ button {
   display: none;
 }
 
+.my__place h2 {
+  outline: 0;
+}
+
 .cart__img {
   position: relative;
 }
