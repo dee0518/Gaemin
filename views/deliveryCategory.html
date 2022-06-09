@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,11 +29,11 @@
             <h1 class="logo">
               <a href="../main.html">
                 <img
-                  src="../images/components/header/logo72.png"
+                  src="./images/components/header/logo72.png"
                   alt="배달의 민족 로고"
                 />
                 <img
-                  src="../images/components/header/logo.svg"
+                  src="./images/components/header/logo.svg"
                   alt="배달의 민족"
                 />
               </a>
@@ -42,10 +43,10 @@
               <a href="/" class="header__login">로그인</a>
               <a href=""
                 ><img
-                  src="../images/components/header/person32.png"
+                  src="./images/components/header/person32.png"
                   alt="마이배민"
               /></a>
-              <a href="./cart.html" class="cart__img"><img src="../images/components/header/cart46.png" alt="장바구니" />
+              <a href="./cart.html" class="cart__img"><img src="./images/components/header/cart46.png" alt="장바구니" />
                 <span class="total__count--group local__count__group">
                   <span class="sr-only">총</span>
                   <span class="local__count">1</span>
@@ -66,171 +67,19 @@
                 />
               </fieldset>
             </form>
+
           </div>
         </div>
-        
-      </header>
-      <nav class="nav">
-        <section class="nav__sec">
-          <h2 class="nav__heading">배달</h2>
-          <ul class="nav__ul">
-            <li class="nav__li">
-              <a
-                href="#"
-                class=""
-                role="tab"
-                id="sushi-tab"
-                aria-controls="sushi-panel"
-                aria-selected="false"
-                >돈까스&centerdot;회&centerdot;일식</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                role="tab"
-                class=""
-                id="chinese-tab"
-                aria-controls="chinese-panel"
-                aria-selected="false"
-                href="#"
-                >중식</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="chicken-tab"
-                aria-controls="chicken-panel"
-                aria-selected="false"
-                href="#"
-                >치킨</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="noodle-tab"
-                aria-controls="noodle-panel"
-                aria-selected="false"
-                href="#"
-                >백반&centerdot;죽&centerdot;국수</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class="selected"
-                role="tab"
-                id="cafe-tab"
-                aria-controls="cafe-panel"
-                aria-selected="true"
-                href="./orderDetail.html"
-                >카페&centerdot;디저트</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="bunsik-tab"
-                aria-controls="bunsik-panel"
-                aria-selected="false"
-                href="#"
-                >분식</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="jjigae-tab"
-                aria-controls="jjigae-panel"
-                aria-selected="false"
-                href="#"
-                >짬&centerdot;탕&centerdot;찌개</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="pizza-tab"
-                aria-controls="pizza-panel"
-                aria-selected="false"
-                href="#"
-                >피자</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="spagetti-tab"
-                aria-controls="spagetti-panel"
-                aria-selected="false"
-                href="#"
-                >양식</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="meat-tab"
-                aria-controls="meat-panel"
-                aria-selected="false"
-                href="#"
-                >고기&centerdot;구이</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="jok-tab"
-                aria-controls="jok-panel"
-                aria-selected="false"
-                href="#"
-                >족발&centerdot;보쌈</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="asian-tab"
-                aria-controls="asian-panel"
-                aria-selected="false"
-                href="#"
-                >아시안</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="fastfood-tab"
-                aria-controls="fastfood-panel"
-                aria-selected="false"
-                href="#"
-                >패스트푸드</a
-              >
-            </li>
-            <li class="nav__li">
-              <a
-                class=""
-                role="tab"
-                id="lunchbox-tab"
-                aria-controls="lunchbox-panel"
-                aria-selected="false"
-                href="#"
-                >도시락</a
-              >
-            </li>
-          </ul>
-        </section>
-      </nav>
+        <div class="header__sub2">
+          <form action="#">
+            <fieldset class="search__fieldset">
+              <legend>음식 검색창</legend>
+              <label for="search"></label>
+              <input type="search" id="search" placeholder="닭발?   순대?   곱창?" />
+            </fieldset>
+          </form>
+        </div>
+      </div>
 
       <div
         class="dc__wrapper"
@@ -241,7 +90,7 @@
         <ul class="dc__list">
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -252,7 +101,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -272,7 +121,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -283,7 +132,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -294,7 +143,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -314,7 +163,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -325,7 +174,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -336,7 +185,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -356,7 +205,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -367,7 +216,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -378,7 +227,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -398,7 +247,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -409,7 +258,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -420,7 +269,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -440,7 +289,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -451,7 +300,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -462,7 +311,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -482,7 +331,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -493,7 +342,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -504,7 +353,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -524,7 +373,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -535,7 +384,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -546,7 +395,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -566,7 +415,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -577,7 +426,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+              <img src="./images/delivery-main/chobab.jpg" alt="초밥" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -588,7 +437,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt=""
                   />
                   <dd class="rating">4.9</dd>
@@ -608,7 +457,7 @@
                 <div class="bmNo1wrapper">
                   <dt>
                     배민<img
-                      src="../images/components/restaurantCard/no1-24.png"
+                      src="./images/components/restaurantCard/no1-24.png"
                       alt="배민원"
                     />
                   </dt>
@@ -647,7 +496,7 @@
         <ul class="dc__list">
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/dunkinMain.png" alt="던킨도너츠" />
+              <img src="./images/delivery-main/dunkinMain.png" alt="던킨도너츠" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -658,7 +507,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.9</dd>
@@ -684,7 +533,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/desert1.bmp" alt="파이" />
+              <img src="./images/delivery-main/desert1.bmp" alt="파이" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -695,7 +544,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.4</dd>
@@ -721,7 +570,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/desert2.bmp" alt="디저트2" />
+              <img src="./images/delivery-main/desert2.bmp" alt="디저트2" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -732,7 +581,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.8</dd>
@@ -758,7 +607,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/turkish.jpg" alt="터키쉬딜라이트" />
+              <img src="./images/delivery-main/turkish.jpg" alt="터키쉬딜라이트" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -769,7 +618,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.5</dd>
@@ -795,7 +644,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/churos.jpg" alt="츄러스" />
+              <img src="./images/delivery-main/churos.jpg" alt="츄러스" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -806,7 +655,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">5.0</dd>
@@ -832,7 +681,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/dango.jpg" alt="당고" />
+              <img src="./images/delivery-main/dango.jpg" alt="당고" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -843,7 +692,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.7</dd>
@@ -869,7 +718,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/waffle.jpg" alt="와플" />
+              <img src="./images/delivery-main/waffle.jpg" alt="와플" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -880,7 +729,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.9</dd>
@@ -906,7 +755,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/scorn.jpg" alt="스콘" />
+              <img src="./images/delivery-main/scorn.jpg" alt="스콘" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -917,7 +766,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">5.0</dd>
@@ -943,7 +792,7 @@
           </li>
           <li class="dc__food__item restCard">
             <div class="imgContainer">
-              <img src="../images/delivery-main/Mille-feuille.jpg" alt="밀푀유 디저트" />
+              <img src="./images/delivery-main/Mille-feuille.jpg" alt="밀푀유 디저트" />
             </div>
             <div class="descContainer">
               <h3 class="restName">
@@ -954,7 +803,7 @@
                 <div class="descWrapper__rating">
                   <dt class="sr-only">별점</dt>
                   <img
-                    src="../images/components/restaurantCard/star42.png"
+                    src="./images/components/restaurantCard/star42.png"
                     alt="별점"
                   />
                   <dd class="rating">4.4</dd>
@@ -979,117 +828,684 @@
             </div>
           </li>
         </ul>
-      </div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="bunsik-tab"
-        id="bunsik-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="jjigae-tab"
-        id="jjigae-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="pizza-tab"
-        id="pizza-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="spagetti-tab"
-        id="spagetti-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="meat-tab"
-        id="meat-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="jok-tab"
-        id="jok-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="asian-tab"
-        id="asian-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="fastfood-tab"
-        id="fastfood-panel"
-      ></div>
-      <div
-        class="dc__wrapper"
-        role="tabpanel"
-        aria-labelledby="lunchbox-tab"
-        id="lunchbox-panel"
-      ></div>
+      </section>
+    </nav>
 
-      <footer class="footer">
-        <div class="footer__sub">
-          <p class="">
-            <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
-            <a href="#">이용약관 </a> <span aria-hidden="true">|</span>
-            <a href="#">전자금융거래이용약관 </a>
-            <span aria-hidden="true">|</span>
-            <a href="#" class="footer__bold">개인정보처리방침 </a>
-          </p>
-          <p
-            class="company__detail__toggle footer__bold"
-            role="button"
-            tabindex="0"
-          >
-            (주)우아한형제들
-          </p>
-          <section class="company__detail">
-            <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
-            <div class="company__detail__sub">
-              <p class="">
-                대표이사 김범준 <span aria-hidden="true">|</span> 사업자등록번호
-                120-87-65763
-              </p>
-              <p>
-                통신판매업 서울 송파-0515
-                <span aria-hidden="true">|</span> 호스팅서비스제공자
-                (주)우아한형제들
-              </p>
-              <p>CS@woowahan.com | 서울특별시 송파구 위례성대로 2 장은빌딩</p>
-              <p>전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)</p>
-              <p>Fax 050-6050-0400</p>
-            </div>
-            <div class="customer__service__container">
-              <div class="customer__service__container__sub1">
-                <p>고객센터(대표)</p>
-                <p>1600-0987</p>
-                <p>24시간 운영, 연중무휴</p>
-              </div>
-              <div class="customer__service__container__sub2">
-                <p>고객센터(B마트/배민스토어)</p>
-                <p>1600-0025</p>
-                <p>오전 09:00~익일 새벽 01:00</p>
-              </div>
-            </div>
-          </section>
-          <div class="footer__footer">
-            <p>
-              (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
-              아닙니다. 따라서&nbsp;
-            </p>
-            <p>
-              (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
-              않습니다.
-            </p>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="sushi-tab" id="sushi-panel">
+      <ul class="dc__list">
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
           </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/chobab.jpg" alt="초밥" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">아트스시</a>
+            </h3>
+            <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="bmNo1wrapper">
+                <dt>
+                  배민<img src="../images/components/restaurantCard/no1-24.png" alt="배민원" />
+                </dt>
+                <dd>10~20분</dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="chinese-tab" id="chinese-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="chicken-tab" id="chicken-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="noodle-tab" id="noodle-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="cafe-tab" id="cafe-panel">
+      <ul class="dc__list">
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/dunkinMain.png" alt="던킨도너츠" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="./store.html" class="restLink">던킨 강남역사2호점</a>
+            </h3>
+            <p class="sr-only">달콤한 던킨의 도너츠들을 맛보세요</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>8,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  2,000원~2,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>0.3km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/desert1.bmp" alt="파이" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">에또끌레르</a>
+            </h3>
+            <p class="sr-only">다양한 디저트</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.4</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>20,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  2,000원~4,000원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/desert2.bmp" alt="디저트2" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">브리오슈 도레</a>
+            </h3>
+            <p class="sr-only">다양한 빵과 디저트 전문점</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.8</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  1,000원~2,000원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.2km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/turkish.jpg" alt="터키쉬딜라이트" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">케르반 베이커리</a>
+            </h3>
+            <p class="sr-only">달콤한 케이크를 맛보세요</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.5</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/churos.jpg" alt="츄러스" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">스트릿츄러스</a>
+            </h3>
+            <p class="sr-only">츄러스!</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">5.0</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>5,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  500원~1,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/dango.jpg" alt="당고" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">당고집</a>
+            </h3>
+            <p class="sr-only">쫀득쫀득 달콤한 당고</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.7</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/waffle.jpg" alt="와플" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">스투룹와플&amp;커피</a>
+            </h3>
+            <p class="sr-only">맛있는 와플, 두번 머겅</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.9</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>4,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  500원~1,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.8km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/scorn.jpg" alt="스콘" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">Scone.zip</a>
+            </h3>
+            <p class="sr-only">스콘 맛있겠다...</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">5.0</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>6,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  1,500원~1,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>0.2km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <li class="dc__food__item restCard">
+          <div class="imgContainer">
+            <img src="../images/delivery-main/Mille-feuille.jpg" alt="밀푀유 디저트" />
+          </div>
+          <div class="descContainer">
+            <h3 class="restName">
+              <a href="/" class="restLink">패스트리부티크</a>
+            </h3>
+            <p class="sr-only">크래커 사이에 크림과 딸기를 넣은 프랑스 디저트를 맛보세요</p>
+            <dl>
+              <div class="descWrapper__rating">
+                <dt class="sr-only">별점</dt>
+                <img src="../images/components/restaurantCard/star42.png" alt="별점" />
+                <dd class="rating">4.4</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="minPrice">최소주문</dt>
+                <dd>10,000원</dd>
+              </div>
+              <div class="descWrapper">
+                <dt class="dilvTip">배달팁</dt>
+                <dd>
+                  2,000원~2,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>2.0km
+                </dd>
+              </div>
+              <br />
+              <div class="couponWrapper">
+                <dt class="sr-only">추가사항</dt>
+                <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="bunsik-tab" id="bunsik-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="jjigae-tab" id="jjigae-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="pizza-tab" id="pizza-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="spagetti-tab" id="spagetti-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="meat-tab" id="meat-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="jok-tab" id="jok-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="asian-tab" id="asian-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="fastfood-tab" id="fastfood-panel"></div>
+    <div class="dc__wrapper" role="tabpanel" aria-labelledby="lunchbox-tab" id="lunchbox-panel"></div>
+
+    <footer class="footer">
+      <div class="footer__sub">
+        <p class="">
+          <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
+          <a href="#">이용약관 </a> <span aria-hidden="true">|</span>
+          <a href="#">전자금융거래이용약관 </a>
+          <span aria-hidden="true">|</span>
+          <a href="#" class="footer__bold">개인정보처리방침 </a>
+        </p>
+        <p class="company__detail__toggle footer__bold" role="button" tabindex="0">
+          (주)우아한형제들
+        </p>
+        <section class="company__detail">
+          <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
+          <div class="company__detail__sub">
+            <p class="">
+              대표이사 김범준 <span aria-hidden="true">|</span> 사업자등록번호
+              120-87-65763
+            </p>
+            <p>
+              통신판매업 서울 송파-0515
+              <span aria-hidden="true">|</span> 호스팅서비스제공자
+              (주)우아한형제들
+            </p>
+            <p>CS@woowahan.com | 서울특별시 송파구 위례성대로 2 장은빌딩</p>
+            <p>전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)</p>
+            <p>Fax 050-6050-0400</p>
+          </div>
+          <div class="customer__service__container">
+            <div class="customer__service__container__sub1">
+              <p>고객센터(대표)</p>
+              <p>1600-0987</p>
+              <p>24시간 운영, 연중무휴</p>
+            </div>
+            <div class="customer__service__container__sub2">
+              <p>고객센터(B마트/배민스토어)</p>
+              <p>1600-0025</p>
+              <p>오전 09:00~익일 새벽 01:00</p>
+            </div>
+          </div>
+
           <button type="button" class="top__btn" aria-label="맨 위로 이동"></button>
         </div>
       </footer>
@@ -1097,15 +1513,41 @@
     <div class="modal">
       <div class="modal__body">
         <section class="my__place">
-          <h2>주소 설정</h2>
-          <ul class="my__place__ul">
-            <li>우리 집</li>
-            <li>우리 회사</li>
-            <li><a href="/">주소 추가</a></li>
-          </ul>
+          <h2 tabindex="0">주소 설정</h2>
+              <ul class="my__place__ul">
+                <li tabindex="0">우리 집</li>
+                <li tabindex="0">우리 회사</li>
+                <li tabindex="0"><a href="/">주소 추가</a></li>
+              </ul>
+
         </section>
+        <div class="footer__footer">
+          <p>
+            (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
+            아닙니다. 따라서&nbsp;
+          </p>
+          <p>
+            (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
+            않습니다.
+          </p>
+        </div>
+        <button type="button" class="top__btn" aria-label="맨 위로 이동"></button>
       </div>
+    </footer>
+  </div>
+  <div class="modal">
+    <div class="modal__body">
+      <section class="my__place">
+        <h2>주소 설정</h2>
+        <ul class="my__place__ul">
+          <li>우리 집</li>
+          <li>우리 회사</li>
+          <li><a href="/">주소 추가</a></li>
+        </ul>
+      </section>
     </div>
-  </body>
-  <script type="module" src="../js/index.js"></script>
+  </div>
+</body>
+<script type="module" src="../js/index.js"></script>
+
 </html>
