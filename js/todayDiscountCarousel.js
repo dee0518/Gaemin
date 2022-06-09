@@ -18,8 +18,8 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
       currentItem <= 0
         ? 1
         : currentItem > items.length
-          ? items.length
-          : currentItem;
+        ? items.length
+        : currentItem;
 
     $todayDiscountCurrentItem.innerHTML = `${itemCount} / ${items.length} `;
   };
@@ -32,8 +32,8 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
       <a href="" class="main__section__link">전체보기</a>
 <div class="main__today__discount__list today__discount__carousel__list">
   ${[items[items.length - 1], ...items, items[0], items[1], items[2]]
-        .map(
-          (item) => `
+    .map(
+      (item) => `
       <article class="main__today__discount__item today__discount__carousel__item ${item.styleClass}" role="tabpanel" aria-label="${item.index}번째 배너">
         <a href="#" class="main__today__discount__link">
         <img
@@ -51,8 +51,8 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
         </a>
         </article>
         `
-        )
-        .join("")}
+    )
+    .join("")}
 </div>
 <button class="today_discount__button carousel__list__button prev ">
   <img class="carousel__list-button carousel__list__button prev" src="/images/components/banner/white-arrow56.png" alt="이전 배너 보기 버튼" />
@@ -116,32 +116,32 @@ const todayDiscountCarousel = ($todayDiscountCarousel, items) => {
 todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
   {
     index: 1,
-    logo: "/images/main/logo-vips.png",
-    descTop: "빕스 모든 메뉴",
-    descDiscount: "1만 2천원 할인",
-    descBottem1: "홈파티의 정석!",
-    descBottom2: "집에서 즐기는 빕스 다이닝",
-    background: "/images/components/banner/vips-bg.png",
+    logo: "/images/main/logo-dunkin.webp",
+    descTop: "6월 생일 이벤트",
+    descDiscount: "선착순 무료",
+    descBottem1: "콩~그레이츄레이션",
+    descBottom2: "당신의 생일을 축하합니다",
+    background: "/images/main/birthday.png",
     styleClass: "card__orange",
   },
   {
     index: 2,
-    logo: "/images/main/logo-vips.png",
-    descTop: "빕스 모든 메뉴",
-    descDiscount: "1000만 2천원 할인",
-    descBottem1: "홈파티의 정석!",
-    descBottom2: "집에서 즐기는 빕스 다이닝",
-    background: "/images/components/banner/vips-bg.png",
-    styleClass: "card__darkgreen",
+    logo: "/images/main/logo-udon.webp",
+    descTop: "마루가메 우동 전메뉴",
+    descDiscount: "4천원 할인",
+    descBottem1: "오키나와 스타일 우동 전문 브렌드!",
+    descBottom2: "올 여름 오키나와를 느껴보세요",
+    background: "/images/main/udon.png",
+    styleClass: "card__green",
   },
   {
     index: 3,
-    logo: "/images/main/logo-vips.png",
-    descTop: "빕스 모든 메뉴",
-    descDiscount: "10만 2천원 할인",
-    descBottem1: "홈파티의 정석!",
-    descBottom2: "집에서 즐기는 빕스 다이닝",
-    background: "/images/components/banner/vips-bg.png",
+    logo: "/images/main/carolinas-logo.png",
+    descTop: "보울 메뉴",
+    descDiscount: "1만원 할인",
+    descBottem1: "붐 치키 붐~ 든든하고 맛있게",
+    descBottom2: "리얼 멕시코를 두배 사이즈로",
+    background: "/images/main/mexican.png",
     styleClass: "card__pink",
   },
   {
@@ -152,6 +152,6 @@ todayDiscountCarousel(document.querySelector(".today__discount__carousel"), [
     descBottem1: "홈파티의 정석!",
     descBottom2: "집에서 즐기는 빕스 다이닝",
     background: "/images/components/banner/vips-bg.png",
-    styleClass: "card__olive",
+    styleClass: "card__darkgreen",
   },
 ]);
