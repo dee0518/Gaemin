@@ -42,7 +42,7 @@
   border: transparent;
   border-radius: 3px;
   text-indent: rem(50px);
-  @include fontSetup(400, 18px, $font-gray, 22px);
+  @include fontSetup(400, 18px, $grayscaleGray5, 22px);
 }
 
 .search__fieldset {
