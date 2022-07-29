@@ -876,7 +876,7 @@ button {
   background-image: url(./../images/components/liveShoppingCard/paris-logo.png);
 }
 .live__special__items:nth-child(5) .live__special__coupon::before, .live__special__items:nth-child(10) .live__special__coupon::before {
-  background-image: url(./../images/components/liveShoppingCard/baskin-logo.jpg);
+  background-image: url(./../images/components/liveShoppingCard/pizza-logo.png);
 }
 .live__special__video {
   position: relative;
