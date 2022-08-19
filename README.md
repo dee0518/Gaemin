@@ -13,4 +13,4 @@
 
 5. 키보드로만 접근해야 하는 사용자는 배민 어플을 사용할 수 없다. 또한 모바일 스크린 리더의 사용 또한 쉽지 않기 때문에 이런 문제를 해결하기 위해서도 배달의 민족 웹페이지가 필요하다는 생각을 했다.
 
-https://bubobubobo.github.io/Gaemin/
+https://bubobubobo.github.io/Gaemin/main.html
