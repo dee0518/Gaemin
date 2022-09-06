@@ -1,15 +1,11 @@
 .main__today__discount {
-  @include boxSize($h: 12rem);
+  @include autoMargin;
+  max-width: 1280px;
 
   &__title {
     &::after {
       content: "";
       display: inline-block;
-      background: $white url("./../images/main/icon_discout.png") no-repeat 0 0;
-      background-size: cover;
-      // background-position: ;
-      width: 1.5rem;
-      height: 1.5rem;
     }
   }
 

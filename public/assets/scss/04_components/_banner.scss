@@ -1,24 +1,26 @@
 .banner__container {
   @include autoMargin;
-  position: relative;
   max-width: 1280px;
   margin-top: 20px;
   padding: 0 15px;
   border-radius: 20px;
 
-  @include tablet {
-    height: 220px;
+  &__title {
+    @include fontSetup(700, 32px, $font-black, 1.2);
+    font-family: "Do Hyeon", sans-serif;
   }
-  @include desktop {
-    height: 280px;
+
+  &__carousel {
+    position: relative;
   }
 
   &__control__buttons {
     button {
       @include buttonNone;
       position: absolute;
-      right: 15px;
+      right: 5px;
       top: 50%;
+      z-index: 1;
       width: 30px;
       height: 100%;
       transform: translateY(-50%);
@@ -29,7 +31,7 @@
     }
 
     &__prev {
-      left: 15px;
+      left: 5px;
       right: auto;
 
       img {
@@ -40,11 +42,9 @@
 
   &__list {
     width: 100%;
-    height: 100%;
     overflow: hidden;
 
-    &__tabpanel {
-      width: 100%;
+    &__item {
       height: 100%;
       border-radius: 20px;
       background-color: skyblue;
@@ -55,22 +55,12 @@
         width: 100%;
         height: 100%;
 
-        @include tablet {
-          padding: 40px;
-        }
-        @include desktop {
-          padding: 70px 55px;
-        }
-
         img {
           position: absolute;
-          height: 90%;
-          right: 55px;
-          bottom: 0;
         }
       }
 
-      &__title {
+      &__subTitle {
         @include tablet {
           font-size: rem(14px);
         }
@@ -79,14 +69,39 @@
         }
       }
 
-      &__content {
+      &__title {
         @include fontSetup(700, 28px, $font-black, 1.2);
         font-family: "Do Hyeon", sans-serif;
         letter-spacing: 0.2rem;
         margin-top: 8px;
 
+        span {
+          display: block;
+        }
+
         @include desktop {
           font-size: 36px;
+        }
+      }
+
+      &__content {
+        @include tablet {
+          font-size: rem(14px);
+        }
+        @include desktop {
+          font-size: rem(18px);
+        }
+
+        span {
+          display: block;
+          margin-bottom: 3px;
+        }
+
+        @include tablet {
+          font-size: rem(14px);
+        }
+        @include desktop {
+          font-size: rem(18px);
         }
       }
     }

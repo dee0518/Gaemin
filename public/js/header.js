@@ -43,10 +43,10 @@ const header = () => {
       local_count_group.style.display = "inline-block";
     }
   });
-  my_place_li[my_place_li.length - 1].firstChild.addEventListener(
-    "keyup",
-    (e) => e.keyCode === 9 && my_place_li[0].focus()
-  );
+  // my_place_li[my_place_li.length - 1].firstChild.addEventListener(
+  //   "keyup",
+  //   (e) => e.keyCode === 9 && my_place_li[0].focus()
+  // );
 };
 
 export default header;

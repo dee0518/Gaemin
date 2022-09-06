@@ -1,23 +1,20 @@
-import top from "./topBtn.js";
+import goToTop from "./goToTop.js";
 
 const footer = () => {
-  let company_toggle = document.querySelector('.company__detail__toggle');
-  let company_detail = document.querySelector('.company__detail');
+  let company_detail = document.querySelector(".footer__toggle__company");
+  let company_toggle = company_detail.querySelector("h2");
 
-  
   const companyToggleHandler = () => {
-    company_toggle.classList.toggle('company__toggle__up');
-    company_detail.classList.toggle('is--active');
+    company_detail.classList.toggle("up");
   };
 
   const a11yCompanyHandler = (e) => {
     e.keyCode === 13 && companyToggleHandler();
-  }
-  
-  company_toggle.addEventListener('click', companyToggleHandler);
-  company_toggle.addEventListener('keyup', (e) => a11yCompanyHandler(e));
-  top();
+  };
+
+  company_toggle.addEventListener("click", companyToggleHandler);
+  company_toggle.addEventListener("keyup", a11yCompanyHandler);
+  goToTop();
 };
 
 export default footer;
-
