@@ -1,0 +1,24 @@
+.go__to__top {
+  @include autoMargin;
+  position: relative;
+  max-width: 1280px;
+
+  &__btn {
+    @include buttonNone;
+    position: absolute;
+    top: -70px;
+    z-index: 1;
+    width: rem(50px);
+    height: rem(50px);
+    background: url(/assets/images/components/goToTop/up.png) no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      right: 10px;
+    }
+
+    @include desktop {
+      right: 0;
+    }
+  }
+}
