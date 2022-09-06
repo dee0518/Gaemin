@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "run-p dev watch",
-    "sass": "sass scss:css",
+    "start": "nodemon server",
+    "sass": "sass assets/scss:css",
     "watch": "npm run sass -- --watch",
     "dev": "live-server",
     "build:sass": "npm run sass -- --no-source-map",
@@ -17,5 +17,9 @@
     "postcss-combine-media-query": "^1.0.1",
     "postcss-csso": "^5.0.1",
     "sass": "^1.52.1"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
   }
 }
