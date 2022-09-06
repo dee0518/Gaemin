@@ -1,5 +1,12 @@
 .tablet__container {
-  min-width: 700px;
-  padding-top: rem(160px);
+  min-width: 500px;
   background-color: $bg-gray;
+
+  @include tablet {
+    padding-top: rem(135px);
+  }
+
+  @include desktop {
+    padding-top: rem(160px);
+  }
 }

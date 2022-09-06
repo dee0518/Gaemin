@@ -1,4 +1,4 @@
-const bannerCarousel = ($bannerCarousel, items) => {
+const bannerCarousel = ($bannerCarousel, { title, titleSrOnly, carousels }) => {
   let currentItem = 0;
   let isMoving = false;
   const DURATION = 500;
@@ -27,45 +27,39 @@ const bannerCarousel = ($bannerCarousel, items) => {
   };
 
   document.addEventListener("DOMContentLoaded", () => {
+    // prettier-ignore
     $bannerCarousel.innerHTML = `
-    <h2 class="main__heading banner__event__title sr-only">
-          지금 진행 중인 이벤트
-    </h2>
-        
-    <div class="carousel__button__controls">
-      <button type="button" class="banner__event__button carousel__list__button prev aria-controls="banner__carousel__list">
-        <img class="banner__carousel__list-button carousel__list__button prev" src="./images/components/banner/white-arrow56.png" alt="이전 배너 보기" />
+    <h2 class="main__heading banner__container__title ${titleSrOnly? 'sr-only': ''}">${title}</h2>     
+    <div class="banner__container__control__buttons">
+      <button class="banner__container__control__buttons__prev" aria-controls="banner__carousel__list">
+        <img src="/assets/images/components/banner/white-arrow.png" alt="이전 배너 보기" />
       </button>
-      <button type="button" class="banner__event__button carousel__list__button next aria-controls="banner__carousel__list">
-      <img class="banner__carousel__list-button carousel__list__button" src="./images/components/banner/white-arrow56.png" alt="다음 배너 보기" />  
+      <button class="banner__container__control__buttons__next" aria-controls="banner__carousel__list">
+        <img src="/assets/images/components/banner/white-arrow.png" alt="다음 배너 보기" />  
       </button>
     </div>
-    <div class="banner__event__list banner__carousel__list" id="banner__carousel__list">
-      ${[items[items.length - 1], ...items, items[0], items[1]]
+    <div class="banner__container__list banner__carousel__list" id="banner__carousel__list">
+      ${[carousels.at(-1), ...carousels, carousels.at(0)]
         .map(
-          (item) => `
-          <article class="banner__event__tabpanel banner__carousel__item ${item.styleClass}" aria-label="${item.index}번째 배너"  role="group" aria-roledescription="slide">
-            <a href="#" class="banner__event__link">
-            <img src="${item.img}" alt="" />
-            <p class="banner__event__text">${item.text}</p>
-            <p class="banner__event__text-bold">${item.textBold1}</p>
-            <p class="banner__event__text-bold">${item.textBold2}</p>
+          ({ title, content, img, styleClass }, i) => `
+          <article class="banner__container__list__tabpanel banner__carousel__item ${styleClass}" aria-label="${i}번째 배너" role="group" aria-roledescription="slide">
+            <a href="#" class="banner__container__list__tabpanel__link">
+              <img src="${img}" alt="배너${i}" />
+              <p class="banner__container__list__tabpanel__title">${title}</p>
+              <p class="banner__container__list__tabpanel__content">${content}</p>
             </a>
-            </article>
-            `
-        )
-        .join("")}
+          </article>
+          `
+        ).join("")}
     </div>
-    <a href="#" type="button" class="banner__event__link__button carousel__currnet__badge aria-hidden="true"
-    ><span class="banner__event__link__button__current carousel__currnet__badge__text"> </span
-    >모두보기</a> 
+    <button class="banner__container__current" aria-hidden="true">
+      <span class="banner__container__current__badge__text"></span> 모두보기
+    </button> 
 `;
 
     $carouselList = document.querySelector(".banner__carousel__list");
     $carouselItem = document.querySelectorAll(".banner__carousel__item");
-    $bannerCurrentItem = document.querySelector(
-      ".banner__event__link__button__current"
-    );
+    $bannerCurrentItem = document.querySelector(".banner__container__currnet");
 
     $bannerCarousel.style.opacity = 1;
     move(++currentItem);
@@ -112,37 +106,39 @@ const bannerCarousel = ($bannerCarousel, items) => {
  * DATA SET
  * */
 
-bannerCarousel(document.querySelector(".banner__carousel"), [
-  {
-    index: 1,
-    text: "친구초대시 5천원 쿠폰",
-    textBold1: "이제는",
-    textBold2: "웹에서도 만나요!",
-    img: "./images/components/banner/EzU.png",
-    styleClass: "card__green",
-  },
-  {
-    index: 2,
-    text: "뭐 먹을지 고민될땐",
-    textBold1: "인생은",
-    textBold2: "치킨의 연속",
-    img: "./images/components/banner/eventChicken.png",
-    styleClass: "card__pink",
-  },
-  {
-    index: 3,
-    text: "무더운 여름철",
-    textBold1: "든든한 보양식~",
-    textBold2: "먹고싶을 때",
-    img: "./images/components/banner/eelbob.png",
-    styleClass: "card__orange",
-  },
-  {
-    index: 4,
-    text: "쿠폰함을 확인해 보세요",
-    textBold1: "할인과 결제사이",
-    textBold2: "단 10초!",
-    img: "./images/components/banner/banner4.png",
-    styleClass: "card__darkgreen",
-  },
-]);
+const mainCarousel = {
+  title: "지금 진행 중인 이벤트",
+  titleSrOnly: true,
+  carousels: [
+    {
+      index: 1,
+      title: "<span>이제는</span><span>웹에서도 만나요!</span>",
+      content: "친구초대시 5천원 쿠폰",
+      img: "/assets/images/components/banner/EzU.png",
+      styleClass: "card__green",
+    },
+    {
+      index: 2,
+      title: "<span>인생은</span><span>치킨의 연속</span>",
+      content: "뭐 먹을지 고민될땐",
+      img: "/assets/images/components/banner/eventChicken.png",
+      styleClass: "card__pink",
+    },
+    {
+      index: 3,
+      title: "<span>든든한 보양식~</span><span>먹고싶을 때</span>",
+      content: "무더운 여름철",
+      img: "/assets/images/components/banner/eelbob.png",
+      styleClass: "card__orange",
+    },
+    {
+      index: 4,
+      title: "<span>할인과 결제사이</span><span>단 10초!</span>",
+      content: "쿠폰함을 확인해 보세요",
+      img: "/assets/images/components/banner/banner4.png",
+      styleClass: "card__darkgreen",
+    },
+  ],
+};
+
+bannerCarousel(document.querySelector(".banner__container"), mainCarousel);

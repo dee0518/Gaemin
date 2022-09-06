@@ -1,121 +1,141 @@
-.banner__event {
-  @include boxSize;
-  margin-top: 1rem;
-  border-radius: 1rem;
+.banner__container {
+  @include autoMargin;
+  position: relative;
+  max-width: 1280px;
+  margin-top: 20px;
+  padding: 0 15px;
+  border-radius: 20px;
 
-  // 배너 item 공통 디자인
-  &__tabpanel {
-    @include boxSize;
-    position: relative;
-    background: skyblue;
-    padding: 2rem 4rem;
+  @include tablet {
+    height: 220px;
+  }
+  @include desktop {
+    height: 300px;
+  }
 
-    img {
+  &__control__buttons {
+    button {
+      @include buttonNone;
       position: absolute;
-      right: 5rem;
+      right: 15px;
+      top: 50%;
+      width: 30px;
+      height: 100%;
+      transform: translateY(-50%);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__prev {
+      left: 15px;
+      right: auto;
+
+      img {
+        transform: rotate(180deg);
+      }
     }
   }
 
-  &__item {
-    @include boxSize;
-  }
-
-  &__link {
-    @include boxSize;
-  }
-
-  &__text {
-    font-size: 1.25rem;
-  }
-
-  &__text-bold {
-    font-weight: 700;
-    font-size: 2.25rem;
-    font-family: "BMHANNAPro";
-    letter-spacing: 0.2rem;
-    margin-top: 0.75rem;
-  }
-}
-
-.banner__event__button {
-  height: 220px;
-}
-.carousel__list__button {
-  @include buttonNone;
-
-  position: absolute;
-  width: 3rem;
-
-  img {
-    width: 60%;
-  }
-
-  // background: #000;
-}
-
-// 배너 이동 버튼
-.prev {
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  // background-image: linear-gradient(to right, $white, transparent);
-  
-  img {
-    transform: rotate(180deg);
-  }
-}
-
-.next {
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  // background-image: linear-gradient(to left, $white, transparent);
-}
-
-.carousel__currnet__badge {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  border-radius: 2px;
-  background: rgba($grayscaleGray1, 50%);
-  padding: 0.25rem 0.5rem;
-  border-radius: 3rem;
-  font-size: 0.75rem;
-  color: $grayscaleGray1;
-
-  &__text {
-    color: $white;
-  }
-}
-
-// carousel
-.banner__carousel {
-  @include carouselWrapper;
   &__list {
-    display: flex;
-    @include carouselListWidth($numOfItem: 4+1);
-    transition: transform calc(var(--duration) * 1ms) ease-out;
-    &:focus,
-    &:hover {
-      transition: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &__tabpanel {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background-color: skyblue;
+
+      &__link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @include tablet {
+          padding: 40px;
+        }
+        @include desktop {
+          padding: 70px 55px;
+        }
+
+        img {
+          position: absolute;
+          height: 90%;
+          right: 55px;
+          bottom: 0;
+        }
+      }
+
+      &__title {
+        @include tablet {
+          font-size: rem(14px);
+        }
+        @include desktop {
+          font-size: rem(18px);
+        }
+      }
+
+      &__content {
+        @include fontSetup(700, 28px, $font-black, 1.2);
+        font-family: "Do Hyeon", sans-serif;
+        letter-spacing: 0.2rem;
+        margin-top: 8px;
+
+        @include desktop {
+          font-size: 36px;
+        }
+      }
     }
   }
 
-  &__item {
-    @include carouselSlideItem;
-  }
-}
-.banner__event__list {
-  [aria-label="1번째 배너"] {
-    img {
-      width: 250px;
-      margin-top: -20px;
-    }
-  }
-  [aria-label="3번째 배너"] {
-    img {
-      width: 350px;
-      margin-top: -20px;
+  &__current {
+    @include buttonNone;
+    @include fontSetup(400, 12px, $grayscaleGray6, 1.2);
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+    padding: rem(4px) rem(8px);
+    border-radius: rem(15px);
+    background: rgba($grayscaleGray1, 50%);
+
+    &__badge__text {
+      color: $white;
+      font-weight: bold;
     }
   }
 }
+// // carousel
+// .banner__carousel {
+//   @include carouselWrapper;
+//   &__list {
+//     display: flex;
+//     @include carouselListWidth($numOfItem: 4+1);
+//     transition: transform calc(var(--duration) * 1ms) ease-out;
+//     &:focus,
+//     &:hover {
+//       transition: none;
+//     }
+//   }
+
+//   &__item {
+//     @include carouselSlideItem;
+//   }
+// }
+// .banner__event__list {
+//   [aria-label="1번째 배너"] {
+//     img {
+//       width: 250px;
+//       margin-top: -20px;
+//     }
+//   }
+//   [aria-label="3번째 배너"] {
+//     img {
+//       width: 350px;
+//       margin-top: -20px;
+//     }
+//   }
+// }
