@@ -1,151 +1,154 @@
 // 헤더 시작 ------------------------------------------------------------------------ /
 .header {
-  width: 100%;
-  height: rem(161px);
-  background-color: $banner-blue;
-  border-radius: 0 0 15px 15px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
-  @include autoMargin;
-}
-
-.header__container {
-  padding-top: rem(30px);
-  max-width: rem(1024px);
-  @include paddingX(15px);
-  @include autoMargin;
-}
-
-.header__login {
-  @include fontSetup(400, 20px, $font-white, 25px);
-  margin-right: rem(5px);
-}
-
-.login__container {
-  @include flexbox(row, center, center);
-}
-
-.header__sub1 {
-  @include flexbox(row, space-between, center);
-}
-
-.header__sub2 {
-  @include flexbox(row, center, center);
-  margin-top: rem(15px);
-}
-
-#search {
-  width: rem(500px);
-  height: rem(50px);
-  border: transparent;
-  border-radius: 3px;
-  text-indent: rem(50px);
-  @include fontSetup(400, 18px, $grayscaleGray5, 22px);
-}
-
-.search__fieldset {
-  position: relative;
-  &::before {
-    content: "";
-    width: rem(30px);
-    height: rem(30px);
-    display: inline-block;
-    background-image: url(./../images/components/header/serach-green48.png);
-    background-position: 0 0;
-    background-size: contain;
-    position: absolute;
-    top: rem(10px);
-    left: rem(10px);
-  }
-}
-
-.header__location {
-  @include fontSetup(400, 24px, $font-white, 30px);
-  cursor: pointer;
-  &::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    background-image: url(./../images/components/header/ZtF.png);
-    background-position: 0 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-  }
-}
-
-.logo {
-  height: rem(30px);
-}
-
-.logo img {
-  display: inline-block;
-  &:first-child {
-    width: rem(30px);
-    height: rem(30px);
-  }
-}
-
-.modal {
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  z-index: 1000;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.4);
-}
+  background-color: $banner-blue;
+  border-radius: 0 0 20px 20px;
 
-.modal__body {
-  position: absolute;
-  width: rem(400px);
-  height: 500px;
-  top: 30%;
-  left: 0;
-  background-color: $white;
-  border-radius: 15px;
-  left: calc(50% - rem(200px));
-  height: 30%;
-  @include flexbox(row, center, center);
-}
+  @include tablet {
+    padding: 20px 15px;
+  }
 
-.modal_body h2 {
-  font-weight: bold;
-}
+  @include desktop {
+    padding: 30px 15px;
+  }
 
-.my__place__ul {
-  width: 100%;
-}
+  &__container {
+    @include autoMargin;
+    max-width: 1024px;
+  }
 
-.my__place__ul li {
-  border-bottom: 1px solid $black;
-  margin: 20px 0;
-  cursor: pointer;
-}
+  &__top {
+    @include flexbox(row, space-between, center);
 
-.local__count__group {
-  position: absolute;
-  top: 5px;
-  left: 0px;
-  border-radius: 50%;
-  background-color: $white;
-  width: rem(20px);
-  height: rem(20px);
-  color: $banner-blue;
-  text-align: center;
-  line-height: rem(20px);
-  display: none;
-}
+    @include tablet {
+      margin-bottom: 15px;
+    }
 
-.my__place h2 {
-  outline: 0;
-}
+    @include desktop {
+      margin-bottom: 20px;
+    }
 
-.cart__img {
-  position: relative;
+    &__logo {
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        height: rem(24px);
+
+        & img {
+          height: 100%;
+          margin-right: rem(5px);
+
+          &:last-child {
+            height: rem(20px);
+          }
+        }
+      }
+    }
+
+    &__location {
+      @include fontSetup(700, 16px, $font-white, 30px);
+      background: url(/assets/images/components/header/arrow.svg) no-repeat;
+      background-position: right center;
+      background-size: 12px;
+      cursor: pointer;
+
+      @include tablet {
+        padding-right: 20px;
+      }
+      @include desktop {
+        font-size: rem(18px);
+        padding-right: 30px;
+      }
+    }
+
+    &__link {
+      @include flexbox(row, center, center);
+
+      &__login {
+        @include fontSetup(700, 16px, $font-white, 30px);
+        margin-right: rem(10px);
+
+        @include desktop {
+          font-size: rem(18px);
+        }
+      }
+
+      &__myNCart {
+        text-indent: -9999px;
+        width: rem(30px);
+        height: rem(30px);
+        background: url(/assets/images/components/header/person.png) no-repeat;
+        background-position: center;
+        background-size: 24px;
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:last-of-type {
+          position: relative;
+          background-image: url(/assets/images/components/header/cart.png);
+          background-size: 30px;
+
+          & .local__count__group {
+            @include fontSetup(700, 10px, $font-white, 18px);
+            display: none;
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            border-radius: 50%;
+            background-color: $carousel-pink;
+            width: rem(18px);
+            height: rem(18px);
+            text-align: center;
+            text-indent: 0;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__bottom {
+    &__search__fieldset {
+      height: 50px;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      @include desktop {
+        @include autoMargin;
+        width: rem(500px);
+      }
+
+      input {
+        @include fontSetup(400, 16px, $font-black, 22px);
+        width: 100%;
+        height: 100%;
+        padding-left: 60px;
+        border: 0;
+        border-radius: 3px;
+        background: #fff url(/assets/images/components/header/serach-green.png)
+          no-repeat;
+        background-position: left 10px center;
+        background-size: 38px;
+        box-shadow: 0 1px 3px 2px rgba($black, 0.1);
+
+        @include desktop {
+          font-size: rem(18px);
+        }
+      }
+    }
+  }
 }
 // 헤더 종료 --------------------------------------------------------------------- /

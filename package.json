@@ -1,7 +1,9 @@
 {
+  "name": "Gamin",
   "scripts": {
     "start": "nodemon server",
-    "sass": "sass assets/scss:css",
+    "sass": "sass public/assets/scss:public/css",
+    "server": "live-server",
     "watch": "npm run sass -- --watch",
     "dev": "live-server",
     "build:sass": "npm run sass -- --no-source-map",
