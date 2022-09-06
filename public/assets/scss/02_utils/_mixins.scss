@@ -110,3 +110,9 @@
   background-color: $white;
   border-radius: 5px;
 }
+
+// title
+@mixin sectionTitle($size: 32px) {
+  @include fontSetup(700, $size, $font-black, 1.2);
+  font-family: "Do Hyeon", sans-serif;
+}

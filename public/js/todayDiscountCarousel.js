@@ -31,7 +31,7 @@ const todayDiscountCarousel = (
     // prettier-ignore
     $todayDiscountCarousel.innerHTML = `
     <h2 class="banner__container__title ${ titleSrOnly ? 'sr-only' : '' }">${title}</h2>
-    ${isAllBtn ? '<a href="#" class="banner__container__all__link">전체보기</a>' : ''}
+    ${isAllBtn ? '<a href="#" class="main__all__link">전체보기</a>' : ''}
     <div class="banner__container__carousel">
       <div class="banner__container__control__buttons">
         <button class="banner__container__control__buttons__prev">
@@ -120,7 +120,7 @@ const todayCarousel = {
         "<span>콩~그레이츄레이션</span><span>당신의 생일을 축하합니다</span>",
       img: "/assets/images/components/banner/logo_dunkin.webp",
       background: "/assets/images/components/banner/birthday.png",
-      styleClass: "card__orange",
+      styleClass: "card__skin",
     },
     {
       id: 2,
@@ -129,8 +129,8 @@ const todayCarousel = {
       contents:
         "<span>오키나와 스타일 우동 전문 브렌드!</span><span>올 여름 오키나와를 느껴보세요</span>",
       img: "/assets/images/components/banner/logo_udon.webp",
-      background: "/assets/images/components/banner/birthday.png",
-      styleClass: "card__green",
+      background: "/assets/images/components/banner/udon.png",
+      styleClass: "card__purple",
     },
     {
       id: 3,
@@ -140,7 +140,7 @@ const todayCarousel = {
         "<span>붐 치키 붐~ 든든하고 맛있게</span><span>리얼 멕시코를 두배 사이즈로</span>",
       img: "/assets/images/components/banner/carolinas_logo.png",
       background: "/assets/images/components/banner/mexican.png",
-      styleClass: "card__pink",
+      styleClass: "card__pairgreen",
     },
     {
       id: 4,
@@ -148,8 +148,8 @@ const todayCarousel = {
       title: "2천원 할인",
       contents: "<span>쫄깃한 면발</span><span>여름에 입맛돋구는 막국수</span>",
       img: "/assets/images/components/banner/logo_vips.png",
-      background: "/assets/images/components/banner/bibimgucksu2.png",
-      styleClass: "card__olive",
+      background: "/assets/images/components/banner/vips-bg.png",
+      styleClass: "card__yellow",
     },
   ],
 };

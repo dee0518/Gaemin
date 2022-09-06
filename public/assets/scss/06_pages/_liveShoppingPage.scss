@@ -1,5 +1,6 @@
 // 공통 스타일
-.live__banner, .live {
+.live__banner,
+.live {
   @include tablet {
     min-width: 700px;
   }
@@ -15,11 +16,12 @@
   padding-bottom: 70px;
 }
 
-.live__banner__inner, .live__inner {
+.live__banner__inner,
+.live__inner {
   @include tablet {
     @include paddingX(25px);
   }
-  
+
   @include desktop {
     max-width: 1024px;
     @include autoMargin;
@@ -33,14 +35,15 @@
 
 // 배너
 .live__banner__inner {
-  background: url(./../images/components/liveShoppingCard/shoppinglive486.png) no-repeat;
-  
+  background: url(/assets/images/components/liveShoppingCard/shoppinglive.png)
+    no-repeat;
+
   @include tablet {
     padding-top: 100px;
     padding-bottom: 300px;
     background-position: right -70px bottom;
   }
-  
+
   @include desktop {
     padding-top: 80px;
     padding-bottom: 100px;
@@ -49,20 +52,19 @@
 
   .banner__text {
     span {
-      display: block
+      display: block;
     }
 
     &--bold {
       margin-bottom: 25px;
       @include fontSetup(bold, 48px, $white, 60px);
     }
-    
+
     &--normal {
       @include fontSetup(normal, 20px, $white, 27px);
     }
   }
 }
-
 
 // 다가오는 라이브
 .live__schedule {
@@ -81,7 +83,7 @@
     @include desktop {
       width: calc(50% - 22px);
     }
-    
+
     a {
       display: block;
 
@@ -112,7 +114,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,.1);
+        background-color: rgba(0, 0, 0, 0.1);
       }
 
       img {
@@ -145,7 +147,7 @@
 
     span {
       display: block;
-      @include fontSetup(700,18px, $font-black, 25px);
+      @include fontSetup(700, 18px, $font-black, 25px);
     }
 
     & > span:first-child {
@@ -168,7 +170,7 @@
   }
 
   button {
-    @include buttonNone; 
+    @include buttonNone;
     @include fontSetup(400, 16px, $banner-blue, 1.2);
     @include paddingY(6px);
     @include paddingX(20px);

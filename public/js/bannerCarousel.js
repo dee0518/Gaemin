@@ -33,7 +33,7 @@ const bannerCarousel = (
     // prettier-ignore
     $bannerCarousel.innerHTML = `
     <h2 class="banner__container__title ${ titleSrOnly ? 'sr-only' : '' }">${title}</h2>
-    ${isAllBtn ? '<a href="#" class="banner__container__all__link">전체보기</a>' : ''}
+    ${isAllBtn ? '<a href="#" class="main__all__link">전체보기</a>' : ''}
     <div class="banner__container__carousel">
       <div class="banner__container__control__buttons">
         <button class="banner__container__control__buttons__prev">

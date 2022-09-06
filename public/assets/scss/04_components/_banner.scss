@@ -3,11 +3,9 @@
   max-width: 1280px;
   margin-top: 20px;
   padding: 0 15px;
-  border-radius: 20px;
 
   &__title {
-    @include fontSetup(700, 32px, $font-black, 1.2);
-    font-family: "Do Hyeon", sans-serif;
+    @include sectionTitle;
   }
 
   &__carousel {
@@ -70,8 +68,7 @@
       }
 
       &__title {
-        @include fontSetup(700, 28px, $font-black, 1.2);
-        font-family: "Do Hyeon", sans-serif;
+        @include sectionTitle(28px);
         letter-spacing: 0.2rem;
         margin-top: 8px;
 
@@ -120,6 +117,44 @@
     &__badge__text {
       color: $white;
       font-weight: bold;
+    }
+  }
+
+  .card {
+    &__darkgreen {
+      background: $carousel-darkgreen;
+    }
+
+    &__orange {
+      background: $carousel-orange;
+    }
+
+    &__pink {
+      background: $carousel-pink;
+    }
+
+    &__green {
+      background: $carousel-green;
+    }
+
+    &__olive {
+      background: $carousel-olive;
+    }
+
+    &__skin {
+      background: $carousel-skin;
+    }
+
+    &__purple {
+      background: $carousel-purple;
+    }
+
+    &__pairgreen {
+      background: $carousel-pairGreen;
+    }
+
+    &__yellow {
+      background: $carousel-yellow;
     }
   }
 }
