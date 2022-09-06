@@ -5,13 +5,21 @@
 .restCard {
   width: 100%;
   position: relative;
-  background: $white;
-  border-radius: rem(20px);
-  overflow: hidden;
-  box-shadow: rem(8px) rem(8px) rem(8px) $bg-gray;
+
+  @include desktop {
+    border-radius: rem(20px);
+    overflow: hidden;
+    background: $white;
+    box-shadow: rem(8px) rem(8px) rem(8px) $bg-gray;
+  }
 
   .imgContainer {
     width: 100%;
+
+    @include tablet {
+      border-radius: rem(20px);
+      overflow: hidden;
+    }
 
     img {
       width: 100%;

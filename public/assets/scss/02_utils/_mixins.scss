@@ -116,3 +116,9 @@
   @include fontSetup(700, $size, $font-black, 1.2);
   font-family: "Do Hyeon", sans-serif;
 }
+
+// background-shadow
+@mixin bgWhiteShadow() {
+  background: $white;
+  box-shadow: 0 0 10px 5px $box-shadow-color;
+}

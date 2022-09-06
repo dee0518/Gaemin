@@ -3,10 +3,10 @@
   background-color: $bg-gray;
 
   @include tablet {
-    padding-top: rem(135px);
+    padding-top: 135px;
   }
 
   @include desktop {
-    padding-top: rem(160px);
+    padding-top: 160px;
   }
 }

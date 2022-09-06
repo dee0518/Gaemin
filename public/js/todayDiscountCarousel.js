@@ -138,7 +138,7 @@ const todayCarousel = {
       title: "1만원 할인",
       contents:
         "<span>붐 치키 붐~ 든든하고 맛있게</span><span>리얼 멕시코를 두배 사이즈로</span>",
-      img: "/assets/images/components/banner/carolinas_logo.png",
+      img: "/assets/images/components/banner/logo_carolinas.png",
       background: "/assets/images/components/banner/mexican.png",
       styleClass: "card__pairgreen",
     },

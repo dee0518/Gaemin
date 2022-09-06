@@ -1,41 +1,47 @@
 .nav__main {
-  height: rem(60px);
   width: 100%;
   background-color: $white;
-  padding-top: rem(15px);
+  padding: rem(24px) 0 0;
   position: fixed;
-  top: 150px;
   left: 0;
-  box-shadow: 0 0.1px;
-  z-index: 3;
-}
+  z-index: 2;
+  border-bottom: 1px solid $grayscaleGray7;
 
-.nav__sec__main {
-  text-align: center;
-  max-width: rem(1024px);
-  @include autoMargin;
-}
-
-.nav__heading {
-  @include fontSetup(400, 24px, $font-black, 30px);
-  padding: 5px 0;
-}
-
-.nav__ul__main {
-  @include flexbox(row, flex-start);
-  margin-top: rem(10px);
-  @include paddingX(15px);
-}
-
-.nav__li__main {
-  margin-right: rem(20px);
-  a {
-    @include fontSetup(400, 18px $font-black, 22px);
-    color: #858585;
-    white-space: nowrap;
+  @include tablet {
+    top: 111px;
   }
-}
+  @include desktop {
+    top: 140px;
+  }
 
-.nav__li__main .selected {
-  color: $font-blue;
+  &__inner {
+    @include paddingX(15px);
+    @include autoMargin;
+    max-width: rem(1280px);
+  }
+
+  &__list {
+    @include flexbox(row, flex-start);
+    height: 100%;
+  }
+
+  &__item {
+    &.selected {
+      a {
+        color: $font-blue;
+      }
+    }
+
+    a {
+      @include fontSetup(400, 18px, $font-black, 22px);
+      font-family: "Do Hyeon", sans-serif;
+      display: block;
+      padding: 15px 10px 15px 0;
+      color: $font-gray;
+
+      @include desktop {
+        padding-right: 15px;
+      }
+    }
+  }
 }
