@@ -572,7 +572,7 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .banner__container {
-    height: 300px;
+    height: 280px;
   }
 }
 .banner__container__control__buttons button {
@@ -1850,46 +1850,64 @@ button {
 .main__card {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  gap: 10px;
   max-width: 1280px;
-  height: 17rem;
-  margin-top: 1rem;
+  margin-top: 20px;
+  padding: 0 15px;
 }
 .main__card__item {
-  width: 100%;
-  max-width: 512px;
-  height: 220px;
-  border-radius: 1rem;
-  border: 1px solid #979797;
+  flex-basis: 50%;
+  border-radius: 20px;
+  border: 1px solid #ccc;
   margin: 0.25rem;
-  padding: 2rem;
-  background: #f5f5f5;
+  background: #f8f8f8 url(/assets/images/main/foods406-transparent.png) no-repeat;
+  background-size: contain;
+}
+.main__card__item.package {
+  background-image: url(/assets/images/main/dilivery360.png);
+  background-size: auto 90%;
+}
+@media screen and (max-width: 1023px) {
+  .main__card__item {
+    padding: 1.875rem 1.875rem 3.125rem;
+    background-position: right 10px bottom;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__card__item {
+    padding: 2.5rem 2.5rem 5rem;
+    background-position: right 30px bottom;
+  }
 }
 .main__card__item__title {
-  font-family: "BMHANNAPro";
-  font-style: italic;
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #222222;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .main__card__item__title {
+    font-size: 2.75rem;
+  }
 }
 .main__card__item__desc {
-  font-family: "BMHANNA_11yrs_ttf";
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #222222;
 }
-
-.delivery {
-  background: #f5f5f5 url("./../images/main/foods406-transparent.png") no-repeat 0 0;
-  background-position: right;
+@media screen and (min-width: 1024px) {
+  .main__card__item__desc {
+    font-size: 1.25rem;
+  }
 }
-
-.package {
-  background: #f5f5f5 url("./../images/main/dilivery360.png") no-repeat 0 0;
-  background-position: right;
+.main__card__item__desc span {
+  display: block;
 }
 
 .main__banner__event,

@@ -1,43 +1,56 @@
 // 배달 포장 카드
 .main__card {
-  @include flexbox;
+  @include flexbox(row, space-between, center);
   @include autoMargin;
-  @include boxSize($h: 17rem);
-  margin-top: 1rem;
+  gap: 10px;
+  max-width: 1280px;
+  margin-top: 20px;
+  padding: 0 15px;
 
   &__item {
-    @include boxSize($max-width: 512px);
-    border-radius: 1rem;
-    border: 1px solid $grayscaleGray5;
+    flex-basis: 50%;
+    border-radius: 20px;
+    border: 1px solid $grayscaleGray6;
     margin: 0.25rem;
-    padding: 2rem;
+    background: #f8f8f8 url(/assets/images/main/foods406-transparent.png)
+      no-repeat;
+    background-size: contain;
 
-    background: $grayscaleSnow;
+    &.package {
+      background-image: url(/assets/images/main/dilivery360.png);
+      background-size: auto 90%;
+    }
+
+    @include tablet {
+      padding: rem(30px) rem(30px) rem(50px);
+      background-position: right 10px bottom;
+    }
+    @include desktop {
+      padding: rem(40px) rem(40px) rem(80px);
+      background-position: right 30px bottom;
+    }
 
     &__title {
-      font-family: "BMHANNAPro";
-      font-style: italic;
-      font-size: 3rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
+      @include fontSetup(700, 36px, $font-black, 1.2);
+      margin-bottom: 10px;
+
+      @include desktop {
+        font-size: rem(44px);
+      }
     }
 
     &__desc {
-      font-family: "BMHANNA_11yrs_ttf";
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
+      @include fontSetup(400, 16px, $font-black, 1.2);
+
+      @include desktop {
+        font-size: rem(20px);
+      }
+
+      span {
+        display: block;
+      }
     }
   }
-}
-
-.delivery {
-  background: $grayscaleSnow url("./../images/main/foods406-transparent.png") no-repeat 0 0;
-  background-position: right;
-}
-
-.package {
-  background: $grayscaleSnow url("./../images/main/dilivery360.png") no-repeat 0 0;
-  background-position: right;
 }
 
 .main__banner__event,
@@ -64,7 +77,8 @@
   &::after {
     content: "";
     display: inline-block;
-    background: $white url("/images/components/banner/black-arrow60.png") no-repeat 0 0;
+    background: $white url("/images/components/banner/black-arrow60.png")
+      no-repeat 0 0;
     background-size: cover;
     // background-position: ;
     width: 0.85rem;
