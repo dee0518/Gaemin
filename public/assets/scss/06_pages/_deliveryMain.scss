@@ -54,6 +54,7 @@ $images: (
 
       &__item {
         text-align: center;
+        transition: width 0.3s ease;
 
         @include tablet {
           width: calc((100% - 50px) / 6);
@@ -92,19 +93,29 @@ $images: (
     &__food {
       @include autoMargin;
       max-width: 1280px;
-      padding-bottom: 60px;
+      padding-bottom: 100px;
 
       &__nav {
         @include paddingX(15px);
+        position: sticky;
+        left: 0;
+        z-index: 2;
         overflow-x: scroll;
         -ms-overflow-style: none;
         scrollbar-width: none;
+        background-color: $white;
+
         &::-webkit-scrollbar {
           display: none;
         }
 
         @include tablet {
+          top: 198px;
           padding-right: 0;
+        }
+
+        @include desktop {
+          top: 227px;
         }
 
         &__list {

@@ -36,11 +36,12 @@
       @include fontSetup(400, 18px, $font-black, 22px);
       font-family: "Do Hyeon", sans-serif;
       display: block;
-      padding: 15px 10px 15px 0;
+      padding: 20px 10px 20px 0;
       color: $font-gray;
 
       @include desktop {
-        padding-right: 15px;
+        padding-right: 25px;
+        font-size: 20px;
       }
     }
   }
