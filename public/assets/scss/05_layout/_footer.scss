@@ -1,86 +1,155 @@
 // 푸터 시작 --------------------------------------------------------------------- /
-.customer__service__container {
-  display: flex;
-  border: 1px solid #E8E8E8;
-  margin: rem(15px) 0;
-  width: rem(500px);
-}
-
-.customer__service__container__sub1 {
-  border-right: 1px solid #E8E8E8;
-  padding: rem(10px);
-  flex-grow: 1;
-}
-
-.customer__service__container__sub2 {
-  padding: rem(10px);
-  flex-grow: 1;
-}
-
 .footer {
-  @include fontSetup(normal, 1rem, $font-gray, 1.3);
-  background-color: $grayscaleGray6;
-}
+  background-color: $grayscaleGray7;
 
-.footer__bold {
-  @include fontSetup(bold, 1rem, $font-black);
-}
-
-.footer__sub {
-  padding-left: rem(20px);
-  max-width: rem(1024px);
-  padding: rem(22px) 0 rem(60px) 0;
-  position: relative;
-  @include autoMargin;
-}
-
-.company__detail__toggle {
-  margin: 20px 0 10px 0;
-  width: rem(130px);
-  cursor: pointer;
-  &::after {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-position: 0 3px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(./../images/components/footer/down42.png);
-  }
-}
-
-.company__toggle__up {
-  &::after {
-    background-image: url(./../images/components/footer/up42.png);
-  }
-}
-
-.company__detail {
-  height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  @include flexbox(row, flex-start, flex-start, wrap);
-  margin: rem(5px) 0;
-}
-
-.company__detail__sub {
-  margin-right: rem(10px);
-}
-
-.is--active {
-  @include desktop {
-    height: rem(110px);
+  &__inner {
+    @include autoMargin;
+    max-width: 1280px;
+    padding: 30px 15px;
   }
 
-  @include tablet {
-    height: rem(260px);
+  &__bold {
+    @include fontSetup(700, 14px, $font-black, 1.2);
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  &__nav__list {
+    @include flexbox(row, flex-start, center);
+    @include fontSetup(400, 14px, $font-gray, 1.2);
+    width: 100%;
+    margin-bottom: 15px;
+
+    @include desktop {
+      font-size: 16px;
+    }
+
+    & span {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+
+  &__toggle__company {
+    width: 100%;
+    margin-bottom: 25px;
+
+    &.up .footer__toggle__company__title {
+      background-image: url(/assets/images/components/footer/up.png);
+    }
+
+    &__title {
+      @include fontSetup(700, 18px, $font-black, 30px);
+      width: 130px;
+      background: url(/assets/images/components/footer/down.png) no-repeat;
+      background-position: right center;
+      background-size: 18px;
+      font-family: "Do Hyeon", sans-serif;
+      cursor: pointer;
+
+      @include desktop {
+        width: 145px;
+        font-size: 20px;
+      }
+    }
+
+    &__detail {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      @include desktop {
+        @include flexbox(row, space-between);
+      }
+
+      &.is--active {
+        @include desktop {
+          height: rem(216px);
+        }
+
+        @include tablet {
+          height: rem(121px);
+        }
+      }
+
+      &__list {
+        width: 100%;
+        margin: 5px 0 10px;
+
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        @include desktop {
+          flex-basis: 50%;
+          margin-bottom: 0;
+        }
+
+        & li {
+          @include fontSetup(400, 14px, $grayscaleGray4, 1.2);
+          float: left;
+          margin-bottom: 5px;
+
+          &:nth-child(1)::after,
+          &:nth-child(3)::after,
+          &:nth-child(5)::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            margin: 0 10px;
+            background-color: $grayscaleGray4;
+          }
+
+          &:nth-child(3),
+          &:nth-child(5),
+          &:nth-child(7),
+          &:nth-child(8) {
+            clear: both;
+          }
+
+          @include desktop {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__service {
+        @include flexbox;
+        @include desktop {
+          flex-basis: 50%;
+        }
+
+        & div {
+          @include fontSetup(400, 14px, $grayscaleGray4, 1.2);
+          flex-basis: 50%;
+          border: 1px solid $grayscaleGray6;
+          padding: 15px 10px;
+
+          p {
+            margin-bottom: 5px;
+          }
+        }
+
+        &__2 {
+          margin-left: -1px;
+        }
+      }
+    }
+  }
+
+  &__notices {
+    @include fontSetup(400, 12px, $font-gray, 1.2);
+    @include desktop {
+      & span {
+        display: block;
+      }
+    }
   }
 }
-
-.footer__footer {
-  @include flexbox(row, flex-start, stretch, wrap);
-}
-
 
 // 푸터 종료 --------------------------------------------------------------------- /

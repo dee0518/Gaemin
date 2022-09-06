@@ -1327,20 +1327,20 @@ button {
   background-color: rgb(42, 193, 188);
   border-radius: 0 0 20px 20px;
 }
+.header__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
 @media screen and (max-width: 1023px) {
-  .header {
+  .header__container {
     padding: 20px 15px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .header {
+  .header__container {
     padding: 30px 15px;
   }
-}
-.header__container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1024px;
 }
 .header__top {
   display: flex;
@@ -1451,6 +1451,7 @@ button {
 }
 .header__bottom__search__fieldset {
   height: 50px;
+  transition: width ease 0.3s;
 }
 @media screen and (max-width: 1023px) {
   .header__bottom__search__fieldset {
@@ -1546,99 +1547,170 @@ button {
   border-bottom: none;
 }
 
-.customer__service__container {
-  display: flex;
-  border: 1px solid #E8E8E8;
-  margin: 0.9375rem 0;
-  width: 31.25rem;
-}
-
-.customer__service__container__sub1 {
-  border-right: 1px solid #E8E8E8;
-  padding: 0.625rem;
-  flex-grow: 1;
-}
-
-.customer__service__container__sub2 {
-  padding: 0.625rem;
-  flex-grow: 1;
-}
-
 .footer {
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.3;
-  color: #858585;
-  background-color: #ccc;
+  background-color: #eee;
 }
-
+.footer__inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding: 30px 15px;
+}
 .footer__bold {
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 1.2;
   color: #222222;
 }
-
-.footer__sub {
-  padding-left: 1.25rem;
-  max-width: 64rem;
-  padding: 1.375rem 0 3.75rem 0;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 1024px) {
+  .footer__bold {
+    font-size: 16px;
+  }
 }
-
-.company__detail__toggle {
-  margin: 20px 0 10px 0;
-  width: 8.125rem;
+.footer__nav__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #858585;
+  width: 100%;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .footer__nav__list {
+    font-size: 16px;
+  }
+}
+.footer__nav__list span {
+  display: inline-block;
+  margin: 0 10px;
+}
+.footer__toggle__company {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.footer__toggle__company.up .footer__toggle__company__title {
+  background-image: url(/assets/images/components/footer/up.png);
+}
+.footer__toggle__company__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #222222;
+  width: 130px;
+  background: url(/assets/images/components/footer/down.png) no-repeat;
+  background-position: right center;
+  background-size: 18px;
+  font-family: "Do Hyeon", sans-serif;
   cursor: pointer;
 }
-.company__detail__toggle::after {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-position: 0 3px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(./../images/components/footer/down42.png);
+@media screen and (min-width: 1024px) {
+  .footer__toggle__company__title {
+    width: 145px;
+    font-size: 20px;
+  }
 }
-
-.company__toggle__up::after {
-  background-image: url(./../images/components/footer/up42.png);
-}
-
-.company__detail {
+.footer__toggle__company__detail {
   height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 0.3125rem 0;
 }
-
-.company__detail__sub {
-  margin-right: 0.625rem;
-}
-
 @media screen and (min-width: 1024px) {
-  .is--active {
-    height: 6.875rem;
+  .footer__toggle__company__detail {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__toggle__company__detail.is--active {
+    height: 13.5rem;
   }
 }
 @media screen and (max-width: 1023px) {
-  .is--active {
-    height: 16.25rem;
+  .footer__toggle__company__detail.is--active {
+    height: 7.5625rem;
   }
 }
-
-.footer__footer {
+.footer__toggle__company__detail__list {
+  width: 100%;
+  margin: 5px 0 10px;
+}
+.footer__toggle__company__detail__list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media screen and (min-width: 1024px) {
+  .footer__toggle__company__detail__list {
+    flex-basis: 50%;
+    margin-bottom: 0;
+  }
+}
+.footer__toggle__company__detail__list li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #858585;
+  float: left;
+  margin-bottom: 5px;
+}
+.footer__toggle__company__detail__list li:nth-child(1)::after, .footer__toggle__company__detail__list li:nth-child(3)::after, .footer__toggle__company__detail__list li:nth-child(5)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 10px;
+  background-color: #858585;
+}
+.footer__toggle__company__detail__list li:nth-child(3), .footer__toggle__company__detail__list li:nth-child(5), .footer__toggle__company__detail__list li:nth-child(7), .footer__toggle__company__detail__list li:nth-child(8) {
+  clear: both;
+}
+@media screen and (min-width: 1024px) {
+  .footer__toggle__company__detail__list li {
+    font-size: 16px;
+  }
+}
+.footer__toggle__company__detail__service {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: stretch;
+}
+@media screen and (min-width: 1024px) {
+  .footer__toggle__company__detail__service {
+    flex-basis: 50%;
+  }
+}
+.footer__toggle__company__detail__service div {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #858585;
+  flex-basis: 50%;
+  border: 1px solid #ccc;
+  padding: 15px 10px;
+}
+.footer__toggle__company__detail__service div p {
+  margin-bottom: 5px;
+}
+.footer__toggle__company__detail__service__2 {
+  margin-left: -1px;
+}
+.footer__notices {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #858585;
+}
+@media screen and (min-width: 1024px) {
+  .footer__notices span {
+    display: block;
+  }
 }
 
 .tablet__container {
