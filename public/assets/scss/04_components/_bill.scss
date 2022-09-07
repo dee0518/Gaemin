@@ -3,7 +3,7 @@
   &.off {
     & .empty {
       padding-top: 200px;
-      background: url(./../images/order-detail/icon-empty.png) no-repeat;
+      background: url(/assets/images/order-detail/icon-empty.png) no-repeat;
       background-position: center;
     }
 
@@ -19,7 +19,7 @@
   }
 
   @include tablet {
-    min-width: 700px;
+    min-width: 500px;
   }
 
   @include desktop {
@@ -31,7 +31,6 @@
     align-self: flex-start;
     border-radius: 5px;
     background: $white;
-    // background: $white url(./../images/delivery-main/background_receipt.jpeg);
   }
 
   &__warning {
@@ -53,7 +52,7 @@
     width: 100%;
 
     @include tablet {
-      min-width: 700px;
+      min-width: 500px;
       text-align: center;
       @include paddingY(30px);
       position: fixed;

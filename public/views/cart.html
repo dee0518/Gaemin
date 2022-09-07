@@ -4,43 +4,71 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>배달의 민족 장바구니</title>
+  <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/cart.js" type="module" defer></script>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/cart.js" type="module"></script>
+  <script defer src="/js/receit.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => document.querySelector('.total__count').innerHTML = localStorage.getItem('cart'));
+</script>
 </head>
-<body>
+<body class="cart">
   <div class="tablet__container">
+    <!-- 해더 -->
     <header class="header">
       <div class="header__container">
-        <div class="header__sub1">
-          <h1 class="logo">
-            <a href="../main.html">
-              <img src="../images/components/header/logo72.png" alt="배달의 민족 로고" />
-              <img src="../images/components/header/logo.svg" alt="배달의 민족" />
+        <div class="header__top">
+          <h1 class="header__top__logo">
+            <a href="/index.html">
+              <img
+                src="/assets/images/components/header/logo.png"
+                alt="우리가 어떤 민족 입니까?"
+              />
+              <img
+                src="/assets/images/components/header/logo_text.png"
+                alt="배달의 민족"
+              />
             </a>
           </h1>
-          <p class="header__location" role="button" tabindex="0">주소를 알려주세요!</p>
-          <div class="login__container">
-            <a href="/" class="header__login">로그인</a>
-            <a href=""><img src="../images/components/header/person32.png" alt="마이배민" /></a>
-            <a href="./cart.html" class="cart__img"><img src="../images/components/header/cart46.png" alt="장바구니" />
+          <p class="header__top__location" tabindex="0" role="button">
+            주소를 알려주세요
+          </p>
+          <div class="header__top__link">
+            <a href="#" class="header__top__link__login">로그인</a>
+            <a href="#" class="header__top__link__myNCart"> 마이배민 </a>
+            <a href="/views/cart.html" class="header__top__link__myNCart">
+              장바구니
               <span class="total__count--group local__count__group">
                 <span class="sr-only">총</span>
-                <span class="local__count">1</span>
+                <span class="total__count local__count">1</span>
                 <span class="sr-only">개</span>
               </span>
             </a>
           </div>
         </div>
-        <div class="header__sub2">
+        <div class="header__bottom">
           <form action="#">
-            <fieldset class="search__fieldset">
-              <legend>음식 검색창</legend>
-              <label for="search"></label>
-              <input type="search" id="search" name="qq" placeholder="닭발?   순대?   곱창?" />
+            <fieldset class="header__bottom__search__fieldset">
+              <legend>음식 검색 입력폼</legend>
+              <label for="search" class="sr-only">음식 검색창</label>
+              <input
+                type="search"
+                id="search"
+                name="menu"
+                placeholder="닭발? 순대? 곱창?"
+              />
             </fieldset>
           </form>
         </div>
@@ -50,27 +78,31 @@
       <div class="left__70">
         <h2 class="cart__heading">장바구니</h1> 
         <section class="cart__order__detail">
-          <h2>던킨 강남역사 2호점</h2>
+          <div class="cart__order__detail__heading">
+            <h2><label for="1">던킨 강남역사 2호점</label></h2>
+            <input type="checkbox" name="cart" id="1">
+          </div>
           <article>
             <div class="cart__order__detail__top">
               <span>올스타 도넛세트</span>
-              <img class="cart__btn__x" src="../images/cart/x96.png" alt="장바구니에서 제거" />
+              <button aria-label="장바구니에서 제거"></button>
             </div>
             <div class="cart__order__detail__main">
-              <img src="../images/cart/iOS.jpg" alt="닭도리탕" />
+              <img src="/assets/images/cart/iOS.jpg" alt="닭도리탕" />
               <ul>
                 <li>가격 : 올스타 도넛 세트 (15,000원)</li>
                 <li>메뉴선택 : 아메리카노</li>
                 <li>서비스 선택 : 자몽에이드 (1,000원)</li>
-                <li></li>
+                <li class="cart__order__detail__main__total__price"></li>
               </ul>
             </div>
-            <div class="cart__detail__btn">
-              2
+            <div class="cart__order__detail__btn">
+              <button aria-label="수량 감소" class="discrease"></button>
+              <span>2</span>
+              <button aria-label="수량 추가" class="increase"></button>
             </div>
           </article>
           <a href="/" class="want__more__food">
-            <img src="../images/cart/plus-black72.png" alt="플러스" />
             더 담으로 가기
           </a>
         </section>
@@ -78,8 +110,12 @@
       <div class="bill">
         <section class="bill__warning">
           <h2 class="sr-only">경고문</h2>
-          <p class="bill__warning__desc">(주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
-            않습니다.</p>
+          <p class="bill__warning__desc">
+            <span>(주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다.  </span>
+            <span>따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
+              않습니다.</span>
+            
+            </p>
         </section>
         <section class="bill__total">
           <h2 class="desktop">주문 내역서</h2>
@@ -111,25 +147,86 @@
             <span><span class="display__off"><span class="total__price">16,000</span>원</span> 결제하기</span>
           </button>
         </section>
-        <button type="button" class="cart__delete">장바구니 모두 제거</button>
       </div>
     </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <ul class="footer__nav__list">
+          <li>
+            <a href="#">사업자정보확인</a><span aria-hidden="true">|</span>
+          </li>
+          <li><a href="#">이용약관</a><span aria-hidden="true">|</span></li>
+          <li>
+            <a href="#">전자금융거래이용약관</a>
+            <span aria-hidden="true">|</span>
+          </li>
+          <li><a href="#" class="footer__bold">개인정보처리방침</a></li>
+        </ul>
+        <div class="footer__toggle__company">
+          <h2
+            class="footer__toggle__company__title footer__bold"
+            role="button"
+            tabindex="0"
+          >
+            (주)우아한형제들
+          </h2>
+          <section class="footer__toggle__company__detail">
+            <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
+            <ul class="footer__toggle__company__detail__list">
+              <li>대표이사 김범준</li>
+              <li>사업자등록번호 120-87-65763</li>
+              <li>통신판매업 서울 송파-0515</li>
+              <li>호스팅서비스제공자 (주)우아한형제들</li>
+              <li>CS@woowahan.com</li>
+              <li>서울특별시 송파구 위례성대로 2 장은빌딩</li>
+              <li>
+                전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)
+              </li>
+              <li>Fax 050-6050-0400</li>
+            </ul>
+            <div class="footer__toggle__company__detail__service">
+              <div class="footer__toggle__company__detail__service__1">
+                <p>고객센터(대표)</p>
+                <p>1600-0987</p>
+                <p>24시간 운영, 연중무휴</p>
+              </div>
+              <div class="footer__toggle__company__detail__service__2">
+                <p>고객센터(B마트/배민스토어)</p>
+                <p>1600-0025</p>
+                <p>오전 09:00~익일 새벽 01:00</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <p class="footer__notices">
+          <span>
+            (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
+            아닙니다.
+          </span>
+          <span>
+            따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을
+            지지 않습니다.
+          </span>
+        </p>
+      </div>
+    </footer>
   </div>
 
+  <!-- 모달 -->
   <div class="modal">
     <div class="modal__body">
-      <section class="my__place">
-        <h2 tabindex="0">주소 설정</h2>
-              <ul class="my__place__ul">
-                <li tabindex="0">우리 집</li>
-                <li tabindex="0">우리 회사</li>
-                <li tabindex="0"><a href="/">주소 추가</a></li>
-              </ul>
-      </section>
+      <h2 class="title">주소 설정</h2>
+      <button class="modal__body__close__btn" aira-label="닫기"></button>
+      <ul class="my__place__list">
+        <li tabindex="0">우리 집</li>
+        <li tabindex="0">우리 회사</li>
+        <li tabindex="0"><a href="/">주소 추가</a></li>
+      </ul>
     </div>
   </div>
 
-  <!-- modal -->
+  <!-- 영수증 modal -->
   <div class="receit__modal">
     <div class="receit__wrapper">
       <div class="receit__modal__body">
@@ -174,12 +271,8 @@
       </section>
       <button class="receit__exit" role="button" aria-label="영수증 나가기">
       </button>
-      <a class="exit__home" href="../main.html" aria-label="홈 화면으로 돌아가기"></a>
+      <a class="exit__home" href="/index.html" aria-label="홈 화면으로 돌아가기"></a>
     </div>
   </div>
 </body>
-<script src="../js/receit.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => document.querySelector('.total__count').innerHTML = localStorage.getItem('cart'));
-</script>
 </html>

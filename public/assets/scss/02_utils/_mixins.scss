@@ -102,15 +102,6 @@
   overflow: hidden;
 }
 
-@mixin cartContainer($height, $align, $mg-top) {
-  @include autoMargin;
-  height: $height;
-  text-align: $align;
-  margin-top: $mg-top;
-  background-color: $white;
-  border-radius: 5px;
-}
-
 // title
 @mixin sectionTitle($size: 32px) {
   @include fontSetup(700, $size, $font-black, 1.2);

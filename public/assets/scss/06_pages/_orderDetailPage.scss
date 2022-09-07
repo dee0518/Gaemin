@@ -10,7 +10,7 @@
       @include flexbox;
       gap: 10px;
       @include autoMargin;
-      max-width: 1024px;
+      max-width: 1280px;
     }
   }
 
@@ -25,14 +25,14 @@
 
   &__desc {
     position: relative;
-    background: url(./../images/order-detail/dunkin.jpg) no-repeat;
+    background: url(/assets/images/order-detail/dunkin.jpg) no-repeat;
     background-size: cover;
     background-position: center top 40%;
     height: 300px;
 
     &__content {
       @include paddingX(20px);
-      @include paddingY(20px);
+      @include paddingY(30px);
       position: absolute;
       left: 50%;
       bottom: 0;
@@ -47,10 +47,19 @@
     h2 {
       @include fontSetup(bold, 20px, $black, 1.2);
       margin-bottom: 10px;
+
+      @include desktop {
+        font-size: 28px;
+      }
     }
 
     p {
       @include fontSetup(normal, 16px, $black, 1.2);
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 1.4;
+      }
     }
   }
 
@@ -60,7 +69,7 @@
     }
 
     label {
-      @include flexbox($justify: space-between, $items: center);
+      @include flexbox($justify: space-between);
     }
   }
 
@@ -71,8 +80,16 @@
     background: $white;
     border-bottom: 1px solid $grayscaleGray6;
 
+    @include desktop {
+      @include paddingY(40px);
+    }
+
     h2 {
       @include fontSetup(bold, 20px, $black, 1.2);
+
+      @include desktop {
+        font-size: 24px;
+      }
     }
   }
 

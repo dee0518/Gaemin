@@ -1,165 +1,194 @@
-.cart__heading {
-  @include fontSetup(700, rem(30px), $font-black, rem(80px));
-  @include cartContainer(rem(80px), center, rem(10px));
-}
+.cart {
+  &__main {
+    max-width: 1280px;
+    position: relative;
+    @include autoMargin;
 
-.cart__order__detail {
-  @include cartContainer(rem(500px), left, rem(15px));
-}
+    @include desktop {
+      @include flexbox;
+      gap: 10px;
 
-.cart__order__detail h2 {
-  height: rem(80px);
-  @include fontSetup(400, rem(20px), $font-black, rem(80px));
-  &::before {
-    content: '';
-    display: inline-block;
-    width: rem(30px);
-    height: rem(30px);
-    border-radius: rem(10px);
-    background-image: url(./../images/cart/image.png);
-    border: 1px solid $font-gray;
-    background-position: 0 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: translateY(30%);
-    margin: 0 rem(20px);
-  }
-  box-shadow: 0 0.1px;
-}
-
-.cart__main {
-  max-width: rem(1024px);
-  position: relative;
-  @include autoMargin;
-
-  @include desktop {
-    @include flexbox;
-    gap: 10px;
+      .left__70 {
+        flex-shrink: 0;
+        width: 70%;
+      }
+    }
   }
 
-  @include tablet {
-    padding-bottom: rem(150px);
-  }
-}
+  &__heading {
+    @include bgWhiteShadow;
+    @include fontSetup(700, rem(20px), $font-black, 1.2);
+    @include paddingX(15px);
+    @include paddingY(25px);
+    margin-bottom: 15px;
 
-.left__70 {
-  @include desktop {
-    flex-shrink: 0;
-    width: 70%;
-  }
-}
-
-.cart__order__detail__top {
-  margin: rem(20px);
-  @include flexbox(row, space-between, center);
-}
-
-.cart__btn__x {
-  width: rem(20px);
-  height: rem(20px);
-  background-color: $white;
-}
-
-.cart__order__detail__main{
-  @include flexbox(row, flex-start, flex-start);
-  margin: rem(20px);
-  ul {
-    list-style: disc;
-    @include fontSetup(300, 16px, $font-gray, 2);
-  }
-  img {
-    border-radius: rem(10px);
-    margin-right: rem(40px);
-  }
-  li:last-child {
-    list-style: none;
-    text-indent: rem(-15px);
-    color: $font-black;
-  }
-}
-
-.cart__detail__btn {
-  box-shadow: 0 0 1px;
-  border-radius: 5px;
-  width: rem(150px);
-  height: rem(50px);
-  margin-left: auto;
-  margin-right: rem(20px);
-  margin: rem(20px) rem(20px) rem(20px) auto;
-  @include fontSetup(700, 20px, $font-black);
-  @include flexbox(row, space-between, center);
-  &::before {
-    content: '';
-    display: inline-block;
-    width: rem(20px);
-    height: rem(20px);
-    background-image: url(./../images/cart/minus-512.webp);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 10px;
-  }
-  &::after {
-    content: '';
-    display: inline-block;
-    width: rem(20px);
-    height: rem(20px);
-    background-image: url(./../images/cart/plus-black72.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 10px;
-  }
-}
-
-.want__more__food {
-  @include fontSetup(400, 18px, $font-black);
-  display: inline-block;
-  transform: translateY(50px);
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 -0.1px;
-  padding-top: rem(20px);
-  & img {
-    width: rem(20px);
-    height: rem(20px);
-    margin-right: rem(20px);
-  }
-}
-
-.cart__delete {
-  appearance: none;
-  border: 0;
-  padding: 0;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
-  display: block;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1.2;
-  color: #fff;
-  border-radius: 5px;
-  background: #2ac1bc;
-  position: absolute;
-  bottom: -70px;
-  left: 20px;
-  @include desktop {
-    width: rem(260px);
+    @include desktop {
+      @include paddingY(35px);
+      font-size: 24px;
+    }
   }
 
-  @include tablet {
-    bottom: 80px;
-    left: 70px;
-    width: 80%;
-    // height: rem(50px);
+  &__order__detail {
+    @include bgWhiteShadow;
+    border-bottom: 1px solid $grayscaleGray6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__heading {
+      @include fontSetup(700, rem(20px), $font-black, 1.2);
+      padding: 24px 15px 24px 45px;
+      border-bottom: 1px solid $grayscaleGray7;
+      background: url(/assets/images/order-detail/icon-chk-unchecked.png)
+        no-repeat;
+      background-position: left 15px center;
+      background-size: 22px;
+
+      &.on {
+        background-image: url(/assets/images/order-detail/icon-chk-checked.png);
+      }
+
+      label {
+        display: block;
+      }
+
+      input {
+        display: none;
+      }
+    }
+
+    article {
+      position: relative;
+      padding-bottom: 80px;
+    }
+
+    &__top {
+      @include flexbox(row, space-between, center);
+      margin: rem(20px);
+
+      span {
+        @include fontSetup(700, 18px, $font-black, 30px);
+      }
+
+      button {
+        @include buttonNone;
+        width: rem(30px);
+        height: rem(30px);
+        background: url(/assets/images/cart/close.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+
+    &__main {
+      @include flexbox(row, flex-start, flex-start);
+      padding: 0 15px;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: rem(10px);
+        margin-right: rem(20px);
+      }
+
+      ul {
+        @include fontSetup(300, 16px, $font-gray, 1.5);
+
+        li {
+          position: relative;
+          padding-left: 8px;
+          margin-bottom: 3px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: $font-gray;
+            transform: translateY(-50%);
+          }
+
+          &:last-child {
+            color: $font-black;
+
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      @include fontSetup(400, 16px, $font-black, 1.2);
+      @include flexbox(row, space-between, center);
+      position: absolute;
+      right: 15px;
+      bottom: 20px;
+      width: rem(150px);
+      height: rem(50px);
+      border: 1px solid $grayscaleGray6;
+      border-radius: 3px;
+      margin-top: 10px;
+
+      button {
+        @include buttonNone;
+        width: 50px;
+        height: 100%;
+        background: url(/assets/images/cart/minus-512.webp) no-repeat;
+        background-position: center;
+        background-size: 18px;
+        opacity: 0.5;
+      }
+
+      .increase {
+        background-image: url(/assets/images/cart/plus-black72.png);
+        background-size: 14px;
+        opacity: 1;
+      }
+    }
+
+    .want__more__food {
+      @include flexbox(row, center, center);
+      @include fontSetup(400, 16px, $font-black, 30px);
+      @include paddingY(25px);
+      border-top: 1px solid #eaeaea;
+      text-align: center;
+      gap: 5px;
+      @include desktop {
+        @include paddingY(35px);
+        font-size: 18px;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(/assets/images/cart/plus-black72.png) no-repeat;
+        background-position: center;
+        background-size: 16px;
+      }
+    }
   }
-}
 
-.bill__total {
-  position: relative;
-}
+  .bill__warning {
+    @include tablet {
+      span {
+        display: block;
+        line-height: 1.4;
+      }
+    }
+  }
 
-.cart__order__detail__main img{
-  width: 150px;
-  height: 150px;
+  .footer {
+    @include tablet {
+      display: none;
+    }
+  }
 }
