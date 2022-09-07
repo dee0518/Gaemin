@@ -171,9 +171,12 @@
     }
   }
 
+  .order__detail__box__shadow__wrapper {
+    background: $white;
+  }
+
   &__main {
     margin-top: 2rem;
-    background: $white;
 
     &__nav {
       &__list {
@@ -375,6 +378,14 @@
       }
     }
   }
+  &__body {
+    background-color: #f5f5f5;
+    .footer {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
 }
 
 .star {
@@ -396,14 +407,4 @@
 
 .store__main__review {
   display: none;
-}
-
-.order__detail__main {
-  &.store {
-    .bill {
-      &.off {
-        margin-top: 10rem;
-      }
-    }
-  }
 }
