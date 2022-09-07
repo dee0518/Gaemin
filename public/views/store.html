@@ -9,50 +9,72 @@
   <meta name="description" content="배달의 민족 웹-태블릿 전용 페이지입니다." />
   <meta name="keywords" content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민, 라이브, 배민쇼핑라이브" />
   <meta name="author" content="개발의민족" />
+  <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/headFoot.js" type="module" defer></script>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/headFoot.js" type="module"></script>
 </head>
 
 <body>
   <!-- 해더 -->
   <header class="header">
     <div class="header__container">
-      <div class="header__sub1">
-        <h1 class="logo">
-          <a href="/main.html">
-            <img src="../images/components/header/logo72.png" alt="배달의 민족 로고" />
-            <img src="../images/components/header/logo.svg" alt="배달의 민족" />
+      <div class="header__top">
+        <h1 class="header__top__logo">
+          <a href="/index.html">
+            <img
+              src="/assets/images/components/header/logo.png"
+              alt="우리가 어떤 민족 입니까?"
+            />
+            <img
+              src="/assets/images/components/header/logo_text.png"
+              alt="배달의 민족"
+            />
           </a>
         </h1>
-        <p class="header__location">주소를 알려주세요!</p>
-        <div class="login__container">
-          <a href="/" class="header__login">로그인</a>
-          <a href=""><img src="../images/components/header/person32.png" alt="마이배민" /></a>
-          <a href="./cart.html" class="cart__img"><img src="../images/components/header/cart46.png" alt="장바구니" />
+        <p class="header__top__location" tabindex="0" role="button">
+          주소를 알려주세요
+        </p>
+        <div class="header__top__link">
+          <a href="#" class="header__top__link__login">로그인</a>
+          <a href="#" class="header__top__link__myNCart"> 마이배민 </a>
+          <a href="/views/cart.html" class="header__top__link__myNCart">
+            장바구니
             <span class="total__count--group local__count__group">
               <span class="sr-only">총</span>
-              <span class="local__count">1</span>
+              <span class="total__count local__count">1</span>
               <span class="sr-only">개</span>
             </span>
           </a>
         </div>
       </div>
-      <div class="header__sub2">
+      <div class="header__bottom">
         <form action="#">
-          <fieldset class="search__fieldset">
-            <legend>음식 검색창</legend>
-            <label for="search"></label>
-            <input type="search" id="search" placeholder="닭발?   순대?   곱창?" />
+          <fieldset class="header__bottom__search__fieldset">
+            <legend>음식 검색 입력폼</legend>
+            <label for="search" class="sr-only">음식 검색창</label>
+            <input
+              type="search"
+              id="search"
+              name="menu"
+              placeholder="닭발? 순대? 곱창?"
+            />
           </fieldset>
         </form>
       </div>
     </div>
-
-    </div>
   </header>
+   <!-- 메인 -->
   <main class="store order__detail__main">
     <div class="order__detail__box__shadow__wrapper">
       <h1 class="store__main__title sr-only">음식점 메인 페이지 입니다.</h1>
@@ -60,34 +82,40 @@
         <div class="store__header__title-card">
           <h2 class="store__header__title-card__name">던킨 강남역사 2호점</h2>
           <div class="store__header__title-card__star-point">
-            <span class="star-point"></span><span class="star-point"></span><span class="star-point"></span><span
-              class="star-point"></span><span class="star-point-half"></span>
-            <span class="store__header__title-card__star-point"> 4.5</span>
+            <span class="star star-full"></span>
+            <span class="star star-full"></span>
+            <span class="star star-full"></span>
+            <span
+              class="star star-full">
+            </span>
+            <span class="star star-half"></span>
+            <span class="store__header__title-card__star-point__num">4.5</span>
           </div>
           <div class="store__header__title-card__review">
-            <span class="store__header__title-card__review__recent-review">최근리뷰 84 |</span>
+            <span class="store__header__title-card__review__recent-review">최근리뷰 84</span>
+            <span aria-hidden="true">|</span>
             <span class="store__header__title-card__review__recent-manager-reply">최근사장님댓글 84</span>
           </div>
           <div class="store__header__title-card__contect">
             <a href="tel:050881949965" type="button" class="store__header__title-card__contect__tel">
               전화</a>
-            <button class="store__header__title-card__contect__zzim zzim buttonNone" onclick="handleTitleClick()">찜
+            <button class="store__header__title-card__contect__zzim" onclick="handleTitleClick()">찜
               84</button>
-            <button class="store__header__title-card__contect__share buttonNone">공유</button>
+            <button class="store__header__title-card__contect__share">공유</button>
           </div>
         </div>
       </div>
-      <div class="store__header__coupon__wrapper">
-        <div class="store__header__coupon">
+      <div class="store__header__coupon">
+        <button class="store__header__coupon__btn">
           최대 4000원 쿠폰 받기
-        </div>
+        </button>
       </div>
       <div class="store__order-info">
         <h3 class="store__order-info__header sr-only">배달, 포장 주문 정보 입니다.</h3>
 
-        <div class="store__order__info__wrapper">
-          <h4 class="store__order-info__list__header" role="tab"><span class="border_bottom">배달주문</span></h4>
-          <dl class="store__order-info__list">
+        <div class="store__order__info__tabs">
+          <h4 class="store__order-info__tabs__header on" role="tab">배달주문</h4>
+          <dl class="store__order-info__tabs__list">
             <dt class="store__order-info__list__min-order-price">
               최소주문금액
             </dt>
@@ -107,9 +135,8 @@
               45~60분 소요예상
             </dd>
           </dl>
-          <h4 class="store__order-info__list__header header-package" role="tab"><span
-              class="border_bottom">포장/방문주문</span></h4>
-          <dl class="store__order-info__list">
+          <h4 class="store__order-info__tabs__header package" role="tab">포장/방문주문</h4>
+          <dl class="store__order-info__tabs__list">
             <dt class="store__order-info__list____discount">
               최소주문금액<span class="badge-question">
             </dt>
@@ -130,9 +157,9 @@
       </div>
       <!-- store main -->
       <div class="store__main">
-        <h3 class="store__main__header sr-only">음식점 메뉴, 정보, 리뷰 정보 입니다.</h3>
         <!-- store menu tab-->
         <nav class="store__main__nav">
+          <h3 class="store__main__header sr-only">음식점 메뉴, 정보, 리뷰 정보 입니다.</h3>
           <ul class="store__main__nav__list" role="tablist">
             <li class="store__main__nav__item is-active" tabindex="0" role="tab">메뉴</li>
             <li class="store__main__nav__item" tabindex="0" role="tab">정보</li>
@@ -141,332 +168,221 @@
         </nav>
         <section class="store__main__menu" role="tabpanel">
           <h4 class="store__main__menu__title sr-only" role="tab">메뉴</h4>
-          <!-- store menu nav -->
-          <nav class="store__main__menu__nav">
-            <ul class="store__main__menu__nav__list" role="tablist">
-              <li class="store__main__menu__nav__item is-active" role="tab"><a href=""
-                  class="store__main__menu__nav__link">인기 메뉴</a></li>
-              <li class="store__main__menu__nav__item" role="tab"><a href=""
-                  class="store__main__menu__nav__link">도너츠(팩)</a></li>
-              <li class="store__main__menu__nav__item" role="tab">
-                <a href="" class="store__main__menu__nav__link">커피</a>
-              </li>
-            </ul>
-          </nav>
-
+          <!-- store menu tab -->
+          <ul class="store__main__menu__tab__list" role="tablist">
+            <li class="store__main__menu__tab__item is-active" role="tab"><a href="#">인기 메뉴</a></li>
+            <li class="store__main__menu__tab__item" role="tab"><a href="#">도너츠(팩)</a></li>
+            <li class="store__main__menu__tab__item" role="tab">
+              <a href="#">커피</a>
+            </li>
+          </ul>
           <p class="store__main__menu__desc">
             <!-- <a class="badge-place-of-origin">원산지 표기</a> -->
             <span class="badge-cesco">세스코 멤버스</span>
             강남역 신분당선 6번출구 지하 1층 출입구에서 운영중입니다.
           </p>
-
-
           <div class="signature store__main__menu__category" role="tabpanel">
             <h5 class="signature store__main__menu__category__title">
               인기 메뉴
             </h5>
             <ul class="signature store__main__menu__category__list">
               <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+                <a href="/views/orderDetail.html">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content" aria
-                      src="../images/reataurant-detail/donut1.png" alt="">
+                    <img src="/assets/images/reataurant-detail/donut1.png" alt="">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
                     <span class="badge-signature" aria-label="인기 상품"></span>
                     연유 보스톤 크림
                   </h6>
-                  <p class="store__main__menu__category__desc">담콤 고소한 연유필링을 채우고 진한 초콜릿을 토핑한 도넛</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    1,900원
-                  </p>
-                  <p class="signature store__main__menu__category__item__detail">
-                    품절 임박 3개 남음
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      담콤 고소한 연유필링을 채우고 진한 초콜릿을 토핑한 도넛
+                    </span>
+                    <span class="store__main__menu__category__item__price">1,900원</span>
+                    <span class="store__main__menu__category__item__detail warning">품절 임박 3개 남음</span>
                   </p>
                 </a>
               </li>
               <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+                <a href="/views/orderDetail.html" class="store__main__menu__categoty__link">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content"
-                      src="../images/reataurant-detail/donut2.jpeg" alt="">
+                    <img  src="/assets/images/reataurant-detail/donut2.jpeg" alt="">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
                     <span class="badge-signature" aria-label="인기 상품"></span>
                     스트로베리필드
                   </h6>
-                  <p class="store__main__menu__category__desc">맛있는 딸기각 상큼, 새하얀 슈가파우더가 입안에서 샤르륵</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    1,700원
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      맛있는 딸기각 상큼, 새하얀 슈가파우더가 입안에서 샤르륵
+                    </span>
+                    <span class="store__main__menu__category__item__price">1,700원</span>
                   </p>
-                  <!-- <p class="signature store__main__menu__category__item__detail">
-                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
-                    </p> -->
                 </a>
               </li>
               <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+                <a href="/views/orderDetail.html" class="store__main__menu__categoty__link">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content"
-                      src="../images/reataurant-detail/donut3.png" alt="">
+                    <img src="/assets/images/reataurant-detail/donut3.png" alt="">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
                     <span class="badge-signature" aria-label="인기 상품"></span>
                     올리브 츄이스티
                   </h6>
-                  <p class="store__main__menu__category__desc">향긋한 올리브유를 사용한 쫄깃 도넛</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    1,700원
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      향긋한 올리브유를 사용한 쫄깃 도넛
+                    </span>
+                    <span class="store__main__menu__category__item__price">1,700원</span>
                   </p>
-                  <!-- <p class="signature store__main__menu__category__item__detail">
-                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
-                    </p> -->
                 </a>
               </li>
             </ul>
           </div>
-
-          <div class="signature store__main__menu__category" role="tabpanel">
-            <h5 class="signature store__main__menu__category__title">
-              도너츠(팩)
+          <!-- 메뉴 카테고리 -->
+          <div class="store__main__menu__category">
+            <h5 class="store__main__menu__category__title">
+              커피
             </h5>
-            <ul class="signature store__main__menu__category__list">
-              <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+            <p class="store__main__menu__category__desc"></p>
+            <ul class="store__main__menu__category__list">
+              <li class="store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content"  src="../images/dunkin/IMG_6215.PNG"
-                      alt="">
+                    <img src="/assets/images/dunkin/IMG_6226.PNG" alt="아메리카노">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
-                    <span class="badge-signature" aria-label="인기 상품"></span>
-                    올스타 도넛세트
+                    아메리카노
                   </h6>
-                  <p class="store__main__menu__category__desc">던킨에서 가장 잘나가는 도넛 6개로 구성된 버라이어티 6EA와 맛있는 먼치킨 10EA가 더해진 올스타
-                    도넛세트</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    15,100원
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      풍부한 향이 있는 미디엄 로스팅의 아메리카노<br />(카페인 함유제품)
+                    </span>
+                    <span class="store__main__menu__category__item__price">3,700원</span>
+                    <span class="store__main__menu__category__item__detail">이벤트 제품</span>
                   </p>
-                  <span class="badge-manager-recommend">사장님 추천</span>
                 </a>
               </li>
-              <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+              <li class="store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6216.PNG"
-                      alt="">
+                    <img src="/assets/images/dunkin/IMG_6227.PNG" alt="따뜻한 카페라떼">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
-                    <span class="badge-signature" aria-label="인기 상품"></span>
-                    버라이어티10EA
+                    카페라떼
                   </h6>
-                  <p class="store__main__menu__category__desc">던킨에서 가장 잘나가는 도너츠로 구성된 버라이어디 10EA</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    17,000원
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      우유의 고소함과 부드러움이 잘 어울리는 커피<br />(카페인 함유제품)
+                    </span>
+                    <span class="store__main__menu__category__item__price">4,000원</span>
                   </p>
-                  <span class="badge-manager-recommend">사장님 추천</span>
-                  <!-- <p class="signature store__main__menu__category__item__detail">
-                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
-                    </p> -->
                 </a>
               </li>
-              <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+              <li class="store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6217.PNG"
-                      alt="">
+                    <img src="/assets/images/dunkin/IMG_6228.PNG" alt="따뜻한 카푸치노">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
-                    <span class="badge-signature" aria-label="인기 상품"></span>
-                    해피 먼치킨컵 (10개))
+                    카푸치노
                   </h6>
-                  <p class="store__main__menu__category__desc">동글동글 맛있는 먼치킨 10개 세트</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    5,000원
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      폭신한 우유거품과 진한 에스프레소가 조화로운 카푸치노<br />(카페인 함유제품)
+                    </span>
+                    <span class="store__main__menu__category__item__price">4,000원</span>
                   </p>
-
-                  <!-- <p class="signature store__main__menu__category__item__detail">
-                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
-                    </p> -->
                 </a>
               </li>
-              <li class="signature store__main__menu__category__item">
-                <a href="./orderDetail.html" class="store__main__menu__categoty__link">
+              <li class="store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
                   <div class="store__main__menu__category__item__img">
-                    <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6218.PNG"
-                      alt="">
+                    <img src="/assets/images/dunkin/IMG_6229.PNG"  alt="따뜻한 카페모카">
                   </div>
                   <h6 class="signature store__main__menu__category__item__heading">
-                    커리&도넛 트윈세트
+                    카페모카
                   </h6>
-                  <p class="store__main__menu__category__desc">던킨을 대표하는 도넛 6개와 아메리카노 2잔을 즐길 수 있는 세트 메뉴</p>
-
-                  <p class="signature store__main__menu__category__item__price">
-                    17,500원
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      달콤한 초코, 부드러운 휘핑크림이 조화로운 카페모카<br />(배달주문시 휘핑크림은 제공되지 않습니다, 카페인
+                    함유제품)
+                    </span>
+                    <span class="store__main__menu__category__item__price">4,400원</span>
                   </p>
-
-                  <!-- <p class="signature store__main__menu__category__item__detail">
-                      페퍼로니, 양파, 할라피뇨, 모짜렐라치즈
-                    </p> -->
+                </a>
+              </li>
+              <li class="store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
+                  <div class="store__main__menu__category__item__img">
+                    <img src="/assets/images/dunkin/IMG_6230.PNG"  alt="따뜻한 바닐라라떼">
+                  </div>
+                  <h6 class="signature store__main__menu__category__item__heading">
+                    바닐라라떼
+                  </h6>
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      향긋한 바닐라가 조화로운 달콤한 바닐라 라떼<br />(배달주문시 휘핑크림은 제공되지 않습니다, 카페인
+                    함유제품)
+                    </span>
+                    <span class="store__main__menu__category__item__price">4,400원</span>
+                  </p>
+                </a>
+              </li>
+              <li class="store__main__menu__category__item">
+                <a class="store__main__menu__categoty__link">
+                  <div class="store__main__menu__category__item__img">
+                    <img src="/assets/images/dunkin/IMG_6231.PNG" alt="따뜻한 카라멜마끼아또">
+                  </div>
+                  <h6 class="signature store__main__menu__category__item__heading">
+                    카라멜마끼아또
+                  </h6>
+                  <p class="store__main__menu__category__item__desc__wrapper">
+                    <span class="store__main__menu__category__item__desc">
+                      따뜻한 우유, 달콤한 카라멜이 조화로운 카라멜마끼아또<br />(카페인 함유제품)
+                    </span>
+                    <span class="store__main__menu__category__item__price">4,400원</span>
+                  </p>
+    
                 </a>
               </li>
             </ul>
           </div>
-          <!-- 인기메뉴 -->
-          <!-- <div class="store__main__menu__popular">
-              <h5 class="store__main__menu__popular__title">
-                대표메뉴
-              </h5>
-              <ul class="store__main__menu__popular__list">
-                <li class="store__main__menu__popular__item">
-                  <h6 class="store__main__menu__popular__item__heading">
-                    <span class="badge-popular" aria-label="인기 상품"></span>
-                    슈퍼잭슨(P)
-                  </h6>
-                  <p class="store__main__menu__popular__item__detail">
+          <div class="store__main__menu__category">
+            <h5 class="store__main__menu__category__title">
+              대표메뉴
+            </h5>
+            <ul class="store__main__menu__category__list">
+              <li class="store__main__menu__category__item">
+                <h6 class="store__main__menu__category__item__heading">
+                  <span class="badge-signature" aria-label="인기 상품"></span>
+                  슈퍼잭슨(P)
+                </h6>
+                <p class="store__main__menu__category__item__desc__wrapper">
+                  <span class="store__main__menu__category__item__desc">
                     토마토소스, 모짜렐라치즈, 페퍼로니, 소시지, 크러쉬드 소고기, 베이컨, 적양파, 구운파프리카
-                  </p>
-                  <p class="store__main__menu__popular__item__price">
-                    11,000원
-                  </p>
+                  </span>
+                  <span class="store__main__menu__category__item__price">11,000원</span>
                   <span class="badge-manager-recommend">사장님 추천</span>
-                </li>
-              </ul> -->
-      </div>
-      <!-- 메뉴 카테고리 -->
-
-      <div class="store__main__menu__category">
-        <h5 class="store__main__menu__category__title">
-          커피
-        </h5>
-        <p class="store__main__menu__category__desc"></p>
-        <ul class="store__main__menu__category__list">
-          <li class="store__main__menu__category__item">
-            <a class="store__main__menu__categoty__link">
-              <div class="store__main__menu__category__item__img">
-                <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6226.PNG"
-                  alt="아메리카노">
-              </div>
-              <h6 class="signature store__main__menu__category__item__heading">
-                아메리카노
-              </h6>
-              <p class="store__main__menu__category__desc">풍부한 향이 있는 미디엄 로스팅의 아메리카노 <br />(카페인 함유제품)</p>
-
-              <p class="signature store__main__menu__category__item__price">
-                3,700원
-              </p>
-
-            </a>
-          </li>
-          <li class="store__main__menu__category__item">
-            <a class="store__main__menu__categoty__link">
-              <div class="store__main__menu__category__item__img">
-                <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6227.PNG"
-                  alt="따뜻한 카페라떼">
-              </div>
-              <h6 class="signature store__main__menu__category__item__heading">
-                카페라떼
-              </h6>
-              <p class="store__main__menu__category__desc">우유의 고소함과 부드러움이 잘 어울리는 커피<br />(카페인 함유제품)</p>
-
-              <p class="signature store__main__menu__category__item__price">
-                4,000원
-              </p>
-
-            </a>
-          </li>
-          <li class="store__main__menu__category__item">
-            <a class="store__main__menu__categoty__link">
-              <div class="store__main__menu__category__item__img">
-                <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6228.PNG"
-                  alt="따뜻한 카푸치노">
-              </div>
-              <h6 class="signature store__main__menu__category__item__heading">
-                카푸치노
-              </h6>
-              <p class="store__main__menu__category__desc">폭신한 우유거품과 진한 에스프레소가 조화로운 카푸치노<br />(카페인 함유제품)</p>
-
-              <p class="signature store__main__menu__category__item__price">
-                4,000원
-              </p>
-
-            </a>
-          </li>
-          <li class="store__main__menu__category__item">
-            <a class="store__main__menu__categoty__link">
-              <div class="store__main__menu__category__item__img">
-                <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6229.PNG"
-                  alt="따뜻한 카페모카">
-              </div>
-              <h6 class="signature store__main__menu__category__item__heading">
-                카페모카
-              </h6>
-              <p class="store__main__menu__category__desc">달콤한 초코, 부드러운 휘핑크림이 조화로운 카페모카<br />(배달주문시 휘핑크림은 제공되지 않습니다, 카페인
-                함유제품)</p>
-
-              <p class="signature store__main__menu__category__item__price">
-                4,400원
-              </p>
-
-            </a>
-          </li>
-          <li class="store__main__menu__category__item">
-            <a class="store__main__menu__categoty__link">
-              <div class="store__main__menu__category__item__img">
-                <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6230.PNG"
-                  alt="따뜻한 바닐라라떼">
-              </div>
-              <h6 class="signature store__main__menu__category__item__heading">
-                바닐라라떼
-              </h6>
-              <p class="store__main__menu__category__desc">향긋한 바닐라가 조화로운 달콤한 바닐라 라떼<br />(배달주문시 휘핑크림은 제공되지 않습니다, 카페인
-                함유제품)</p>
-
-              <p class="signature store__main__menu__category__item__price">
-                4,400원
-              </p>
-
-            </a>
-          </li>
-          <li class="store__main__menu__category__item">
-            <a class="store__main__menu__categoty__link">
-              <div class="store__main__menu__category__item__img">
-                <img class="store__main__menu__category__item__img__content" src="../images/dunkin/IMG_6231.PNG"
-                  alt="따뜻한 카라멜마끼아또">
-              </div>
-              <h6 class="signature store__main__menu__category__item__heading">
-                카라멜마끼아또
-              </h6>
-              <p class="store__main__menu__category__desc">따뜻한 우유, 달콤한 카라멜이 조화로운 카라멜마끼아또<br />(카페인 함유제품)</p>
-
-              <p class="signature store__main__menu__category__item__price">
-                4,400원
-              </p>
-
-            </a>
-          </li>
-        </ul>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
 
       <!-- 원산지 표기 -->
-      <div class="store__main__menu__place-of-origin">
-      </div>
-
-      </section>
+      <!-- <div class="store__main__menu__place-of-origin">
+      </div> -->
       <!-- store info tab -->
-      <section class="store__main__info">
+      <!-- <section class="store__main__info">
         <h4 class="store__main__menu__title" role="tab">정보</h4>
-      </section>
+      </section> -->
       <!-- store review tab -->
-      <section class="store__main__review">
+      <!-- <section class="store__main__review">
         <h4 class="store__main__menu__title" role="tab">리뷰</h4>
-      </section>
-    </div>
+      </section> -->
     </div>
     <div class="bill off">
       <section class="bill__warning">
@@ -536,70 +452,88 @@
       </section>
     </div>
   </main>
+  <!-- go to top -->
+  <div class="go__to__top">
+    <button
+      type="button"
+      class="go__to__top__btn"
+      aria-label="맨 위로 이동"
+    ></button>
+  </div>
   <!-- footer -->
-  <footer class="footer__store footer">
-    <div class="footer__sub">
-      <p class="">
-        <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
-        <a href="#">이용약관 </a> <span aria-hidden="true">|</span>
-        <a href="#">전자금융거래이용약관 </a>
-        <span aria-hidden="true">|</span>
-        <a href="#" class="footer__bold">개인정보처리방침 </a>
-      </p>
-      <p class="company__detail__toggle footer__bold" role="button" tabindex="0">
-        (주)우아한형제들
-      </p>
-      <section class="company__detail">
-        <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
-        <div class="company__detail__sub">
-          <p class="">
-            대표이사 김범준 <span aria-hidden="true">|</span> 사업자등록번호
-            120-87-65763
-          </p>
-          <p>
-            통신판매업 서울 송파-0515 | 호스팅서비스제공자 (주)우아한형제들
-          </p>
-          <p>CS@woowahan.com | 서울특별시 송파구 위례성대로 2 장은빌딩</p>
-          <p>전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)</p>
-          <p>Fax 050-6050-0400</p>
-        </div>
-        <div class="customer__service__container">
-          <div class="customer__service__container__sub1">
-            <p>고객센터(대표)</p>
-            <p>1600-0987</p>
-            <p>24시간 운영, 연중무휴</p>
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__nav__list">
+        <li>
+          <a href="#">사업자정보확인</a><span aria-hidden="true">|</span>
+        </li>
+        <li><a href="#">이용약관</a><span aria-hidden="true">|</span></li>
+        <li>
+          <a href="#">전자금융거래이용약관</a>
+          <span aria-hidden="true">|</span>
+        </li>
+        <li><a href="#" class="footer__bold">개인정보처리방침</a></li>
+      </ul>
+      <div class="footer__toggle__company">
+        <h2
+          class="footer__toggle__company__title footer__bold"
+          role="button"
+          tabindex="0"
+        >
+          (주)우아한형제들
+        </h2>
+        <section class="footer__toggle__company__detail">
+          <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
+          <ul class="footer__toggle__company__detail__list">
+            <li>대표이사 김범준</li>
+            <li>사업자등록번호 120-87-65763</li>
+            <li>통신판매업 서울 송파-0515</li>
+            <li>호스팅서비스제공자 (주)우아한형제들</li>
+            <li>CS@woowahan.com</li>
+            <li>서울특별시 송파구 위례성대로 2 장은빌딩</li>
+            <li>
+              전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)
+            </li>
+            <li>Fax 050-6050-0400</li>
+          </ul>
+          <div class="footer__toggle__company__detail__service">
+            <div class="footer__toggle__company__detail__service__1">
+              <p>고객센터(대표)</p>
+              <p>1600-0987</p>
+              <p>24시간 운영, 연중무휴</p>
+            </div>
+            <div class="footer__toggle__company__detail__service__2">
+              <p>고객센터(B마트/배민스토어)</p>
+              <p>1600-0025</p>
+              <p>오전 09:00~익일 새벽 01:00</p>
+            </div>
           </div>
-          <div class="customer__service__container__sub2">
-            <p>고객센터(B마트/배민스토어)</p>
-            <p>1600-0025</p>
-            <p>오전 09:00~익일 새벽 01:00</p>
-          </div>
-        </div>
-      </section>
-      <div class="footer__footer">
-        <p>
-          (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다.
-          따라서&nbsp;
-        </p>
-        <p>
-          (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
-          않습니다.
-        </p>
+        </section>
       </div>
-      <button type="button" class="top__btn" aria-label="맨 위로 이동"></button>
+      <p class="footer__notices">
+        <span>
+          (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
+          아닙니다.
+        </span>
+        <span>
+          따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을
+          지지 않습니다.
+        </span>
+      </p>
     </div>
   </footer>
-  <div class="modal">
-    <div class="modal__body">
-      <section class="my__place">
-        <h2 tabindex="0">주소 설정</h2>
-              <ul class="my__place__ul">
-                <li tabindex="0">우리 집</li>
-                <li tabindex="0">우리 회사</li>
-                <li tabindex="0"><a href="/">주소 추가</a></li>
-              </ul>
-      </section>
-    </div>
+ <!-- 모달 -->
+ <div class="modal">
+  <div class="modal__body">
+    <h2 class="title">주소 설정</h2>
+    <button class="modal__body__close__btn" aira-label="닫기"></button>
+    <ul class="my__place__list">
+      <li tabindex="0">우리 집</li>
+      <li tabindex="0">우리 회사</li>
+      <li tabindex="0"><a href="/">주소 추가</a></li>
+    </ul>
+  </div>
+</div>
 </body>
 
 </html>
