@@ -12,15 +12,26 @@
       name="keywords"
       content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민, 라이브"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+    rel="shortcut icon"
+    href="/assets/images/favicon.ico"
+    type="image/x-icon"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+  rel="stylesheet"
+  />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+  <link rel="stylesheet" href="/css/style.css" />
     <title>라이브 쇼핑</title>
-    <script src="../js/headFoot.js" type="module" defer></script>
+    <script src=".js/headFoot.js" type="module"></script>
+    <script src="/js/liveShopping.js"></script>
+
   </head>
 
   <body>
@@ -28,50 +39,45 @@
       <!-- 해더 -->
       <header class="header">
         <div class="header__container">
-          <div class="header__sub1">
-            <h1 class="logo">
-              <a href="./main.html">
+          <div class="header__top">
+            <h1 class="header__top__logo">
+              <a href="/index.html">
                 <img
-                  src="../images/components/header/logo72.png"
-                  alt="배달의 민족 로고"
+                  src="/assets/images/components/header/logo.png"
+                  alt="우리가 어떤 민족 입니까?"
                 />
                 <img
-                  src="../images/components/header/logo.svg"
+                  src="/assets/images/components/header/logo_text.png"
                   alt="배달의 민족"
                 />
               </a>
             </h1>
-            <p class="header__location">주소를 알려주세요!</p>
-            <div class="login__container">
-              <a href="/" class="header__login">로그인</a>
-
-              <a href=""
-                ><img
-                  src="../images/components/header/person32.png"
-                  alt="마이배민"
-              /></a>
-              <a href="./cart.html" class="cart__img"
-                ><img
-                  src="../images/components/header/cart46.png"
-                  alt="장바구니"
-                />
+            <p class="header__top__location" tabindex="0" role="button">
+              주소를 알려주세요
+            </p>
+            <div class="header__top__link">
+              <a href="#" class="header__top__link__login">로그인</a>
+              <a href="#" class="header__top__link__myNCart"> 마이배민 </a>
+              <a href="/views/cart.html" class="header__top__link__myNCart">
+                장바구니
                 <span class="total__count--group local__count__group">
                   <span class="sr-only">총</span>
-                  <span class="local__count">1</span>
+                  <span class="total__count local__count">1</span>
                   <span class="sr-only">개</span>
                 </span>
               </a>
             </div>
           </div>
-          <div class="header__sub2">
+          <div class="header__bottom">
             <form action="#">
-              <fieldset class="search__fieldset">
-                <legend>음식 검색창</legend>
-                <label for="search"></label>
+              <fieldset class="header__bottom__search__fieldset">
+                <legend>음식 검색 입력폼</legend>
+                <label for="search" class="sr-only">음식 검색창</label>
                 <input
                   type="search"
                   id="search"
-                  placeholder="닭발?   순대?   곱창?"
+                  name="menu"
+                  placeholder="닭발? 순대? 곱창?"
                 />
               </fieldset>
             </form>
@@ -79,15 +85,165 @@
         </div>
       </header>
     <!-- 네비게이션 -->
-    <nav class="nav__main">
-      <section class="nav__sec__main">
-        <h2 class="nav__heading__main sr-only">네비게이션 바</h2>
-        <ul class="nav__ul__main">
-          <li class="nav__li__main"><a href="./deliveryMain.html">배달</a></li>
-          <li class="nav__li__main"><a href="../index.html">포장</a></li>
-          <li class="nav__li__main"><a href="#" class="selected">쇼핑라이브</a></li>
+    <nav class="nav">
+      <div class="nav__inner">
+        <h2 class="nav__heading sr-only">네비게이션 바</h2>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/views/delivery.html" aria-selected="true">배달</a>
+            <div class="nav__sub__container">
+              <ul class="nav__sub__list">
+                <li class="nav__sub__list__item">
+                  <a
+                    href="#"
+                    class=""
+                    role="tab"
+                    id="sushi-tab"
+                    aria-controls="sushi-panel"
+                    aria-selected="false"
+                    >돈까스&centerdot;회&centerdot;일식</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    class=""
+                    id="chinese-tab"
+                    aria-controls="chinese-panel"
+                    aria-selected="false"
+                    href="#"
+                    >중식</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="chicken-tab"
+                    aria-controls="chicken-panel"
+                    aria-selected="false"
+                    href="#"
+                    >치킨</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="noodle-tab"
+                    aria-controls="noodle-panel"
+                    aria-selected="false"
+                    href="#"
+                    >백반&centerdot;죽&centerdot;국수</a
+                  >
+                </li>
+                <li class="nav__sub__list__item selected">
+                  <a
+                    role="tab"
+                    id="cafe-tab"
+                    aria-controls="cafe-panel"
+                    aria-selected="true"
+                    href="/views/orderDetail.html"
+                    >카페&centerdot;디저트</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="bunsik-tab"
+                    aria-controls="bunsik-panel"
+                    aria-selected="false"
+                    href="#"
+                    >분식</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="jjigae-tab"
+                    aria-controls="jjigae-panel"
+                    aria-selected="false"
+                    href="#"
+                    >짬&centerdot;탕&centerdot;찌개</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="pizza-tab"
+                    aria-controls="pizza-panel"
+                    aria-selected="false"
+                    href="#"
+                    >피자</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="spagetti-tab"
+                    aria-controls="spagetti-panel"
+                    aria-selected="false"
+                    href="#"
+                    >양식</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="meat-tab"
+                    aria-controls="meat-panel"
+                    aria-selected="false"
+                    href="#"
+                    >고기&centerdot;구이</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="jok-tab"
+                    aria-controls="jok-panel"
+                    aria-selected="false"
+                    href="#"
+                    >족발&centerdot;보쌈</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="asian-tab"
+                    aria-controls="asian-panel"
+                    aria-selected="false"
+                    href="#"
+                    >아시안</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="fastfood-tab"
+                    aria-controls="fastfood-panel"
+                    aria-selected="false"
+                    href="#"
+                    >패스트푸드</a
+                  >
+                </li>
+                <li class="nav__sub__list__item">
+                  <a
+                    role="tab"
+                    id="lunchbox-tab"
+                    aria-controls="lunchbox-panel"
+                    aria-selected="false"
+                    href="#"
+                    >도시락</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav__item"><a href="/views/map.html">포장</a></li>
+          <li class="nav__item selected">
+            <a href="/views/liveShopping.html">쇼핑라이브</a>
+          </li>
         </ul>
-      </section>
+      </div>
     </nav>
   </div>
   <!-- 라이브 배너 -->
@@ -115,10 +271,10 @@
         <h2 class="live__title">지금 특가 중!</h2>
         <ul class="live__special__container">
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex1.gif" alt="돌아가는 피자" />
+                  <img src="/assets/images/components/liveShoppingCard/ex1.gif" alt="돌아가는 피자" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l1">미스터 피자 상품권 특가 판매</span>
@@ -147,10 +303,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex2.gif" alt="돌아가는 햄버거" />
+                  <img src="/assets/images/components/liveShoppingCard/ex2.gif" alt="돌아가는 햄버거" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l2">버거킹 1 + 1 특가 판매</span>
@@ -179,10 +335,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex3.gif" alt="썰리는 스테이크" />
+                  <img src="/assets/images/components/liveShoppingCard/ex3.gif" alt="썰리는 스테이크" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l3">빕스 스테이크 상품권 판매</span>
@@ -211,10 +367,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex4.gif" alt="빵위에 휘핑크림을 뿌리는 사진" />
+                  <img src="/assets/images/components/liveShoppingCard/ex4.gif" alt="빵위에 휘핑크림을 뿌리는 사진" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l4">파리바게트 신상품 할인 상품권 판매</span>
@@ -243,10 +399,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex5.gif" alt="아이스 쇼콜라" />
+                  <img src="/assets/images/components/liveShoppingCard/ex5.gif" alt="아이스 쇼콜라" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l5">베스킨라빈스 31데이 할인 특가 판매</span>
@@ -275,10 +431,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex1.gif" alt="돌아가는 피자" />
+                  <img src="/assets/images/components/liveShoppingCard/ex1.gif" alt="돌아가는 피자" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l1">미스터 피자 상품권 특가 판매</span>
@@ -307,10 +463,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex2.gif" alt="돌아가는 햄버거" />
+                  <img src="/assets/images/components/liveShoppingCard/ex2.gif" alt="돌아가는 햄버거" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l2">버거킹 1 + 1 특가 판매</span>
@@ -339,10 +495,10 @@
             </a>
           </li>
           <li class="live__special__items">
-            <a href="./liveVideo.html" target="_self" rel="opener" class="live__special__link">
+            <a href="/views/liveVideo.html" target="_self" rel="opener" class="live__special__link">
               <div class="live__special__video">
                 <figure>
-                  <img src="../images/components/liveShoppingCard/ex3.gif" alt="썰리는 스테이크" />
+                  <img src="/assets/images/components/liveShoppingCard/ex3.gif" alt="썰리는 스테이크" />
                   <figcaption>
                     <div class="live__special__video__caption">
                       <span class="sr-only" id="l3">빕스 스테이크 상품권 판매</span>
@@ -390,7 +546,7 @@
             </a>
             <a href="/">
               <figure>
-                <img src="../images/components/liveShoppingCard/fruit.jpg" alt="성주 참외">
+                <img src="/assets/images/components/liveShoppingCard/fruit.jpg" alt="성주 참외">
                 <figcaption>
                   <div>
                     <span class="sr-only">꿀 성주 참외 라이브 방송일</span>
@@ -417,7 +573,7 @@
             </a>
             <a href="/">
               <figure>
-                <img src="../images/components/liveShoppingCard/apple.jpg" alt="대구 사고">
+                <img src="/assets/images/components/liveShoppingCard/apple.jpg" alt="대구 사고">
                 <figcaption>
                   <div>
                     <span class="sr-only">꿀 대구 사과 라이브 방송일</span>
@@ -444,7 +600,7 @@
             </a>
             <a href="/">
               <figure>
-                <img src="../images/components/liveShoppingCard/watermelon.jpg" alt="수박">
+                <img src="/assets/images/components/liveShoppingCard/watermelon.jpg" alt="수박">
                 <figcaption>
                   <div>
                     <span class="sr-only">꿀 수박박수 라이브 방송일</span>
@@ -471,7 +627,7 @@
             </a>
             <a href="/">
               <figure>
-                <img src="../images/components/liveShoppingCard/lemon.jpg" alt="레몬">
+                <img src="/assets/images/components/liveShoppingCard/lemon.jpg" alt="레몬">
                 <figcaption>
                   <div>
                     <span class="sr-only">새콤달콤한 레몬 라이브 방송일</span>
@@ -487,50 +643,88 @@
       </section>
     </div>
   </main>
+  <!-- go to top -->
+  <div class="go__to__top">
+    <button
+      type="button"
+      class="go__to__top__btn"
+      aria-label="맨 위로 이동"
+    ></button>
+  </div>
   <!-- footer -->
   <footer class="footer">
-    <div class="footer__sub">
-      <p class="">
-        <a href="#">사업자정보확인 </a><span aria-hidden="true">|</span>
-        <a href="#">이용약관 </a> <span aria-hidden="true">|</span>
-        <a href="#">전자금융거래이용약관 </a>
-        <span aria-hidden="true">|</span>
-        <a href="#" class="footer__bold">개인정보처리방침 </a>
-      </p>
-      <p class="company__detail__toggle footer__bold" role="button" tabindex="0">
-        (주)우아한형제들
-      </p>
-      <section class="company__detail">
-        <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
-        <div class="company__detail__sub">
-          <p class="">
-            대표이사 김범준 <span aria-hidden="true">|</span> 사업자등록번호
-            120-87-65763
-          </p>
-          <p>
-            (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지
-            않습니다.
-          </p>
-        </div>
-        <button
-          type="button"
-          class="top__btn"
-          aria-label="맨 위로 이동"
-        ></button>
-      </div>
-    </footer>
-    <div class="modal">
-      <div class="modal__body">
-        <section class="my__place">
-          <h2 tabindex="0">주소 설정</h2>
-          <ul class="my__place__ul">
-            <li tabindex="0">우리 집</li>
-            <li tabindex="0">우리 회사</li>
-            <li tabindex="0"><a href="/">주소 추가</a></li>
+    <div class="footer__inner">
+      <ul class="footer__nav__list">
+        <li>
+          <a href="#">사업자정보확인</a><span aria-hidden="true">|</span>
+        </li>
+        <li><a href="#">이용약관</a><span aria-hidden="true">|</span></li>
+        <li>
+          <a href="#">전자금융거래이용약관</a>
+          <span aria-hidden="true">|</span>
+        </li>
+        <li><a href="#" class="footer__bold">개인정보처리방침</a></li>
+      </ul>
+      <div class="footer__toggle__company">
+        <h2
+          class="footer__toggle__company__title footer__bold"
+          role="button"
+          tabindex="0"
+        >
+          (주)우아한형제들
+        </h2>
+        <section class="footer__toggle__company__detail">
+          <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
+          <ul class="footer__toggle__company__detail__list">
+            <li>대표이사 김범준</li>
+            <li>사업자등록번호 120-87-65763</li>
+            <li>통신판매업 서울 송파-0515</li>
+            <li>호스팅서비스제공자 (주)우아한형제들</li>
+            <li>CS@woowahan.com</li>
+            <li>서울특별시 송파구 위례성대로 2 장은빌딩</li>
+            <li>
+              전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)
+            </li>
+            <li>Fax 050-6050-0400</li>
           </ul>
+          <div class="footer__toggle__company__detail__service">
+            <div class="footer__toggle__company__detail__service__1">
+              <p>고객센터(대표)</p>
+              <p>1600-0987</p>
+              <p>24시간 운영, 연중무휴</p>
+            </div>
+            <div class="footer__toggle__company__detail__service__2">
+              <p>고객센터(B마트/배민스토어)</p>
+              <p>1600-0025</p>
+              <p>오전 09:00~익일 새벽 01:00</p>
+            </div>
+          </div>
         </section>
       </div>
+      <p class="footer__notices">
+        <span>
+          (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
+          아닙니다.
+        </span>
+        <span>
+          따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을
+          지지 않습니다.
+        </span>
+      </p>
     </div>
-    <script src="../js/liveShopping.js"></script>
+  </footer>
+</div>
+<!-- 모달 -->
+<div class="modal">
+  <div class="modal__body">
+    <h2 class="title">주소 설정</h2>
+    <button class="modal__body__close__btn" aira-label="닫기"></button>
+    <ul class="my__place__list">
+      <li tabindex="0">우리 집</li>
+      <li tabindex="0">우리 회사</li>
+      <li tabindex="0"><a href="/">주소 추가</a></li>
+    </ul>
+  </div>
+</div>
   </body>
 </html>

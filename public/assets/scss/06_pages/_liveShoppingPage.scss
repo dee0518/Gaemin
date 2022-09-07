@@ -2,13 +2,13 @@
 .live__banner,
 .live {
   @include tablet {
-    min-width: 700px;
+    min-width: 500px;
   }
 }
 
 .live__banner {
   margin-top: 50px;
-  background: $font-pink;
+  background: $font-blue;
 }
 
 .live {
@@ -23,14 +23,15 @@
   }
 
   @include desktop {
-    max-width: 1024px;
+    max-width: 1280px;
+    @include paddingX(15px);
     @include autoMargin;
   }
 }
 
 .live__title {
   margin-bottom: 20px;
-  @include fontSetup(700, 24px, $font-black, 1.2);
+  @include sectionTitle;
 }
 
 // 배너
@@ -68,6 +69,9 @@
 
 // 다가오는 라이브
 .live__schedule {
+  margin-top: 60px;
+  margin-bottom: 100px;
+
   &__container {
     @include flexbox($wrap: wrap);
     gap: 22px;
