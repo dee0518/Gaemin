@@ -121,17 +121,25 @@
   }
 
   &__rest {
-    padding: 20px 20px 30px;
+    padding: 20px 20px 0;
     background: $white;
+
+    @include desktop {
+      padding-bottom: 30px;
+    }
 
     &__barcode {
       display: block;
       width: 100%;
       padding-top: 15%;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       background: url(/assets/images/cart/barcode.png) no-repeat;
       background-position: center top;
       background-size: cover;
+
+      @include desktop {
+        margin-bottom: 20px;
+      }
     }
   }
 }
