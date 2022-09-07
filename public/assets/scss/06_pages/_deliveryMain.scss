@@ -178,15 +178,6 @@ $images: (
           padding: rem(24px);
         }
       }
-
-      .couponWrapper {
-        @include paddingX(16px);
-        @include fontSetup(400, 16px, $font-orange, 28px);
-        display: inline-block;
-        margin-top: 0.5rem;
-        border-radius: rem(14px);
-        background: $bg-orange;
-      }
     }
   }
 }

@@ -1,32 +1,43 @@
 .dc {
   &__wrapper {
-    display: none;
-    max-width: rem(1024px);
-    margin-bottom: rem(100px);
-    @include autoMargin;
+    // display: none;
+    max-width: 1280px;
+    margin: 0 auto rem(100px);
+    padding: rem(125px) 15px 0;
   }
 
   &__list {
-
     @include flexbox($justify: space-between, $wrap: wrap);
-  }
+    gap: 20px;
 
-  &__food {
     &__item {
-      width: 31%;
-      @include marginY(20px);
-      box-shadow: none;
+      flex-basis: calc(50% - 10px);
 
-      .couponWrapper {
-        display: inline-block;
-        position: relative;
-        margin-top: 0.5rem;
-        border-radius: rem(24px);
-        background: $bg-orange;
-        color: $font-orange;
-        @include paddingY(6px);
-        @include paddingX(10px);
+      @include mobile {
+        flex-basis: 100%;
+      }
+      @include desktop {
+        flex-basis: calc((100% - 40px) / 3);
       }
     }
   }
+
+  // &__food {
+  //   &__item {
+  //     width: 31%;
+  //     @include marginY(20px);
+  //     box-shadow: none;
+
+  //     .couponWrapper {
+  //       display: inline-block;
+  //       position: relative;
+  //       margin-top: 0.5rem;
+  //       border-radius: rem(24px);
+  //       background: $bg-orange;
+  //       color: $font-orange;
+  //       @include paddingY(6px);
+  //       @include paddingX(10px);
+  //     }
+  //   }
+  // }
 }

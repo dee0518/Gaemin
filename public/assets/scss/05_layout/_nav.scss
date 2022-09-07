@@ -1,42 +1,95 @@
 .nav {
-  height: rem(100px);
   width: 100%;
   background-color: $white;
-  padding-top: rem(15px);
+  padding: rem(24px) 0 0;
   position: fixed;
-  top: 150px;
   left: 0;
-  z-index: 3;
-}
+  z-index: 2;
+  border-bottom: 1px solid $grayscaleGray7;
 
-.nav__sec {
-  text-align: center;
-  box-shadow: 0 0.1px;
-}
-
-.nav__heading {
-  @include fontSetup(400, 24px, $font-black, 30px);
-}
-
-.nav__ul {
-  @include flexbox(row, center);
-  margin-top: rem(20px);
-  overflow-x: scroll;
-  background-color: $white;
-}
-
-.nav__li {
-  margin-right: rem(20px);
-  a {
-    @include fontSetup(400, 18px $font-black, 22px);
-    color: #858585;
-    white-space: nowrap;
+  @include tablet {
+    top: 111px;
   }
-}
+  @include desktop {
+    top: 140px;
+  }
 
-.nav__li .selected {
-  border-bottom: 3px solid $black;
-  height: rem(35px);
-  color: $font-black;
-  display: inline-block;
+  &__inner {
+    @include paddingX(15px);
+    @include autoMargin;
+    max-width: rem(1280px);
+  }
+
+  &__list {
+    @include flexbox(row, flex-start);
+    height: 100%;
+  }
+
+  &__item {
+    &.selected > a {
+      color: $font-blue;
+    }
+
+    & > a {
+      @include fontSetup(400, 18px, $font-black, 22px);
+      font-family: "Do Hyeon", sans-serif;
+      display: block;
+      padding: 20px 10px 20px 0;
+      color: $font-gray;
+
+      @include desktop {
+        padding-right: 25px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__sub__container {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 86px;
+    width: 100%;
+    background: $white;
+
+    @include tablet {
+      padding-left: 10px;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__sub__list {
+    @include flexbox();
+    @include autoMargin;
+    max-width: 1280px;
+    gap: 10px;
+
+    @include desktop {
+      padding: 0 10px;
+      justify-content: space-between;
+    }
+
+    &__item {
+      @include fontSetup(400, 18px, $font-black, 1.2);
+      font-family: "Do Hyeon", sans-serif;
+      flex-shrink: 0;
+      padding: 10px 5px;
+
+      &.selected {
+        font-weight: 700;
+        border-bottom: 2px solid $font-black;
+
+        a {
+          color: $font-black;
+        }
+      }
+
+      &:hover {
+        color: $pickup-border-color;
+      }
+    }
+  }
 }

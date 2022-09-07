@@ -14,14 +14,23 @@
       content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민"
     />
     <meta name="author" content="개발의민족" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <script type="module" src="../js/headFoot.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/headFoot.js" defer></script>
   </head>
 
   <body>
@@ -75,15 +84,68 @@
             </div>
           </div>
         </header>
-        <nav class="nav__main">
-          <div class="nav__main__inner">
-            <h2 class="nav__main__heading sr-only">네비게이션 바</h2>
-            <ul class="nav__main__list">
-              <li class="nav__main__item selected">
+        <nav class="nav">
+          <div class="nav__inner">
+            <h2 class="nav__heading sr-only">네비게이션 바</h2>
+            <ul class="nav__list">
+              <li class="nav__item selected">
                 <a href="/views/delivery.html" aria-selected="true">배달</a>
+                <div class="nav__sub__container">
+                  <ul class="nav__sub__list">
+                    <li class="nav__sub__list__item">
+                      <a href="#" class="" role="tab" id="sushi-tab" aria-controls="sushi-panel"
+                        aria-selected="false">돈까스&centerdot;회&centerdot;일식</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" class="" id="chinese-tab" aria-controls="chinese-panel" aria-selected="false" href="#">중식</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="chicken-tab" aria-controls="chicken-panel" aria-selected="false" href="#">치킨</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="noodle-tab" aria-controls="noodle-panel" aria-selected="false"
+                        href="#">백반&centerdot;죽&centerdot;국수</a>
+                    </li>
+                    <li class="nav__sub__list__item selected">
+                      <a role="tab" id="cafe-tab" aria-controls="cafe-panel" aria-selected="true"
+                        href="./orderDetail.html">카페&centerdot;디저트</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="bunsik-tab" aria-controls="bunsik-panel" aria-selected="false" href="#">분식</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="jjigae-tab" aria-controls="jjigae-panel" aria-selected="false"
+                        href="#">짬&centerdot;탕&centerdot;찌개</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="pizza-tab" aria-controls="pizza-panel" aria-selected="false" href="#">피자</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="spagetti-tab" aria-controls="spagetti-panel" aria-selected="false" href="#">양식</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="meat-tab" aria-controls="meat-panel" aria-selected="false"
+                        href="#">고기&centerdot;구이</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="jok-tab" aria-controls="jok-panel" aria-selected="false"
+                        href="#">족발&centerdot;보쌈</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="asian-tab" aria-controls="asian-panel" aria-selected="false" href="#">아시안</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="fastfood-tab" aria-controls="fastfood-panel" aria-selected="false"
+                        href="#">패스트푸드</a>
+                    </li>
+                    <li class="nav__sub__list__item">
+                      <a role="tab" id="lunchbox-tab" aria-controls="lunchbox-panel" aria-selected="false" href="#">도시락</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav__main__item"><a href="/index.html">포장</a></li>
-              <li class="nav__main__item">
+              <li class="nav__item"><a href="/views/map.html">포장</a></li>
+              <li class="nav__item">
                 <a href="/views/liveShopping.html">쇼핑라이브</a>
               </li>
             </ul>
@@ -223,15 +285,11 @@
                     <a href="/" class="restLink">아트스시</a>
                   </h3>
                   <p class="sr-only">예술적인 초밥 맛을 느껴보세요.</p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="sr-only">별점</dt>
-                      <img
-                        src="/assets/images/components/restaurantCard/star.png"
-                        alt=""
-                      />
-                      <dd class="rating">4.9</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>10,000원</dd>
@@ -243,7 +301,6 @@
                         ><span class="middot">&middot;</span>1.8km
                       </dd>
                     </div>
-                    <br />
                     <div class="couponWrapper">
                       <dt class="sr-only">추가사항</dt>
                       <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
@@ -263,15 +320,11 @@
                     <a href="/" class="restLink">파이포유</a>
                   </h3>
                   <p class="sr-only">달콤한 파이를 맛보세요.</p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="sr-only">별점</dt>
-                      <img
-                        src="/assets/images/components/restaurantCard/star.png"
-                        alt="별점"
-                      />
-                      <dd class="rating">5.0</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>12,000원</dd>
@@ -283,7 +336,6 @@
                         ><span class="middot">&middot;</span>2.8km
                       </dd>
                     </div>
-                    <br />
                     <div class="couponWrapper">
                       <dt class="sr-only">추가사항</dt>
                       <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
@@ -303,15 +355,11 @@
                     <a href="/" class="restLink">빌리엔젤</a>
                   </h3>
                   <p class="sr-only">달콤한 케이크를 맛보세요</p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="sr-only">별점</dt>
-                      <img
-                        src="/assets/images/components/restaurantCard/star.png"
-                        alt="별점"
-                      />
-                      <dd class="rating">4.9</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>10,000원</dd>
@@ -323,7 +371,6 @@
                         ><span class="middot">&middot;</span>1.8km
                       </dd>
                     </div>
-                    <br />
                     <div class="couponWrapper">
                       <dt class="sr-only">추가사항</dt>
                       <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
@@ -343,15 +390,11 @@
                     <a href="/" class="restLink">샐러디</a>
                   </h3>
                   <p class="sr-only">깔끔한 맛, 샐러디</p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="sr-only">별점</dt>
-                      <img
-                        src="/assets/images/components/restaurantCard/star.png"
-                        alt="별점"
-                      />
-                      <dd class="rating">4.9</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>7,000원</dd>
@@ -363,7 +406,6 @@
                         ><span class="middot">&middot;</span>0.5km
                       </dd>
                     </div>
-                    <br />
                     <div class="couponWrapper">
                       <dt class="sr-only">추가사항</dt>
                       <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
@@ -384,15 +426,11 @@
                     <a href="/" class="restLink">빌리엔젤</a>
                   </h3>
                   <p class="sr-only">달콤한 케이크를 맛보세요</p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="sr-only">별점</dt>
-                      <img
-                        src="/assets/images/components/restaurantCard/star.png"
-                        alt="별점"
-                      />
-                      <dd class="rating">4.9</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>10,000원</dd>
@@ -404,7 +442,6 @@
                         ><span class="middot">&middot;</span>1.8km
                       </dd>
                     </div>
-                    <br />
                     <div class="couponWrapper">
                       <dt class="sr-only">추가사항</dt>
                       <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
@@ -424,15 +461,11 @@
                     <a href="/" class="restLink">샐러디</a>
                   </h3>
                   <p class="sr-only">깔끔한 맛, 샐러디</p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="sr-only">별점</dt>
-                      <img
-                        src="/assets/images/components/restaurantCard/star.png"
-                        alt="별점"
-                      />
-                      <dd class="rating">4.9</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>7,000원</dd>
@@ -444,7 +477,6 @@
                         ><span class="middot">&middot;</span>0.5km
                       </dd>
                     </div>
-                    <br />
                     <div class="couponWrapper">
                       <dt class="sr-only">추가사항</dt>
                       <dd>쿠폰<span class="sr-only">적용 가능</span></dd>
