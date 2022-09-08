@@ -8,12 +8,13 @@
   }
 
   &-tab {
-    // position: sticky;
-    // top: 210px;
+    position: relative;
+    z-index: 1;
     background: #f9f9f9;
 
     &__list {
       @include flexbox;
+      align-self: flex-start;
       @include autoMargin;
       max-width: 1280px;
       padding: 0 10px;
@@ -86,148 +87,142 @@
       }
     }
   }
-}
-// map
-.pickup-mapinfo {
-  display: flex;
-  height: 90vh;
-  float: left;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 1024px;
-  background-color: $white;
-  .rating-dt {
-    img {
-      margin-right: rem(6px);
-      margin-left: rem(-2px);
-      display: inline-block;
-      max-width: 18px;
-      margin-bottom: -10px;
+
+  &-mapinfo {
+    @include autoMargin;
+    max-width: 1280px;
+    background-color: $white;
+
+    @include tablet {
+      @include flexbox(column-reverse, flex-start, center);
     }
-  }
-  .rating {
-    height: 2rem;
-    margin-bottom: -15px;
-    margin-left: rem(-5px);
-  }
-  #map {
-    width: 100%;
-    height: 100%;
-    .loading-map {
-      background-color: #e0e0e0;
+    @include desktop {
+      @include flexbox;
+      height: 900px;
+    }
+
+    &__search {
       width: 100%;
       height: 100%;
-      animation: blinker 1s linear infinite;
-      z-index: 99;
-      float: inherit;
-    }
-  }
-  .bmNo1wrapper {
-    height: 30px;
-    display: none;
-    dt {
-      padding-right: 2px;
-      img {
-        max-width: 15px;
+      @include tablet {
+        @include bgWhiteShadow;
       }
-    }
-    dd {
-      margin-left: -8px;
-    }
-  }
-  &__search {
-    box-sizing: border-box;
-    padding-top: rem(61px);
-    height: 100%;
-    padding: 24px;
-    width: rem(320px);
-    border: 1px solid transparent;
-    border-image: linear-gradient(
-      to left,
-      $box-shadow-color 99%,
-      transparent 100%
-    );
-    border-image-slice: 1;
-    overflow-y: auto;
 
-    .pickup-cardlist {
-      overflow-x: hidden;
-      .imgContainer {
-        height: 120px;
-        object-fit: contain;
+      @include desktop {
+        max-width: calc(100% / 3);
+        border-right: 1px solid $grayscaleGray7;
       }
-      li {
-        margin-top: rem(24px);
-        &:nth-of-type(1) {
-          margin-top: 1px;
+
+      &__container {
+        position: relative;
+        padding: 30px 15px 0;
+        margin-bottom: rem(30px);
+
+        @include desktop {
+          padding: 20px 20px 0;
+        }
+
+        input {
+          @include fontSetup(400, 16px, $font-black, 1.2);
+          width: 100%;
+          height: rem(45px);
+          padding: 10px 10px 10px 45px;
+          border: 1px solid $pickup-border-color;
+          border-radius: 25px;
+          outline: none;
+        }
+
+        button {
+          @include buttonNone;
+          position: absolute;
+          top: 30px;
+          left: 15px;
+          width: rem(45px);
+          height: rem(45px);
+          background: url(/assets/images/map/AsG.png) no-repeat center;
+          background-size: 28px;
+
+          @include desktop {
+            top: 20px;
+            left: 20px;
+          }
         }
       }
-      .descWrapper__rating {
-        display: flex;
-        align-items: center;
-      }
-      .loading-text {
-        position: absolute;
-        padding: rem(10px);
-        margin-left: 0;
-        height: rem(90px);
-        margin-top: -5px;
-        width: 80%;
-        border-radius: 10px;
-      }
-      .loading-button {
-        margin-left: 7px;
-        margin-top: -20px;
-        height: rem(35px);
-        width: rem(122px);
+
+      .pickup-cardlist {
+        &-container {
+          padding: 0 15px 50px;
+
+          @include desktop {
+            height: calc(100% - 95px);
+            padding-bottom: 20px;
+            overflow-y: scroll;
+          }
+        }
+
         @include tablet {
-          height: rem(40px);
-          width: 50%;
+          @include flexbox(row, space-between, center, wrap);
+          gap: 16px;
         }
-      }
-      .descWrapper {
-        line-height: 1.4rem;
+
+        .restCard {
+          width: calc(50% - 8px);
+          margin-bottom: rem(15px);
+
+          @include mobile {
+            width: 100%;
+          }
+
+          @include desktop {
+            width: 100%;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .loading-text {
+          position: absolute;
+          padding: rem(10px);
+          margin-left: 0;
+          height: rem(90px);
+          margin-top: -5px;
+          width: 80%;
+          border-radius: 10px;
+        }
+        .loading-button {
+          margin-left: 7px;
+          margin-top: -20px;
+          height: rem(35px);
+          width: rem(122px);
+          @include tablet {
+            height: rem(40px);
+            width: 50%;
+          }
+        }
       }
     }
-    &__container {
-      position: relative;
-      margin-bottom: rem(38px);
-      overflow: hidden;
 
-      #search {
-        text-indent: 3rem;
-        height: rem(45px);
-        border-radius: 20px;
+    #map {
+      width: 100%;
+      height: 600px;
+
+      @include desktop {
+        height: 900px;
+      }
+
+      .loading-map {
+        background-color: #e0e0e0;
         width: 100%;
-        padding: 0;
-        border: 1px solid $pickup-border-color;
-        outline: none;
-
-        &:focus {
-          border-width: 3px;
-        }
-      }
-      button {
-        display: none;
-      }
-      label {
-        position: absolute;
-        top: 50%;
-        left: rem(14px);
-        transform: translateY(-50%);
-        width: rem(30px);
-        height: rem(30px);
-        display: block;
-        background-image: url(/assets/images/map/AsG.png);
-        background-size: contain;
+        height: 100%;
+        animation: blinker 1s linear infinite;
+        z-index: 99;
       }
     }
   }
 }
-
+// map
 [class^="column-"] {
   -webkit-flex: 1;
   flex: 1;
@@ -259,120 +254,42 @@
     "dairy": "dairy.png",
   );
 
-  .dm {
-    &__container {
-      box-sizing: border-box;
-      @include paddingY(10px);
-      @include paddingX(24px);
-    }
-
-    &__category {
-      width: 100%;
-
-      &__list {
-        white-space: wrap;
-        @include autoMargin;
-        min-width: 0;
-        width: rem(420px);
-        max-width: 100%;
-        overflow: hidden;
-        border-radius: rem(10px);
-        height: fit-content;
-        padding-top: rem(10px);
-      }
-
-      &__item {
-        white-space: wrap;
-        padding-top: 0px;
-        float: left;
-        position: relative;
-        text-align: center;
-        font-size: rem(10px);
-        text-align: center;
-        font-weight: 700;
-        width: rem(60px);
-        height: rem(60px);
-        &:nth-of-type(1) {
-          white-space: nowrap;
-        }
-        button {
-          margin: 0px;
-        }
-      }
-
-      &__link {
-        @each $name, $glyph in $images {
-          &__#{$name}::before {
-            content: "";
-            width: rem(60px);
-            height: rem(40px);
-            display: block;
-            background: url("/assets/images/delivery-main/#{$glyph}") no-repeat;
-            background-size: contain;
-            position: relative;
-            transform: translateX(15%);
-          }
-        }
-      }
-    }
-  }
+  // .dm {
+  //   &__category {
+  //     &__link {
+  //       @each $name, $glyph in $images {
+  //         &__#{$name}::before {
+  //           content: "";
+  //           width: rem(60px);
+  //           height: rem(40px);
+  //           display: block;
+  //           background: url("/assets/images/delivery-main/#{$glyph}") no-repeat;
+  //           background-size: contain;
+  //           position: relative;
+  //           transform: translateX(15%);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
-.tablet__container {
-  &.pickup {
-    background-color: #fff;
 
-    footer {
-      float: left;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-}
-@include tablet {
-  .pickup-mapinfo {
-    display: flex;
-    flex-flow: column nowrap;
-    #map {
-      height: 600px;
-      order: 1;
-    }
-    &__search {
-      order: 2;
-      width: 100%;
-      .pickup-cardlist {
-        text-align: center;
-      }
-      .restCard {
-        display: inline-block;
-        width: 40%;
-        &:nth-of-type(odd) {
-          margin-right: rem(40px);
-        }
-        text-align: start;
-      }
-    }
-  }
-  .pickUp-tab__contents {
-    width: 100%;
-  }
-  .pickup-cardlist {
-    .restCard,
-    .loading-img {
-      .imgContainer {
-        height: 240px;
-      }
-    }
-    .loading {
-      .loading-text {
-        height: 50px;
-        width: rem(290px);
-      }
-      .loading-button {
-        width: rem(140px);
-      }
-    }
-  }
-}
+// @include tablet {
+// .pickup-cardlist {
+//   .restCard,
+//   .loading-img {
+//     .imgContainer {
+//       height: 240px;
+//     }
+//   }
+//   .loading {
+//     .loading-text {
+//       height: 50px;
+//       width: rem(290px);
+//     }
+//     .loading-button {
+//       width: rem(140px);
+//     }
+//   }
+// }
+// }

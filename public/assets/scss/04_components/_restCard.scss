@@ -81,13 +81,14 @@
       }
 
       .bmNo1wrapper {
-        @include flexbox($justify: space-between);
-        @include fontSetup(700, 14px, $font-blue, 1.2);
+        @include flexbox($justify: space-around);
+        @include fontSetup(700, 12px, $font-blue, 1.2);
         @include paddingY(3px);
         @include paddingX(10px);
         position: absolute;
         right: 14px;
-        top: 18px;
+        top: 12px;
+        margin-top: 10px;
         border: 1px solid $font-blue;
         gap: 6px;
         border-radius: rem(24px);

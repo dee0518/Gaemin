@@ -269,6 +269,15 @@
       flex-shrink: 0;
       width: 300px;
 
+      .imgContainer {
+        height: 250px;
+
+        @include tablet {
+          border-radius: rem(16px);
+          overflow: hidden;
+        }
+      }
+
       @include tablet {
         border-radius: 0;
         box-shadow: none;
@@ -286,15 +295,6 @@
       .descContainer .restLink::after {
         top: -250px;
         height: calc(100% + 250px);
-      }
-
-      .imgContainer {
-        height: 250px;
-
-        @include tablet {
-          border-radius: rem(16px);
-          overflow: hidden;
-        }
       }
     }
   }

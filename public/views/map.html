@@ -21,10 +21,10 @@
       rel="stylesheet"
     />
   <link rel="stylesheet" href="/css/style.css" />
-  <script src="/js/pickup.js"></script>
   <script type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0e2b110b15d4094e23e39dd92edc102a&libraries=services"></script>
-  <script type="module" src="/js/index.js" defer></script>
+  src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0e2b110b15d4094e23e39dd92edc102a&libraries=services"></script>
+  <script type="module" src="/js/index.js"></script>
+  <script defer src="/js/pickup.js"></script>
   <script defer src="/js/skeleton.js"></script>
   <script defer src="/js/kakaoMap.js"></script>
 
@@ -241,7 +241,7 @@
         </ul>
       </div>
     </nav>
-    <div class="pickup-container ">
+    <div class="pickup-container">
       <div class="pickup-tab">
         <!-- 탭 인덱스 -->
         <ul class="pickup-tab__list" role="tablist">
@@ -340,9 +340,9 @@
             <fieldset>
               <legend>검색 폼</legend>
               <div class="pickup-mapinfo__search__container">
-                <input type="search" id="search" name="qqq" required />
-                <button type="submit" id="submit" class="pickup-mapinfo__search-button"></button>
-                <label for="submit" class="pickup-mapinfo__search__icon-search"></label>
+                <label class="sr-only">장소 검색 입력창</label>
+                <input type="search" name="store" placeholder="검색어를 입력해주세요." required />
+                <button type="submit" class="pickup-mapinfo__search-button"></button>
               </div>
             </fieldset>
           </form>
@@ -359,7 +359,6 @@
                   <img src="/assets/images/map/lowandslow.jpg" alt="스테이크" />
                 </div>
                 <div class="descContainer">
-
                   <div class="loading">
                     <div class="loading-text blink_me"></div>
                   </div>
@@ -370,11 +369,11 @@
                   <p class="sr-only">
                     스테이크플레터를 만나보세요.
                   </p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="rating-dt"><img src="/assets/images/components/restaurantCard/star.png" alt="별점"></dt>
-                      <dd class="rating">4.8</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>9,000원</dd>
@@ -385,9 +384,8 @@
                         900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
                       </dd>
                     </div>
-                    <br />
                     <div class="bmNo1wrapper">
-                      <dt>배민<img src="/assets/images/components/restaurantCard/no1.png" alt="배민원" /></dt>
+                      <dt class="bmNo1wrapper__no1">배민</dt>
                       <dd>10~20분</dd>
                     </div>
                     <div class="loading">
@@ -396,7 +394,6 @@
                   </dl>
                 </div>
               </li>
-
               <li class="restCard">
                 <div class="imgContainer">
                   <div class="loading">
@@ -418,11 +415,11 @@
                   <p class="sr-only">
                     꼬치구이 이자카야 입니다
                   </p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="rating-dt"><img src="/assets/images/components/restaurantCard/star.png" alt="별점"></dt>
-                      <dd class="rating">4.8</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>9,000원</dd>
@@ -433,9 +430,8 @@
                         900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
                       </dd>
                     </div>
-                    <br />
                     <div class="bmNo1wrapper">
-                      <dt>배민<img src="/assets/images/components/restaurantCard/no1.png" alt="배민원" /></dt>
+                      <dt class="bmNo1wrapper__no1">배민</dt>
                       <dd>10~20분</dd>
                     </div>
                     <div class="loading">
@@ -449,9 +445,7 @@
                   <div class="loading">
                     <div class="loadingImg blink_me"></div>
                   </div>
-
                   <img src="/assets/images/map/meadocks.jpg" alt="피자" />
-
                 </div>
                 <div class="descContainer">
                   <div class="loading">
@@ -465,12 +459,11 @@
                   <p class="sr-only">
                     다양한 조각피자를 만나보세요.
                   </p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="rating-dt"><img src="/assets/images/components/restaurantCard/star.png" alt="별점">
-                      </dt>
-                      <dd class="rating">4.8</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>9,000원</dd>
@@ -481,9 +474,8 @@
                         900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
                       </dd>
                     </div>
-                    <br />
                     <div class="bmNo1wrapper">
-                      <dt>배민<img src="/assets/images/components/restaurantCard/no1.png" alt="배민원" /></dt>
+                      <dt class="bmNo1wrapper__no1">배민</dt>
                       <dd>10~20분</dd>
                     </div>
                     <div class="loading">
@@ -513,11 +505,11 @@
                   <p class="sr-only">
                     태국음식점 쏭타이를 만나보세요.
                   </p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="rating-dt"><img src="/assets/images/components/restaurantCard/star.png" alt="별점"></dt>
-                      <dd class="rating">4.8</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>9,000원</dd>
@@ -528,9 +520,8 @@
                         900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
                       </dd>
                     </div>
-                    <br />
                     <div class="bmNo1wrapper">
-                      <dt>배민<img src="/assets/images/components/restaurantCard/no1.png" alt="배민원" /></dt>
+                      <dt class="bmNo1wrapper__no1">배민</dt>
                       <dd>10~20분</dd>
                     </div>
                     <div class="loading">
@@ -560,11 +551,11 @@
                   <p class="sr-only">
                     고기가 많은 설렁탕으로 유명한 백년설렁탕의 메뉴를 눌러 확인해보세요.
                   </p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="rating-dt"><img src="/assets/images/components/restaurantCard/star.png" alt="별점"></dt>
-                      <dd class="rating">4.8</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>9,000원</dd>
@@ -575,9 +566,8 @@
                         900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
                       </dd>
                     </div>
-                    <br />
                     <div class="bmNo1wrapper">
-                      <dt>배민<img src="/assets/images/components/restaurantCard/no1.png" alt="배민원" /></dt>
+                      <dt class="bmNo1wrapper__no1">배민</dt>
                       <dd>10~20분</dd>
                     </div>
                     <div class="loading">
@@ -607,11 +597,11 @@
                   <p class="sr-only">
                     고기가 많은 설렁탕으로 유명한 백년설렁탕의 메뉴를 눌러 확인해보세요.
                   </p>
+                  <div class="descContainer__rating">
+                    <p class="sr-only">별점</p>
+                    <p class="descContainer__rating__num">4.9</p>
+                  </div>
                   <dl>
-                    <div class="descWrapper__rating">
-                      <dt class="rating-dt"><img src="/assets/images/components/restaurantCard/star.png" alt="별점"></dt>
-                      <dd class="rating">4.8</dd>
-                    </div>
                     <div class="descWrapper">
                       <dt class="minPrice">최소주문</dt>
                       <dd>9,000원</dd>
@@ -622,9 +612,8 @@
                         900원~1,900원<span class="sr-only">거리</span><span class="middot">&middot;</span>1.1km
                       </dd>
                     </div>
-                    <br />
                     <div class="bmNo1wrapper">
-                      <dt>배민<img src="/assets/images/components/restaurantCard/no1.png" alt="배민원" /></dt>
+                      <dt class="bmNo1wrapper__no1">배민</dt>
                       <dd>10~20분</dd>
                     </div>
                     <div class="loading">
