@@ -18,10 +18,6 @@ const bannerCarousel = ($bannerCarousel, { title, titleSrOnly, isAllBtn, carouse
     $bannerCurrentItem.innerHTML = `${itemCount} / ${length} `;
   };
 
-  const setAutoplay = () => {
-    timerId = setInterval(() => move(++currentItem, DURATION), 5000);
-  };
-
   document.addEventListener('DOMContentLoaded', () => {
     // prettier-ignore
     $bannerCarousel.innerHTML = `
@@ -82,11 +78,9 @@ const bannerCarousel = ($bannerCarousel, { title, titleSrOnly, isAllBtn, carouse
   $bannerCarousel.addEventListener('transitionend', () => {
     isMoving = false;
 
-    const point = currentItem === 0 ? 1 : currentItem === length + 1 ? -1 : 0;
+    if (currentItem > 0 && currentItem < length + 1) return;
 
-    if (!point) return;
-
-    currentItem += length * point;
+    currentItem = currentItem <= 0 ? length + 1 : 1;
     move(currentItem);
   });
 };

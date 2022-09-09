@@ -62,7 +62,7 @@
         -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
         animation: loading-text-opacity 2s linear 0s infinite normal;
         color: #ffffff;
-        font-family: "Helvetica Neue, " Helvetica ", " "arial";
+        font-family: 'Helvetica Neue, ' Helvetica ', ' 'arial';
         font-size: 10px;
         font-weight: bold;
         margin-top: 45px;
@@ -125,8 +125,7 @@
       display: block;
       width: 103px;
       height: 30px;
-      background: url(/assets/images/components/liveShoppingCard/logo-live.png)
-        no-repeat;
+      background: url(/assets/images/components/liveShoppingCard/logo_live.png) no-repeat;
       background-size: contain;
       background-position: right top -2px;
       @include fontSetup(bold, 16px, $white, 30px);
@@ -152,8 +151,7 @@
     top: 50px;
     width: 100%;
     padding-left: 50px;
-    background: url(/assets/images/components/liveShoppingCard/icon-badge.png)
-      no-repeat;
+    background: url(/assets/images/components/liveShoppingCard/icon-badge.png) no-repeat;
     background-position: left 10px center;
     background-size: contain;
   }
@@ -175,12 +173,11 @@
     display: inline-block;
     padding-left: 18px;
     margin-right: 8px;
-    background: url(/assets/images/components/liveShoppingCard/icon-person.png)
-      no-repeat;
+    background: url(/assets/images/components/liveShoppingCard/icon-person.png) no-repeat;
     background-size: contain;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       right: -7px;
       top: 50%;
@@ -205,8 +202,7 @@
       @include buttonNone;
       width: 30px;
       height: 30px;
-      background: url(/assets/images/components/liveShoppingCard/icon-muted.png)
-        no-repeat;
+      background: url(/assets/images/components/liveShoppingCard/icon-muted.png) no-repeat;
       background-position: center;
       background-size: 70%;
     }
@@ -295,8 +291,7 @@
         @include buttonNone;
         width: 50px;
         height: 40px;
-        background: url(/assets/images/components/liveShoppingCard/icon-coupon.png)
-          no-repeat;
+        background: url(/assets/images/components/liveShoppingCard/icon-coupon.png) no-repeat;
         background-position: center;
       }
 
@@ -343,8 +338,7 @@
       display: block;
       padding-right: 80px;
       padding-left: 10px;
-      background: url(/assets/images/components/liveShoppingCard/icon-pack.png)
-        no-repeat;
+      background: url(/assets/images/components/liveShoppingCard/icon-pack.png) no-repeat;
       background-position: right 10px center;
 
       &::before {
@@ -362,12 +356,11 @@
       background: $white;
       border-radius: 5px;
       padding-left: 70px;
-      background: $white
-        url(/assets/images/components/liveShoppingCard/pizza-logo.png) no-repeat;
+      background: $white url(/assets/images/components/liveShoppingCard/pizza-logo.png) no-repeat;
       background-size: contain;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         right: -4px;
         bottom: 50%;
@@ -442,8 +435,7 @@
           @include buttonNone;
           width: 30px;
           height: 30px;
-          background: url(/assets/images/components/liveShoppingCard/icon-play.png)
-            no-repeat;
+          background: url(/assets/images/components/liveShoppingCard/icon-play.png) no-repeat;
           background-position: center;
         }
 
