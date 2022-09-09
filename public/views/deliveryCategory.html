@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="/js/headFoot.js"></script>
     <script type="module" src="/js/deliveryCategory.js"></script>
   </head>
@@ -63,70 +64,145 @@
               <a href="/views/delivery.html" aria-selected="true">배달</a>
               <div class="nav__sub__container show">
                 <ul class="nav__sub__list">
-                  <li class="nav__sub__list__item selected">
-                    <a href="#" class="" role="tab" id="sushi-tab" aria-controls="sushi-panel" aria-selected="false"
+                  <li class="nav__sub__list__item" id="sub1">
+                    <a
+                      href="/views/deliveryCategory.html?storeId=1"
+                      class=""
+                      role="tab"
+                      id="sushi-tab"
+                      aria-controls="sushi-panel"
+                      aria-selected="false"
                       >돈까스&centerdot;회&centerdot;일식</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" class="" id="chinese-tab" aria-controls="chinese-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub2">
+                    <a
+                      role="tab"
+                      class=""
+                      id="chinese-tab"
+                      aria-controls="chinese-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=2"
                       >중식</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="chicken-tab" aria-controls="chicken-panel" aria-selected="false" href="#">치킨</a>
+                  <li class="nav__sub__list__item" id="sub3">
+                    <a
+                      role="tab"
+                      id="chicken-tab"
+                      aria-controls="chicken-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=3"
+                      >치킨</a
+                    >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="noodle-tab" aria-controls="noodle-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub4">
+                    <a
+                      role="tab"
+                      id="noodle-tab"
+                      aria-controls="noodle-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=4"
                       >백반&centerdot;죽&centerdot;국수</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
+                  <li class="nav__sub__list__item" id="sub5">
                     <a
                       role="tab"
                       id="cafe-tab"
                       aria-controls="cafe-panel"
                       aria-selected="true"
-                      href="./orderDetail.html"
+                      href="/views/deliveryCategory.html?storeId=5"
                       >카페&centerdot;디저트</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="bunsik-tab" aria-controls="bunsik-panel" aria-selected="false" href="#">분식</a>
+                  <li class="nav__sub__list__item" id="sub6">
+                    <a
+                      role="tab"
+                      id="bunsik-tab"
+                      aria-controls="bunsik-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=6"
+                      >분식</a
+                    >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="jjigae-tab" aria-controls="jjigae-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub7">
+                    <a
+                      role="tab"
+                      id="jjigae-tab"
+                      aria-controls="jjigae-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=7"
                       >짬&centerdot;탕&centerdot;찌개</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="pizza-tab" aria-controls="pizza-panel" aria-selected="false" href="#">피자</a>
+                  <li class="nav__sub__list__item" id="sub8">
+                    <a
+                      role="tab"
+                      id="pizza-tab"
+                      aria-controls="pizza-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=8"
+                      >피자</a
+                    >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="spagetti-tab" aria-controls="spagetti-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub9">
+                    <a
+                      role="tab"
+                      id="spagetti-tab"
+                      aria-controls="spagetti-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=9"
                       >양식</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="meat-tab" aria-controls="meat-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub10">
+                    <a
+                      role="tab"
+                      id="meat-tab"
+                      aria-controls="meat-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=10"
                       >고기&centerdot;구이</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="jok-tab" aria-controls="jok-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub11">
+                    <a
+                      role="tab"
+                      id="jok-tab"
+                      aria-controls="jok-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=11"
                       >족발&centerdot;보쌈</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="asian-tab" aria-controls="asian-panel" aria-selected="false" href="#">아시안</a>
+                  <li class="nav__sub__list__item" id="sub12">
+                    <a
+                      role="tab"
+                      id="asian-tab"
+                      aria-controls="asian-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=12"
+                      >아시안</a
+                    >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="fastfood-tab" aria-controls="fastfood-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub13">
+                    <a
+                      role="tab"
+                      id="fastfood-tab"
+                      aria-controls="fastfood-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=13"
                       >패스트푸드</a
                     >
                   </li>
-                  <li class="nav__sub__list__item">
-                    <a role="tab" id="lunchbox-tab" aria-controls="lunchbox-panel" aria-selected="false" href="#"
+                  <li class="nav__sub__list__item" id="sub14">
+                    <a
+                      role="tab"
+                      id="lunchbox-tab"
+                      aria-controls="lunchbox-panel"
+                      aria-selected="false"
+                      href="/views/deliveryCategory.html?storeId=14"
                       >도시락</a
                     >
                   </li>
@@ -183,7 +259,7 @@
         </ul>
       </div> -->
       <div class="dc__wrapper" role="tabpanel" aria-labelledby="cafe-tab" id="cafe-panel">
-        <ul class="dc__list">
+        <!-- <ul class="dc__list">
           <li class="dc__list__item restCard">
             <div class="imgContainer">
               <img src="/assets/images/delivery-main/dunkinMain.png" alt="던킨도너츠" />
@@ -445,7 +521,7 @@
               </dl>
             </div>
           </li>
-        </ul>
+        </ul> -->
       </div>
       <!-- go to top -->
       <div class="go__to__top">
