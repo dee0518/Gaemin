@@ -111,8 +111,7 @@
       text-align: center;
 
       a {
-        background: url(/assets/images/components/liveShoppingCard/logo_live.png)
-          no-repeat;
+        background: url(/assets/images/components/liveShoppingCard/logo_live.png) no-repeat;
 
         @include tablet {
           padding: rem(40px) 0 rem(15px);
@@ -167,12 +166,15 @@
       &__list {
         @include flexbox(row);
         gap: 20px;
+
         @include tablet {
           height: 160px;
+          transform: translate3D(calc(var(--currentItem) * -340px), 0, 0);
         }
 
         @include desktop {
           height: 200px;
+          transform: translate3D(calc(var(--currentItem) * -420px), 0, 0);
         }
 
         &__item {
@@ -245,8 +247,7 @@
     &__title {
       @include sectionTitle;
       margin-bottom: 15px;
-      background: url(/assets/images/main/icon_thumbsUp.png) no-repeat left
-        215px center;
+      background: url(/assets/images/main/icon_thumbsUp.png) no-repeat left 215px center;
       background-size: contain;
     }
   }
@@ -324,8 +325,7 @@
     h2 {
       @include sectionTitle;
       margin-bottom: 15px;
-      background: url(/assets/images/components/liveShoppingCard/logo_live.png)
-        no-repeat left 180px center;
+      background: url(/assets/images/components/liveShoppingCard/logo_live.png) no-repeat left 180px center;
       background-size: contain;
     }
   }

@@ -9,7 +9,7 @@
   }
 
   &__carousel {
-    position: relative;
+    @include carouselWrapper;
   }
 
   &__control__buttons {
@@ -39,10 +39,19 @@
   }
 
   &__list {
-    width: 100%;
-    overflow: hidden;
+    --duration: 0;
+    --currentItem: 0;
+    display: flex;
+    transition: transform calc(var(--duration) * 1ms) ease-out;
+    transform: translate3D(calc(var(--currentItem) * -100%), 0, 0);
+
+    &:focus,
+    &:hover {
+      transition: none;
+    }
 
     &__item {
+      flex-shrink: 0;
       height: 100%;
       border-radius: 20px;
       background-color: skyblue;
@@ -158,23 +167,7 @@
     }
   }
 }
-// // carousel
-// .banner__carousel {
-//   @include carouselWrapper;
-//   &__list {
-//     display: flex;
-//     @include carouselListWidth($numOfItem: 4+1);
-//     transition: transform calc(var(--duration) * 1ms) ease-out;
-//     &:focus,
-//     &:hover {
-//       transition: none;
-//     }
-//   }
 
-//   &__item {
-//     @include carouselSlideItem;
-//   }
-// }
 // .banner__event__list {
 //   [aria-label="1번째 배너"] {
 //     img {

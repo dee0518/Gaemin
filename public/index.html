@@ -5,35 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>개발의 민족 for Web</title>
-    <meta
-      name="description"
-      content="배달의 민족 웹-태블릿 전용 페이지입니다."
-    />
-    <meta
-      name="keywords"
-      content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민, 라이브, 배민쇼핑라이브"
-    />
+    <meta name="description" content="배달의 민족 웹-태블릿 전용 페이지입니다." />
+    <meta name="keywords" content="배달의민족, 배달, 포장, 음식, 주문, 웹주문, 배민, 라이브, 배민쇼핑라이브" />
     <meta name="author" content="개발의민족" />
-    <link
-      rel="shortcut icon"
-      href="/assets/images/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <script type="module" src="/js/main.js"></script>
-  <script type="module" src="/js/bannerCarousel.js"></script>
-  <script type="module" src="/js/todayDiscountCarousel.js"></script>
   <body>
     <div class="tablet__container main">
       <!-- 해더 -->
@@ -42,19 +24,11 @@
           <div class="header__top">
             <h1 class="header__top__logo">
               <a href="/index.html">
-                <img
-                  src="/assets/images/components/header/logo.png"
-                  alt="우리가 어떤 민족 입니까?"
-                />
-                <img
-                  src="/assets/images/components/header/logo_text.png"
-                  alt="배달의 민족"
-                />
+                <img src="/assets/images/components/header/logo.png" alt="우리가 어떤 민족 입니까?" />
+                <img src="/assets/images/components/header/logo_text.png" alt="배달의 민족" />
               </a>
             </h1>
-            <p class="header__top__location" tabindex="0" role="button">
-              주소를 알려주세요
-            </p>
+            <button class="header__top__location">주소를 알려주세요</button>
             <div class="header__top__link">
               <a href="#" class="header__top__link__login">로그인</a>
               <a href="#" class="header__top__link__myNCart"> 마이배민 </a>
@@ -73,12 +47,7 @@
               <fieldset class="header__bottom__search__fieldset">
                 <legend>음식 검색 입력폼</legend>
                 <label for="search" class="sr-only">음식 검색창</label>
-                <input
-                  type="search"
-                  id="search"
-                  name="menu"
-                  placeholder="닭발? 순대? 곱창?"
-                />
+                <input type="search" id="search" name="menu" placeholder="닭발? 순대? 곱창?" />
               </fieldset>
             </form>
           </div>
@@ -89,8 +58,7 @@
         class="banner__container main__banner"
         role="region"
         aria-roledescription="carousel"
-        aria-label="메인 광고 배너"
-      ></div>
+        aria-label="메인 광고 배너"></div>
       <!-- 배달 / 포장 -->
       <section class="main__card">
         <h2 class="sr-only">배달, 포장 카드 링크</h2>
@@ -114,10 +82,7 @@
             </a>
           </li>
           <li class="main__card__item shoppingLive">
-            <a
-              href="/views/liveShopping.html"
-              aria-label="라이브 쇼핑 이동 버튼"
-            >
+            <a href="/views/liveShopping.html" aria-label="라이브 쇼핑 이동 버튼">
               <h3 class="main__card__item__title title">쇼핑 라이브</h3>
             </a>
           </li>
@@ -139,15 +104,12 @@
           class="banner__container today__discount__carousel"
           role="region"
           aria-roledescription="carousel"
-          aria-label="오늘의 할인 배너"
-        ></div>
+          aria-label="오늘의 할인 배너"></div>
       </div>
       <!-- 최근에 주문했어요 -->
       <section class="main__recent__order">
         <div class="main__recent__order__inner">
-          <h2 class="main__section__heading main__recent__order__title">
-            최근에 주문했어요
-          </h2>
+          <h2 class="main__section__heading main__recent__order__title">최근에 주문했어요</h2>
           <a href="#" class="main__all__link">주문 내역 보기</a>
           <ul class="main__restCards">
             <!-- Restaurant Card -->
@@ -167,10 +129,7 @@
                 <dl>
                   <div class="descWrapper">
                     <dt class="dilvTip">배달팁</dt>
-                    <dd>
-                      1,500원~2,500원<span class="sr-only">거리</span
-                      ><span class="middot">&middot;</span>0.8km
-                    </dd>
+                    <dd>1,500원~2,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>0.8km</dd>
                   </div>
                   <div class="bmNo1wrapper">
                     <dt class="bmNo1wrapper__no1">배민</dt>
@@ -195,10 +154,7 @@
                 <dl>
                   <div class="descWrapper">
                     <dt class="dilvTip">배달팁</dt>
-                    <dd>
-                      1,500원~2,500원<span class="sr-only">거리</span
-                      ><span class="middot">&middot;</span>0.8km
-                    </dd>
+                    <dd>1,500원~2,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>0.8km</dd>
                   </div>
                   <div class="bmNo1wrapper">
                     <dt class="bmNo1wrapper__no1">배민</dt>
@@ -223,10 +179,7 @@
                 <dl>
                   <div class="descWrapper">
                     <dt class="dilvTip">배달팁</dt>
-                    <dd>
-                      1,500원~2,500원<span class="sr-only">거리</span
-                      ><span class="middot">&middot;</span>0.8km
-                    </dd>
+                    <dd>1,500원~2,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>0.8km</dd>
                   </div>
                   <div class="bmNo1wrapper">
                     <dt class="bmNo1wrapper__no1">배민</dt>
@@ -251,10 +204,7 @@
                 <dl>
                   <div class="descWrapper">
                     <dt class="dilvTip">배달팁</dt>
-                    <dd>
-                      1,500원~2,500원<span class="sr-only">거리</span
-                      ><span class="middot">&middot;</span>0.8km
-                    </dd>
+                    <dd>1,500원~2,500원<span class="sr-only">거리</span><span class="middot">&middot;</span>0.8km</dd>
                   </div>
                   <div class="bmNo1wrapper">
                     <dt class="bmNo1wrapper__no1">배민</dt>
@@ -270,42 +220,28 @@
       <section class="live__special main__shopping__live">
         <div class="live__special__inner">
           <h2 class="main__section__heading shopping__live">배민쇼핑라이브</h2>
-          <a href="/views/liveShopping.html" class="main__all__link"
-            >전체보기</a
-          >
+          <a href="/views/liveShopping.html" class="main__all__link">전체보기</a>
           <ul class="live__special__container">
             <li class="live__special__items">
-              <a
-                href="/views/liveShopping.html"
-                target="_self"
-                rel="opener"
-                class="live__special__link"
-              >
+              <a href="/views/liveShopping.html" target="_self" rel="opener" class="live__special__link">
                 <div class="live__special__video">
                   <figure>
                     <video
                       muted
                       src="/assets/images/components/liveShoppingCard/ex01.webm"
                       type="video/webm"
-                      poster="/assets/images/components/liveShoppingCard/ex1.gif"
-                    ></video>
+                      poster="/assets/images/components/liveShoppingCard/ex1.gif"></video>
                     <figcaption>
                       <div class="live__special__video__caption">
-                        <span class="sr-only" id="live__special__figcap"
-                          >미스터 피자 상품권 특가 판매</span
-                        >
+                        <span class="sr-only" id="live__special__figcap">미스터 피자 상품권 특가 판매</span>
                         <span aria-labelledby="live__special__video__figcap"
                           >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
                         >
                         <span class="live__special__video__type">
                           <span>기간한정특가</span>
-                          <span
-                            >1,000원 쿠폰<span class="sr-only">제공</span></span
-                          >
+                          <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
                         </span>
-                        <span class="live__special__video__viewer"
-                          >63,185<span class="sr-only">명 시청 중</span></span
-                        >
+                        <span class="live__special__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
                       </div>
                     </figcaption>
                   </figure>
@@ -314,54 +250,38 @@
                   <dl>
                     <dt>
                       <span
-                        >미스터 피자
-                        <span class="live__special__coupon--bottom"
-                          >20,000원</span
-                        >상품권<span aria-hidden="true">/</span></span
+                        >미스터 피자 <span class="live__special__coupon--bottom">20,000원</span>상품권<span
+                          aria-hidden="true"
+                          >/</span
+                        ></span
                       >
                     </dt>
                     <dd>
                       <span>25%<span class="sr-only">할인</span></span>
-                      <span
-                        >15,000원<span class="sr-only">으로 판매중</span></span
-                      >
+                      <span>15,000원<span class="sr-only">으로 판매중</span></span>
                     </dd>
                   </dl>
                 </div>
               </a>
             </li>
             <li class="live__special__items">
-              <a
-                href="/views/liveShopping.html"
-                target="_self"
-                rel="opener"
-                class="live__special__link"
-              >
+              <a href="/views/liveShopping.html" target="_self" rel="opener" class="live__special__link">
                 <div class="live__special__video">
                   <figure>
                     <video
                       muted
                       src="/assets/images/components/liveShoppingCard/ex02.webm"
                       type="video/webm"
-                      poster="/assets/images/components/liveShoppingCard/ex2.gif"
-                    ></video>
+                      poster="/assets/images/components/liveShoppingCard/ex2.gif"></video>
                     <figcaption>
                       <div class="live__special__video__caption">
-                        <span class="sr-only" id="live__special__figcap"
-                          >버거킹 특가 판매</span
-                        >
-                        <span aria-labelledby="live__special__video__figcap"
-                          >버거킹 와퍼주니어 1 + 1 특별 행사</span
-                        >
+                        <span class="sr-only" id="live__special__figcap">버거킹 특가 판매</span>
+                        <span aria-labelledby="live__special__video__figcap">버거킹 와퍼주니어 1 + 1 특별 행사</span>
                         <span class="live__special__video__type">
                           <span>기간한정특가</span>
-                          <span
-                            >1,000원 쿠폰<span class="sr-only">제공</span></span
-                          >
+                          <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
                         </span>
-                        <span class="live__special__video__viewer"
-                          >5,185<span class="sr-only">명 시청 중</span></span
-                        >
+                        <span class="live__special__video__viewer">5,185<span class="sr-only">명 시청 중</span></span>
                       </div>
                     </figcaption>
                   </figure>
@@ -370,54 +290,38 @@
                   <dl>
                     <dt>
                       <span
-                        >버거킹
-                        <span class="live__special__coupon--bottom"
-                          >와퍼주니어 1 + 1</span
-                        >상품권<span aria-hidden="true">/</span></span
+                        >버거킹 <span class="live__special__coupon--bottom">와퍼주니어 1 + 1</span>상품권<span
+                          aria-hidden="true"
+                          >/</span
+                        ></span
                       >
                     </dt>
                     <dd>
                       <span>25%<span class="sr-only">할인</span></span>
-                      <span
-                        >8,000원<span class="sr-only">으로 판매중</span></span
-                      >
+                      <span>8,000원<span class="sr-only">으로 판매중</span></span>
                     </dd>
                   </dl>
                 </div>
               </a>
             </li>
             <li class="live__special__items">
-              <a
-                href="/views/liveShopping.html"
-                target="_self"
-                rel="opener"
-                class="live__special__link"
-              >
+              <a href="/views/liveShopping.html" target="_self" rel="opener" class="live__special__link">
                 <div class="live__special__video">
                   <figure>
                     <video
                       muted
                       src="/assets/images/components/liveShoppingCard/ex03.webm"
                       type="video/webm"
-                      poster="/assets/images/components/liveShoppingCard/ex3.gif"
-                    ></video>
+                      poster="/assets/images/components/liveShoppingCard/ex3.gif"></video>
                     <figcaption>
                       <div class="live__special__video__caption">
-                        <span class="sr-only" id="live__special__figcap"
-                          >스테이크 특가 판매</span
-                        >
-                        <span aria-labelledby="live__special__video__figcap"
-                          >빕스 스테이크 2만원이상 할인 혜택</span
-                        >
+                        <span class="sr-only" id="live__special__figcap">스테이크 특가 판매</span>
+                        <span aria-labelledby="live__special__video__figcap">빕스 스테이크 2만원이상 할인 혜택</span>
                         <span class="live__special__video__type">
                           <span>기간한정특가</span>
-                          <span
-                            >5,000원 쿠폰<span class="sr-only">제공</span></span
-                          >
+                          <span>5,000원 쿠폰<span class="sr-only">제공</span></span>
                         </span>
-                        <span class="live__special__video__viewer"
-                          >70,185<span class="sr-only">명 시청 중</span></span
-                        >
+                        <span class="live__special__video__viewer">70,185<span class="sr-only">명 시청 중</span></span>
                       </div>
                     </figcaption>
                   </figure>
@@ -426,54 +330,40 @@
                   <dl>
                     <dt>
                       <span
-                        >빕스 스테이크
-                        <span class="live__special__coupon--bottom"
-                          >50,000원</span
-                        >상품권<span aria-hidden="true">/</span></span
+                        >빕스 스테이크 <span class="live__special__coupon--bottom">50,000원</span>상품권<span
+                          aria-hidden="true"
+                          >/</span
+                        ></span
                       >
                     </dt>
                     <dd>
                       <span>50%<span class="sr-only">할인</span></span>
-                      <span
-                        >25,000원<span class="sr-only">으로 판매중</span></span
-                      >
+                      <span>25,000원<span class="sr-only">으로 판매중</span></span>
                     </dd>
                   </dl>
                 </div>
               </a>
             </li>
             <li class="live__special__items">
-              <a
-                href="/views/liveShopping.html"
-                target="_self"
-                rel="opener"
-                class="live__special__link"
-              >
+              <a href="/views/liveShopping.html" target="_self" rel="opener" class="live__special__link">
                 <div class="live__special__video">
                   <figure>
                     <video
                       muted
                       src="/assets/images/components/liveShoppingCard/ex04.webm"
                       type="video/webm"
-                      poster="/assets/images/components/liveShoppingCard/ex4.gif"
-                    ></video>
+                      poster="/assets/images/components/liveShoppingCard/ex4.gif"></video>
                     <figcaption>
                       <div class="live__special__video__caption">
-                        <span class="sr-only" id="live__special__figcap"
-                          >파리바게트 상품권 특가 판매</span
-                        >
+                        <span class="sr-only" id="live__special__figcap">파리바게트 상품권 특가 판매</span>
                         <span aria-labelledby="live__special__video__figcap"
                           >파리바게트 신상 디저트 상품 할인 특가 판매</span
                         >
                         <span class="live__special__video__type">
                           <span>기간한정특가</span>
-                          <span
-                            >1,000원 쿠폰<span class="sr-only">제공</span></span
-                          >
+                          <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
                         </span>
-                        <span class="live__special__video__viewer"
-                          >83,205<span class="sr-only">명 시청 중</span></span
-                        >
+                        <span class="live__special__video__viewer">83,205<span class="sr-only">명 시청 중</span></span>
                       </div>
                     </figcaption>
                   </figure>
@@ -482,54 +372,40 @@
                   <dl>
                     <dt>
                       <span
-                        >파리바게트
-                        <span class="live__special__coupon--bottom"
-                          >30,000원</span
-                        >상품권<span aria-hidden="true">/</span></span
+                        >파리바게트 <span class="live__special__coupon--bottom">30,000원</span>상품권<span
+                          aria-hidden="true"
+                          >/</span
+                        ></span
                       >
                     </dt>
                     <dd>
                       <span>40%<span class="sr-only">할인</span></span>
-                      <span
-                        >12,000원<span class="sr-only">으로 판매중</span></span
-                      >
+                      <span>12,000원<span class="sr-only">으로 판매중</span></span>
                     </dd>
                   </dl>
                 </div>
               </a>
             </li>
             <li class="live__special__items">
-              <a
-                href="/views/liveShopping.html"
-                target="_self"
-                rel="opener"
-                class="live__special__link"
-              >
+              <a href="/views/liveShopping.html" target="_self" rel="opener" class="live__special__link">
                 <div class="live__special__video">
                   <figure>
                     <video
                       muted
                       src="/assets/images/components/liveShoppingCard/ex01.webm"
                       type="video/webm"
-                      poster="/assets/images/components/liveShoppingCard/ex1.gif"
-                    ></video>
+                      poster="/assets/images/components/liveShoppingCard/ex1.gif"></video>
                     <figcaption>
                       <div class="live__special__video__caption">
-                        <span class="sr-only" id="live__special__figcap"
-                          >미스터 피자 상품권 특가 판매</span
-                        >
+                        <span class="sr-only" id="live__special__figcap">미스터 피자 상품권 특가 판매</span>
                         <span aria-labelledby="live__special__video__figcap"
                           >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
                         >
                         <span class="live__special__video__type">
                           <span>기간한정특가</span>
-                          <span
-                            >1,000원 쿠폰<span class="sr-only">제공</span></span
-                          >
+                          <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
                         </span>
-                        <span class="live__special__video__viewer"
-                          >63,185<span class="sr-only">명 시청 중</span></span
-                        >
+                        <span class="live__special__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
                       </div>
                     </figcaption>
                   </figure>
@@ -538,54 +414,40 @@
                   <dl>
                     <dt>
                       <span
-                        >미스터 피자
-                        <span class="live__special__coupon--bottom"
-                          >20,000원</span
-                        >상품권<span aria-hidden="true">/</span></span
+                        >미스터 피자 <span class="live__special__coupon--bottom">20,000원</span>상품권<span
+                          aria-hidden="true"
+                          >/</span
+                        ></span
                       >
                     </dt>
                     <dd>
                       <span>25%<span class="sr-only">할인</span></span>
-                      <span
-                        >15,000원<span class="sr-only">으로 판매중</span></span
-                      >
+                      <span>15,000원<span class="sr-only">으로 판매중</span></span>
                     </dd>
                   </dl>
                 </div>
               </a>
             </li>
             <li class="live__special__items">
-              <a
-                href="/views/liveShopping.html"
-                target="_self"
-                rel="opener"
-                class="live__special__link"
-              >
+              <a href="/views/liveShopping.html" target="_self" rel="opener" class="live__special__link">
                 <div class="live__special__video">
                   <figure>
                     <video
                       muted
                       src="/assets/images/components/liveShoppingCard/ex02.webm"
                       type="video/webm"
-                      poster="/assets/images/components/liveShoppingCard/ex2.gif"
-                    ></video>
+                      poster="/assets/images/components/liveShoppingCard/ex2.gif"></video>
                     <figcaption>
                       <div class="live__special__video__caption">
-                        <span class="sr-only" id="live__special__figcap"
-                          >미스터 피자 상품권 특가 판매</span
-                        >
+                        <span class="sr-only" id="live__special__figcap">미스터 피자 상품권 특가 판매</span>
                         <span aria-labelledby="live__special__video__figcap"
                           >미스터 피자X쥬라기월드 8천원이상 할인 혜택</span
                         >
                         <span class="live__special__video__type">
                           <span>기간한정특가</span>
-                          <span
-                            >1,000원 쿠폰<span class="sr-only">제공</span></span
-                          >
+                          <span>1,000원 쿠폰<span class="sr-only">제공</span></span>
                         </span>
-                        <span class="live__special__video__viewer"
-                          >63,185<span class="sr-only">명 시청 중</span></span
-                        >
+                        <span class="live__special__video__viewer">63,185<span class="sr-only">명 시청 중</span></span>
                       </div>
                     </figcaption>
                   </figure>
@@ -594,17 +456,15 @@
                   <dl>
                     <dt>
                       <span
-                        >미스터 피자
-                        <span class="live__special__coupon--bottom"
-                          >20,000원</span
-                        >상품권<span aria-hidden="true">/</span></span
+                        >미스터 피자 <span class="live__special__coupon--bottom">20,000원</span>상품권<span
+                          aria-hidden="true"
+                          >/</span
+                        ></span
                       >
                     </dt>
                     <dd>
                       <span>25%<span class="sr-only">할인</span></span>
-                      <span
-                        >15,000원<span class="sr-only">으로 판매중</span></span
-                      >
+                      <span>15,000원<span class="sr-only">으로 판매중</span></span>
                     </dd>
                   </dl>
                 </div>
@@ -615,19 +475,13 @@
       </section>
       <!-- go to top -->
       <div class="go__to__top">
-        <button
-          type="button"
-          class="go__to__top__btn"
-          aria-label="맨 위로 이동"
-        ></button>
+        <button type="button" class="go__to__top__btn" aria-label="맨 위로 이동"></button>
       </div>
       <!-- footer -->
       <footer class="footer">
         <div class="footer__inner">
           <ul class="footer__nav__list">
-            <li>
-              <a href="#">사업자정보확인</a><span aria-hidden="true">|</span>
-            </li>
+            <li><a href="#">사업자정보확인</a><span aria-hidden="true">|</span></li>
             <li><a href="#">이용약관</a><span aria-hidden="true">|</span></li>
             <li>
               <a href="#">전자금융거래이용약관</a>
@@ -636,13 +490,7 @@
             <li><a href="#" class="footer__bold">개인정보처리방침</a></li>
           </ul>
           <div class="footer__toggle__company">
-            <h2
-              class="footer__toggle__company__title footer__bold"
-              role="button"
-              tabindex="0"
-            >
-              (주)우아한형제들
-            </h2>
+            <h2 class="footer__toggle__company__title footer__bold" role="button" tabindex="0">(주)우아한형제들</h2>
             <section class="footer__toggle__company__detail">
               <h2 class="sr-only">기업 상세 및 고객센터 정보</h2>
               <ul class="footer__toggle__company__detail__list">
@@ -652,9 +500,7 @@
                 <li>호스팅서비스제공자 (주)우아한형제들</li>
                 <li>CS@woowahan.com</li>
                 <li>서울특별시 송파구 위례성대로 2 장은빌딩</li>
-                <li>
-                  전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)
-                </li>
+                <li>전자금융분쟁처리 Tel 1600-0987(유료), 080-849-0987(무료)</li>
                 <li>Fax 050-6050-0400</li>
               </ul>
               <div class="footer__toggle__company__detail__service">
@@ -672,14 +518,8 @@
             </section>
           </div>
           <p class="footer__notices">
-            <span>
-              (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가
-              아닙니다.
-            </span>
-            <span>
-              따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을
-              지지 않습니다.
-            </span>
+            <span> (주)우아한형제들은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. </span>
+            <span> 따라서 (주)우아한형제들은 상품, 거래정보 및 거래에 대하여 책임을 지지 않습니다. </span>
           </p>
         </div>
       </footer>
@@ -687,12 +527,18 @@
       <div class="modal">
         <div class="modal__body">
           <h2 class="title">주소 설정</h2>
-          <button class="modal__body__close__btn" aira-label="닫기"></button>
+          <button class="modal__body__add__address__btn">주소 추가</button>
           <ul class="my__place__list">
-            <li tabindex="0">우리 집</li>
-            <li tabindex="0">우리 회사</li>
-            <li tabindex="0"><a href="/">주소 추가</a></li>
+            <li tabindex="0" id="home">
+              <span class="title">우리 집</span>
+              <span class="address">서울 강남구</span>
+            </li>
+            <li tabindex="0" id="company">
+              <span class="title">우리 회사</span>
+              <span class="address">서울 강남구</span>
+            </li>
           </ul>
+          <button class="modal__body__close__btn" aira-label="닫기"></button>
         </div>
       </div>
     </div>

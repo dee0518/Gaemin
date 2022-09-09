@@ -1,52 +1,52 @@
 const header = () => {
-  let modal = document.querySelector(".modal");
-  let header_location = document.querySelector(".header__top__location");
-  let modal_body = document.querySelector(".modal__body");
-  let body = document.querySelector("body");
-  let my_place_li = document.querySelectorAll(".my__place__ul li");
-  let local_count_group = document.querySelector(".local__count__group");
-  let local_count = document.querySelector(".local__count");
-  let my_place_head = document.querySelector(".my__place h2");
+  const $body = document.querySelector("body");
+  const $ModalOpenBtn = document.querySelector(".header__top__location");
+  const $modal = document.querySelector(".modal");
+  const $addAddressBtn = document.querySelector(
+    ".modal__body__add__address__btn"
+  );
+  const $myPlaceList = document.querySelector(".my__place__list");
+  const $countContainer = document.querySelector(".local__count__group");
+  const $count = document.querySelector(".local__count");
 
   const modalHandler = () => {
-    modal.style.display = "block";
-    modal_body.classList.add("on");
-    body.style.overflow = "hidden";
-    my_place_head.focus();
+    $modal.style.display = "block";
+    $body.style.overflow = "hidden";
+
+    $addAddressBtn.focus();
   };
 
-  const modalOff = (e) => {
-    modal.style.display = "none";
-    body.style.overflow = "auto";
-    e.target.tagName === "LI" && e.target.textContent !== "주소 추가"
-      ? (header_location.textContent = e.target.textContent)
-      : null;
+  const modalOff = () => {
+    $modal.style.display = "none";
+    $body.style.overflow = "auto";
   };
 
-  const a11yModalHandler = (e) => {
-    e.keyCode === 13 && modalHandler();
-  };
+  $ModalOpenBtn.addEventListener("click", modalHandler);
+  $modal.addEventListener("click", (e) => {
+    if (
+      e.target.closest(".modal__body") &&
+      !e.target.classList.contains("modal__body__close__btn")
+    )
+      return;
 
-  const a11yListHandler = (e) => {
-    e.keyCode === 13 && modalOff(e);
-  };
-
-  header_location.addEventListener("click", modalHandler);
-  modal.addEventListener("click", (e) => modalOff(e));
-  header_location.addEventListener("keyup", (e) => a11yModalHandler(e));
-  my_place_li.forEach((x) =>
-    x.addEventListener("keyup", (e) => a11yListHandler(e))
-  );
-  document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("cart") !== null) {
-      local_count.innerHTML = localStorage.getItem("cart");
-      local_count_group.style.display = "inline-block";
-    }
+    modalOff();
   });
-  // my_place_li[my_place_li.length - 1].firstChild.addEventListener(
-  //   "keyup",
-  //   (e) => e.keyCode === 9 && my_place_li[0].focus()
-  // );
+
+  $myPlaceList.addEventListener("click", (e) => {
+    if (e.target.matches(".my__place__list")) return;
+
+    modalOff();
+    $ModalOpenBtn.textContent =
+      e.target.closest("li").firstElementChild.textContent;
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const count = localStorage.getItem("cart");
+    if (count === null) return;
+
+    $count.textContent = count;
+    $countContainer.style.display = "block";
+  });
 };
 
 export default header;

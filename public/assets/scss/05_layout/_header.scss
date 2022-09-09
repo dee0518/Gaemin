@@ -52,11 +52,11 @@
     }
 
     &__location {
+      @include buttonNone;
       @include fontSetup(700, 16px, $font-white, 30px);
       background: url(/assets/images/components/header/arrow.svg) no-repeat;
       background-position: right center;
       background-size: 12px;
-      cursor: pointer;
 
       @include tablet {
         padding-right: 20px;
