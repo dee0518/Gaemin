@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/headFoot.js" type="module"></script>
-    <script defer src="/js/order.js"></script>
+    <script type="module" src="/js/order.js"></script>
   </head>
 
   <body class="store__body">
@@ -265,70 +265,16 @@
         <h4 class="store__main__menu__title" role="tab">리뷰</h4>
       </section> -->
       </div>
-      <div class="bill off">
+      <div class="bill">
         <section class="bill__warning">
           <h2 class="sr-only">경고문</h2>
           <p class="bill__warning__desc">메뉴 사진은 연출한 이미지로 실제 조리한 형식과 다를 수 있습니다.</p>
         </section>
         <section class="bill__total">
           <h2 class="desktop">주문 내역서</h2>
-          <p class="bill__total__limit">배달최소주문금액 <span class="bill__total__limit__price">12,000</span>원</p>
-          <div class="desktop">
-            <!-- 텅 이미지 -->
-            <div class="empty"></div>
-
-            <!-- 주문 내역서 리스트 -->
-            <!-- <ul class="bill__total__list desktop">
-                <li class="bill__total__item">
-                  <span class="bill__total__item__product"
-                    >유명 찜닭<span>25,000원</span></span
-                  >
-                  <ul class="bill__total__detail__list">
-                    <li class="bill__total__item">
-                      <span class="bill__total__item__product"
-                        >추가 목록들<span>1,000원</span></span
-                      >
-                    </li>
-                    <li class="bill__total__item">
-                      <span class="bill__total__item__product"
-                        >추가 목록들<span>1,000원</span></span
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="bill__total__item">
-                  <span class="bill__total__item__product"
-                    >유명 찜닭<span>25,000원</span></span
-                  >
-                  <ul class="bill__total__detail__list">
-                    <li class="bill__total__item">
-                      <span class="bill__total__item__product"
-                        >추가 목록들<span>1,000원</span></span
-                      >
-                    </li>
-                    <li class="bill__total__item">
-                      <span class="bill__total__item__product"
-                        >추가 목록들<span>1,000원</span></span
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <p class="bill__total__price">
-                <span>총결제금액</span><span class="total__price">25,000원</span>
-              </p> -->
-          </div>
-          <!-- 클래스 off추가되면 button disabled=true설정 필요 -->
-          <button type="button">
-            <span class="total__count--group">
-              <span class="sr-only">총</span>
-              <span class="total__count">1</span>
-              <span class="sr-only">개</span>
-            </span>
-            <span
-              ><span class="display__off"><span class="total__price">25,000</span>원</span> 주문하기</span
-            >
-          </button>
+          <p class="bill__total__limit">배달최소주문금액 12,000원</p>
+          <div class="desktop bill__list"></div>
+          <button type="submit" class="submit__btn"></button>
         </section>
       </div>
     </main>

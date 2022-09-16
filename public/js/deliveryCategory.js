@@ -22,7 +22,7 @@ const getStore = async () => {
           </div>
           <div class="descContainer">
             <h3 class="restName">
-              <a href="/views/store.html?storeId=${data.id}&detailId=${id}" class="restLink">${name}</a>
+              <a href="/views/order.html?categoryId=${data.id}&storeId=${id}" class="restLink">${name}</a>
             </h3>
             <div class="descContainer__rating">
               <p class="sr-only">별점</p>

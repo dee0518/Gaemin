@@ -1,3 +1,5 @@
+import bill from './bill.js';
+
 const order = async () => {
   const $storeHeader = document.querySelector('.store__header');
   const $storeCoupon = document.querySelector('.store__header__coupon');
@@ -5,9 +7,9 @@ const order = async () => {
   const $tabsHeader = document.querySelectorAll('.store__order-info__tabs__header');
   const [$deliveryTabInfo, $pickupTabInfo] = document.querySelectorAll('.store__order-info__tabs__list');
   const $storeMenu = document.querySelector('.store__main__menu');
-  const $billLimitPrice = document.querySelector('.bill__total__limit__price');
-  const $bill = document.querySelector('.bill__total .desktop');
+  const $bill = document.querySelector('.bill__total');
   let storeState = null;
+  let orderList = localStorage.getItem('cart') || null;
 
   const renderInitial = () => {
     const {
@@ -100,7 +102,7 @@ const order = async () => {
           <h5 class="store__main__menu__category__title">${title}</h5>
           <ul class="store__main__menu__category__list">
             ${list.map(({id: itemId, title, img, content, price, outOfstock}) => `<li class="signature store__main__menu__category__item">
-              <a href="/views/orderDetail.html${window.location.search}&categoryId=${id}&itemId=${itemId}">
+              <a href="/views/orderDetail.html${window.location.search}&listId=${id}&itemId=${itemId}">
                 <div class="store__main__menu__category__item__img">
                   ${img !== ''? `<img src="${img}" alt="" />`: ''}
                 </div>
@@ -117,42 +119,26 @@ const order = async () => {
             </li>`).join('')}
           </ul>
         </div>`).join('')}`;
-
-    $billLimitPrice.innerHTML = delivery.limit;
-  };
-
-  const renderBill = () => {
-    const cart = localStorage.getItem('cart');
-
-    // prettier-ignore
-    $bill.innerHTML = !cart
-      ? '<div class="empty"></div>'
-      : `<ul class="bill__total__list desktop">
-          ${cart.orders.map(order => `<li class="bill__total__item">
-          <span class="bill__total__item__product"
-            >유명 찜닭<span>25,000원</span></span
-          >
-          <ul class="bill__total__detail__list">
-            <li class="bill__total__item">
-              <span class="bill__total__item__product"
-                >추가 목록들<span>1,000원</span></span
-              >
-            </li>
-            <li class="bill__total__item">
-              <span class="bill__total__item__product"
-                >추가 목록들<span>1,000원</span></span
-              >
-            </li>
-          </ul>
-        </li>`).join('')}
-        </ul>`;
   };
 
   try {
     const { status, data } = await axios.get('/storeDetail' + window.location.search);
     if (status === 200) {
       storeState = data;
+      const { categoryId, storeId } = data;
+      if (orderList === null) {
+        orderList = {
+          userId: 1,
+          categoryId,
+          storeId,
+          storeName: '미소야',
+          limitPrice: 8000,
+          orders: [],
+        };
+      }
+
       renderInitial();
+      bill($bill, 8000, { categoryId, storeId, type: 'order' }, orderList);
     }
   } catch (e) {
     console.error(e);

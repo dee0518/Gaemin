@@ -8,18 +8,25 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.get('/store', (req, res) => {
-  const { storeId } = req.query;
-  res.send(store.getOneStore(storeId));
+  const { categoryId } = req.query;
+  res.send(store.getOneStore(categoryId));
 });
 
 app.get('/storeDetail', (req, res) => {
-  const { storeId, detailId } = req.query;
-  res.send(store.getStoreDetail(storeId, detailId));
+  const { categoryId, storeId } = req.query;
+  let response = store.getStoreDetail(categoryId, storeId);
+  if (response) response = { categoryId: +categoryId, storeId: +storeId, ...response };
+  res.send(response);
 });
 
 app.get('/menu', (req, res) => {
-  const { storeId, detailId, categoryId, itemId } = req.query;
-  res.send(store.getMenu(storeId, detailId, categoryId, itemId));
+  const { categoryId, storeId, listId, itemId } = req.query;
+  let response = store.getMenu(categoryId, storeId, listId, itemId);
+
+  if (response)
+    response = { categoryId: +categoryId, storeId: +storeId, listId: +listId, itemId: +itemId, ...response };
+
+  res.send(response);
 });
 
 app.listen(PORT, () => console.log(`server is running ${PORT}`));

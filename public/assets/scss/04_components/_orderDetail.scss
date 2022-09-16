@@ -9,6 +9,22 @@
       @include paddingY(40px);
     }
 
+    &.default {
+      @include flexbox(row, space-between, center);
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .default__price {
+        @include fontSetup(bold, 20px, $black, 1.2);
+
+        @include desktop {
+          font-size: 28px;
+        }
+      }
+    }
+
     h2 {
       @include fontSetup(bold, 20px, $black, 1.2);
       margin-bottom: 20px;
@@ -62,8 +78,7 @@
     }
 
     label {
-      background: url(/assets/images/order-detail/icon-radio-unchecked.png)
-        no-repeat;
+      background: url(/assets/images/order-detail/icon-radio-unchecked.png) no-repeat;
       background-size: 20px;
     }
 
@@ -80,8 +95,7 @@
     }
 
     label {
-      background: url(/assets/images/order-detail/icon-chk-unchecked.png)
-        no-repeat;
+      background: url(/assets/images/order-detail/icon-chk-unchecked.png) no-repeat;
       background-size: contain;
     }
 
@@ -112,7 +126,7 @@
       height: 50px;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 50%;
         top: 50%;
@@ -127,7 +141,7 @@
       }
 
       &:last-child::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 50%;
         top: 50%;

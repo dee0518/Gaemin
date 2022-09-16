@@ -1,16 +1,14 @@
+import bill from './bill.js';
+
 const orderDetail = async () => {
   const $orderDetailWrapper = document.querySelector('.order__detail__box__shadow__wrapper');
-  // const ulGroup = document.querySelectorAll('ul[class*=order__detail__]');
-  // const billContainer = document.querySelector('.bill');
-  // const submitBtn = document.querySelector('button[type=submit]');
-  // const miusBtn = document.querySelector('.mius__btn');
-  // const plusBtn = document.querySelector('.plus__btn');
-  // const totalCount = document.querySelector('.order__detail__total__num');
-  // const totalCount2 = document.querySelector('.total__count');
+  const $bill = document.querySelector('.bill');
+  const $form = document.querySelector('.order__detail__form');
+  let orderDetail = null;
+  let orderList = localStorage.getItem('cart') || null;
 
-  const num = 1;
-
-  const render = ({ id, title, content, img, price, outOfstock, extra }) => {
+  const render = () => {
+    const { id, title, content, img, price, outOfstock, extra } = orderDetail;
     // prettier-ignore
     $orderDetailWrapper.innerHTML = `
       <section class="order__detail__desc" id="id" style="${img !== '' ? `background-image: url(${img});` : ''}">
@@ -19,15 +17,19 @@ const orderDetail = async () => {
           <p>${content}</p>
         </div>
       </section>
-      ${extra.map(({id, title, max, items}) => `<section class="order__detail__menu">
+      <section class="order__detail__menu default">
+        <h2>가격</h2>
+        <p class="default__price">${price}원</p>
+      </section>
+      ${extra.map(({id : extraId, title, max, items}) => `<section class="order__detail__menu">
       <h2>${title}</h2>
-      <ul class="order__detail__radio--group">
+      <ul class="${max === 1? 'order__detail__radio--group' : 'order__detail__chk--group'}">
         ${items.map(({id, name, price}) => `<li>
-        <label for="extra${id}">
+        <label for="${extraId}${id}">
           <span class="order__detail__name">${name}</span>
           <span class="order__detail__menu__price">+${price}원</span>
         </label>
-        <input id="extra${id}" type="${max === 1? 'radio' : 'checkbox'}" name="price" />
+        <input id="${extraId}${id}" type="${max === 1? 'radio' : 'checkbox'}" name="price" />
       </li>`).join('')}
       </ul>
     </section>`).join('')}
@@ -45,29 +47,46 @@ const orderDetail = async () => {
   try {
     const { data, status } = await axios.get('/menu' + window.location.search);
     if (status === 200) {
-      render(data);
+      orderDetail = data;
+      const { categoryId, storeId, listId, itemId } = data;
+
+      orderList = {
+        id: 1,
+        userId: 1,
+        categoryId,
+        storeId,
+        storeName: '미소야',
+        limitPrice: 8000,
+        orders: [
+          {
+            id: 1,
+            listId,
+            itemId,
+            title: '로스까츠',
+            price: 10000,
+            extra: [{ id: 1, name: '돈까스 추가', price: 4000 }],
+          },
+        ],
+      };
+      render();
+      bill($bill, 8000, { categoryId, storeId, type: 'orderDetail' }, orderList);
     }
   } catch (e) {
     console.error(e);
   }
 
   // radion, checkbox on & off
-  const changeInput = target => {
+  const changeInput = ({ target }) => {
     const { type } = target;
 
     if (type === 'radio') {
       target
         .closest('ul')
         .querySelectorAll('li')
-        .forEach(item => item.classList.toggle('on', item === target));
+        .forEach(item => item.classList.toggle('on', item === target.closest('li')));
     }
 
     if (type === 'checkbox') target.closest('li').classList.toggle('on');
-
-    // if (billContainer.className.includes('off')) {
-    //   billContainer.classList.remove('off');
-    //   submitBtn.disabled = false;
-    // }
   };
 
   // 수량 계산
@@ -81,24 +100,23 @@ const orderDetail = async () => {
   };
 
   const setCart = () => {
-    console.log('hi');
-    localStorage.setItem('cart', num);
+    localStorage.setItem('cart', JSON.stringify(orderList));
   };
 
   $orderDetailWrapper.addEventListener('change', changeInput);
   $orderDetailWrapper.addEventListener('click', calTotalNum);
-
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   totalCount.innerHTML = 1;
-  //   ulGroup.forEach(ul => {
-  //     ul.addEventListener('click', changeInput);
-  //   });
-
-  //   miusBtn.addEventListener('click', calTotalNum);
-  //   plusBtn.addEventListener('click', calTotalNum);
-  // });
-
-  // submitBtn.addEventListener('click', setCart);
+  console.log($form);
+  $form.addEventListener('submit', e => {
+    e.preventDefault();
+    setCart();
+    window.location.href =
+      window.location.origin +
+      '/views/order.html' +
+      window.location.search
+        .split('&')
+        .filter((_, i) => i === 0 || i === 1)
+        .join('&');
+  });
 };
 
 orderDetail();

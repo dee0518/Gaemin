@@ -48,14 +48,14 @@ const store = [
                   {
                     id: 1,
                     title: '추가 선택',
-                    max: 3,
+                    max: 1,
                     items: [
                       { id: 1, name: '돈까스 추가', price: 4000 },
                       { id: 2, name: '고로케 추가', price: 4000 },
                     ],
                   },
                   {
-                    id: 1,
+                    id: 2,
                     title: '소스 선택',
                     max: 3,
                     items: [
@@ -148,7 +148,7 @@ const store = [
                   {
                     id: 1,
                     title: '추가 선택',
-                    max: 3,
+                    max: 1,
                     items: [
                       { id: 1, name: '돈까스 추가', price: 4000 },
                       { id: 2, name: '고로케 추가', price: 4000 },
@@ -2711,11 +2711,11 @@ const store = [
 ];
 
 const getOneStore = id => store.find(store => store.id === +id);
-const getStoreDetail = (storeId, detailId) =>
-  store.find(store => store.id === +storeId).store.find(detail => detail.id === +detailId);
-const getMenu = (storeId, detailId, categoryId, itemId) =>
-  getStoreDetail(storeId, detailId)
-    .menu.find(category => category.id === +categoryId)
+const getStoreDetail = (categoryId, storeId) =>
+  store.find(category => category.id === +categoryId).store.find(st => st.id === +storeId);
+const getMenu = (categoryId, storeId, listId, itemId) =>
+  getStoreDetail(categoryId, storeId)
+    .menu.find(list => list.id === +listId)
     .list.find(item => item.id === +itemId);
 
 module.exports = { getOneStore, getStoreDetail, getMenu };

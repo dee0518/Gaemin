@@ -1,27 +1,17 @@
 .bill {
   box-shadow: 0px 2px 10px 0 rgb(213 213 213 / 50%);
-  &.off {
-    & .empty {
-      padding-top: 200px;
-      background: url(/assets/images/order-detail/icon-empty.png) no-repeat;
-      background-position: center;
-    }
 
-    button {
-      background: $font-gray;
-    }
+  & .empty {
+    padding-top: 200px;
+    background: url(/assets/images/order-detail/icon-empty.png) no-repeat;
+    background-position: center;
+  }
 
-    .total__count--group,
-    .display__off {
+  button:disabled {
+    background: $font-gray;
+
+    .total__count--group {
       display: none;
-    }
-
-    &__body {
-      .footer {
-        @include desktop {
-          background: $white;
-        }
-      }
     }
   }
 
