@@ -1858,8 +1858,8 @@ button {
   }
 }
 .nav__inner {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 80rem;
@@ -1876,25 +1876,25 @@ button {
 }
 .nav__item > a {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
   color: #222222;
   font-family: "Do Hyeon", sans-serif;
   display: block;
-  padding: 20px 10px 20px 0;
+  padding: 15px 10px 15px 5px;
   color: #858585;
 }
 @media screen and (min-width: 1024px) {
   .nav__item > a {
     padding-right: 25px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .nav__sub__container {
   display: none;
   position: absolute;
   left: 0;
-  top: 86px;
+  top: 77px;
   width: 100%;
   background: #fff;
 }

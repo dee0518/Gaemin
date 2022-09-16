@@ -15,7 +15,7 @@
   }
 
   &__inner {
-    @include paddingX(15px);
+    @include paddingX(10px);
     @include autoMargin;
     max-width: rem(1280px);
   }
@@ -31,15 +31,15 @@
     }
 
     & > a {
-      @include fontSetup(400, 18px, $font-black, 22px);
-      font-family: "Do Hyeon", sans-serif;
+      @include fontSetup(400, 14px, $font-black, 22px);
+      font-family: 'Do Hyeon', sans-serif;
       display: block;
-      padding: 20px 10px 20px 0;
+      padding: 15px 10px 15px 5px;
       color: $font-gray;
 
       @include desktop {
         padding-right: 25px;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
@@ -48,7 +48,7 @@
     display: none;
     position: absolute;
     left: 0;
-    top: 86px;
+    top: 77px;
     width: 100%;
     background: $white;
 
@@ -74,7 +74,7 @@
 
     &__item {
       @include fontSetup(400, 18px, $font-black, 1.2);
-      font-family: "Do Hyeon", sans-serif;
+      font-family: 'Do Hyeon', sans-serif;
       flex-shrink: 0;
       padding: 10px 5px;
 
