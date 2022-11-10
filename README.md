@@ -33,15 +33,10 @@
       - 기존의 [-1, 0, -1]에서 [0, -1, -1]이 됨
       - 다시 Tab키로 이동했을 때 focus되는 것은 1번째 버튼이 됨
 ```javascript
-  // liveVideo.js
+  // liveVideo.js 중 해당 WAI-ARIA 관련 부분만 발췌...
   
   // i. 비디오 음소거 / 해제
   const setMuted = ({ target }) => {
-    const ariaPressed = target.getAttribute('aria-pressed');
-
-    $video.muted = !$video.muted;
-    $mutedBtn.classList.toggle('muted');
-    
     // 어떤 버튼인지 알려준다.
     target.setAttribute('aria-label', ariaPressed ? '음소거 해제' : '음소거');
     
@@ -53,8 +48,6 @@
   const setProgress = (videoDuration, videoCurrentTime) => {
     // 비디오의 전체 시간과 현재 재생되고 있는 시간을 알려준다.
     $progress.setAttribute('aria-valuetext', `${videoDuration}초 중 ${videoCurrentTime}초 재생 중`);
-    $progressBar.style.width = Math.round((videoCurrentTime / videoDuration) * 100) + '%';
-    $timer.innerHTML = '00:' + (videoCurrentTime < 10 ? '0' + videoCurrentTime : videoCurrentTime);
   };
   
   // iii. Tab키로 비디오 컨트롤 focus되는 부분을 설정해준다.
