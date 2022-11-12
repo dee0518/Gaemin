@@ -19,9 +19,16 @@
 <br>
 
 ## 2. Contribution
-- 비디오 컨트롤 및 채팅창: [public/js/liveVideo.js](./public/js/liveVideo.js)
-- 쇼핑 라이브 UI 및 기능 : [public/js/liveShopping.js](./public/js/liveShopping.js)
-- 주문 페이지 UI 및 기능 : [public/js/orderDetail.js](./public/js/orderDetail.js)
+- 라이브 비디오 UI 및 기능
+    - 기능: 비디오 컨트롤 및 채팅창, 탭과 화살표 키를 이용한 웹 접근성
+    - 깃허브: [public/js/liveVideo.js](./public/js/liveVideo.js)
+    - 페이지: [https://bubobubobo.github.io/Gaemin/views/liveVideo.html](https://bubobubobo.github.io/Gaemin/views/liveVideo.html)
+- 쇼핑 라이브 UI
+    - 깃허브: [public/js/liveShopping.js](./public/js/liveShopping.js)
+    - 페이지: [https://bubobubobo.github.io/Gaemin/views/liveShopping.html](https://bubobubobo.github.io/Gaemin/views/liveShopping.html)
+- 주문 페이지 UI
+    - 깃허브: [public/js/orderDetail.js](./public/js/orderDetail.js)
+    - 페이지: [https://bubobubobo.github.io/Gaemin/views/orderDetail.html](https://bubobubobo.github.io/Gaemin/views/orderDetail.html)
 - 작업한 웹 접근성 <br>
    1. 비디오 음소거 / 해제<br>
       - 어떤 버튼인지, 버튼이 눌려진 여부를 알려준다.
