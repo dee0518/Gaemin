@@ -14,7 +14,7 @@
 - 비디오 컨트롤
 - Map API
 - Skeleton UI
-- 링크 : [개발의 민족](https://bubobubobo.github.io/Gaemin/main.html)
+- 링크 : [https://bubobubobo.github.io/Gaemin/main.html](https://bubobubobo.github.io/Gaemin/main.html)
 
 <br>
 
@@ -97,10 +97,10 @@ const chats = [
 ```
 <br>
 
-## 4. 팀 작업 이후...
+<!-- ## 4. 팀 작업 이후...
 팀 작업 이후에 자바스크립트에 대한 지식이 강화되어 이를 적용하고자 사용자 UI를 다듬고 기능을 추가하는 리뉴얼 작업을 진행 중이다. <br>
 추가한 기능은 아래와 같다.
 - 넓은 범위의 반응형 적용 및 UI 수정.
 - Mock server와의 데이터 연결.
 - 현재 Mock Server의 데이터가 제대로 출력되지 않아 해결 중에 있다. 
-- 링크 : [리뉴얼_개발의 민족](https://gaemin.vercel.app/)
+- 링크 : [https://gaemin.vercel.app/](https://gaemin.vercel.app/) -->
