@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const store = require('./fake_data/store');
 
 const app = express();
@@ -6,6 +7,10 @@ const PORT = 5500;
 
 app.use(express.static('public'));
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.get('/store', (req, res) => {
   const { categoryId } = req.query;
