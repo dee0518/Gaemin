@@ -9,7 +9,7 @@ const PORT = 5500;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join('index.html', { root: path.join(__dirname, 'public') }));
 });
 
 app.get('/store', (req, res) => {
