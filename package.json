@@ -1,7 +1,7 @@
 {
   "name": "Gamin",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "sass": "sass public/assets/scss:public/css",
     "server": "live-server",
     "watch": "npm run sass -- --watch",
