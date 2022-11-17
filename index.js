@@ -5,7 +5,7 @@ const store = require('./fake_data/store');
 const app = express();
 const PORT = 5500;
 
-app.use('/public', express.static(__dirname, +'/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.get('/', (req, res) => {
