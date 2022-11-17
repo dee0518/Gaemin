@@ -1,7 +1,7 @@
 {
   "name": "Gamin",
   "scripts": {
-    "start": "nodemon server",
+    "start": "node server.js",
     "sass": "sass public/assets/scss:public/css",
     "server": "live-server",
     "watch": "npm run sass -- --watch",
@@ -29,6 +29,6 @@
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.19",
-    "vercel": "^28.2.5"
+    "vercel": "^28.5.3"
   }
 }
