@@ -111,3 +111,7 @@ const chats = [
 - Mock server와의 데이터 연결.
 - 현재 Mock Server의 데이터가 제대로 출력되지 않아 해결 중에 있다. 
 - 링크 : [https://gaemin.vercel.app/](https://gaemin.vercel.app/) -->
+
+
+## 회고
+회고록을 보시려면 [여기](https://velog.io/@dee0518/Memoir-%EA%B0%9C%EB%B0%9C%EC%9D%98-%EB%AF%BC%EC%A1%B1)를 클릭해주세요:)
